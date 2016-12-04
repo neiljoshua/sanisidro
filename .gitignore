@@ -1,0 +1,14 @@
+.DS_Store
+#sass files
+.sass-cache
+
+#module control
+node_modules
+npm_log
+
+#html files
+html
+
+#Git flow
+gitflow-installer.sh
+gitflow/ 

@@ -1,0 +1,275 @@
+/*
+Theme name: San Isidro
+Author: Neil Joshua
+Author URI: http://www.neiljoshua.com
+Version: 1.0
+*/
+
+@import 'reset';
+@import 'variables';
+@import 'hamburger';
+@import 'mixin';
+
+body {
+	font-family: Arial, san-serif;
+	font-size: 14px;
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+p {
+	line-height: 1.6;
+}
+
+/*General Layout*/
+div.container {
+	width: 100%;
+}
+
+/*Header*/
+.site-header {
+	border-bottom: 2px solid #999;
+	padding: 40px 50px;
+}
+
+.site-branding {
+	 h1 {
+	 	font-size: 150%;
+	 }
+	 h6{
+	 	font-size: 70%;
+	 }
+}
+.site-branding,
+.site-nav {
+	display: inline-block;
+}
+
+/*Footer*/
+.site-footer {
+	margin-top: 40px;
+	border-bottom: 2px solid #999;
+}
+
+/*post*/
+article.post {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 2px dotted #bbbbbb;
+	h2{
+		margin-bottom: 20px;
+	}
+}
+
+article.post:last-of-type{
+	border-bottom: none;
+}
+/*Branding*/
+
+.site-branding {
+	h1, h6, a {
+		margin: 0;
+		padding: 0;
+		color: $black;
+	}
+
+	a{
+		color: $silver;
+	}
+}
+/*Navigation Menu*/
+
+.site-nav {
+	float: right;
+	ul {
+		margin: 0;
+		padding: 0;
+		&:before,&:after {
+			content: ""; display: table;
+		}
+		&:after { 
+			clear:both; 
+		}
+		li {
+			list-style: none;
+			float: left;
+			margin-left: 20px;
+			text-transform: capitalize;
+			a {
+				letter-spacing: 1.5px;
+				color: $black;
+				font-weight: 400;
+				&:link, &:visited {
+					margin-right: 5px;
+				}
+				&:hover,&:active {
+					color: $silver;
+				}
+
+			}	
+		}
+	}
+}
+
+.site-header {
+	a {
+	text-decoration: none;
+	}
+}
+
+section {
+	width:90%;
+	margin: 0 auto;
+	padding: 10px 0;
+	&:first-child{
+		margin-bottom: 50px;
+		width: 95%;
+
+	}
+}
+/* Hero Page */
+
+.full-width-template, .site-inner {
+		max-width:100%;
+		padding: 0;
+}
+
+/** Section ! Hero Section **/
+
+div.hero {
+	background-size: cover;
+	background-position: center;
+}
+
+div.cta_container {
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(0 , 0, 0, 0.52);
+	background: rgba(0 , 0, 0, 0.52);
+	color: rgba(0 , 0, 0, 0.52);
+}
+
+div.cta_content {
+	padding:100px 10px;
+	color: $white;
+	p{
+		margin-bottom: 50px;
+	}
+}
+
+a.button {
+	padding: 10px 20px;
+	font-size: 15px;
+	color: $white;
+	background-color: rgba(0 , 0, 0, 0.52);
+	height: 10px;
+}
+
+.dark {
+	background: $black;
+	color: $white;
+}
+
+/** Section 2 and 3 **/
+
+.image-text,
+.text-image {
+	display: -webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+}
+
+.image-left,
+.text-right,
+.image-right,
+.text-left {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 50%;
+	color: $black;
+	img {
+		height: 400px;
+		max-height: 1000px;
+	}
+}
+
+.text-right,
+.text-left {
+	padding: 0 80px;
+	vertical-align: middle;
+	h1{
+		font-size: 18px;
+		font-weight: 600;
+		line-space: 4px;
+		margin-bottom: 25px;
+		text-align: center;
+	}
+	p{
+		font-size: 14px;
+		line-space: 3px;
+		line-height: 150%;
+	}
+}
+
+/* Footer*/
+
+footer {
+	padding: 60px 50px;
+	background-color : $lightgray;
+	color: $white;
+	p{
+		display: inline-block;
+	}
+	.footer-nav {
+		display: inline-block;
+		ul{
+			li{
+				a {
+					color: $white;
+					&:hover{
+						color: $black;
+					}	
+				}
+			}
+		}		
+	}
+
+}
+
+/* Media Queries */
+@include media(large) {
+
+	.site-nav {
+		display: none;
+	}
+	.c-hamburger {
+		position: absolute;
+    	right: 50px;;
+    	top: 30px;
+		display: block;
+		z-index: 10;
+	}
+
+}
+
+@include media(tablet) {
+	.site-header {
+	padding: 20px;
+	}
+	.c-hamburger {
+		right: 10px;
+	}
+}
+

@@ -1,0 +1,30 @@
+/*Footer*/
+.site-footer {
+	margin-top: 40px;
+	border-bottom: 2px solid #999;
+}
+
+/* Footer*/
+
+footer {
+	padding: 60px 50px;
+	background-color : $lightgray;
+	color: $white;
+	p{
+		display: inline-block;
+	}
+	.footer-nav {
+		display: inline-block;
+		ul{
+			li{
+				a {
+					color: $white;
+					&:hover{
+						color: $black;
+					}	
+				}
+			}
+		}		
+	}
+
+}

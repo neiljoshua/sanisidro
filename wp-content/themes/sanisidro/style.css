@@ -89,7 +89,7 @@ button {
 .c-hamburger {
   display: none;
   float: right;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -116,7 +116,7 @@ button {
   left: 14px;
   right: 14px;
   height: 2px;
-  background: #000;
+  background: #fff;
 }
 /* line 29, src/sass/hamburger.scss */
 .c-hamburger span::before, .c-hamburger span::after {
@@ -125,7 +125,7 @@ button {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color: #fff;
   content: "";
 }
 /* line 38, src/sass/hamburger.scss */
@@ -157,182 +157,230 @@ button {
   transform: rotate(90deg);
 }
 
-/* line 13, src/sass/style.scss */
-body {
-  font-family: Arial, san-serif;
-  font-size: 14px;
-  color: #333;
-}
-
-/* line 19, src/sass/style.scss */
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-/* line 24, src/sass/style.scss */
-p {
-  line-height: 1.6;
-}
-
-/*General Layout*/
-/* line 29, src/sass/style.scss */
-div.container {
-  width: 100%;
-}
-
 /*Header*/
-/* line 34, src/sass/style.scss */
+/* line 2, src/sass/header.scss */
 .site-header {
-  border-bottom: 2px solid #999;
-  padding: 40px 50px;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 50;
 }
 
-/* line 40, src/sass/style.scss */
+/* line 9, src/sass/header.scss */
+.site-branding {
+  float: left;
+}
+/* line 11, src/sass/header.scss */
 .site-branding h1 {
   font-size: 150%;
 }
-/* line 43, src/sass/style.scss */
+/* line 14, src/sass/header.scss */
 .site-branding h6 {
   font-size: 70%;
 }
 
-/* line 47, src/sass/style.scss */
+/* line 18, src/sass/header.scss */
 .site-branding,
 .site-nav {
-  display: inline-block;
-}
-
-/*Footer*/
-/* line 53, src/sass/style.scss */
-.site-footer {
-  margin-top: 40px;
-  border-bottom: 2px solid #999;
-}
-
-/*post*/
-/* line 59, src/sass/style.scss */
-article.post {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-bottom: 2px dotted #bbbbbb;
-}
-/* line 65, src/sass/style.scss */
-article.post h2 {
-  margin-bottom: 20px;
-}
-
-/* line 70, src/sass/style.scss */
-article.post:last-of-type {
-  border-bottom: none;
+  display: block;
+  width: auto;
+  margin: 20px 30px;
 }
 
 /*Branding*/
-/* line 76, src/sass/style.scss */
+/* line 28, src/sass/header.scss */
 .site-branding h1, .site-branding h6, .site-branding a {
   margin: 0;
   padding: 0;
-  color: #000;
+  color: #fff;
 }
-/* line 82, src/sass/style.scss */
+/* line 34, src/sass/header.scss */
 .site-branding a {
   color: #c0c0c0;
 }
 
 /*Navigation Menu*/
-/* line 88, src/sass/style.scss */
+/* line 40, src/sass/header.scss */
 .site-nav {
   float: right;
 }
-/* line 90, src/sass/style.scss */
+/* line 42, src/sass/header.scss */
 .site-nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 93, src/sass/style.scss */
+/* line 45, src/sass/header.scss */
 .site-nav ul:before, .site-nav ul:after {
   content: "";
   display: table;
 }
-/* line 96, src/sass/style.scss */
+/* line 48, src/sass/header.scss */
 .site-nav ul:after {
   clear: both;
 }
-/* line 99, src/sass/style.scss */
+/* line 51, src/sass/header.scss */
 .site-nav ul li {
   list-style: none;
   float: left;
   margin-left: 20px;
   text-transform: capitalize;
 }
-/* line 104, src/sass/style.scss */
+/* line 56, src/sass/header.scss */
 .site-nav ul li a {
   letter-spacing: 1.5px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
+  padding-top: 5px;
 }
-/* line 108, src/sass/style.scss */
+/* line 61, src/sass/header.scss */
 .site-nav ul li a:link, .site-nav ul li a:visited {
   margin-right: 5px;
 }
-/* line 111, src/sass/style.scss */
+/* line 64, src/sass/header.scss */
 .site-nav ul li a:hover, .site-nav ul li a:active {
   color: #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
 }
 
-/* line 121, src/sass/style.scss */
+/* line 75, src/sass/header.scss */
 .site-header a {
   text-decoration: none;
 }
 
-/* line 126, src/sass/style.scss */
-section {
+/*Footer*/
+/* line 2, src/sass/footer.scss */
+.site-footer {
+  margin-top: 40px;
+  border-bottom: 2px solid #999;
+}
+
+/* Footer*/
+/* line 9, src/sass/footer.scss */
+footer {
+  padding: 60px 50px;
+  background-color: #dadada;
+  color: #fff;
+}
+/* line 13, src/sass/footer.scss */
+footer p {
+  display: inline-block;
+}
+/* line 16, src/sass/footer.scss */
+footer .footer-nav {
+  display: inline-block;
+}
+/* line 20, src/sass/footer.scss */
+footer .footer-nav ul li a {
+  color: #fff;
+}
+/* line 22, src/sass/footer.scss */
+footer .footer-nav ul li a:hover {
+  color: #000;
+}
+
+/* line 15, src/sass/style.scss */
+body {
+  font-family: Arial, san-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+/* line 21, src/sass/style.scss */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 26, src/sass/style.scss */
+p {
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+/*General Layout*/
+/* line 32, src/sass/style.scss */
+div.container {
+  width: 100%;
+}
+
+/*post*/
+/* line 37, src/sass/style.scss */
+article.post {
   width: 90%;
   margin: 0 auto;
-  padding: 10px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px dotted #bbbbbb;
 }
-/* line 130, src/sass/style.scss */
-section:first-child {
-  margin-bottom: 50px;
+/* line 43, src/sass/style.scss */
+article.post h2 {
+  margin-bottom: 20px;
+}
+
+/* line 48, src/sass/style.scss */
+article.post:last-of-type {
+  border-bottom: none;
+}
+
+/* line 53, src/sass/style.scss */
+section {
   width: 95%;
+  margin: 0 auto;
+  padding: 10px 0;
+  overflow: hidden;
+}
+/* line 58, src/sass/style.scss */
+section:first-child {
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0;
 }
 
 /* Hero Page */
-/* line 138, src/sass/style.scss */
+/* line 66, src/sass/style.scss */
 .full-width-template, .site-inner {
   max-width: 100%;
   padding: 0;
 }
 
 /** Section ! Hero Section **/
-/* line 145, src/sass/style.scss */
+/* line 73, src/sass/style.scss */
 div.hero {
+  position: relative;
   background-size: cover;
   background-position: center;
+  min-height: 85vh;
 }
 
-/* line 150, src/sass/style.scss */
+/* line 80, src/sass/style.scss */
+div.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+/* line 85, src/sass/style.scss */
+div.logo img {
+  height: 200px;
+}
+
+/* line 91, src/sass/style.scss */
 div.cta_container {
   text-align: center;
   vertical-align: middle;
-  background-color: rgba(0, 0, 0, 0.52);
-  background: rgba(0, 0, 0, 0.52);
-  color: rgba(0, 0, 0, 0.52);
 }
 
-/* line 158, src/sass/style.scss */
+/* line 99, src/sass/style.scss */
 div.cta_content {
   padding: 100px 10px;
   color: #fff;
 }
-/* line 161, src/sass/style.scss */
+/* line 102, src/sass/style.scss */
 div.cta_content p {
   margin-bottom: 50px;
 }
 
-/* line 166, src/sass/style.scss */
+/* line 107, src/sass/style.scss */
 a.button {
   padding: 10px 20px;
   font-size: 15px;
@@ -341,14 +389,35 @@ a.button {
   height: 10px;
 }
 
-/* line 174, src/sass/style.scss */
+/* line 115, src/sass/style.scss */
 .dark {
   background: #000;
   color: #fff;
 }
 
 /** Section 2 and 3 **/
-/* line 181, src/sass/style.scss */
+/* line 121, src/sass/style.scss */
+div.slider {
+  overflow: hidden;
+}
+/* line 123, src/sass/style.scss */
+div.slider p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 129, src/sass/style.scss */
+div.text-slider {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* line 135, src/sass/style.scss */
+div.about-text {
+  overflow: hidden;
+}
+
+/* line 139, src/sass/style.scss */
 .image-text,
 .text-image {
   display: -webkit-flex;
@@ -356,7 +425,7 @@ a.button {
   display: flex;
 }
 
-/* line 188, src/sass/style.scss */
+/* line 146, src/sass/style.scss */
 .image-left,
 .text-right,
 .image-right,
@@ -372,7 +441,15 @@ a.button {
   width: 50%;
   color: #000;
 }
-/* line 202, src/sass/style.scss */
+/* line 160, src/sass/style.scss */
+.image-left p,
+.text-right p,
+.image-right p,
+.text-left p {
+  letter-spacing: 2px;
+  margin: 40px 20px;
+}
+/* line 164, src/sass/style.scss */
 .image-left img,
 .text-right img,
 .image-right img,
@@ -381,13 +458,13 @@ a.button {
   max-height: 1000px;
 }
 
-/* line 208, src/sass/style.scss */
+/* line 170, src/sass/style.scss */
 .text-right,
 .text-left {
   padding: 0 80px;
   vertical-align: middle;
 }
-/* line 212, src/sass/style.scss */
+/* line 174, src/sass/style.scss */
 .text-right h1,
 .text-left h1 {
   font-size: 18px;
@@ -396,61 +473,75 @@ a.button {
   margin-bottom: 25px;
   text-align: center;
 }
-/* line 219, src/sass/style.scss */
+/* line 181, src/sass/style.scss */
 .text-right p,
 .text-left p {
   font-size: 14px;
-  line-space: 3px;
+  letter-spacing: 3px;
   line-height: 150%;
 }
 
+/* line 188, src/sass/style.scss */
+.text-left {
+  float: left;
+}
+
+/* line 192, src/sass/style.scss */
+.text-right {
+  float: right;
+}
+
 /* Footer*/
-/* line 228, src/sass/style.scss */
+/* line 197, src/sass/style.scss */
 footer {
   padding: 60px 50px;
   background-color: #dadada;
   color: #fff;
 }
-/* line 232, src/sass/style.scss */
+/* line 201, src/sass/style.scss */
 footer p {
   display: inline-block;
 }
-/* line 235, src/sass/style.scss */
+/* line 204, src/sass/style.scss */
 footer .footer-nav {
   display: inline-block;
 }
-/* line 239, src/sass/style.scss */
+/* line 208, src/sass/style.scss */
 footer .footer-nav ul li a {
   color: #fff;
 }
-/* line 241, src/sass/style.scss */
+/* line 210, src/sass/style.scss */
 footer .footer-nav ul li a:hover {
   color: #000;
 }
 
 /* Media Queries */
 @media (max-width: 1200px) {
-  /* line 254, src/sass/style.scss */
+  /* line 223, src/sass/style.scss */
   .site-nav {
     display: none;
   }
 
-  /* line 257, src/sass/style.scss */
+  /* line 226, src/sass/style.scss */
   .c-hamburger {
-    position: absolute;
-    right: 50px;
-    top: 30px;
+    top: 5px;
+    right: 10px;
     display: block;
     z-index: 10;
   }
+
+  /* line 235, src/sass/style.scss */
+  div.logo img {
+    height: 150px;
+  }
 }
 @media (max-width: 768px) {
-  /* line 268, src/sass/style.scss */
+  /* line 243, src/sass/style.scss */
   .site-header {
     padding: 20px;
   }
 
-  /* line 271, src/sass/style.scss */
+  /* line 246, src/sass/style.scss */
   .c-hamburger {
     right: 10px;
   }

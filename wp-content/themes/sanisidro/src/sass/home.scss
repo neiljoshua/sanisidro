@@ -5,7 +5,7 @@
 		padding: 0;
 }
 
-/** Section ! Hero Section **/
+/** Section 1 Hero Section **/
 
 div.hero {
 	position: relative;
@@ -24,69 +24,30 @@ div.logo {
 	}
 }
 
-
-div.cta_container {
-	text-align: center;
-	vertical-align: middle;
-	// background-color: rgba(0 , 0, 0, 0.52);
-	// background: rgba(0 , 0, 0, 0.52);
-	// color: rgba(0 , 0, 0, 0.52);
-}
-
-div.cta_content {
-	padding:100px 10px;
-	color: $white;
-	p{
-		margin-bottom: 50px;
-	}
-}
-
-a.button {
-	padding: 10px 20px;
-	font-size: 15px;
-	color: $white;
-	background-color: rgba(0 , 0, 0, 0.52);
-	height: 10px;
-}
-
-.dark {
-	background: $black;
-	color: $white;
-}
-
-/** Section 2 and 3 **/
-div.slider{
+/** Section 2 Slider Section **/
+div.text-slider {
+	max-width: 700px;
+	margin:20px auto;
+	padding: 20px 0;
 	p{
 		margin-top: 40px;
 		margin-bottom: 40px;
 	}
 }
 
-div.slider-for {
-	overflow: hidden;
-	width: 100%;
-	height: 80vh;
-	// position: relative;
-	// .slick-container{
-	// 	overflow: hidden;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	right: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	img {
-	// 		width: 100%;
-	// 		min-width: 100%;
-	// 	}
-	// }	
+.slider-for {
+	width: 95%;
+	margin: 0 auto;
 }
 
-div.text-slider {
-	max-width: 700px;
-	margin:20px auto;
+.slick-slide {
+	img {
+		width: 100%;
+		height: 70vh;
+	}
 }
 
-
+/** Section 3 About Section **/
 div.about-text {
 	overflow: hidden;
 }
@@ -114,7 +75,7 @@ div.about-text {
 	color: $black;
 	p{
 		letter-spacing: 2px;
-		margin: 40px 20px;	
+		margin: 20px 20px;	
 	}
 	img {
 		height: 400px;
@@ -142,8 +103,53 @@ div.about-text {
 
 .text-left {
 	float: left;
+	p {
+		font-size: 30px;
+		font-weight: 400;
+	}
 }
 
 .text-right {
 	float: right;
+}
+/** Section 4 Gallery Section **/
+
+.featured_title, .feature_view {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.featured_title {
+	p {
+		text-align: left;
+		font-weight: 200;
+		font-size: 50px;
+	}
+}
+
+.feature_view {
+	p{
+		text-align: right;
+		font-size: 18px;
+	}
+}
+
+.home-gallery {
+	width: 100%;
+	margin: 40px 0;
+	padding: 40px 0;
+	overflow: hidden; 
+}
+
+.gallery-image {
+	width: 25%;
+	float: left;
+	img {
+		width: 150px;
+		height: 150px;
+		display: block;
+		margin: 20px auto;
+	}
 }

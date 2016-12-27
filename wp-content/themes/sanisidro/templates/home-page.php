@@ -43,7 +43,7 @@ if( have_rows('home_content') ): ?>
 
 	<?php 	// check current row layout ?>
 	<?php 	if( get_row_layout() == 'slider-home'): ?>
-			<section>
+			<section id="startchange">
 			<div class="text-slider">
 				 <?php the_sub_field('slider_description'); ?> 
 			</div>
@@ -56,7 +56,7 @@ if( have_rows('home_content') ): ?>
 					<?php $imageLink = get_sub_field('slider_image');?>
 
 						 <div class="slick-container">
-						 	<img src="<?php echo $imageLink; ?>" alt="<?php echo $imageLink; ?>"/>
+						 	<img class="<?php the_sub_field('css_class')?>" src="<?php echo $imageLink; ?>" alt="<?php echo $imageLink; ?>"/>
 						 </div>
 
 				<?php endwhile; ?>
@@ -81,11 +81,23 @@ if( have_rows('home_content') ): ?>
 	<?php 	if( get_row_layout() == 'featured_properties'): ?>
 			<section>
 			
-				<div class="text-left"><p><?php the_sub_field('featured_title') ?> </p></div>
-				<div class="text-right"><p><?php the_sub_field('feature_view') ?> </p></div>
-				<div class="about-gallery">
-					<?php the_sub_field('featured_gallery') ?>
-				</div>
+				<div class="featured_title"><p><?php the_sub_field('featured_title') ?> </p></div>
+				<div class="feature_view "><p><?php the_sub_field('feature_view') ?> </p></div>
+				
+				<?php 
+				$images = get_sub_field('featured_gallery'); 
+
+				if( $images ): ?>
+				    <ul class="home-gallery clear-float">
+				        <?php foreach( $images as $image ): ?>
+				            <li class="gallery-image" >
+				                <a href="<?php echo $image['url']; ?>">
+				                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+				                </a>
+				            </li>
+				        <?php endforeach; ?>
+				    </ul>
+				<?php endif; ?>
 				
 			</section>
 	<?php endif; ?>		

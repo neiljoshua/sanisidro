@@ -4,6 +4,25 @@
 	width:100%;
 	overflow: hidden;
 	z-index: 50;
+	opacity: 0.8;
+	&.white-background {
+		background: $white;
+		h1,h6,a {
+			color: $black;
+		}
+	}
+}
+
+.c-hamburger {
+	&.white-background {
+		
+		span {
+			background: $black;
+			&::before, &::after{
+				background-color: $black;
+			}	
+		}
+	}	
 }
 
 .site-branding {
@@ -15,6 +34,7 @@
 	 	font-size: 70%;
 	 }
 }
+
 .site-branding,
 .site-nav {
 	display: block;
@@ -65,7 +85,9 @@
 					color: $silver;
 					border-bottom: 1px solid $silver;
 				}
-
+				&.white-background {
+					color: $black;
+				}
 			}	
 		}
 	}

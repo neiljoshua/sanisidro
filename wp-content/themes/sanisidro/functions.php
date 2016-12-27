@@ -11,6 +11,7 @@ add_action('wp_enqueue_scripts','learningWordpress_resources');
 // // Enqueue Slick scripts and styles
 function themeprefix_slick_enqueue_scripts_styles() {
 
+	 wp_enqueue_script( 'sanisidro', get_template_directory_uri() . '/src/js/sanisidro.js', array( 'jquery' ),true);
 	 wp_enqueue_script( 'slickjs', get_stylesheet_directory_uri() . '/src/js/vendors/slick.min.js', array( 'jquery' ), '1.6.0', true );
 	 wp_enqueue_script( 'slickjs-init', get_stylesheet_directory_uri(). '/src/js/slick-init.js', array( 'slickjs' ), '1.6.0', true );
 	 wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/src/css/slick.css', '1.6.0', 'all');

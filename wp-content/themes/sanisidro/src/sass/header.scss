@@ -4,12 +4,15 @@
 	width:100%;
 	overflow: hidden;
 	z-index: 50;
-	opacity: 0.8;
+	opacity: 0.9;
+	h1 {
+		text-align: center;
+	}
 	&.white-background {
 		background: $white;
-		h1,h6,a {
-			color: $black;
-		}
+		a {
+		color: $black;
+	}
 	}
 }
 
@@ -27,15 +30,20 @@
 
 .site-branding {
 	float: left;
-	 h1 {
-	 	font-size: 150%;
+	visibility: hidden;
+	 a {
+	 	margin: 10px 20px;
+	 	display: block;
+	 	img{
+	 	height: 36px;
+	 	border-radius: 5px;
+	 	}
 	 }
-	 h6{
-	 	font-size: 70%;
+	 &.white-background {
+	 	visibility: visible;
 	 }
 }
 
-.site-branding,
 .site-nav {
 	display: block;
 	width: auto;
@@ -44,17 +52,17 @@
 
 /*Branding*/
 
-.site-branding {
-	h1, h6, a {
-		margin: 0;
-		padding: 0;
-		color: $white;
-	}
+// .site-branding {
+// 	h1, h6, a {
+// 		margin: 0;
+// 		padding: 0;
+// 		color: $white;
+// 	}
 
-	a{
-		color: $silver;
-	}
-}
+// 	a{
+// 		color: $silver;
+// 	}
+// }
 /*Navigation Menu*/
 
 .site-nav {

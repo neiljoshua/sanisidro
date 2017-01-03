@@ -56,11 +56,15 @@ if( have_rows('home_content') ): ?>
 					<?php $imageLink = get_sub_field('slider_image');?>
 
 						 <div class="slick-container">
-						 	<img class="<?php the_sub_field('css_class')?>" src="<?php echo $imageLink; ?>" alt="<?php echo $imageLink; ?>"/>
+						 	<img src="<?php echo $imageLink; ?>" alt="<?php echo $imageLink; ?>"/>
+						 	<p> <?php the_sub_field('slider_description')?></p>
 						 </div>
 
 				<?php endwhile; ?>
 				
+			</div>
+			<div class="text-left">
+				<p><?php the_sub_field('slider_about')?></p>
 			</div>
 			<?php endif; ?>
 
@@ -71,8 +75,8 @@ if( have_rows('home_content') ): ?>
 	<?php 	if( get_row_layout() == 'about_home'): ?>
 			<section>
 			<div class="about-text">
-				<div class="text-left"><p><?php the_sub_field('about_one') ?> </p></div>
-				<div class="text-right"><p><?php the_sub_field('about_two') ?> </p></div>
+				<div class="text-left"><h1><?php the_sub_field('about_title') ?> </h1></div>
+				<div class="text-right"><p><?php the_sub_field('about_description') ?> </p></div>
 			</div>		
 			</section>
 	<?php endif; ?>		
@@ -94,6 +98,7 @@ if( have_rows('home_content') ): ?>
 				                <a href="<?php echo $image['url']; ?>">
 				                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
 				                </a>
+				                <p><?php echo $image['caption']; ?></p>
 				            </li>
 				        <?php endforeach; ?>
 				    </ul>

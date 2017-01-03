@@ -6,6 +6,7 @@ Version: 1.0
 */
 
 @import 'reset';
+@import 'merriweather';
 @import 'variables';
 @import 'hamburger';
 @import 'mixin';
@@ -15,9 +16,12 @@ Version: 1.0
 
 /* General Layout */
 body {
-	font-family: Arial, san-serif;
+	font-family: $Merriweather, Arial, san-serif;
 	font-size: 14px;
 	color: #333;
+	&.fixed {
+
+	}
 }
 
 a {
@@ -58,7 +62,7 @@ article.post {
 	}
 }
 
-article.post:last-of-type{
+article.post:last-of-type {
 	border-bottom: none;
 }
 
@@ -76,49 +80,7 @@ section {
 /* Media Queries */
 @include media(large) {
 
-	.site-nav {
-		padding:0;
-		margin: 0;
-	    visibility: hidden;
-	    float: none;
-	    position: fixed;
-	    display: block;
-	    top: 0;
-	    bottom: 0;
-	    right: 0;
-	    left: 50%;
-	    background-color: $gray;
-	    ul {
-	    	display: block;
-		    position: absolute;
-		    top: 50%;
-		    transform: translateY(-50%);
-		    li{
-	    		color: $white;
-		    	width: 100%;
-		    	margin-bottom: 30px;
-		    	margin-left: 20px;
-		    	a {
-		    		display: block;
-		    	}
-		    }
-	    }
-	}
 	
-	.c-hamburger {
-		top: 5px;
-		right: 10px;
-		display: block;
-		z-index: 10;
-	}
-
-	div.logo {
-		
-		img{
-			height: 150px;
-		}
-	}
-
 }
 
 @include media(tablet) {

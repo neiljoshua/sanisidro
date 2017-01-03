@@ -6,6 +6,13 @@
 	var startChange = $('#startchange');
 	var offset = 0;
 
+	$('.c-hamburger--rot').on('click', function(e){
+      e.preventDefault();
+        $(this).toggleClass('is-active');
+       // $('header').toggleClass('active');
+        $('.site-nav').toggleClass('active');
+    });
+
 		if (startChange){
 		
 			$(document).scroll( function(){

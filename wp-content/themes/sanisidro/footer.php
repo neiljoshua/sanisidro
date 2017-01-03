@@ -4,7 +4,7 @@
 		<?php bloginfo('name')?> - &copy; <?php echo date('Y'); ?>
 		</p>
 
-		<nav class="site-nav footer-nav">
+		<nav class="footer-nav">
 				<?php 
 				$args =array(
 					'theme_location'=> 'footer'

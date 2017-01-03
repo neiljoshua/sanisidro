@@ -63,7 +63,7 @@ if( have_rows('home_content') ): ?>
 				<?php endwhile; ?>
 				
 			</div>
-			<div class="text-left">
+			<div class="slider-description">
 				<p><?php the_sub_field('slider_about')?></p>
 			</div>
 			<?php endif; ?>

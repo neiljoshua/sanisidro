@@ -58,6 +58,14 @@ div.text-slider {
 	}
 }
 
+.slider-description {
+	padding: 0 40px;
+	max-width: 50%;
+	p {
+		font-size: 18px;
+	}
+}
+
 /** Section 3 About Section **/
 div.about-text {
 	overflow: hidden;
@@ -115,6 +123,7 @@ div.about-text {
 .text-left {
 	float: left;
 	p {
+		max-width: 300px;
 		font-size: 22px;
 		font-weight: 400;
 	}
@@ -177,12 +186,39 @@ div.about-text {
 }
 
 @include media(tablet) {
+	.slider-description {
+		max-width: 100%;
+		p {
+			font-size: 16px;
+		}
+	}
+
+	.about-text {
+		padding: 0 40px;
+	}
+
+	.featured_title{
+		p{
+			font-size: 40px;
+		}
+	}
+
 	.gallery-image {
 	    width: 50%;
+	    img {
+	    	height: 200px;
+	    }
 	}
 }
 
 @include media(mobile) {
+
+	.text-left, .text-right {
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
 	.gallery-image {
 	    width: 100%;
 	    height: auto;

@@ -662,6 +662,36 @@ div.about-text {
     float: none;
   }
 }
+/* line 2, src/sass/projects.scss */
+.page-template-projects-page main {
+  padding-top: 60px;
+}
+/* line 6, src/sass/projects.scss */
+.page-template-projects-page a span {
+  background: #000;
+}
+/* line 9, src/sass/projects.scss */
+.page-template-projects-page a span::before, .page-template-projects-page a span::after {
+  background-color: #000;
+}
+/* line 14, src/sass/projects.scss */
+.page-template-projects-page .site-branding {
+  visibility: visible;
+}
+/* line 19, src/sass/projects.scss */
+.page-template-projects-page .site-nav a {
+  color: #000;
+}
+/* line 23, src/sass/projects.scss */
+.page-template-projects-page section, .page-template-projects-page section:first-child {
+  max-width: 980px;
+  margin: 0 auto;
+}
+/* line 27, src/sass/projects.scss */
+.page-template-projects-page section div.featured_title p, .page-template-projects-page section:first-child div.featured_title p {
+  font-size: 50px;
+}
+
 /* Footer*/
 /* line 5, src/sass/footer.scss */
 footer {
@@ -694,47 +724,47 @@ footer .footer-nav ul li a:hover {
 }
 
 /* General Layout */
-/* line 18, src/sass/style.scss */
+/* line 19, src/sass/style.scss */
 body {
   font-family: "Merriweather Sans", Arial, san-serif;
   font-size: 14px;
   color: #333;
 }
 
-/* line 27, src/sass/style.scss */
+/* line 28, src/sass/style.scss */
 a {
   text-decoration: none;
   color: #000;
 }
 
-/* line 32, src/sass/style.scss */
+/* line 33, src/sass/style.scss */
 p {
   line-height: 1.6;
   letter-spacing: 1.3px;
 }
 
-/* line 37, src/sass/style.scss */
+/* line 38, src/sass/style.scss */
 .pull-left {
   float: left;
 }
 
-/* line 41, src/sass/style.scss */
+/* line 42, src/sass/style.scss */
 .pull-right {
   float: right;
 }
 
-/* line 45, src/sass/style.scss */
+/* line 46, src/sass/style.scss */
 .clear-float {
   clear: both;
 }
 
-/* line 49, src/sass/style.scss */
+/* line 50, src/sass/style.scss */
 div.container {
   width: 100%;
 }
 
 /*post*/
-/* line 54, src/sass/style.scss */
+/* line 55, src/sass/style.scss */
 article.post {
   width: 90%;
   margin: 0 auto;
@@ -742,22 +772,22 @@ article.post {
   padding-bottom: 40px;
   border-bottom: 2px dotted #bbbbbb;
 }
-/* line 60, src/sass/style.scss */
+/* line 61, src/sass/style.scss */
 article.post h2 {
   margin-bottom: 20px;
 }
 
-/* line 65, src/sass/style.scss */
+/* line 66, src/sass/style.scss */
 article.post:last-of-type {
   border-bottom: none;
 }
 
-/* line 70, src/sass/style.scss */
+/* line 71, src/sass/style.scss */
 section {
   width: 100%;
   overflow: hidden;
 }
-/* line 73, src/sass/style.scss */
+/* line 74, src/sass/style.scss */
 section:first-child {
   margin-top: 0;
   margin-bottom: 0;
@@ -766,7 +796,7 @@ section:first-child {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  /* line 88, src/sass/style.scss */
+  /* line 89, src/sass/style.scss */
   .c-hamburger {
     right: 10px;
   }

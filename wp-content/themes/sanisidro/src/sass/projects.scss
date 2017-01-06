@@ -1,0 +1,33 @@
+.page-template-projects-page {
+	main {
+		padding-top: 60px;
+	}
+	a {
+		span {
+			background: $black;
+		}
+		span::before, span::after {
+			background-color: $black;
+
+		}
+	}
+	.site-branding {
+		visibility: visible;
+	}
+
+	.site-nav {
+		a{
+			color: $black;
+		}
+	}
+	section, section:first-child {
+		max-width: 980px;
+		margin: 0 auto;
+		div.featured_title{
+			p {
+				font-size: 50px;
+			}
+		}
+		
+	}
+}

@@ -9,9 +9,12 @@
 	$('.c-hamburger--rot').on('click', function(e){
       e.preventDefault();
         $(this).toggleClass('is-active');
-       // $('header').toggleClass('active');
+        $('body').toggleClass('fixed');
         $('.site-nav').toggleClass('active');
     });
+
+
+	function changeMenuColor() {
 
 		if (startChange){
 		
@@ -34,7 +37,13 @@
 			})
 
 		}
-
+	}	
+		
+	if ( $('body').hasClass('home') ) {
+		changeMenuColor();
+	}
+	
 	});
+
 
 })(jQuery, this);

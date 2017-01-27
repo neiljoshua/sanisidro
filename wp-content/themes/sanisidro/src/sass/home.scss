@@ -47,7 +47,7 @@ div.text-slider {
 .slick-slide {
 	img {
 		width: 100%;
-		height: 70vh;
+		height: 65vh;
 	}
 }
 
@@ -134,13 +134,16 @@ div.about-text {
 }
 /** Section 4 Gallery Section **/
 
-.featured_title, .feature_view {
+.featured_title, .featured_link {
 	display: block;
 	margin: 0 auto;
 	padding: 0 40px;
 }
 
 .featured_title {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	max-width: 1300px;
 	p {
 		text-align: left;
 		font-weight: 200;
@@ -148,11 +151,9 @@ div.about-text {
 	}
 }
 
-.feature_view {
-	p{
+a.featured_link {
 		text-align: right;
 		font-size: 18px;
-	}
 }
 
 .home-gallery {
@@ -160,6 +161,7 @@ div.about-text {
     margin: 40px auto;
     overflow: hidden;
     max-width: 1200px;
+    padding-bottom: 40px;
 }
 
 .gallery-image {
@@ -170,7 +172,7 @@ div.about-text {
 		margin: 20px auto;
 	}
 	img {
-		height: 160px;
+		height: 180px;
 		display: block;
 	}
 	p{

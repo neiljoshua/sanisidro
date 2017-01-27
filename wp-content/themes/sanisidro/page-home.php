@@ -3,7 +3,7 @@
 *Template Name: Home Page
 **/
 
-add_action('home_page_content', 'do_home_page_content');
+// add_action('home_page_content', 'do_home_page_content');
 
 add_filter('body_class', 'add_home_page_body_class');
 
@@ -15,9 +15,11 @@ function add_home_page_body_class($classes) {
 
 }
 
-// add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'nav',) );
+add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'nav',) );
 
-function do_home_page_content() {
+// function do_home_page_content() {
+
+get_header(); 
 ?>
 
 <main>
@@ -83,28 +85,7 @@ if( have_rows('home_content') ): ?>
 
 	<?php 	// check current row layout ?>
 	<?php 	if( get_row_layout() == 'featured_properties'): ?>
-			<section>
-			
-				<div class="featured_title"><p><?php the_sub_field('featured_title') ?> </p></div>
-				<div class="feature_view "><p><?php the_sub_field('feature_view') ?> </p></div>
-				
-				<?php 
-				$images = get_sub_field('featured_gallery'); 
-
-				if( $images ): ?>
-				    <ul class="home-gallery clear-float">
-				        <?php foreach( $images as $image ): ?>
-				            <li class="gallery-image" >
-				                <a href="<?php echo $image['url']; ?>">
-				                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-				                </a>
-				                <p><?php echo $image['caption']; ?></p>
-				            </li>
-				        <?php endforeach; ?>
-				    </ul>
-				<?php endif; ?>
-				
-			</section>
+			<?php include("partials/featured-blocks.php") ?>
 	<?php endif; ?>		
 
 
@@ -122,11 +103,11 @@ endif;
 
 <?php
 
-}
+// }
 
 
-get_header(); 
 
-do_action( 'home_page_content' );
+
+// do_action( 'home_page_content' );
 
 get_footer(); 

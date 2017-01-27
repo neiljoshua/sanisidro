@@ -21,7 +21,15 @@ body {
 	font-size: 14px;
 	color: #333;
 	&.fixed {
+		overflow: hidden;
+	}
+}
 
+section {
+	max-width: 1180px;
+	margin: 0 auto;
+	&:first-child{
+		max-width: 100%;
 	}
 }
 
@@ -77,6 +85,7 @@ section {
 		padding: 0;
 	}
 }
+
 
 /* Media Queries */
 @include media(large) {

@@ -21,6 +21,13 @@ function themeprefix_slick_enqueue_scripts_styles() {
 
 add_action( 'wp_enqueue_scripts', 'themeprefix_slick_enqueue_scripts_styles' );
 
+// Remove Admin bar
+function remove_admin_bar(){
+    return false;
+}
+add_filter( 'show_admin_bar', 'remove_admin_bar' ); // Remove Admin bar
+
+add_image_size( 'full', '2400', '1200', false );
 
 // Register San Isidro menus.
 register_nav_menus( array(
@@ -28,3 +35,44 @@ register_nav_menus( array(
 		'footer' => __( 'Footer Menu'),
 	) );
 
+// Register custom post Properties
+
+add_action( 'init', 'create_post_type' );
+
+function create_post_type() {
+
+  register_post_type( 'project',
+    array(
+      'labels' => array(
+        'name' => __( 'Projects' ),
+        'singular_name' => __( 'Project' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'rewrite' => array('slug' => 'project'),
+      'menu_position' => 5,
+      // 'rewrite' => array( 'slug' => '/our-properties/%state%', 'with_front' => false )
+      'capability_type' => 'post',
+    )
+  );
+
+  register_post_type( 'members',
+    array(
+      'labels' => array(
+        'name' => __( 'Members' ),
+        'singular_name' => __( 'Member' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'rewrite' => array('slug' => 'members'),
+      'menu_position' => 5,
+      // 'rewrite' => array( 'slug' => '/our-properties/%state%', 'with_front' => false )
+    )
+  );
+
+ }
+
+ flush_rewrite_rules();
+
+
+  

@@ -15,7 +15,7 @@ function add_full_width_body_class($classes) {
 
 }
 
-// add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'nav',) );
+add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'nav',) );
 
 function do_full_width_content() {
 ?>

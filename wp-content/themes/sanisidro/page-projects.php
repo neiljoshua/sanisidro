@@ -43,7 +43,7 @@ $args = array(
 $posts = get_posts( $args );
     
 ?>
-   <section class="hero-project">
+   <section >
    	<!-- display lead image. -->
 <?php
 
@@ -58,8 +58,8 @@ $posts = get_posts( $args );
 	   	$lead = get_field('project_lead');
 	   	if ($lead){
 ?>
-	   		<div>
-	   			<img class ="hero-image" src="<?php echo $imagelead; ?>">
+	   		<div class="page-hero">
+	   			<img class ="hero-page-image" src="<?php echo $imagelead; ?>">
 	   		</div>
 <?php
 	   	}
@@ -72,9 +72,9 @@ $posts = get_posts( $args );
 
    <!-- display propject -->
 
-   <div class="featured_title"><p>Projects</p></div>
 
-   <section class="home-gallery clear-float">
+   <section>
+   		<div class="featured_title"><p>Projects</p></div>
 	 	<?php include("partials/featured-blocks.php") ?>
    </section>		
 

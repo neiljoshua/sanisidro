@@ -13,6 +13,17 @@
         $('.site-nav').toggleClass('active');
     });
 
+	function addWhiteBackGroundMenu() {
+		$('header').addClass('white-background');
+		$('.site-branding').addClass('white-background');
+		$('a.c-hamburger').addClass('white-background');
+	}
+
+	function removeWhiteBackGroundMenu() {
+		$('header').removeClass('white-background');
+		$('.site-branding').removeClass('white-background');
+		$('a.c-hamburger').removeClass('white-background');
+	}
 
 	function changeMenuColor() {
 
@@ -22,16 +33,11 @@
 				scrollStart = $(this).scrollTop();
 				offset = startChange.offset().top - 55 ;
 				if( scrollStart >= offset ){
-					console.log('passed bellow hero');
-					$('header').addClass('white-background');
-					$('.site-branding').addClass('white-background');
-					$('a.c-hamburger').addClass('white-background');
+					addWhiteBackGroundMenu();
 
 				} else {
-					console.log('We are on the hero section');
-					$('header').removeClass('white-background');
-					$('.site-branding').removeClass('white-background');
-					$('a.c-hamburger').removeClass('white-background');
+					removeWhiteBackGroundMenu();
+					
 				}
 
 			})
@@ -41,6 +47,8 @@
 		
 	if ( $('body').hasClass('home') ) {
 		changeMenuColor();
+		} else {
+			addWhiteBackGroundMenu();
 	}
 	
 	});

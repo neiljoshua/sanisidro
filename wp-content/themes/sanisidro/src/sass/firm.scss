@@ -1,0 +1,79 @@
+.firm {
+	div.firm-description {
+		position: relative;
+		max-width: $container-max-width;
+		margin: 20px auto;
+		p{
+			padding: 30px 20px;
+			max-width: $content-lenght;
+			margin: 0 auto;
+		}	
+	}
+	.member-container {
+		overflow: hidden;
+		margin: 20px;
+		padding-bottom: 20px;
+		&:nth-child(odd){
+			.image {
+				float:left;
+			}
+			.text{
+				float:right;
+				h3,h2,p {
+					margin-left: 25px;
+				}
+			}
+
+		}
+		&:nth-child(even){
+			.image {
+				float:right;
+				img {
+					float:right;
+					margin-right: 0;
+				}
+			}
+			.text{
+				float:left;
+				p {
+					margin-right: 25px;
+				}
+			}
+
+		}
+	}
+
+	.image {
+		width: 40%;
+		overflow: hidden;
+		img {
+			max-height: 400px;
+			margin: 0;
+		}
+	}
+	.text {
+		width: 60%;
+
+		h2,h3 {
+			margin-bottom: 20px;
+		}
+		h2{
+			margin-top: 20px;
+			font-size: 18px;
+		}
+		p {
+			max-width: $content-lenght;
+		}
+	}
+
+	@include media(tablet) {
+	
+		.image {
+			img {
+				max-height: 300px;
+			}	
+		}
+	}
+
+
+}	

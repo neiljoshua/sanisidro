@@ -28,9 +28,9 @@
 ?>
 
 	
-	<section class="hero-project">
+	<section class="page-hero">
 		<div>
-			<img class="hero-image" src="<?php echo $image ?>" />
+			<img class="hero-page-image" src="<?php echo $image ?>" />
 		</div>
 	</section>
 

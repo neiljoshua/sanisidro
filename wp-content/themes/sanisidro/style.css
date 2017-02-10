@@ -385,22 +385,14 @@ button {
 }
 
 /** Section 1 Hero Section **/
-/* line 10, src/sass/home.scss */
-div.hero {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  min-height: 85vh;
-}
-
-/* line 17, src/sass/home.scss */
+/* line 12, src/sass/home.scss */
 div.logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
-/* line 22, src/sass/home.scss */
+/* line 17, src/sass/home.scss */
 div.logo img {
   height: 170px;
   border: 2px solid white;
@@ -411,52 +403,52 @@ div.logo img {
 }
 
 /** Section 2 Slider Section **/
-/* line 33, src/sass/home.scss */
+/* line 28, src/sass/home.scss */
 div.text-slider {
   max-width: 700px;
   margin: 20px auto;
   padding: 20px 0;
 }
-/* line 37, src/sass/home.scss */
+/* line 32, src/sass/home.scss */
 div.text-slider p {
   margin: 40px;
 }
 
-/* line 42, src/sass/home.scss */
+/* line 37, src/sass/home.scss */
 .slider-for {
   width: 95%;
   margin: 0 auto;
 }
 
-/* line 48, src/sass/home.scss */
+/* line 43, src/sass/home.scss */
 .slick-slide img {
   width: 100%;
   height: 65vh;
 }
 
-/* line 55, src/sass/home.scss */
+/* line 50, src/sass/home.scss */
 .slick-container p {
   text-align: right;
   margin: 15px 0;
 }
 
-/* line 61, src/sass/home.scss */
+/* line 56, src/sass/home.scss */
 .slider-description {
   padding: 0 40px;
   max-width: 50%;
 }
-/* line 64, src/sass/home.scss */
+/* line 59, src/sass/home.scss */
 .slider-description p {
   font-size: 18px;
 }
 
 /** Section 3 About Section **/
-/* line 70, src/sass/home.scss */
+/* line 65, src/sass/home.scss */
 div.about-text {
   overflow: hidden;
 }
 
-/* line 74, src/sass/home.scss */
+/* line 69, src/sass/home.scss */
 .image-text,
 .text-image {
   display: -webkit-flex;
@@ -464,7 +456,7 @@ div.about-text {
   display: flex;
 }
 
-/* line 81, src/sass/home.scss */
+/* line 76, src/sass/home.scss */
 .image-left,
 .text-right,
 .image-right,
@@ -480,7 +472,7 @@ div.about-text {
   width: 50%;
   color: #000;
 }
-/* line 95, src/sass/home.scss */
+/* line 90, src/sass/home.scss */
 .image-left p,
 .text-right p,
 .image-right p,
@@ -488,7 +480,7 @@ div.about-text {
   letter-spacing: 1.3px;
   margin: 20px 0;
 }
-/* line 99, src/sass/home.scss */
+/* line 94, src/sass/home.scss */
 .image-left img,
 .text-right img,
 .image-right img,
@@ -497,13 +489,13 @@ div.about-text {
   max-height: 1000px;
 }
 
-/* line 105, src/sass/home.scss */
+/* line 100, src/sass/home.scss */
 .text-right,
 .text-left {
   padding: 0 40px;
   vertical-align: middle;
 }
-/* line 109, src/sass/home.scss */
+/* line 104, src/sass/home.scss */
 .text-right h1,
 .text-left h1 {
   font-size: 20px;
@@ -512,7 +504,7 @@ div.about-text {
   margin-top: 40px;
   padding-top: 40px;
 }
-/* line 116, src/sass/home.scss */
+/* line 111, src/sass/home.scss */
 .text-right p,
 .text-left p {
   font-size: 14px;
@@ -520,74 +512,73 @@ div.about-text {
   line-height: 150%;
 }
 
-/* line 123, src/sass/home.scss */
+/* line 118, src/sass/home.scss */
 .text-left {
   float: left;
 }
-/* line 125, src/sass/home.scss */
+/* line 120, src/sass/home.scss */
 .text-left p {
   max-width: 300px;
   font-size: 22px;
   font-weight: 400;
 }
 
-/* line 132, src/sass/home.scss */
+/* line 127, src/sass/home.scss */
 .text-right {
   float: right;
 }
 
 /** Section 4 Gallery Section **/
-/* line 137, src/sass/home.scss */
+/* line 132, src/sass/home.scss */
 .featured_title, .featured_link {
   display: block;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-/* line 143, src/sass/home.scss */
+/* line 138, src/sass/home.scss */
 .featured_title {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  max-width: 1300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 1280px;
 }
-/* line 147, src/sass/home.scss */
+/* line 142, src/sass/home.scss */
 .featured_title p {
   text-align: left;
   font-weight: 200;
   font-size: 80px;
 }
 
-/* line 154, src/sass/home.scss */
+/* line 149, src/sass/home.scss */
 a.featured_link {
   text-align: right;
   font-size: 18px;
 }
 
-/* line 159, src/sass/home.scss */
+/* line 154, src/sass/home.scss */
 .home-gallery {
   width: 100%;
-  margin: 40px auto;
+  margin: 0 auto;
   overflow: hidden;
-  max-width: 1200px;
   padding-bottom: 40px;
 }
 
-/* line 167, src/sass/home.scss */
+/* line 161, src/sass/home.scss */
 .gallery-image {
   width: 25%;
   float: left;
 }
-/* line 170, src/sass/home.scss */
+/* line 164, src/sass/home.scss */
 .gallery-image img, .gallery-image p {
   width: 90%;
   margin: 20px auto;
 }
-/* line 174, src/sass/home.scss */
+/* line 168, src/sass/home.scss */
 .gallery-image img {
   height: 180px;
   display: block;
 }
-/* line 178, src/sass/home.scss */
+/* line 172, src/sass/home.scss */
 .gallery-image p {
   text-align: center;
   padding-bottom: 20px;
@@ -596,43 +587,43 @@ a.featured_link {
 }
 
 @media (max-width: 768px) {
-  /* line 191, src/sass/home.scss */
+  /* line 185, src/sass/home.scss */
   .slider-description {
     max-width: 100%;
   }
-  /* line 193, src/sass/home.scss */
+  /* line 187, src/sass/home.scss */
   .slider-description p {
     font-size: 16px;
   }
 
-  /* line 198, src/sass/home.scss */
+  /* line 192, src/sass/home.scss */
   .about-text {
     padding: 0 40px;
   }
 
-  /* line 203, src/sass/home.scss */
+  /* line 197, src/sass/home.scss */
   .featured_title p {
     font-size: 40px;
   }
 
-  /* line 208, src/sass/home.scss */
+  /* line 202, src/sass/home.scss */
   .gallery-image {
     width: 50%;
   }
-  /* line 210, src/sass/home.scss */
+  /* line 204, src/sass/home.scss */
   .gallery-image img {
     height: 200px;
   }
 }
 @media (max-width: 600px) {
-  /* line 218, src/sass/home.scss */
+  /* line 212, src/sass/home.scss */
   .text-left, .text-right {
     float: none;
     padding: 0;
     width: 100%;
   }
 
-  /* line 224, src/sass/home.scss */
+  /* line 218, src/sass/home.scss */
   .gallery-image {
     width: 100%;
     height: auto;
@@ -640,64 +631,193 @@ a.featured_link {
   }
 }
 /* line 3, src/sass/projects.scss */
-.projects main {
-  padding-top: 60px;
-}
-/* line 8, src/sass/projects.scss */
-.projects a span {
-  background: #000;
-}
-/* line 11, src/sass/projects.scss */
-.projects a span::before, .projects a span::after {
-  background-color: #000;
-}
-/* line 17, src/sass/projects.scss */
-.projects .site-header {
-  background-color: #fff;
-  opacity: 0.8;
-}
-/* line 22, src/sass/projects.scss */
-.projects .site-branding {
-  visibility: visible;
-}
-/* line 27, src/sass/projects.scss */
-.projects .site-nav a {
-  color: #000;
-}
-/* line 32, src/sass/projects.scss */
-.projects .hero-project {
-  margin: 0 auto;
-  height: 65vh;
-  max-width: 1200px;
-  position: relative;
-}
-/* line 37, src/sass/projects.scss */
-.projects .hero-project div {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-/* line 45, src/sass/projects.scss */
-.projects .hero-image {
-  width: 100%;
-  height: 100%;
-}
-/* line 50, src/sass/projects.scss */
 .projects .projects-link-page {
   margin-left: 30px;
   font-size: 25px;
 }
-/* line 55, src/sass/projects.scss */
+/* line 8, src/sass/projects.scss */
 .projects .about-project {
   width: 70%;
   float: right;
 }
-/* line 58, src/sass/projects.scss */
+/* line 11, src/sass/projects.scss */
 .projects .about-project p {
   padding: 25px;
   margin-right: 25px;
+}
+
+/* line 2, src/sass/firm.scss */
+.firm div.firm-description {
+  position: relative;
+  max-width: 1280px;
+  margin: 20px auto;
+}
+/* line 6, src/sass/firm.scss */
+.firm div.firm-description p {
+  padding: 30px 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+/* line 12, src/sass/firm.scss */
+.firm .member-container {
+  overflow: hidden;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+/* line 17, src/sass/firm.scss */
+.firm .member-container:nth-child(odd) .image {
+  float: left;
+}
+/* line 20, src/sass/firm.scss */
+.firm .member-container:nth-child(odd) .text {
+  float: right;
+}
+/* line 22, src/sass/firm.scss */
+.firm .member-container:nth-child(odd) .text h3, .firm .member-container:nth-child(odd) .text h2, .firm .member-container:nth-child(odd) .text p {
+  margin-left: 25px;
+}
+/* line 29, src/sass/firm.scss */
+.firm .member-container:nth-child(even) .image {
+  float: right;
+}
+/* line 31, src/sass/firm.scss */
+.firm .member-container:nth-child(even) .image img {
+  float: right;
+  margin-right: 0;
+}
+/* line 36, src/sass/firm.scss */
+.firm .member-container:nth-child(even) .text {
+  float: left;
+}
+/* line 38, src/sass/firm.scss */
+.firm .member-container:nth-child(even) .text p {
+  margin-right: 25px;
+}
+/* line 46, src/sass/firm.scss */
+.firm .image {
+  width: 40%;
+  overflow: hidden;
+}
+/* line 49, src/sass/firm.scss */
+.firm .image img {
+  max-height: 400px;
+  margin: 0;
+}
+/* line 54, src/sass/firm.scss */
+.firm .text {
+  width: 60%;
+}
+/* line 57, src/sass/firm.scss */
+.firm .text h2, .firm .text h3 {
+  margin-bottom: 20px;
+}
+/* line 60, src/sass/firm.scss */
+.firm .text h2 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+/* line 64, src/sass/firm.scss */
+.firm .text p {
+  max-width: 720px;
+}
+@media (max-width: 768px) {
+  /* line 72, src/sass/firm.scss */
+  .firm .image img {
+    max-height: 300px;
+  }
+}
+
+/* line 4, src/sass/contact.scss */
+.contact section:first-child {
+  text-align: center;
+  padding-top: 60px;
+  background-color: #b9e2e0;
+}
+/* line 8, src/sass/contact.scss */
+.contact section:first-child h1, .contact section:first-child p {
+  width: 100%;
+  max-width: 650px;
+  margin: 20px auto;
+  padding-bottom: 30px;
+}
+/* line 15, src/sass/contact.scss */
+.contact section:first-child h1 {
+  padding-top: 20px;
+  font-size: 45px;
+  font-weight: 200;
+}
+/* line 21, src/sass/contact.scss */
+.contact section:first-child p {
+  text-align: left;
+}
+/* line 27, src/sass/contact.scss */
+.contact .contact-map {
+  width: 100%;
+  height: 400px;
+  background: url("src/images/contactmap.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 38, src/sass/contact.scss */
+.contact .error, .contact .success {
+  border-radius: 3px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 15px 9px;
+  text-align: center;
+}
+/* line 46, src/sass/contact.scss */
+.contact .error {
+  border: 1px solid red;
+  color: red;
+}
+/* line 51, src/sass/contact.scss */
+.contact .success {
+  border: 1px solid green;
+  color: green;
+}
+/* line 57, src/sass/contact.scss */
+.contact form {
+  width: 720px;
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 20px 0;
+}
+/* line 62, src/sass/contact.scss */
+.contact form p {
+  margin-bottom: 20px;
+}
+/* line 65, src/sass/contact.scss */
+.contact form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #b9e2e0;
+  padding: 5px 0 80px;
+  margin: 20px auto 0;
+  max-width: 720px;
+  resize: none;
+  outline: none;
+}
+/* line 76, src/sass/contact.scss */
+.contact form input {
+  display: block;
+  width: 40%;
+  margin-top: 20px;
+  border: 1px solid #b9e2e0;
+  padding: 5px 0;
+}
+/* line 84, src/sass/contact.scss */
+.contact form span {
+  color: red;
+}
+/* line 90, src/sass/contact.scss */
+.contact input.human {
+  display: inline-block;
+  border: 1px solid #000;
+  width: 60px;
+  border: 1px solid #b9e2e0;
 }
 
 /* Footer*/
@@ -732,61 +852,94 @@ footer .footer-nav ul li a:hover {
 }
 
 /* General Layout */
-/* line 19, src/sass/style.scss */
+/* line 21, src/sass/style.scss */
 body {
   font-family: "Merriweather Sans", Arial, san-serif;
   font-size: 14px;
   color: #333;
 }
-/* line 23, src/sass/style.scss */
+/* line 25, src/sass/style.scss */
 body.fixed {
   overflow: hidden;
 }
 
-/* line 28, src/sass/style.scss */
+/* line 30, src/sass/style.scss */
 section {
-  max-width: 1180px;
+  font-family: "Merriweather Sans", Arial, san-serif;
+  max-width: 1280px;
   margin: 0 auto;
 }
-/* line 31, src/sass/style.scss */
+/* line 34, src/sass/style.scss */
 section:first-child {
   max-width: 100%;
 }
 
-/* line 36, src/sass/style.scss */
+/* line 39, src/sass/style.scss */
 a {
   text-decoration: none;
   color: #000;
 }
 
-/* line 41, src/sass/style.scss */
+/* line 44, src/sass/style.scss */
 p {
   line-height: 1.6;
   letter-spacing: 1.3px;
 }
 
-/* line 46, src/sass/style.scss */
+/* line 49, src/sass/style.scss */
 .pull-left {
   float: left;
 }
 
-/* line 50, src/sass/style.scss */
+/* line 53, src/sass/style.scss */
 .pull-right {
   float: right;
 }
 
-/* line 54, src/sass/style.scss */
+/* line 57, src/sass/style.scss */
 .clear-float {
   clear: both;
 }
 
-/* line 58, src/sass/style.scss */
+/* line 61, src/sass/style.scss */
+div.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 85vh;
+}
+
+/* line 70, src/sass/style.scss */
 div.container {
   width: 100%;
 }
 
+/* line 74, src/sass/style.scss */
+.page-hero {
+  padding-top: 60px;
+  margin: 0 auto;
+  height: 65vh;
+  max-height: 65vh;
+  max-width: 1280px;
+  position: relative;
+}
+/* line 81, src/sass/style.scss */
+.page-hero div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 89, src/sass/style.scss */
+.hero-page-image {
+  width: 100%;
+  height: 100%;
+}
+
 /*post*/
-/* line 63, src/sass/style.scss */
+/* line 95, src/sass/style.scss */
 article.post {
   width: 90%;
   margin: 0 auto;
@@ -794,22 +947,22 @@ article.post {
   padding-bottom: 40px;
   border-bottom: 2px dotted #bbbbbb;
 }
-/* line 69, src/sass/style.scss */
+/* line 101, src/sass/style.scss */
 article.post h2 {
   margin-bottom: 20px;
 }
 
-/* line 74, src/sass/style.scss */
+/* line 106, src/sass/style.scss */
 article.post:last-of-type {
   border-bottom: none;
 }
 
-/* line 79, src/sass/style.scss */
+/* line 111, src/sass/style.scss */
 section {
   width: 100%;
   overflow: hidden;
 }
-/* line 82, src/sass/style.scss */
+/* line 114, src/sass/style.scss */
 section:first-child {
   margin-top: 0;
   margin-bottom: 0;
@@ -818,8 +971,13 @@ section:first-child {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  /* line 98, src/sass/style.scss */
+  /* line 130, src/sass/style.scss */
   .c-hamburger {
     right: 10px;
+  }
+
+  /* line 135, src/sass/style.scss */
+  .image img {
+    max-height: 200px;
   }
 }

@@ -41,7 +41,7 @@ if( have_rows('home_content') ): ?>
 					</div>
 				</div>
 			</section>
-	<?php endif; ?>		
+	<?php 	endif; ?>		
 
 	<?php 	// check current row layout ?>
 	<?php 	if( get_row_layout() == 'slider-home'): ?>
@@ -85,7 +85,15 @@ if( have_rows('home_content') ): ?>
 
 	<?php 	// check current row layout ?>
 	<?php 	if( get_row_layout() == 'featured_properties'): ?>
+		<section>
+			
+			<div class="featured_title"><p><?php the_sub_field('featured_title') ?> </p></div>
+			<a class="featured_link" href="<?php the_sub_field('featured_link') ?>">
+									<?php the_sub_field('featured_text') ?></a>
 			<?php include("partials/featured-blocks.php") ?>
+
+		</section>
+			
 	<?php endif; ?>		
 
 

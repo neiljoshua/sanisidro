@@ -7,12 +7,7 @@
 
 /** Section 1 Hero Section **/
 
-div.hero {
-	position: relative;
-	background-size: cover;
-	background-position: center;
-	min-height:85vh;
-}
+
 
 div.logo {
 	position: absolute;
@@ -141,9 +136,9 @@ div.about-text {
 }
 
 .featured_title {
-	padding-top: 40px;
-	padding-bottom: 40px;
-	max-width: 1300px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	max-width: $container-max-width;
 	p {
 		text-align: left;
 		font-weight: 200;
@@ -158,9 +153,8 @@ a.featured_link {
 
 .home-gallery {
 	width: 100%;
-    margin: 40px auto;
+    margin: 0 auto;
     overflow: hidden;
-    max-width: 1200px;
     padding-bottom: 40px;
 }
 

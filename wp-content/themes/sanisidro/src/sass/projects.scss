@@ -1,52 +1,5 @@
 .projects {
 
-	main {
-		padding-top: 60px;
-	}
-
-	a {
-		span {
-			background: $black;
-		}
-		span::before, span::after {
-			background-color: $black;
-
-		}
-	}
-
-	.site-header {
-		background-color: $white;
-		opacity: 0.8;
-	}
-	
-	.site-branding {
-		visibility: visible;
-	}
-
-	.site-nav {
-		a{
-			color: $black;
-		}
-	}
-
-	.hero-project {
-		margin: 0 auto;
-		height: 65vh;
-		max-width: 1200px;
-		position: relative;
-		div {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-		}
-	}
-	.hero-image{
-		width: 100%;
-		height: 100%;
-	}
-
 	.projects-link-page {
 		margin-left: 30px;
 		font-size: 25px;

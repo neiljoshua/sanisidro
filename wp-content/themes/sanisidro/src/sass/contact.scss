@@ -1,0 +1,97 @@
+.contact {
+
+	section {
+		&:first-child {
+		text-align: center;
+			padding-top:60px;
+			background-color: $seagreen;
+			h1, p {
+				width: 100%;
+				max-width: 650px;
+				margin: 20px auto;
+				padding-bottom: 30px;
+			}
+
+			h1 {
+				padding-top: 20px;
+				font-size: 45px;
+				font-weight: 200;
+			}
+
+			p {
+				text-align: left;
+			}
+		}
+	}
+
+	.contact-map {
+		width: 100%;
+		height: 400px;
+		background: url('src/images/contactmap.jpg') center center no-repeat;
+		-webkit-background-size: cover;
+	 	-moz-background-size: cover;
+	  -o-background-size: cover;
+		background-size: cover;
+	}
+	
+
+	.error, .success {
+	  border-radius: 3px;
+	  max-width: 720px;
+	  margin: 0 auto;
+	  padding: 15px 9px;
+	 text-align: center;
+	}
+
+	.error {
+		border: 1px solid red;
+	  color: red;
+	}
+
+	.success{
+	  border: 1px solid green;
+	  color: green;
+	  
+	}
+
+	form {
+		width: 720px;
+		max-width: 720px;
+		margin: 20px auto;
+		padding: 20px 0;
+		p {
+			margin-bottom: 20px;
+		}
+		textarea {
+			display: block;
+		  width: 100%;
+			border: 1px solid $seagreen;
+		  padding: 5px 0 80px;
+		  margin: 20px auto 0;
+		  max-width: 720px;
+		  resize: none;
+		  outline: none;
+		}
+
+		input {
+			display: block;
+			width: 40%;
+			margin-top: 20px;
+			border: 1px solid $seagreen;
+			padding: 5px 0;
+
+		}
+		span{
+		  color: red;
+		}
+
+	}
+
+	input.human {
+		display: inline-block;
+		border: 1px solid $black;
+		width: 60px;
+		border: 1px solid $seagreen;
+	}
+
+}

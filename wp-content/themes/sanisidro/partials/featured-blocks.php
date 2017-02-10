@@ -1,27 +1,24 @@
-<section>
-			
-				<div class="featured_title"><p><?php the_sub_field('featured_title') ?> </p></div>
-				<a class="featured_link" href="<?php the_sub_field('featured_link') ?>">
-										<?php the_sub_field('featured_text') ?></a>
-	<?php 
-				$args = array(
-				  'post_type' => 'project',
-				  'posts_per_page' => 8,
-				  'order' => 'DESC',
-				  'orderby' => 'post_date',
-				  'meta_query' => array(
-				    array(
-				      'key' => 'project_featured',
-				      'value' => '1',
-				      'compare' => '=='
-				    )
-				  )
-				);
 
-				$posts = get_posts( $args );
+	<?php 
+		$args = array(
+		  'post_type' => 'project',
+		  'posts_per_page' => 8,
+		  'order' => 'DESC',
+		  'orderby' => 'post_date',
+		  'meta_query' => array(
+		    array(
+		      'key' => 'project_featured',
+		      'value' => '1',
+		      'compare' => '=='
+		    )
+		  )
+		);
+
+		$posts = get_posts( $args );
 	?>
 
-			    <ul class="home-gallery clear-float">
+	<ul class="home-gallery clear-float">
+
 	<?php 		foreach( $posts as $post ): 
 			        setup_postdata( $post );
 					$title = get_the_title(); 
@@ -35,8 +32,8 @@
 		                <p><?php echo $title ?></p>
 		            </li>
 	<?php 		endforeach; ?>
-			    <?php wp_reset_postdata();?>
-			    </ul>
-				<!-- <?php //endif; ?> -->
+
+	<?php wp_reset_postdata();?>
+
+	</ul>
 				
-			</section>

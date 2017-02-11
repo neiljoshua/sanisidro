@@ -5,14 +5,16 @@
 		text-align: center;
 			padding-top:60px;
 			background-color: $seagreen;
-			h1, p {
-				width: 100%;
+
+			p {
+				width: 90%;
 				max-width: 650px;
 				margin: 20px auto;
-				padding-bottom: 30px;
+				padding: 0 20px 30px;
 			}
 
 			h1 {
+				margin-top: 20px;
 				padding-top: 20px;
 				font-size: 45px;
 				font-weight: 200;
@@ -21,6 +23,7 @@
 			p {
 				text-align: left;
 			}
+
 		}
 	}
 
@@ -55,12 +58,12 @@
 	}
 
 	form {
-		width: 720px;
+		width: 100%;
 		max-width: 720px;
-		margin: 20px auto;
-		padding: 20px 0;
+		margin: 30px auto;
 		p {
-			margin-bottom: 20px;
+			width: 90%;
+			margin: 0 auto 20px;
 		}
 		textarea {
 			display: block;
@@ -92,6 +95,16 @@
 		border: 1px solid $black;
 		width: 60px;
 		border: 1px solid $seagreen;
+	}
+
+	@include media(mobile) {
+
+		form {
+			input {
+				width: 100%;
+			}
+		}
+
 	}
 
 }

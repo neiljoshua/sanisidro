@@ -28,8 +28,8 @@
 ?>
 
 	
-	<section class="page-hero">
-		<div>
+	<section >
+		<div class="page-hero">
 			<img class="hero-page-image" src="<?php echo $image ?>" />
 		</div>
 	</section>

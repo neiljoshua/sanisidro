@@ -46,8 +46,11 @@
 	.image {
 		width: 40%;
 		overflow: hidden;
+		height: 350px;
+
 		img {
-			max-height: 400px;
+			height: 350px;
+			width: 350px;
 			margin: 0;
 		}
 	}
@@ -75,5 +78,28 @@
 		}
 	}
 
+	@include media(mobile) {
+
+		.member-container {
+			&:nth-child(odd), &:nth-child(even){
+				.text{
+					h3,h2,p {
+						margin-right: 0;
+						margin-left: 0;
+					}
+				}
+			}	
+		}
+			
+		.image, .text {
+			float: none;
+			width: 100%;
+			h3,h2,p {
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+
+	}	
 
 }	

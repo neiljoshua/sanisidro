@@ -99,7 +99,7 @@
           <form action="<?php the_permalink(); ?>" method="POST">
             <p><label for="name">Name: <span>*</span> <br><input type="text" name="message_name" placeholder="John Smith"></label></p>
 
-            <p><label for="message_email">Email: <span>*</span> <br><input type="text" name="message_email" placeholder="youremail@server.com>"> </label></p>
+            <p><label for="message_email">Email: <span>*</span> <br><input type="text" name="message_email" placeholder="youremail@server.com"> </label></p>
 
             <p><label for="message_text">Message: <span>*</span> <br><textarea type="text" name="message_text"></textarea></label></p>
 

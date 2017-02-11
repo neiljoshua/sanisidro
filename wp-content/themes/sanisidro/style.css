@@ -643,7 +643,6 @@ a.featured_link {
 /* line 11, src/sass/projects.scss */
 .projects .about-project p {
   padding: 25px;
-  margin-right: 25px;
 }
 
 /* line 2, src/sass/firm.scss */
@@ -697,33 +696,52 @@ a.featured_link {
 .firm .image {
   width: 40%;
   overflow: hidden;
+  height: 350px;
 }
-/* line 49, src/sass/firm.scss */
+/* line 51, src/sass/firm.scss */
 .firm .image img {
-  max-height: 400px;
+  height: 350px;
+  width: 350px;
   margin: 0;
 }
-/* line 54, src/sass/firm.scss */
+/* line 57, src/sass/firm.scss */
 .firm .text {
   width: 60%;
 }
-/* line 57, src/sass/firm.scss */
+/* line 60, src/sass/firm.scss */
 .firm .text h2, .firm .text h3 {
   margin-bottom: 20px;
 }
-/* line 60, src/sass/firm.scss */
+/* line 63, src/sass/firm.scss */
 .firm .text h2 {
   margin-top: 20px;
   font-size: 18px;
 }
-/* line 64, src/sass/firm.scss */
+/* line 67, src/sass/firm.scss */
 .firm .text p {
   max-width: 720px;
 }
 @media (max-width: 768px) {
-  /* line 72, src/sass/firm.scss */
+  /* line 75, src/sass/firm.scss */
   .firm .image img {
     max-height: 300px;
+  }
+}
+@media (max-width: 600px) {
+  /* line 86, src/sass/firm.scss */
+  .firm .member-container:nth-child(odd) .text h3, .firm .member-container:nth-child(odd) .text h2, .firm .member-container:nth-child(odd) .text p, .firm .member-container:nth-child(even) .text h3, .firm .member-container:nth-child(even) .text h2, .firm .member-container:nth-child(even) .text p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  /* line 94, src/sass/firm.scss */
+  .firm .image, .firm .text {
+    float: none;
+    width: 100%;
+  }
+  /* line 97, src/sass/firm.scss */
+  .firm .image h3, .firm .image h2, .firm .image p, .firm .text h3, .firm .text h2, .firm .text p {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -733,24 +751,25 @@ a.featured_link {
   padding-top: 60px;
   background-color: #b9e2e0;
 }
-/* line 8, src/sass/contact.scss */
-.contact section:first-child h1, .contact section:first-child p {
-  width: 100%;
+/* line 9, src/sass/contact.scss */
+.contact section:first-child p {
+  width: 90%;
   max-width: 650px;
   margin: 20px auto;
-  padding-bottom: 30px;
+  padding: 0 20px 30px;
 }
-/* line 15, src/sass/contact.scss */
+/* line 16, src/sass/contact.scss */
 .contact section:first-child h1 {
+  margin-top: 20px;
   padding-top: 20px;
   font-size: 45px;
   font-weight: 200;
 }
-/* line 21, src/sass/contact.scss */
+/* line 23, src/sass/contact.scss */
 .contact section:first-child p {
   text-align: left;
 }
-/* line 27, src/sass/contact.scss */
+/* line 30, src/sass/contact.scss */
 .contact .contact-map {
   width: 100%;
   height: 400px;
@@ -760,7 +779,7 @@ a.featured_link {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 38, src/sass/contact.scss */
+/* line 41, src/sass/contact.scss */
 .contact .error, .contact .success {
   border-radius: 3px;
   max-width: 720px;
@@ -768,28 +787,28 @@ a.featured_link {
   padding: 15px 9px;
   text-align: center;
 }
-/* line 46, src/sass/contact.scss */
+/* line 49, src/sass/contact.scss */
 .contact .error {
   border: 1px solid red;
   color: red;
 }
-/* line 51, src/sass/contact.scss */
+/* line 54, src/sass/contact.scss */
 .contact .success {
   border: 1px solid green;
   color: green;
 }
-/* line 57, src/sass/contact.scss */
+/* line 60, src/sass/contact.scss */
 .contact form {
-  width: 720px;
+  width: 100%;
   max-width: 720px;
-  margin: 20px auto;
-  padding: 20px 0;
+  margin: 30px auto;
 }
-/* line 62, src/sass/contact.scss */
+/* line 64, src/sass/contact.scss */
 .contact form p {
-  margin-bottom: 20px;
+  width: 90%;
+  margin: 0 auto 20px;
 }
-/* line 65, src/sass/contact.scss */
+/* line 68, src/sass/contact.scss */
 .contact form textarea {
   display: block;
   width: 100%;
@@ -800,7 +819,7 @@ a.featured_link {
   resize: none;
   outline: none;
 }
-/* line 76, src/sass/contact.scss */
+/* line 79, src/sass/contact.scss */
 .contact form input {
   display: block;
   width: 40%;
@@ -808,23 +827,29 @@ a.featured_link {
   border: 1px solid #b9e2e0;
   padding: 5px 0;
 }
-/* line 84, src/sass/contact.scss */
+/* line 87, src/sass/contact.scss */
 .contact form span {
   color: red;
 }
-/* line 90, src/sass/contact.scss */
+/* line 93, src/sass/contact.scss */
 .contact input.human {
   display: inline-block;
   border: 1px solid #000;
   width: 60px;
   border: 1px solid #b9e2e0;
 }
+@media (max-width: 600px) {
+  /* line 103, src/sass/contact.scss */
+  .contact form input {
+    width: 100%;
+  }
+}
 
 /* Footer*/
 /* line 5, src/sass/footer.scss */
 footer {
   padding: 60px 50px;
-  background-color: #dadada;
+  background-color: #eeeeee;
   color: #fff;
 }
 /* line 9, src/sass/footer.scss */
@@ -918,7 +943,7 @@ div.container {
 .page-hero {
   padding-top: 60px;
   margin: 0 auto;
-  height: 65vh;
+  height: 60vh;
   max-height: 65vh;
   max-width: 1280px;
   position: relative;

@@ -3,6 +3,7 @@
 .full-width-template, .site-inner {
 		max-width:100%;
 		padding: 0;
+		font-family: 'Merriweather-Sans-light';
 }
 
 /** Section 1 Hero Section **/
@@ -31,6 +32,7 @@ div.text-slider {
 	padding: 20px 0;
 	p{
 		margin: 40px;
+		font-family: 'Merriweather-Sans-light';
 	}
 }
 
@@ -57,6 +59,7 @@ div.text-slider {
 	padding: 0 40px;
 	max-width: 50%;
 	p {
+		font-family: 'Merriweather-Sans-light';
 		font-size: 18px;
 	}
 }
@@ -87,7 +90,9 @@ div.about-text {
 	justify-content: center;
 	width: 50%;
 	color: $black;
-	p{
+	font-family: 'Merriweather-Sans-light';
+	p {
+		font-family: 'Merriweather-Sans-light';
 		letter-spacing: 1.3px;
 		margin: 20px 0;	
 	}
@@ -101,14 +106,17 @@ div.about-text {
 .text-left {
 	padding: 0 40px;
 	vertical-align: middle;
-	h1{
+	h1, h2, h3, p {
+		font-family: 'Merriweather-Sans-light';
+	}
+	h1 {
 		font-size: 20px;
 		font-weight: 200;
 		letter-spacing: 1.3px;
 		margin-top: 40px;
 		padding-top: 40px;
 	}
-	p{
+	p {
 		font-size: 14px;
 		letter-spacing: 1.3px;
 		line-height: 150%;
@@ -129,7 +137,8 @@ div.about-text {
 }
 /** Section 4 Gallery Section **/
 
-.featured_title, .featured_link {
+.featured_title, a.featured_link {
+	font-family: 'Merriweather-Sans-light';
 	display: block;
 	margin: 0 auto;
 	padding: 0 40px;
@@ -140,9 +149,9 @@ div.about-text {
 	padding-bottom: 30px;
 	max-width: $container-max-width;
 	p {
+		font-family: 'Merriweather-Sans-light';
 		text-align: left;
-		font-weight: 200;
-		font-size: 80px;
+		font-size: 55px;
 	}
 }
 
@@ -169,7 +178,8 @@ a.featured_link {
 		height: 180px;
 		display: block;
 	}
-	p{
+	p {
+		font-family: 'Merriweather-Sans-light';
 		text-align: center;
 		padding-bottom: 20px;
 		font-style: capitalize;

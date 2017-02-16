@@ -1,9 +1,11 @@
 .firm {
+
 	div.firm-description {
 		position: relative;
 		max-width: $container-max-width;
 		margin: 20px auto;
-		p{
+		p {
+			font-family: 'Merriweather-Sans-light';
 			padding: 30px 20px;
 			max-width: $content-lenght;
 			margin: 0 auto;
@@ -21,6 +23,7 @@
 				float:right;
 				h3,h2,p {
 					margin-left: 25px;
+					font-family: 'Merriweather-Sans-light';
 				}
 			}
 
@@ -49,8 +52,8 @@
 		height: 350px;
 
 		img {
-			height: 350px;
-			width: 350px;
+			height: 320px;
+			width: 320px;
 			margin: 0;
 		}
 	}
@@ -83,22 +86,33 @@
 		.member-container {
 			&:nth-child(odd), &:nth-child(even){
 				.text{
+					float: none;
 					h3,h2,p {
 						margin-right: 0;
 						margin-left: 0;
+					}
+				}
+				.image {
+					float: none;
+					img {
+						float: none;
+						display: block;
+						margin: 0 auto;
 					}
 				}
 			}	
 		}
 			
 		.image, .text {
-			float: none;
+			
 			width: 100%;
 			h3,h2,p {
 				margin-right: 0;
 				margin-left: 0;
 			}
+		
 		}
+
 
 	}	
 

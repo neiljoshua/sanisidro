@@ -28,7 +28,7 @@
 // media queries
 @mixin media($type) {
     @if $type == large {
-        @media (max-width: 1200px) { @content; }
+        @media (max-width: 1024px) { @content; }
     }
     @if $type == tablet {
         @media (max-width: 768px)  { @content; }

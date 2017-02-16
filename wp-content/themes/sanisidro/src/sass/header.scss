@@ -11,7 +11,7 @@
 	&.white-background {
 		background: $white;
 		a {
-		color: $black;
+		color: $gray;
 	}
 	}
 }
@@ -20,9 +20,9 @@
 	&.white-background {
 		
 		span {
-			background: $black;
+			background: $gray;
 			&::before, &::after{
-				background-color: $black;
+				background-color: $gray;
 			}	
 		}
 	}	
@@ -69,6 +69,7 @@
 			margin-left: 20px;
 			text-transform: capitalize;
 			a {
+				font-family: 'Merriweather-Sans-normal';
 				letter-spacing: 1.5px;
 				color: $white;
 				font-weight: 400;
@@ -81,7 +82,7 @@
 					border-bottom: 1px solid $silver;
 				}
 				&.white-background {
-					color: $black;
+					color: $gray;
 				}
 			}	
 		}
@@ -91,6 +92,7 @@
 .site-header {
 	a {
 	text-decoration: none;
+	font-family: 'Merriweather-Sans-normal';
 	}
 }
 
@@ -117,7 +119,7 @@
 			right: 0;
 			left: 50%;
 			opacity: 1;
-			background-color: $gray;
+			background-color: $black;
 			transition: all .6s ease-in;
 		}
 	    ul {
@@ -133,10 +135,11 @@
 		    		a {
 		    			color: $white;
 		    			border-bottom: 1px solid $white;
+		    			font-family: 'Merriweather-Sans-normal';
 		    		}
 		    	}
 		    	a {
-				color: $silver;
+				color: $gray;
 				font-size: 18px;
 				margin-bottom: 20px;
 				padding-bottom: 10px;

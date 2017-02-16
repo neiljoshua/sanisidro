@@ -6,8 +6,10 @@ Version: 1.0
 */
 
 @import 'reset';
-@import 'merriweather';
 @import 'variables';
+@import 'Raleway';
+@import 'oswald';
+@import 'merriweather';
 @import 'hamburger';
 @import 'mixin';
 @import 'header';
@@ -19,7 +21,7 @@ Version: 1.0
 
 /* General Layout */
 body {
-	font-family: $Merriweather, Arial, san-serif;
+	font-family: 'Merriweather-Sans-light', 'Oswald-Extra-light', Arial, san-serif;
 	font-size: 14px;
 	color: #333;
 	&.fixed {
@@ -27,8 +29,11 @@ body {
 	}
 }
 
+h1, h2, h3, p {
+	font-family: 'Merriweather-Sans-light', 'Oswald-Extra-light', Arial, san-serif;
+}
+
 section {
-	font-family: $Merriweather, Arial, san-serif;
 	max-width: $container-max-width;
 	margin: 0 auto;
 	&:first-child{
@@ -42,8 +47,8 @@ a {
 }
 
 p {
-	line-height: 1.6;
-	letter-spacing: 1.3px;
+	line-height: 1.8;
+	letter-spacing: 1.5px;
 }
 
 .pull-left {
@@ -62,7 +67,8 @@ div.hero {
 	position: relative;
 	background-size: cover;
 	background-position: center;
-	min-height:85vh;
+	min-height:80vh;
+	max-height: 80vh;
 }
 
 
@@ -72,12 +78,11 @@ div.container {
 }
 
 .page-hero {
-	padding-top: 60px;
-	margin: 0 auto;
-	height: 60vh;
-	max-height: 65vh;
-	max-width: $container-max-width;
 	position: relative;
+	margin: 0 auto;
+	height: 80vh;
+	max-height: 80vh;
+	width: 100%;
 	div {
 		position: absolute;
 		top: 0;

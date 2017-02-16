@@ -32,14 +32,21 @@
 		<div class="page-hero">
 			<img class="hero-page-image" src="<?php echo $image ?>" />
 		</div>
+		<div class="projects-link-page">
+			<?php next_post_link('%link',' Previous Project'); ?>
+			
+			<a  href="http://san-isidro.local/projects/">View all Projects</a>
+
+			<?php previous_post_link('%link','Next Project'); ?>
+		</div>	
 	</section>
 
-	<div class="featured_title"><p><?php echo $title; ?></p></div>
-	
 	<section>
-		<a class="projects-link-page" href="http://san-isidro.local/projects/">View all Projects</a>	
+
+		<div class="featured_title"><p><?php echo $title; ?></p></div>
+
 		<div class="about-project">
-			<p><?php echo $project_description; ?></p>
+			<?php echo $project_description; ?>
 		</div>
 	</section>
 <?php 	

@@ -1002,6 +1002,44 @@ a.featured_link {
   }
 }
 
+/* line 3, src/sass/news-content.scss */
+.news-content main {
+  padding-top: 60px;
+}
+/* line 7, src/sass/news-content.scss */
+.news-content .image-news {
+  position: relative;
+  height: 50vh;
+  width: 50%;
+  overflow: hidden;
+  float: left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 17, src/sass/news-content.scss */
+.news-content .image-news:nth-child(2), .news-content .image-news:nth-child(3), .news-content .image-news:nth-child(4) {
+  height: 25vh;
+}
+/* line 20, src/sass/news-content.scss */
+.news-content .image-news:nth-child(3), .news-content .image-news:nth-child(4) {
+  width: 25%;
+}
+/* line 23, src/sass/news-content.scss */
+.news-content .image-news a {
+  font-family: 'Oswald-Medium';
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+  padding: 60%;
+  background-color: #595959;
+  opacity: 0.6;
+  width: 100%;
+  text-align: center;
+}
+
 /* Footer*/
 /* line 5, src/sass/footer.scss */
 footer {
@@ -1034,60 +1072,60 @@ footer .footer-nav ul li a:hover {
 }
 
 /* General Layout */
-/* line 23, src/sass/style.scss */
+/* line 24, src/sass/style.scss */
 body {
   font-family: 'Merriweather-Sans-light', 'Oswald-Extra-light', Arial, san-serif;
   font-size: 14px;
   color: #333;
 }
-/* line 27, src/sass/style.scss */
+/* line 28, src/sass/style.scss */
 body.fixed {
   overflow: hidden;
 }
 
-/* line 32, src/sass/style.scss */
+/* line 33, src/sass/style.scss */
 h1, h2, h3, p {
   font-family: 'Merriweather-Sans-light', 'Oswald-Extra-light', Arial, san-serif;
 }
 
-/* line 36, src/sass/style.scss */
+/* line 37, src/sass/style.scss */
 section {
   max-width: 1024px;
   margin: 0 auto;
 }
-/* line 39, src/sass/style.scss */
+/* line 40, src/sass/style.scss */
 section:first-child {
   max-width: 100%;
 }
 
-/* line 44, src/sass/style.scss */
+/* line 45, src/sass/style.scss */
 a {
   text-decoration: none;
   color: #000;
 }
 
-/* line 49, src/sass/style.scss */
+/* line 50, src/sass/style.scss */
 p {
   line-height: 1.8;
   letter-spacing: 1.5px;
 }
 
-/* line 54, src/sass/style.scss */
+/* line 55, src/sass/style.scss */
 .pull-left {
   float: left;
 }
 
-/* line 58, src/sass/style.scss */
+/* line 59, src/sass/style.scss */
 .pull-right {
   float: right;
 }
 
-/* line 62, src/sass/style.scss */
+/* line 63, src/sass/style.scss */
 .clear-float {
   clear: both;
 }
 
-/* line 66, src/sass/style.scss */
+/* line 67, src/sass/style.scss */
 div.hero {
   position: relative;
   background-size: cover;
@@ -1096,12 +1134,12 @@ div.hero {
   max-height: 80vh;
 }
 
-/* line 76, src/sass/style.scss */
+/* line 77, src/sass/style.scss */
 div.container {
   width: 100%;
 }
 
-/* line 80, src/sass/style.scss */
+/* line 81, src/sass/style.scss */
 .page-hero {
   position: relative;
   margin: 0 auto;
@@ -1109,7 +1147,7 @@ div.container {
   max-height: 80vh;
   width: 100%;
 }
-/* line 86, src/sass/style.scss */
+/* line 87, src/sass/style.scss */
 .page-hero div {
   position: absolute;
   top: 0;
@@ -1118,14 +1156,22 @@ div.container {
   right: 0;
 }
 
-/* line 94, src/sass/style.scss */
+/* line 95, src/sass/style.scss */
 .hero-page-image {
   width: 100%;
   height: 100%;
 }
 
-/*post*/
 /* line 100, src/sass/style.scss */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/*post*/
+/* line 108, src/sass/style.scss */
 article.post {
   width: 90%;
   margin: 0 auto;
@@ -1133,22 +1179,22 @@ article.post {
   padding-bottom: 40px;
   border-bottom: 2px dotted #bbbbbb;
 }
-/* line 106, src/sass/style.scss */
+/* line 114, src/sass/style.scss */
 article.post h2 {
   margin-bottom: 20px;
 }
 
-/* line 111, src/sass/style.scss */
+/* line 119, src/sass/style.scss */
 article.post:last-of-type {
   border-bottom: none;
 }
 
-/* line 116, src/sass/style.scss */
+/* line 124, src/sass/style.scss */
 section {
   width: 100%;
   overflow: hidden;
 }
-/* line 119, src/sass/style.scss */
+/* line 127, src/sass/style.scss */
 section:first-child {
   margin-top: 0;
   margin-bottom: 0;
@@ -1157,12 +1203,12 @@ section:first-child {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  /* line 135, src/sass/style.scss */
+  /* line 143, src/sass/style.scss */
   .c-hamburger {
     right: 10px;
   }
 
-  /* line 140, src/sass/style.scss */
+  /* line 148, src/sass/style.scss */
   .image img {
     max-height: 200px;
   }

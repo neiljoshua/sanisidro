@@ -23,34 +23,33 @@ get_header();
 <main>
 
 <section>
-	<?php
+	<?php 
+		$args = array(
+		  'post_type' => 'newsblog',
+		  'posts_per_page' => 8,
+		  'order' => 'DESC',
+		  'orderby' => 'post_date',
+		  'meta_query' => array(
+		  )
+		);
 
-	// check if the repeater field has rows of data
-	if( have_rows('news_content') ):
+		$posts = get_posts( $args );
+	?>
 
-	 	// loop through the rows of data
-	    while ( have_rows('news_content') ) : the_row();
-	  		// vars
-				$image = get_sub_field('news_image');
-				$title = get_sub_field('news_title');
-				?>
-				<div class="image-news" style="background-image: url(<?php the_sub_field('news_image') ?>)">
-						
+	<?php foreach( $posts as $post ): 
+			    setup_postdata( $post );
+					$title = get_the_title(); 
+	?>
+					<div class="image-news" style="background-image: url(<?php the_field('image_news_blog'); ?>)">
 						<a href="<?php the_permalink() ?>" class="center">
 						<?php echo $title; ?>
 						</a>
-				</div>
-	     
-			<?php 	
-	    endwhile;
+					</div>
+		           
+	<?php endforeach; ?>
 
-	else :
+	<?php wp_reset_postdata();?>
 
-	    // no rows found
-
-	endif;
-
-	?>
 	</section>
 	
 </main>	

@@ -56,15 +56,15 @@ function create_post_type() {
     )
   );
 
-  register_post_type( 'members',
+  register_post_type( 'newsblog',
     array(
       'labels' => array(
-        'name' => __( 'Members' ),
-        'singular_name' => __( 'Member' )
+        'name' => __( 'newsblogs' ),
+        'singular_name' => __( 'newsblog' )
       ),
       'public' => true,
       'has_archive' => false,
-      'rewrite' => array('slug' => 'members'),
+      'rewrite' => array('slug' => 'news'),
       'menu_position' => 5,
       // 'rewrite' => array( 'slug' => '/our-properties/%state%', 'with_front' => false )
     )

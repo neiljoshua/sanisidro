@@ -32,9 +32,9 @@
 			<img class="hero-page-image" src="<?php echo $image ?>" />
 		</div>
 		<div class="projects-link-page">
-			<?php next_post_link('%link',' Previous'); ?>
+			<a  href="http://san-isidro.local/news/">All</a>
 			
-			<a  href="http://san-isidro.local/news/">View all</a>
+			<?php next_post_link('%link',' Previous'); ?>
 
 			<?php previous_post_link('%link','Next'); ?>
 		</div>	
@@ -42,11 +42,9 @@
 
 	<section>
 
-		<div class="featured_title"><p><?php echo $title; ?></p></div>
+		<h2 class="title post-title"><?php echo $title; ?></h2>
 
-		<div class="about-project">
-			<?php echo $news_content; ?>
-		</div>
+		<p class="content"> <?php echo $news_content; ?> </p>
 	</section>
 <?php 	
 

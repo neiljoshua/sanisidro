@@ -9,7 +9,7 @@ add_filter('body_class', 'add_home_page_body_class');
 
 function add_home_page_body_class($classes) {
 	
-	$classes[] = 'home_page_template';
+	$classes[] = 'home';
 
 	return $classes;
 
@@ -24,98 +24,89 @@ get_header();
 
 <main>
 
-<?php
+<?php 
+	$lead = get_field('hero_image');
+	if ($lead){
+  ?>
+  
+  <section>
+ 		<div class="hero" style="background-image: url(<?php the_field('hero_image') ?>)">
+		<div class="logo">
+			<img src="<?php the_field('hero_logo') ?>" />
+		</div>
+	</div>
+ 	</section>	
 
-// Check if the flexible content field has rows of data 
-if( have_rows('home_content') ): ?>
+  <?php
+  }
+  ?>
 
-	<?php // loop through the rows of data ?>
-	<?php while ( have_rows('home_content') ) : the_row(); ?>
+  <?php 
+	 	$sliderHome = get_field('slider_home_page');
+	 	if ($sliderHome){
+	  ?>
+ 
+ 		 <section id="startchange">
+ 		 	<h2 class="title"> San Isidro </h2>
+ 		 	<p class="content"> <?php the_field('hero_content');?> </p>	
 
-	<?php 	// check current row layout ?>
-	<?php 	if( get_row_layout() == 'hero'): ?>
-			<section>
-				<div class="hero" style="background-image: url(<?php the_sub_field('hero_image') ?>)">
-					<div class="logo">
-						<img src="<?php the_sub_field('hero_logo') ?>" />
-					</div>
-				</div>
-			</section>
-	<?php 	endif; ?>		
-
-	<?php 	// check current row layout ?>
-	<?php 	if( get_row_layout() == 'slider-home'): ?>
-			<section id="startchange">
-			<div class="text-slider">
-				 <?php the_sub_field('slider_description'); ?> 
-			</div>
-
-			<?php if( have_rows('slider_home') ): ?>
+			<?php if( have_rows('slider_home_page') ): ?>
 			
-			 <div class="slider-for">
+			 	<div class="slider-for">
 
-				<?php while( have_rows('slider_home') ): the_row(); ?>
+				<?php while( have_rows('slider_home_page') ): the_row(); ?>
 					<?php $imageLink = get_sub_field('slider_image');?>
 
 						 <div class="slick-container">
 						 	<img src="<?php echo $imageLink; ?>" alt="<?php echo $imageLink; ?>"/>
-						 	<p> <?php the_sub_field('slider_description')?></p>
+						 	<p> <?php the_sub_field('slider_name')?></p>
 						 </div>
 
 				<?php endwhile; ?>
 				
-			</div>
-			<div class="slider-description">
-				<p><?php the_sub_field('slider_about')?></p>
-			</div>
+				</div>
+				<!-- <div class="slider-description">
+					<p><?php //the_sub_field('slider_about')?></p>
+				</div> -->
 			<?php endif; ?>
 
-			</section>
-	<?php endif; ?>		
-
-	<?php 	// check current row layout ?>
-	<?php 	if( get_row_layout() == 'about_home'): ?>
-			<section>
-			<div class="about-text">
-				<div class="text-left"><h1><?php the_sub_field('about_title') ?> </h1></div>
-				<div class="text-right"><p><?php the_sub_field('about_description') ?> </p></div>
-			</div>		
-			</section>
-	<?php endif; ?>		
-
-	<?php 	// check current row layout ?>
-	<?php 	if( get_row_layout() == 'featured_properties'): ?>
-		<section>
-			
-			<div class="featured_title"><p><?php the_sub_field('featured_title') ?> </p></div>
-			<a class="featured_link" href="<?php the_sub_field('featured_link') ?>">
-									<?php the_sub_field('featured_text') ?></a>
-			<?php include("partials/featured-blocks.php") ?>
-
 		</section>
-			
-	<?php endif; ?>		
 
+  <?php
+  }
+  ?>
 
-	<?php endwhile; ?>
+  <?php 
+ 	$aboutTitle = get_field('about_title');
+ 	if ($aboutTitle){
+  ?>
 
-<?php else :	
+	  <section>
+	 		<h2 class="title"> <?php echo $aboutTitle; ?></h2>
+	 		<p class="content"> <?php the_field('about_content');?></p>
+	 	</section>	
 
-	// do something
+  <?php
+  }
+  ?>	
 
-endif;	
+  <?php
+  $feautred_page = get_field('featured_page_option'); 
+  if($feautred_page) {
+  ?>
 
-?>
+	  <section>
+			<h2 class="title">Featured </h2>
+			<a class="featured_link" href="/index.php?page_id=251"> View Projects</a>
+			<?php include("partials/featured-blocks.php") ?>
+		</section>
+
+	<?php 
+	}
+	?>	
 
 </main>	
 
 <?php
-
-// }
-
-
-
-
-// do_action( 'home_page_content' );
 
 get_footer(); 

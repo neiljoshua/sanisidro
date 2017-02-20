@@ -3,28 +3,20 @@
 	
 	section {
 		&:first-child {
-		text-align: center;
+			text-align: center;
 			padding-top:60px;
 			background-color: $seagreen;
-			
+			h1 {
+				font-size: 35px;
+				margin-top: 20px;
+				padding-top: 20px;
+				font-weight: 400;
+			}
 			p {
-				font-family: 'Merriweather-Sans-light';
 				width: 90%;
 				max-width: 650px;
 				margin: 20px auto;
 				padding: 0 20px 30px;
-			}
-
-			h1 {
-				margin-top: 20px;
-				padding-top: 20px;
-				font-size: 45px;
-				font-weight: 200;
-				font-family: 'Merriweather-Sans-light';
-			}
-
-			p {
-				text-align: left;
 			}
 
 		}

@@ -87,7 +87,7 @@
 
       <section>
         <h1 class="entry-title"><?php the_title(); ?></h1>
-        <p> <?php the_content(); ?> </p>
+        <?php the_content(); ?>
         <div class="contact-map"></div>
       </section>
 

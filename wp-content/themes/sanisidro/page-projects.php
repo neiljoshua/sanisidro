@@ -43,38 +43,37 @@ $args = array(
 $posts = get_posts( $args );
     
 ?>
-   <section >
+  <section >
    	<!-- display lead image. -->
-<?php
+  <?php
 
 	foreach ($posts as $post){ 
 		setup_postdata( $post );
-	    $title = get_the_title(); 
-	    $imagelead =  get_field('project_image');  
-	    $location = get_field('project_location');
+    $title = get_the_title(); 
+    $imagelead =  get_field('project_image');  
+    $location = get_field('project_location');
 
-?>
-<?php 
-	   	$lead = get_field('project_lead');
-	   	if ($lead){
-?>
-	   		<div class="page-hero">
-	   			<img class ="hero-page-image" src="<?php echo $imagelead; ?>">
-	   		</div>
-<?php
-	   	}
-?>
-<?php
+    ?>
+    <?php 
+   	$lead = get_field('project_lead');
+   	if ($lead){
+    ?>
+   		<div class="page-hero">
+   			<img class ="hero-page-image" src="<?php echo $imagelead; ?>">
+   		</div>
+    <?php
+	  }
+    ?>
+    <?php
 	 	wp_reset_postdata();
 	} 
-?>
-   </section>
+  ?>
+  </section>
 
    <!-- display propject -->
 
-
    <section>
-   		<div class="featured_title"><p>Projects</p></div>
+   		<h2 class="title">Projects</h2>
 	 	<?php include("partials/featured-blocks.php") ?>
    </section>		
 

@@ -1,0 +1,52 @@
+//Oswald Font
+
+/* Roboto Light */
+@font-face {
+  font-family: 'Roboto-Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('src/fonts/Roboto/Roboto-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* Oswald Regular */
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('src/fonts/Roboto/Roboto-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Roboto Bold */
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('src/fonts/Roboto/Roboto-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+
+//Merriweather_Sans Font
+
+/* Merriweather_Sans Extra Light */
+@font-face {
+  font-family: 'MerriweatherSans-Extra-light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('src/fonts/Merriweather_Sans/MerriweatherSans-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Merriweather_Sans Extra Regular */
+@font-face {
+  font-family: 'MerriweatherSans-Regular';
+  font-style: normal;
+  font-weight: 300;
+  src: url('src/fonts/Merriweather_Sans/MerriweatherSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* OMerriweather_Sans  Bold */
+@font-face {
+  font-family: 'MerriweatherSans-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('src/fonts/Merriweather_Sans/MerriweatherSans-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+

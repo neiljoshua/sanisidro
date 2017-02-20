@@ -1,18 +1,15 @@
 .projects {
 	.projects-link-page {
 
-		text-align: left;
-		font-size: 12px;
-		font-family: 'Oswald-Medium';
+		text-align: right;
+		font-size: 13px;
 		a {
-			background-color: #eeeeee;
 			display: inline-block;
-			font-weight: 700;
-			padding: 10px 12px;
-			width: 110px;
+			font-weight: 300;
+			padding: 10px;
+			text-align: center;
 			&:hover {
-				background-color: $black;
-				color: #eeeeee;
+				background-color: #eeeeee;
 			}
 
 		}
@@ -20,12 +17,12 @@
 
 	.about-project {
 		width: 70%;
-		float: right;
+		margin: 0 auto;
 		p {
-			font-family: 'Merriweather-Sans-light';
 			padding: 0 25px 30px;
-			// margin-right: 25px;
+			
 		}
 	}
 	
 }
+

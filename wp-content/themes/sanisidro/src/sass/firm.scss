@@ -5,10 +5,11 @@
 		max-width: $container-max-width;
 		margin: 20px auto;
 		p {
-			font-family: 'Merriweather-Sans-light';
 			padding: 30px 20px;
 			max-width: $content-lenght;
 			margin: 0 auto;
+			font-size: 18px;
+			font-weight: 400;
 		}	
 	}
 	.member-container {
@@ -23,7 +24,6 @@
 				float:right;
 				h3,h2,p {
 					margin-left: 25px;
-					font-family: 'Merriweather-Sans-light';
 				}
 			}
 
@@ -52,8 +52,9 @@
 		height: 350px;
 
 		img {
-			height: 320px;
-			width: 320px;
+			max-height: 300px;
+			min-height: 300px;
+			width: 280px;
 			margin: 0;
 		}
 	}
@@ -69,15 +70,21 @@
 		}
 		p {
 			max-width: $content-lenght;
+			font-size: 16px;
 		}
 	}
 
 	@include media(tablet) {
 	
 		.image {
+			width: 50%;
 			img {
+				margin-top: 20px;
 				max-height: 300px;
 			}	
+		}
+		.text {
+			width: 50%;
 		}
 	}
 

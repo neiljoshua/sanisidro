@@ -3,7 +3,6 @@
 .full-width-template, .site-inner {
 		max-width:100%;
 		padding: 0;
-		font-family: 'Merriweather-Sans-light';
 }
 
 /** Section 1 Hero Section **/
@@ -16,7 +15,7 @@ div.logo {
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
 	img{
-		height: 170px;
+		max-height: 120px;
 	    border: 2px solid white;
 	    border-radius: 117px;
 	    line-height: 120px;
@@ -32,7 +31,6 @@ div.text-slider {
 	padding: 20px 0;
 	p{
 		margin: 40px;
-		font-family: 'Merriweather-Sans-light';
 	}
 }
 
@@ -44,7 +42,8 @@ div.text-slider {
 .slick-slide {
 	img {
 		width: 100%;
-		height: 65vh;
+		@include calc(min-height,100vw/(1200/694));
+		@include calc(max-height,100vw/(1200/694));
 	}
 }
 
@@ -59,106 +58,16 @@ div.text-slider {
 	padding: 0 40px;
 	max-width: 50%;
 	p {
-		font-family: 'Merriweather-Sans-light';
 		font-size: 18px;
 	}
 }
 
-/** Section 3 About Section **/
-div.about-text {
-	overflow: hidden;
-}
-
-.image-text,
-.text-image {
-	display: -webkit-flex;
-	display:-ms-flexbox;
-	display:flex;
-}
-
-.image-left,
-.text-right,
-.image-right,
-.text-left {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	width: 50%;
-	color: $black;
-	font-family: 'Merriweather-Sans-light';
-	p {
-		font-family: 'Merriweather-Sans-light';
-		letter-spacing: 1.3px;
-		margin: 20px 0;	
-	}
-	img {
-		height: 400px;
-		max-height: 1000px;
-	}
-}
-
-.text-right,
-.text-left {
-	padding: 0 40px;
-	vertical-align: middle;
-	h1, h2, h3, p {
-		font-family: 'Merriweather-Sans-light';
-	}
-	h1 {
-		font-size: 20px;
-		font-weight: 200;
-		letter-spacing: 1.3px;
-		margin-top: 40px;
-		padding-top: 40px;
-	}
-	p {
-		font-size: 14px;
-		letter-spacing: 1.3px;
-		line-height: 150%;
-	}
-}
-
-.text-left {
-	float: left;
-	p {
-		max-width: 300px;
-		font-size: 22px;
-		font-weight: 400;
-	}
-}
-
-.text-right {
-	float: right;
-}
-/** Section 4 Gallery Section **/
-
-.featured_title, a.featured_link {
-	font-family: 'Merriweather-Sans-light';
-	display: block;
-	margin: 0 auto;
-	padding: 0 40px;
-	text-transform: capitalize;
-}
-
-.featured_title {
-	padding-top: 30px;
-	padding-bottom: 30px;
-	max-width: $container-max-width;
-	p {
-		font-family: 'Merriweather-Sans-light';
-		text-align: left;
-		font-size: 55px;
-	}
-}
+/** Section 4 About Section **/
 
 a.featured_link {
-		text-align: right;
-		font-size: 18px;
+	display: block;
+	text-align: right;
+	font-size: 18px;
 }
 
 .home-gallery {
@@ -176,14 +85,13 @@ a.featured_link {
 		margin: 20px auto;
 	}
 	img {
-		height: 180px;
+		min-height: 150px;
+		max-height: 150px;
 		display: block;
 	}
 	p {
-		font-family: 'Merriweather-Sans-light';
 		text-align: center;
 		padding-bottom: 20px;
-		font-style: capitalize;
 		border-bottom: 1px solid $black;
 	}
 }
@@ -200,36 +108,25 @@ a.featured_link {
 		}
 	}
 
-	.about-text {
-		padding: 0 40px;
-	}
-
-	.featured_title{
-		p{
-			font-size: 40px;
-		}
-	}
-
 	.gallery-image {
 	    width: 50%;
-	    img {
-	    	height: 200px;
-	    }
 	}
 }
 
 @include media(mobile) {
 
-	.text-left, .text-right {
-		float: none;
-		padding: 0;
-		width: 100%;
+	div.logo {
+		img{
+			max-height: 60px;	
+		}
 	}
-
 	.gallery-image {
 	    width: 100%;
-	    height: auto;
 	    float: none;
+	    img {
+				min-height: 200px;
+				max-height: 200px;
+			}
 	}
 
 }

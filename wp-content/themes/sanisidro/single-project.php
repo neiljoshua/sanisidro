@@ -33,21 +33,19 @@
 			<img class="hero-page-image" src="<?php echo $image ?>" />
 		</div>
 		<div class="projects-link-page">
-			<?php next_post_link('%link',' Previous Project'); ?>
+			<a  href="http://san-isidro.local/projects/">View all </a>
 			
-			<a  href="http://san-isidro.local/projects/">View all Projects</a>
+			<?php next_post_link('%link',' Previous'); ?>
 
-			<?php previous_post_link('%link','Next Project'); ?>
+			<?php previous_post_link('%link','Next'); ?>
 		</div>	
 	</section>
 
 	<section>
 
-		<div class="featured_title"><p><?php echo $title; ?></p></div>
+		<h2 class="title post-title"><?php echo $title; ?></h2>
 
-		<div class="about-project">
-			<?php echo $project_description; ?>
-		</div>
+		<p class="content"> <?php echo $project_description; ?></p>
 	</section>
 <?php 	
 

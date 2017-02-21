@@ -181,28 +181,28 @@ button {
   src: url("src/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
-/* Merriweather_Sans Extra Light */
+/* Merriweather Light */
 @font-face {
-  font-family: 'MerriweatherSans-Extra-light';
+  font-family: 'Merriweather-Light';
   font-style: normal;
   font-weight: 300;
-  src: url("src/fonts/Merriweather_Sans/MerriweatherSans-Light.ttf") format("truetype");
+  src: url("src/fonts/Merriweather/Merriweather-Light.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
-/* Merriweather_Sans Extra Regular */
+/* Merriweather Extra Regular */
 @font-face {
-  font-family: 'MerriweatherSans-Regular';
+  font-family: 'Merriweather-Regular';
   font-style: normal;
   font-weight: 300;
-  src: url("src/fonts/Merriweather_Sans/MerriweatherSans-Regular.ttf") format("truetype");
+  src: url("src/fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
-/* OMerriweather_Sans  Bold */
+/* OMerriweather  Bold */
 @font-face {
-  font-family: 'MerriweatherSans-Bold';
+  font-family: 'Merriweather-Bold';
   font-style: normal;
   font-weight: 700;
-  src: url("src/fonts/Merriweather_Sans/MerriweatherSans-Bold.ttf") format("truetype");
+  src: url("src/fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
 /*Header*/
@@ -513,8 +513,8 @@ a.featured_link {
 }
 /* line 87, src/sass/home.scss */
 .gallery-image img {
-  min-height: 150px;
-  max-height: 150px;
+  min-height: 170px;
+  max-height: 170px;
   display: block;
 }
 /* line 92, src/sass/home.scss */
@@ -525,35 +525,52 @@ a.featured_link {
 }
 
 @media (max-width: 768px) {
-  /* line 104, src/sass/home.scss */
+  /* line 105, src/sass/home.scss */
+  div.logo img {
+    max-height: 0px;
+  }
+
+  /* line 109, src/sass/home.scss */
   .slider-description {
     max-width: 100%;
   }
-  /* line 106, src/sass/home.scss */
+  /* line 111, src/sass/home.scss */
   .slider-description p {
     font-size: 16px;
   }
 
-  /* line 111, src/sass/home.scss */
+  /* line 116, src/sass/home.scss */
   .gallery-image {
     width: 50%;
   }
 }
 @media (max-width: 600px) {
-  /* line 119, src/sass/home.scss */
+  /* line 124, src/sass/home.scss */
   div.logo img {
     max-height: 60px;
   }
 
-  /* line 123, src/sass/home.scss */
+  /* line 128, src/sass/home.scss */
   .gallery-image {
     width: 100%;
+    margin: 20px 0;
     float: none;
   }
-  /* line 126, src/sass/home.scss */
+  /* line 132, src/sass/home.scss */
+  .gallery-image img, .gallery-image p {
+    width: 100%;
+  }
+  /* line 135, src/sass/home.scss */
   .gallery-image img {
+    margin: 0;
     min-height: 200px;
     max-height: 200px;
+  }
+
+  /* line 141, src/sass/home.scss */
+  .slider-for {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 /* line 2, src/sass/projects.scss */
@@ -567,17 +584,14 @@ a.featured_link {
   font-weight: 300;
   padding: 10px;
   text-align: center;
+  margin-right: 5px;
 }
-/* line 11, src/sass/projects.scss */
-.projects .projects-link-page a:hover {
-  background-color: #eeeeee;
-}
-/* line 18, src/sass/projects.scss */
+/* line 15, src/sass/projects.scss */
 .projects .about-project {
   width: 70%;
   margin: 0 auto;
 }
-/* line 21, src/sass/projects.scss */
+/* line 18, src/sass/projects.scss */
 .projects .about-project p {
   padding: 0 25px 30px;
 }
@@ -656,52 +670,53 @@ a.featured_link {
 .firm .text h2 {
   margin-top: 20px;
   font-size: 18px;
+  font-weight: 700;
 }
-/* line 71, src/sass/firm.scss */
+/* line 72, src/sass/firm.scss */
 .firm .text p {
   max-width: 720px;
   font-size: 16px;
 }
 @media (max-width: 768px) {
-  /* line 79, src/sass/firm.scss */
+  /* line 80, src/sass/firm.scss */
   .firm .image {
     width: 50%;
   }
-  /* line 81, src/sass/firm.scss */
+  /* line 82, src/sass/firm.scss */
   .firm .image img {
     margin-top: 20px;
     max-height: 300px;
   }
-  /* line 86, src/sass/firm.scss */
+  /* line 87, src/sass/firm.scss */
   .firm .text {
     width: 50%;
   }
 }
 @media (max-width: 600px) {
-  /* line 95, src/sass/firm.scss */
+  /* line 96, src/sass/firm.scss */
   .firm .member-container:nth-child(odd) .text, .firm .member-container:nth-child(even) .text {
     float: none;
   }
-  /* line 97, src/sass/firm.scss */
+  /* line 98, src/sass/firm.scss */
   .firm .member-container:nth-child(odd) .text h3, .firm .member-container:nth-child(odd) .text h2, .firm .member-container:nth-child(odd) .text p, .firm .member-container:nth-child(even) .text h3, .firm .member-container:nth-child(even) .text h2, .firm .member-container:nth-child(even) .text p {
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 102, src/sass/firm.scss */
+  /* line 103, src/sass/firm.scss */
   .firm .member-container:nth-child(odd) .image, .firm .member-container:nth-child(even) .image {
     float: none;
   }
-  /* line 104, src/sass/firm.scss */
+  /* line 105, src/sass/firm.scss */
   .firm .member-container:nth-child(odd) .image img, .firm .member-container:nth-child(even) .image img {
     float: none;
     display: block;
     margin: 0 auto;
   }
-  /* line 113, src/sass/firm.scss */
+  /* line 114, src/sass/firm.scss */
   .firm .image, .firm .text {
     width: 100%;
   }
-  /* line 116, src/sass/firm.scss */
+  /* line 117, src/sass/firm.scss */
   .firm .image h3, .firm .image h2, .firm .image p, .firm .text h3, .firm .text h2, .firm .text p {
     margin-right: 0;
     margin-left: 0;
@@ -843,8 +858,9 @@ a.featured_link {
 .contact form p {
   width: 90%;
   margin: 0 auto 20px;
+  font-weight: 700;
 }
-/* line 63, src/sass/contact.scss */
+/* line 64, src/sass/contact.scss */
 .contact form textarea {
   display: block;
   width: 100%;
@@ -855,7 +871,7 @@ a.featured_link {
   resize: none;
   outline: none;
 }
-/* line 74, src/sass/contact.scss */
+/* line 75, src/sass/contact.scss */
 .contact form input {
   display: block;
   width: 40%;
@@ -864,15 +880,20 @@ a.featured_link {
   padding: 5px 0;
 }
 /* line 83, src/sass/contact.scss */
+.contact form input[type='submit'] {
+  font-weight: 400;
+  font-size: 14px;
+}
+/* line 86, src/sass/contact.scss */
 .contact form input[type='submit']:hover {
   background-color: #b9e2e0;
   color: #fff;
 }
-/* line 88, src/sass/contact.scss */
+/* line 91, src/sass/contact.scss */
 .contact form span {
   color: red;
 }
-/* line 96, src/sass/contact.scss */
+/* line 99, src/sass/contact.scss */
 .contact input.human {
   display: inline-block;
   border: 1px solid #000;
@@ -880,7 +901,7 @@ a.featured_link {
   border: 1px solid #b9e2e0;
 }
 @media (max-width: 600px) {
-  /* line 106, src/sass/contact.scss */
+  /* line 109, src/sass/contact.scss */
   .contact form input {
     width: 100%;
   }
@@ -960,7 +981,7 @@ body.fixed {
 
 /* line 30, src/sass/style.scss */
 h1, h2, h3, a {
-  font-family: 'MerriweatherSans-Extra-light', Arial, san-serif;
+  font-family: 'Merriweather-Light', Arial, san-serif;
 }
 
 /* line 34, src/sass/style.scss */

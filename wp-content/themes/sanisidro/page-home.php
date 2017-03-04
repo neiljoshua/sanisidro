@@ -30,12 +30,12 @@ get_header();
   ?>
   
   <section>
- 		<div class="hero" style="background-image: url(<?php the_field('hero_image') ?>)">
+ 	<div class="hero" style="background-image: url(<?php the_field('hero_image') ?>)">
 		<div class="logo">
 			<img src="<?php the_field('hero_logo') ?>" />
 		</div>
 	</div>
- 	</section>	
+  </section>	
 
   <?php
   }

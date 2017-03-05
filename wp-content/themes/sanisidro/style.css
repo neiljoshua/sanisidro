@@ -89,6 +89,7 @@ button {
 .c-hamburger {
   position: fixed;
   overflow: hidden;
+  visibility: hidden;
   margin: 0;
   padding: 0;
   width: 50px;
@@ -103,11 +104,11 @@ button {
   transition: background 0.3s;
   z-index: 500;
 }
-/* line 17, src/sass/hamburger.scss */
+/* line 18, src/sass/hamburger.scss */
 .c-hamburger:focus {
   outline: none;
 }
-/* line 20, src/sass/hamburger.scss */
+/* line 21, src/sass/hamburger.scss */
 .c-hamburger span {
   display: block;
   position: absolute;
@@ -117,7 +118,7 @@ button {
   height: 2px;
   background: #fff;
 }
-/* line 28, src/sass/hamburger.scss */
+/* line 29, src/sass/hamburger.scss */
 .c-hamburger span::before, .c-hamburger span::after {
   position: absolute;
   display: block;
@@ -127,31 +128,31 @@ button {
   background-color: #fff;
   content: "";
 }
-/* line 37, src/sass/hamburger.scss */
+/* line 38, src/sass/hamburger.scss */
 .c-hamburger span::before {
   top: -8px;
 }
-/* line 40, src/sass/hamburger.scss */
+/* line 41, src/sass/hamburger.scss */
 .c-hamburger span::after {
   bottom: -8px;
 }
 
-/* line 46, src/sass/hamburger.scss */
+/* line 47, src/sass/hamburger.scss */
 .c-hamburger--rot {
   opacity: 1;
   transition: opacity 0.3s 0.3s;
 }
-/* line 50, src/sass/hamburger.scss */
+/* line 51, src/sass/hamburger.scss */
 .c-hamburger--rot span {
   transition: transform 0.3s;
 }
 
 /* active state, i.e. menu open */
-/* line 55, src/sass/hamburger.scss */
+/* line 56, src/sass/hamburger.scss */
 .c-hamburger--rot.is-active {
   opacity: 0.9;
 }
-/* line 58, src/sass/hamburger.scss */
+/* line 59, src/sass/hamburger.scss */
 .c-hamburger--rot.is-active span {
   transform: rotate(90deg);
 }
@@ -210,7 +211,7 @@ button {
   position: fixed;
   width: 100%;
   overflow: hidden;
-  z-index: 40;
+  z-index: 10;
   opacity: 0.9;
 }
 /* line 8, src/sass/header.scss */
@@ -243,116 +244,122 @@ button {
 .site-branding {
   position: fixed;
   visibility: hidden;
+  z-index: 300;
 }
-/* line 36, src/sass/header.scss */
+/* line 37, src/sass/header.scss */
 .site-branding a {
   margin: 10px 20px;
   display: block;
 }
-/* line 39, src/sass/header.scss */
+/* line 40, src/sass/header.scss */
 .site-branding a img {
   height: 36px;
   border-radius: 5px;
 }
-/* line 44, src/sass/header.scss */
+/* line 45, src/sass/header.scss */
 .site-branding.white-background {
   visibility: visible;
 }
 
 /*Navigation Menu*/
-/* line 51, src/sass/header.scss */
+/* line 52, src/sass/header.scss */
 .site-nav {
   float: right;
   display: block;
   margin: 20px 30px;
 }
-/* line 55, src/sass/header.scss */
+/* line 56, src/sass/header.scss */
 .site-nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 58, src/sass/header.scss */
+/* line 59, src/sass/header.scss */
 .site-nav ul:before, .site-nav ul:after {
   content: "";
   display: table;
 }
-/* line 61, src/sass/header.scss */
+/* line 62, src/sass/header.scss */
 .site-nav ul:after {
   clear: both;
 }
-/* line 64, src/sass/header.scss */
+/* line 65, src/sass/header.scss */
 .site-nav ul li {
   list-style: none;
   float: left;
   margin-left: 20px;
   text-transform: capitalize;
 }
-/* line 69, src/sass/header.scss */
+/* line 70, src/sass/header.scss */
 .site-nav ul li a {
   letter-spacing: 1.5px;
   color: #fff;
   font-weight: 400;
   padding-top: 5px;
 }
-/* line 74, src/sass/header.scss */
+/* line 75, src/sass/header.scss */
 .site-nav ul li a:link, .site-nav ul li a:visited {
   margin-right: 5px;
 }
-/* line 77, src/sass/header.scss */
+/* line 78, src/sass/header.scss */
 .site-nav ul li a:hover, .site-nav ul li a:active {
   color: #c0c0c0;
   border-bottom: 1px solid #c0c0c0;
 }
-/* line 81, src/sass/header.scss */
+/* line 82, src/sass/header.scss */
 .site-nav ul li a.white-background {
   color: #595959;
 }
 
 @media (max-width: 1024px) {
-  /* line 91, src/sass/header.scss */
+  /* line 92, src/sass/header.scss */
   .site-header {
     height: 60px;
-    -webkit-transition: all 0.5s ease-in 0.8s;
-    -ms-transition: all 0.5s ease-in 0.8s;
-    -o-transition: all 0.5s ease-in 0.8s;
-    transition: all 0.5s ease-in 0.8s;
+    -webkit-transition: all 0.6s ease-in 0.3s;
+    -ms-transition: all 0.6s ease-in 0.3s;
+    -o-transition: all 0.6s ease-in 0.3s;
+    transition: all 0.6s ease-in 0.3s;
   }
-  /* line 94, src/sass/header.scss */
+  /* line 95, src/sass/header.scss */
   .site-header.active {
     height: 100%;
   }
 
-  /* line 99, src/sass/header.scss */
+  /* line 100, src/sass/header.scss */
   .site-nav {
     position: fixed;
     top: 0;
-    bottom: 0;
-    right: -50%;
-    left: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
     z-index: 150;
     visibility: hidden;
-    padding: 0;
     margin: 0;
     float: none;
     background-color: #595959;
-    -webkit-transition: all 0.4s ease-in;
-    -ms-transition: all 0.4s ease-in;
-    -o-transition: all 0.4s ease-in;
-    transition: all 0.4s ease-in;
+    -webkit-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -o-transform: translateX(200%);
+    transform: translateX(200%);
+    -webkit-transition: all 0.6s ease-in;
+    -ms-transition: all 0.6s ease-in;
+    -o-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
   }
   /* line 113, src/sass/header.scss */
   .site-nav.active {
     visibility: visible;
-    right: 0;
-    left: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
     opacity: 1;
     background-color: #000;
-    -webkit-transition: all 0.4s ease-in;
-    -ms-transition: all 0.4s ease-in;
-    -o-transition: all 0.4s ease-in;
-    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.6s ease-in;
+    -ms-transition: all 0.6s ease-in;
+    -o-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
   }
-  /* line 121, src/sass/header.scss */
+  /* line 120, src/sass/header.scss */
   .site-nav ul {
     display: block;
     position: absolute;
@@ -362,18 +369,18 @@ button {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  /* line 126, src/sass/header.scss */
+  /* line 125, src/sass/header.scss */
   .site-nav ul li {
     color: #fff;
     width: 100%;
     margin-bottom: 30px;
   }
-  /* line 131, src/sass/header.scss */
+  /* line 130, src/sass/header.scss */
   .site-nav ul li.current-menu-item a {
     color: #fff;
     border-bottom: 1px solid #fff;
   }
-  /* line 136, src/sass/header.scss */
+  /* line 135, src/sass/header.scss */
   .site-nav ul li a {
     color: #595959;
     font-size: 18px;
@@ -381,35 +388,30 @@ button {
     padding-bottom: 10px;
     letter-spacing: 2px;
   }
-  /* line 142, src/sass/header.scss */
+  /* line 141, src/sass/header.scss */
   .site-nav ul li a:link, .site-nav ul li a:visited {
     margin-right: 5px;
   }
-  /* line 145, src/sass/header.scss */
+  /* line 144, src/sass/header.scss */
   .site-nav ul li a:hover, .site-nav ul li a:active {
     color: #fff;
     border-bottom: 1px solid #fff;
   }
 
-  /* line 154, src/sass/header.scss */
+  /* line 153, src/sass/header.scss */
   .c-hamburger {
     top: 5px;
     right: 10px;
     display: block;
   }
 
-  /* line 162, src/sass/header.scss */
+  /* line 161, src/sass/header.scss */
   div.logo img {
     height: 150px;
   }
 }
 @media (max-width: 768px) {
-  /* line 170, src/sass/header.scss */
-  .site-nav {
-    right: -100%;
-    left: 100%;
-  }
-  /* line 173, src/sass/header.scss */
+  /* line 171, src/sass/header.scss */
   .site-nav ul {
     display: block;
     position: absolute;
@@ -420,15 +422,17 @@ button {
     -o-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
   }
-  /* line 180, src/sass/header.scss */
+  /* line 178, src/sass/header.scss */
   .site-nav ul li {
     margin: 20px 0;
     text-align: center;
   }
-  /* line 185, src/sass/header.scss */
+  /* line 183, src/sass/header.scss */
   .site-nav.active {
-    right: 0;
-    left: 0;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
 /* Hero Page */
@@ -1158,7 +1162,7 @@ article.post:last-of-type {
 @media (max-width: 1024px) {
   /* line 150, src/sass/style.scss */
   .c-hamburger {
-    display: block;
+    visibility: visible;
   }
 }
 @media (max-width: 768px) {

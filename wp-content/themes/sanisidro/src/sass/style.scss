@@ -148,7 +148,7 @@ article.post:last-of-type {
 /* Media Queries */
 @include media(large) {
 	.c-hamburger {
-		display: block;
+		visibility: visible;
 	}
 	
 }

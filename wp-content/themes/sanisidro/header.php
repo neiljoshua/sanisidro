@@ -24,7 +24,7 @@
 			</div>
 			<!-- 	<h1> <?php //bloginfo('name');?></h1> -->
 				
-			<nav class="site-nav">
+			<div class="site-nav">
 
 				<?php 
 				$args =array(
@@ -33,6 +33,6 @@
 				?>
 				<?php wp_nav_menu($args); ?>
 				
-			</nav>
+			</div>
 
 		</header> <!--site-geader-->

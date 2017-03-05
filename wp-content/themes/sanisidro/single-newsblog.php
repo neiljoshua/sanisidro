@@ -32,7 +32,7 @@
 			<img class="hero-page-image" src="<?php echo $image ?>" />
 		</div>
 		<div class="projects-link-page">
-			<a  href="http://san-isidro.local/news/">All</a>
+			<a  href="http://san-isidro.local/news/">View All</a>
 			
 			<?php next_post_link('%link',' Previous'); ?>
 

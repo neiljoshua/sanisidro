@@ -335,10 +335,10 @@ button {
     margin: 0;
     float: none;
     background-color: #595959;
-    -webkit-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
   }
   /* line 113, src/sass/header.scss */
   .site-nav.active {
@@ -347,10 +347,10 @@ button {
     left: 50%;
     opacity: 1;
     background-color: #000;
-    -webkit-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
   }
   /* line 121, src/sass/header.scss */
   .site-nav ul {
@@ -579,8 +579,8 @@ a.featured_link {
   /* line 135, src/sass/home.scss */
   .gallery-image img {
     margin: 0;
-    min-height: 200px;
-    max-height: 200px;
+    min-height: 250px;
+    max-height: 250px;
   }
 
   /* line 141, src/sass/home.scss */
@@ -799,7 +799,7 @@ a.featured_link {
 }
 /* line 54, src/sass/news-content.scss */
 .news-content .image-news a:hover {
-  opacity: 0.6;
+  opacity: 0.7;
   background-color: #000;
 }
 @media (max-width: 768px) {
@@ -892,7 +892,7 @@ a.featured_link {
   display: block;
   width: 100%;
   border: 1px solid #b9e2e0;
-  padding: 5px 0 80px;
+  padding: 10px 0 80px 5px;
   margin: 20px auto 0;
   max-width: 720px;
   resize: none;
@@ -904,7 +904,7 @@ a.featured_link {
   width: 40%;
   margin-top: 20px;
   border: 1px solid #b9e2e0;
-  padding: 5px 0;
+  padding: 10px 0 10px 5px;
 }
 /* line 83, src/sass/contact.scss */
 .contact form input[type='submit'] {

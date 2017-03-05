@@ -10,6 +10,7 @@
       e.preventDefault();
         $(this).toggleClass('is-active');
         $('body').toggleClass('fixed');
+        $('.site-header').toggleClass('active');
         $('.site-nav').toggleClass('active');
     });
 

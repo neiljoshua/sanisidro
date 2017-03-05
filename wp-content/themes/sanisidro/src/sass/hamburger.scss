@@ -1,7 +1,5 @@
 .c-hamburger {
-    display: none;
-    float: right;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -15,6 +13,7 @@
     border: none;
     cursor: pointer;
     transition: background 0.3s;
+    z-index: 500;
     &:focus {
       outline: none;
     }

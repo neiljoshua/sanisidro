@@ -41,8 +41,8 @@ get_header();
 					$title = get_the_title(); 
 	?>
 					<div class="image-news" style="background-image: url(<?php the_field('image_news_blog'); ?>)">
-						<a href="<?php the_permalink() ?>" class="center">
-						<?php echo $title; ?>
+						<a href="<?php the_permalink() ?>">
+							<span class="center"><?php echo $title; ?></span>
 						</a>
 					</div>
 		           

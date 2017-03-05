@@ -3,10 +3,13 @@
 	position:fixed;
 	width:100%;
 	overflow: hidden;
-	z-index: 50;
+	z-index: 40;
 	opacity: 0.9;
 	h1 {
 		text-align: center;
+	}
+	a {
+	text-decoration: none;
 	}
 	&.white-background {
 		background: $white;
@@ -18,7 +21,6 @@
 
 .c-hamburger {
 	&.white-background {
-		
 		span {
 			background: $gray;
 			&::before, &::after{
@@ -29,7 +31,7 @@
 }
 
 .site-branding {
-	float: left;
+	position: fixed;
 	visibility: hidden;
 	 a {
 	 	margin: 10px 20px;
@@ -44,16 +46,12 @@
 	 }
 }
 
-.site-nav {
-	display: block;
-	width: auto;
-	margin: 20px 30px;
-}
-
 /*Navigation Menu*/
 
 .site-nav {
 	float: right;
+	display: block;
+	margin: 20px 30px;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -88,43 +86,43 @@
 	}
 }
 
-.site-header {
-	a {
-	text-decoration: none;
-	}
-}
-
-
-
 
 @include media(large) {
+	.site-header {
+		height: 60px;
+		@include prefix(transition, all 0.5s ease-in 0.8s, webkit ms o);
+		&.active{
+		height: 100%;
+		}
+	}
+
 	.site-nav {
 	    position: fixed;
-	    height: 100%;
-	    visibility: hidden;
-		padding:0;
-		margin: 0;
-	    float: none;
-	    display: block;
 	    top: 0;
 	    bottom: 0;
 	    right: -50%;
 	    left: 100%;
+	    z-index: 150;
+	    visibility: hidden;
+			padding:0;
+			margin: 0;
+	    float: none;
+	   
 	    background-color: $gray;
-	    transition: all .6s ease-in;
+	    @include prefix(transition, all 0.5s ease-in, webkit ms o);
 		&.active {
 			visibility: visible;
 			right: 0;
 			left: 50%;
 			opacity: 1;
 			background-color: $black;
-			transition: all .6s ease-in;
+			@include prefix(transition, all 0.5s ease-in, webkit ms o);
 		}
 	    ul {
 	    	display: block;
 		    position: absolute;
 		    top: 50%;
-		    transform: translateY(-50%);
+		    @include prefix(transform, translateY(-50%), webkit ms o );
 		    li {
 	    		color: $white;
 		    	width: 100%;
@@ -157,7 +155,6 @@
 		top: 5px;
 		right: 10px;
 		display: block;
-		z-index: 10;
 	}
 
 	div.logo {
@@ -178,7 +175,8 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translateY(-50%) translateX(-50%);
+			@include prefix(transform, translateY(-50%) translateX(-50%), webkit ms o );
+			// transform: translateY(-50%) translateX(-50%);
 			li {
 				margin: 20px 0;
 				text-align: center;

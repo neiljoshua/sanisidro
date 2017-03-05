@@ -3,11 +3,12 @@
 /* Footer*/
 
 footer {
-	padding: 60px 50px;
-	background-color : $lightgray;
-	color: $white;
+	padding: 20px 40px;
+	background-color : $white;
+	color: $black;
 	p{
 		display: inline-block;
+		line-height: 1;
 	}
 	.footer-nav {
 		display: inline-block;
@@ -18,9 +19,9 @@ footer {
 				display: inline-block;
 				margin: 0 20px;
 				a {
-					color: $white;
+					color: $black;
 					&:hover{
-						color: $black;
+						color: $gray;
 					}	
 				}
 			}

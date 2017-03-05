@@ -1,20 +1,16 @@
 .news-content {
 
 	main{
-		padding-top: 60px;
+		padding-top: 56px;
 		background-color: $silver;
 	}
 
 	.image-news {
 		position: relative;
-		// height: 50vh;
 		width: 50%;
 		overflow: hidden;
 		float: left;
-		-webkit-background-size: cover;
-	 	-moz-background-size: cover;
-	  -o-background-size: cover;
-		background-size: cover;
+		@include prefix(background-size, cover, webkit ms o);
 		&:before {
 			content: "";
 			display: block;
@@ -36,16 +32,29 @@
 			}
 		}
 		a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
 			overflow: hidden;
 			font-weight: 300;
 			font-size: 20px;
 			color: $white;
-			padding: 80%;
-			background-color: $gray;
-			opacity: 0.9;
-			width: 100%;
+			opacity: 1;
 			text-align: center;
+			vertical-align: middle;
 			text-transform: capitalize;
+			span{
+				z-index: 20;
+				color: $white;
+				font-weight: 600;
+				line-height: 1.5;
+			}
+			&:hover{	
+				opacity: 0.6;
+				background-color: $black;
+			}
 		}
 	}
 

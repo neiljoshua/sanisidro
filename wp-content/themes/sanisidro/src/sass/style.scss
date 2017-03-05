@@ -19,10 +19,12 @@ Version: 1.0
 @import 'footer';
 
 /* General Layout */
-body {
+body  {
+	height:100%;
 	font-size: 14px;
 	color: #333;
 	&.fixed {
+		top: 0;
 		overflow: hidden;
 	}
 }
@@ -44,6 +46,7 @@ section {
 }
 
 a {
+	text-transform: capitalize;
 	text-decoration: none;
 	color: $black;
 }
@@ -122,7 +125,7 @@ div.hero {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translateY(-50%) translateX(-50%);
+	@include prefix(transform, translateY(-50%) translateX(-50%), webkit ms o);
 }
 
 /*post*/
@@ -144,15 +147,13 @@ article.post:last-of-type {
 
 /* Media Queries */
 @include media(large) {
-
+	.c-hamburger {
+		display: block;
+	}
 	
 }
 
 @include media(tablet) {
-	
-	.c-hamburger {
-		right: 10px;
-	}
 
 	.image {
 		img {

@@ -17,16 +17,23 @@
 	position: fixed;
 	visibility: hidden;
 	z-index: 80;
-	opacity: 0.7;
+	opacity: 0.9;
 	&.white-background {
 		visibility: visible;
 		background: $white;
+		height: 60px;
+		a{
+			color: $black;
+		}
 	}
 }
 
 .header-logo {
- 	margin: 10px 20px;
- 	display: block;
+ 	position: fixed;
+ 	top: 10px;
+ 	left: 10px;
+ 	height: 50px;
+ 	width: 50px;
  	img{
 	 	height: 36px;
 	 	border-radius: 5px;
@@ -47,9 +54,23 @@
 /*Navigation Menu*/
 
 .site-nav {
+	position: relative;
 	float: right;
 	display: block;
 	margin: 20px 30px;
+	z-index: 90;
+	&.white-background {
+		&.current-menu-item {
+    		a {
+					color: $gray;
+					border-bottom: 1px solid $gray;
+					font-weight: 600;
+    		}
+    	}
+		a{
+			color: $gray;
+		}
+	}
 	ul {
 		margin: 0;
 		padding: 0;
@@ -64,10 +85,18 @@
 			float: left;
 			margin-left: 20px;
 			text-transform: capitalize;
+			&.current-menu-item {
+    		a {
+					color: $silver;
+					border-bottom: 1px solid $silver;
+					font-weight: 600;
+    		}
+    	}
 			a {
+				text-transform: uppercase;
 				letter-spacing: 1.5px;
 				color: $white;
-				font-weight: 400;
+				font-weight: 600;
 				padding-top:5px;
 				&:link, &:visited {
 					margin-right: 5px;
@@ -75,9 +104,7 @@
 				&:hover,&:active {
 					color: $silver;
 					border-bottom: 1px solid $silver;
-				}
-				&.white-background {
-					color: $gray;
+					font-weight: 600;
 				}
 			}	
 		}
@@ -117,17 +144,16 @@
 		width: 100%;
 		z-index: 50;
 		margin: 0;
-		padding: 0;
 		background-color: $gray;
 		@include prefix(transform, translateX(200%), webkit ms o);
-		@include prefix(transition, all 0.7s ease-in, webkit ms o);
+		@include prefix(transition, all 0.6s ease, webkit ms o);
 		&.active {
 			visibility: visible;
 			left: 0;
 			@include prefix(transform, translateX(50%), webkit ms o);
 			opacity: 1;
 			background-color: $black;
-			@include prefix(transition, all 0.7s ease-in, webkit ms o);
+			@include prefix(transition, all 0.3s ease, webkit ms o);
 		}
     ul {
     	display: block;

@@ -10,18 +10,17 @@
       e.preventDefault();
         $(this).toggleClass('is-active');
         $('body').toggleClass('fixed');
+        $('site-branding').toggleClass('white-background');
         $('.site-header').toggleClass('active');
         $('.site-nav').toggleClass('active');
     });
 
 	function addWhiteBackGroundMenu() {
-		$('header').addClass('white-background');
 		$('.site-branding').addClass('white-background');
 		$('a.c-hamburger').addClass('white-background');
 	}
 
 	function removeWhiteBackGroundMenu() {
-		$('header').removeClass('white-background');
 		$('.site-branding').removeClass('white-background');
 		$('a.c-hamburger').removeClass('white-background');
 	}

@@ -3,20 +3,34 @@
 	position:fixed;
 	width:100%;
 	overflow: hidden;
-	z-index: 10;
-	opacity: 0.9;
+	z-index: 30;
 	h1 {
 		text-align: center;
 	}
 	a {
-	text-decoration: none;
+		text-decoration: none;
 	}
+}
+
+.site-branding {
+	width: 100%;
+	position: fixed;
+	visibility: hidden;
+	z-index: 80;
+	opacity: 0.7;
 	&.white-background {
+		visibility: visible;
 		background: $white;
-		a {
-		color: $gray;
 	}
-	}
+}
+
+.header-logo {
+ 	margin: 10px 20px;
+ 	display: block;
+ 	img{
+	 	height: 36px;
+	 	border-radius: 5px;
+ 	}
 }
 
 .c-hamburger {
@@ -28,23 +42,6 @@
 			}	
 		}
 	}	
-}
-
-.site-branding {
-	position: fixed;
-	visibility: hidden;
-	z-index: 300;
-	 a {
-	 	margin: 10px 20px;
-	 	display: block;
-	 	img{
-	 	height: 36px;
-	 	border-radius: 5px;
-	 	}
-	 }
-	 &.white-background {
-	 	visibility: visible;
-	 }
 }
 
 /*Navigation Menu*/
@@ -89,27 +86,41 @@
 
 
 @include media(large) {
+	
 	.site-header {
-		height: 60px;
-		@include prefix(transition, all 0.6s ease-in 0.3s, webkit ms o);
-		&.active{
-		height: 100%;
+		min-height: 60px;
+		&.active {
+			height: 100%;
+			.header-logo {
+				visibility: hidden;
+			}
+			.site-branding {
+				background-color: transparent;
+				height: 0;
+				span {
+					background: $white;
+					&::before, &::after {
+						background-color: $white;
+					}	
+				}
+			}	
 		}
 	}
 
 	.site-nav {
-	    visibility: hidden;
-	    float: none;
-	    position: fixed;
-	    top: 0;
-	    left: 100%;
-	    height: 100%;
-	    width: 100%;
-	    z-index: 150;
-	    margin: 0;
-	    background-color: $gray;
-	    @include prefix(transform, translateX(200%), webkit ms o);
-	    @include prefix(transition, all 0.7s ease-in, webkit ms o);
+		visibility: hidden;
+		float: none;
+		position: fixed;
+		top: 0;
+		left: 100%;
+		height: 100%;
+		width: 100%;
+		z-index: 50;
+		margin: 0;
+		padding: 0;
+		background-color: $gray;
+		@include prefix(transform, translateX(200%), webkit ms o);
+		@include prefix(transition, all 0.7s ease-in, webkit ms o);
 		&.active {
 			visibility: visible;
 			left: 0;
@@ -118,37 +129,37 @@
 			background-color: $black;
 			@include prefix(transition, all 0.7s ease-in, webkit ms o);
 		}
-	    ul {
-	    	display: block;
-		    position: absolute;
-		    top: 50%;
-		    @include prefix(transform, translateY(-50%), webkit ms o );
-		    li {
-	    		color: $white;
-		    	width: 100%;
-		    	margin-bottom: 30px;
-		    	&.current-menu-item {
-		    		a {
-		    			color: $white;
-		    			border-bottom: 1px solid $white;
-		    		}
-		    	}
-		    	a {
-				color: $gray;
-				font-size: 18px;
-				margin-bottom: 20px;
-				padding-bottom: 10px;
-				letter-spacing: 2px;
-				&:link, &:visited {
-					margin-right: 5px;
-				}
-				&:hover, &:active {
-					color: $white;
-					border-bottom: 1px solid $white;
-				}
-			}	
-		    }
-	    }
+    ul {
+    	display: block;
+	    position: absolute;
+	    top: 50%;
+	    @include prefix(transform, translateY(-50%), webkit ms o );
+	    li {
+    		color: $white;
+	    	width: 100%;
+	    	margin-bottom: 30px;
+	    	&.current-menu-item {
+	    		a {
+	    			color: $white;
+	    			border-bottom: 1px solid $white;
+	    		}
+	    	}
+	    	a {
+					color: $gray;
+					font-size: 18px;
+					margin-bottom: 20px;
+					padding-bottom: 10px;
+					letter-spacing: 2px;
+					&:link, &:visited {
+						margin-right: 5px;
+					}
+					&:hover, &:active {
+						color: $white;
+						border-bottom: 1px solid $white;
+					}
+				}	
+    	}
+    }
 	}
 	
 	.c-hamburger {
@@ -158,11 +169,11 @@
 	}
 
 	div.logo {
-		
 		img{
 			height: 150px;
 		}
 	}
+
 }
 
 @include media(tablet) {
@@ -185,6 +196,5 @@
 			@include prefix(transform, translateX(0%), webkit ms o);
 		}
 	}
-
 
 }

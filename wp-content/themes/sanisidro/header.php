@@ -14,15 +14,14 @@
 	<!-- Site container -->
 	<div class="container">
 
-		<a href="#" class="c-hamburger c-hamburger--rot"> <span>toggle menu</span> </a> 
 			
 		<!-- Site header -->
 		<header class="site-header">
 
 			<div class="site-branding">
-				<a href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>"/></a>
+				<a class="header-logo" href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>"/></a>
+				<a href="#" class="c-hamburger c-hamburger--rot"> <span>toggle menu</span> </a> 
 			</div>
-			<!-- 	<h1> <?php //bloginfo('name');?></h1> -->
 				
 			<div class="site-nav">
 

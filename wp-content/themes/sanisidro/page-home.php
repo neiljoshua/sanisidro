@@ -98,6 +98,23 @@ get_header();
 	  <section>
 			<h2 class="title">Featured </h2>
 			<a class="featured_link" href="/index.php?page_id=251"> View Projects</a>
+			<?php 
+				$args = array(
+				  'post_type' => 'project',
+				  'posts_per_page' => 8,
+				  'order' => 'DESC',
+				  'orderby' => 'post_date',
+				  'meta_query' => array(
+				    array(
+				      'key' => 'project_featured',
+				      'value' => '1',
+				      'compare' => '=='
+				    )
+				  )
+				);
+
+				$posts = get_posts( $args );
+			?>
 			<?php include("partials/featured-blocks.php") ?>
 		</section>
 

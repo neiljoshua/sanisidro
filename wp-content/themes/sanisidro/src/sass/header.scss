@@ -1,9 +1,11 @@
 /*Header*/
 .site-header {
-	position:fixed;
 	width:100%;
+	position:fixed;
+	top: 0;
 	overflow: hidden;
-	z-index: 30;
+	z-index: 2000;
+	left: 80px;
 	h1 {
 		text-align: center;
 	}
@@ -16,7 +18,9 @@
 	width: 100%;
 	position: fixed;
 	visibility: hidden;
-	z-index: 80;
+	top: 0;
+	left: 0;
+	z-index: 1500;
 	opacity: 0.9;
 	&.white-background {
 		visibility: visible;
@@ -30,13 +34,17 @@
 
 .header-logo {
  	position: fixed;
- 	top: 10px;
- 	left: 10px;
- 	height: 50px;
- 	width: 50px;
+ 	display: block;
+ 	top: 0;
+ 	left: 0;
  	img{
-	 	height: 36px;
+	 	height: 30px;
+	 	width: 30px;
+	 	margin: 10px 20px;
 	 	border-radius: 5px;
+	 	&:hover {
+	 		cursor: pointer;
+	 	}
  	}
 }
 
@@ -57,7 +65,7 @@
 	position: relative;
 	float: right;
 	display: block;
-	margin: 20px 30px;
+	margin: 20px 100px 0 0;
 	z-index: 90;
 	&.white-background {
 		&.current-menu-item {
@@ -93,7 +101,7 @@
     		}
     	}
 			a {
-				text-transform: uppercase;
+				// text-transform: uppercase;
 				letter-spacing: 1.5px;
 				color: $white;
 				font-weight: 600;
@@ -140,52 +148,53 @@
 		position: fixed;
 		top: 0;
 		left: 100%;
+		right: -100%;
 		height: 100%;
-		width: 100%;
 		z-index: 50;
 		margin: 0;
 		background-color: $gray;
-		@include prefix(transform, translateX(200%), webkit ms o);
-		@include prefix(transition, all 0.6s ease, webkit ms o);
+		@include prefix(transform, translateX(50%), webkit ms o);
+		@include prefix(transition, all 0.9s ease, webkit ms o);
 		&.active {
 			visibility: visible;
 			left: 0;
-			@include prefix(transform, translateX(50%), webkit ms o);
+			right: 0;
 			opacity: 1;
 			background-color: $black;
-			@include prefix(transition, all 0.3s ease, webkit ms o);
+			@include prefix(transform, translateX(50%), webkit ms o);
+			@include prefix(transition, all 0.7s ease, webkit ms o);
 		}
-    ul {
-    	display: block;
-	    position: absolute;
-	    top: 50%;
-	    @include prefix(transform, translateY(-50%), webkit ms o );
-	    li {
-    		color: $white;
-	    	width: 100%;
-	    	margin-bottom: 30px;
-	    	&.current-menu-item {
-	    		a {
-	    			color: $white;
-	    			border-bottom: 1px solid $white;
-	    		}
+	    ul {
+	    	display: block;
+		    position: absolute;
+		    top: 50%;
+		    @include prefix(transform, translateY(-50%), webkit ms o );
+		    li {
+	    		color: $white;
+		    	width: 100%;
+		    	margin-bottom: 30px;
+		    	&.current-menu-item {
+		    		a {
+		    			color: $white;
+		    			border-bottom: 1px solid $white;
+		    		}
+		    	}
+		    	a {
+						color: $gray;
+						font-size: 18px;
+						margin-bottom: 20px;
+						padding-bottom: 10px;
+						letter-spacing: 2px;
+						&:link, &:visited {
+							margin-right: 5px;
+						}
+						&:hover, &:active {
+							color: $white;
+							border-bottom: 1px solid $white;
+						}
+					}	
 	    	}
-	    	a {
-					color: $gray;
-					font-size: 18px;
-					margin-bottom: 20px;
-					padding-bottom: 10px;
-					letter-spacing: 2px;
-					&:link, &:visited {
-						margin-right: 5px;
-					}
-					&:hover, &:active {
-						color: $white;
-						border-bottom: 1px solid $white;
-					}
-				}	
-    	}
-    }
+	    }
 	}
 	
 	.c-hamburger {
@@ -205,21 +214,20 @@
 @include media(tablet) {
 
 	.site-nav {
-		
+
 		ul {
 			display: block;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			@include prefix(transform, translateY(-50%) translateX(-50%), webkit ms o );
-			// transform: translateY(-50%) translateX(-50%);
 			li {
 				margin: 20px 0;
 				text-align: center;
 			}
 		}
 		&.active {
-			@include prefix(transform, translateX(0%), webkit ms o);
+			@include prefix(transform, translateX(0), webkit ms o);
 		}
 	}
 

@@ -13,16 +13,10 @@
 ?>>
 	<!-- Site container -->
 	<div class="container">
-
 			
 		<!-- Site header -->
 		<header class="site-header">
 
-			<div class="site-branding">
-				<a class="header-logo" href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>"/></a>
-				<a href="#" class="c-hamburger c-hamburger--rot"> <span>toggle menu</span> </a> 
-			</div>
-				
 			<div class="site-nav">
 
 				<?php 
@@ -35,3 +29,9 @@
 			</div>
 
 		</header> <!--site-geader-->
+		
+		<div class="site-branding">
+		<a class="header-logo" href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>"/></a>
+		</div>
+
+		<a href="#" class="c-hamburger c-hamburger--rot"> <span>toggle menu</span> </a> 

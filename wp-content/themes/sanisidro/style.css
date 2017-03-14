@@ -103,7 +103,7 @@ button {
   border: none;
   cursor: pointer;
   transition: background 0.3s;
-  z-index: 500;
+  z-index: 2500;
 }
 /* line 19, src/sass/hamburger.scss */
 .c-hamburger:focus {
@@ -210,121 +210,129 @@ button {
 /*Header*/
 /* line 2, src/sass/header.scss */
 .site-header {
-  position: fixed;
   width: 100%;
+  position: fixed;
+  top: 0;
   overflow: hidden;
-  z-index: 30;
+  z-index: 2000;
+  left: 80px;
 }
-/* line 7, src/sass/header.scss */
+/* line 9, src/sass/header.scss */
 .site-header h1 {
   text-align: center;
 }
-/* line 10, src/sass/header.scss */
+/* line 12, src/sass/header.scss */
 .site-header a {
   text-decoration: none;
 }
 
-/* line 15, src/sass/header.scss */
+/* line 17, src/sass/header.scss */
 .site-branding {
   width: 100%;
   position: fixed;
   visibility: hidden;
-  z-index: 80;
+  top: 0;
+  left: 0;
+  z-index: 1500;
   opacity: 0.9;
 }
-/* line 21, src/sass/header.scss */
+/* line 25, src/sass/header.scss */
 .site-branding.white-background {
   visibility: visible;
   background: #fff;
   height: 60px;
 }
-/* line 25, src/sass/header.scss */
+/* line 29, src/sass/header.scss */
 .site-branding.white-background a {
   color: #000;
 }
 
-/* line 31, src/sass/header.scss */
+/* line 35, src/sass/header.scss */
 .header-logo {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  height: 50px;
-  width: 50px;
+  display: block;
+  top: 0;
+  left: 0;
 }
-/* line 37, src/sass/header.scss */
+/* line 40, src/sass/header.scss */
 .header-logo img {
-  height: 36px;
+  height: 30px;
+  width: 30px;
+  margin: 10px 20px;
   border-radius: 5px;
 }
-
 /* line 45, src/sass/header.scss */
+.header-logo img:hover {
+  cursor: pointer;
+}
+
+/* line 53, src/sass/header.scss */
 .c-hamburger.white-background span {
   background: #595959;
 }
-/* line 47, src/sass/header.scss */
+/* line 55, src/sass/header.scss */
 .c-hamburger.white-background span::before, .c-hamburger.white-background span::after {
   background-color: #595959;
 }
 
 /*Navigation Menu*/
-/* line 56, src/sass/header.scss */
+/* line 64, src/sass/header.scss */
 .site-nav {
   position: relative;
   float: right;
   display: block;
-  margin: 20px 30px;
+  margin: 20px 100px 0 0;
   z-index: 90;
 }
-/* line 64, src/sass/header.scss */
+/* line 72, src/sass/header.scss */
 .site-nav.white-background.current-menu-item a {
   color: #595959;
   border-bottom: 1px solid #595959;
   font-weight: 600;
 }
-/* line 70, src/sass/header.scss */
+/* line 78, src/sass/header.scss */
 .site-nav.white-background a {
   color: #595959;
 }
-/* line 74, src/sass/header.scss */
+/* line 82, src/sass/header.scss */
 .site-nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 77, src/sass/header.scss */
+/* line 85, src/sass/header.scss */
 .site-nav ul:before, .site-nav ul:after {
   content: "";
   display: table;
 }
-/* line 80, src/sass/header.scss */
+/* line 88, src/sass/header.scss */
 .site-nav ul:after {
   clear: both;
 }
-/* line 83, src/sass/header.scss */
+/* line 91, src/sass/header.scss */
 .site-nav ul li {
   list-style: none;
   float: left;
   margin-left: 20px;
   text-transform: capitalize;
 }
-/* line 89, src/sass/header.scss */
+/* line 97, src/sass/header.scss */
 .site-nav ul li.current-menu-item a {
   color: #c0c0c0;
   border-bottom: 1px solid #c0c0c0;
   font-weight: 600;
 }
-/* line 95, src/sass/header.scss */
+/* line 103, src/sass/header.scss */
 .site-nav ul li a {
-  text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #fff;
   font-weight: 600;
   padding-top: 5px;
 }
-/* line 101, src/sass/header.scss */
+/* line 109, src/sass/header.scss */
 .site-nav ul li a:link, .site-nav ul li a:visited {
   margin-right: 5px;
 }
-/* line 104, src/sass/header.scss */
+/* line 112, src/sass/header.scss */
 .site-nav ul li a:hover, .site-nav ul li a:active {
   color: #c0c0c0;
   border-bottom: 1px solid #c0c0c0;
@@ -332,69 +340,70 @@ button {
 }
 
 @media (max-width: 1024px) {
-  /* line 117, src/sass/header.scss */
+  /* line 125, src/sass/header.scss */
   .site-header {
     min-height: 60px;
   }
-  /* line 119, src/sass/header.scss */
+  /* line 127, src/sass/header.scss */
   .site-header.active {
     height: 100%;
   }
-  /* line 121, src/sass/header.scss */
+  /* line 129, src/sass/header.scss */
   .site-header.active .header-logo {
     visibility: hidden;
   }
-  /* line 124, src/sass/header.scss */
+  /* line 132, src/sass/header.scss */
   .site-header.active .site-branding {
     background-color: transparent;
     height: 0;
   }
-  /* line 127, src/sass/header.scss */
+  /* line 135, src/sass/header.scss */
   .site-header.active .site-branding span {
     background: #fff;
   }
-  /* line 129, src/sass/header.scss */
+  /* line 137, src/sass/header.scss */
   .site-header.active .site-branding span::before, .site-header.active .site-branding span::after {
     background-color: #fff;
   }
 
-  /* line 137, src/sass/header.scss */
+  /* line 145, src/sass/header.scss */
   .site-nav {
     visibility: hidden;
     float: none;
     position: fixed;
     top: 0;
     left: 100%;
+    right: -100%;
     height: 100%;
-    width: 100%;
     z-index: 50;
     margin: 0;
     background-color: #595959;
-    -webkit-transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -o-transform: translateX(200%);
-    transform: translateX(200%);
-    -webkit-transition: all 0.6s ease;
-    -ms-transition: all 0.6s ease;
-    -o-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-  }
-  /* line 150, src/sass/header.scss */
-  .site-nav.active {
-    visibility: visible;
-    left: 0;
     -webkit-transform: translateX(50%);
     -ms-transform: translateX(50%);
     -o-transform: translateX(50%);
     transform: translateX(50%);
-    opacity: 1;
-    background-color: #000;
-    -webkit-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.9s ease;
+    -ms-transition: all 0.9s ease;
+    -o-transition: all 0.9s ease;
+    transition: all 0.9s ease;
   }
   /* line 158, src/sass/header.scss */
+  .site-nav.active {
+    visibility: visible;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    background-color: #000;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
+    -webkit-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+  }
+  /* line 167, src/sass/header.scss */
   .site-nav ul {
     display: block;
     position: absolute;
@@ -404,18 +413,18 @@ button {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  /* line 163, src/sass/header.scss */
+  /* line 172, src/sass/header.scss */
   .site-nav ul li {
     color: #fff;
     width: 100%;
     margin-bottom: 30px;
   }
-  /* line 168, src/sass/header.scss */
+  /* line 177, src/sass/header.scss */
   .site-nav ul li.current-menu-item a {
     color: #fff;
     border-bottom: 1px solid #fff;
   }
-  /* line 173, src/sass/header.scss */
+  /* line 182, src/sass/header.scss */
   .site-nav ul li a {
     color: #595959;
     font-size: 18px;
@@ -423,30 +432,30 @@ button {
     padding-bottom: 10px;
     letter-spacing: 2px;
   }
-  /* line 179, src/sass/header.scss */
+  /* line 188, src/sass/header.scss */
   .site-nav ul li a:link, .site-nav ul li a:visited {
     margin-right: 5px;
   }
-  /* line 182, src/sass/header.scss */
+  /* line 191, src/sass/header.scss */
   .site-nav ul li a:hover, .site-nav ul li a:active {
     color: #fff;
     border-bottom: 1px solid #fff;
   }
 
-  /* line 191, src/sass/header.scss */
+  /* line 200, src/sass/header.scss */
   .c-hamburger {
     top: 5px;
     right: 10px;
     display: block;
   }
 
-  /* line 198, src/sass/header.scss */
+  /* line 207, src/sass/header.scss */
   div.logo img {
     height: 150px;
   }
 }
 @media (max-width: 768px) {
-  /* line 209, src/sass/header.scss */
+  /* line 218, src/sass/header.scss */
   .site-nav ul {
     display: block;
     position: absolute;
@@ -457,17 +466,17 @@ button {
     -o-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
   }
-  /* line 216, src/sass/header.scss */
+  /* line 224, src/sass/header.scss */
   .site-nav ul li {
     margin: 20px 0;
     text-align: center;
   }
-  /* line 221, src/sass/header.scss */
+  /* line 229, src/sass/header.scss */
   .site-nav.active {
-    -webkit-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
-    transform: translateX(0%);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 /* Hero Page */
@@ -577,52 +586,57 @@ a.featured_link {
   text-align: center;
   padding-bottom: 20px;
   border-bottom: 1px solid #000;
+  text-transform: capitalize;
+}
+/* line 98, src/sass/home.scss */
+.gallery-image.is-loading {
+  background-color: #000;
 }
 
 @media (max-width: 768px) {
-  /* line 105, src/sass/home.scss */
+  /* line 109, src/sass/home.scss */
   div.logo img {
     max-height: 120px;
   }
 
-  /* line 109, src/sass/home.scss */
+  /* line 113, src/sass/home.scss */
   .slider-description {
     max-width: 100%;
   }
-  /* line 111, src/sass/home.scss */
+  /* line 115, src/sass/home.scss */
   .slider-description p {
     font-size: 16px;
   }
 
-  /* line 116, src/sass/home.scss */
+  /* line 120, src/sass/home.scss */
   .gallery-image {
     width: 50%;
   }
 }
 @media (max-width: 600px) {
-  /* line 124, src/sass/home.scss */
+  /* line 128, src/sass/home.scss */
   div.logo img {
     max-height: 70px;
   }
 
-  /* line 128, src/sass/home.scss */
+  /* line 132, src/sass/home.scss */
   .gallery-image {
     width: 100%;
     margin: 20px 0;
     float: none;
   }
-  /* line 132, src/sass/home.scss */
+  /* line 136, src/sass/home.scss */
   .gallery-image img, .gallery-image p {
     width: 100%;
   }
-  /* line 135, src/sass/home.scss */
+  /* line 139, src/sass/home.scss */
   .gallery-image img {
     margin: 0;
     min-height: 250px;
     max-height: 250px;
   }
 
-  /* line 141, src/sass/home.scss */
+  /* line 145, src/sass/home.scss */
   .slider-for {
     width: 100%;
     margin: 0 auto;
@@ -827,39 +841,42 @@ a.featured_link {
   text-align: center;
   vertical-align: middle;
   text-transform: capitalize;
+  padding: 0;
+  margin: 0;
 }
-/* line 47, src/sass/news-content.scss */
+/* line 49, src/sass/news-content.scss */
 .news-content .image-news a span {
   z-index: 20;
   color: #fff;
   font-weight: 600;
   line-height: 1.5;
 }
-/* line 53, src/sass/news-content.scss */
+/* line 55, src/sass/news-content.scss */
 .news-content .image-news a:hover {
   opacity: 0.7;
   background-color: #000;
+  margin: -1px;
 }
 @media (max-width: 768px) {
-  /* line 62, src/sass/news-content.scss */
+  /* line 65, src/sass/news-content.scss */
   .news-content .image-news a {
     font-size: 18px;
   }
-  /* line 66, src/sass/news-content.scss */
+  /* line 69, src/sass/news-content.scss */
   .news-content .image-news:nth-child(2):before, .news-content .image-news:nth-child(3):before, .news-content .image-news:nth-child(4):before {
     padding-bottom: 100%;
   }
-  /* line 70, src/sass/news-content.scss */
+  /* line 73, src/sass/news-content.scss */
   .news-content .image-news:nth-child(3), .news-content .image-news:nth-child(4) {
     width: 50%;
   }
 }
 @media (max-width: 600px) {
-  /* line 77, src/sass/news-content.scss */
+  /* line 80, src/sass/news-content.scss */
   .news-content .image-news {
     width: 100%;
   }
-  /* line 79, src/sass/news-content.scss */
+  /* line 82, src/sass/news-content.scss */
   .news-content .image-news:nth-child(2), .news-content .image-news:nth-child(3), .news-content .image-news:nth-child(4) {
     width: 100%;
   }

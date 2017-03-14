@@ -1,22 +1,4 @@
 
-	<?php 
-		$args = array(
-		  'post_type' => 'project',
-		  'posts_per_page' => 8,
-		  'order' => 'DESC',
-		  'orderby' => 'post_date',
-		  'meta_query' => array(
-		    array(
-		      'key' => 'project_featured',
-		      'value' => '1',
-		      'compare' => '=='
-		    )
-		  )
-		);
-
-		$posts = get_posts( $args );
-	?>
-
 	<ul class="home-gallery clear-float">
 
 	<?php 		foreach( $posts as $post ): 

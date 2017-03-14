@@ -27,7 +27,7 @@ add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'na
 <?php 
 
 $args = array(
-  'post_type' => 'projects',
+  'post_type' => 'project',
   'posts_per_page' => 1,
   'order' => 'DESC',
   'orderby' => 'post_date',
@@ -73,8 +73,19 @@ $posts = get_posts( $args );
    <!-- display propject -->
 
    <section>
-   		<h2 class="title">Projects</h2>
-	 	<?php include("partials/featured-blocks.php") ?>
+     <h2 class="title">Projects</h2>
+     <?php 
+        $args = array(
+          'post_type' => 'project',
+          'posts_per_page' => 50,
+          'order' => 'DESC',
+          'orderby' => 'post_date'
+        );
+
+        $posts = get_posts( $args );
+      ?>
+	 	 <?php include("partials/featured-blocks.php") ?>
+     
    </section>		
 
 </main>	

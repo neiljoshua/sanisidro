@@ -8,29 +8,29 @@ $(document).ready(function(){
   var $nav = $('.site-nav');
   var $mobile =$('.c-hamburger');
   var $body =$('body');
+  var loadedImageCount, imageCount;
 
 
-  if ($body.hasClass('.projects')) {
-	  $('.home-gallery').on('load', function() {
-		  // add new images
-		  console.log('loading images');
+  if ($body.hasClass('projects')) {
+  	$('.home-gallery').imagesLoaded( function() {
+  		console.log('loading images');
 		  var items = getItems();
 		  $container.prepend( $(items) );
 		  // use ImagesLoaded
 		  $container.imagesLoaded()
-		    .progress( onProgress )
-		    .always( onAlways );
+		    .progress( onProgress );
 		  // reset progress counter
 		  imageCount = $container.find('img').length;
-		  resetProgress();
-		  updateProgress( 0 );
+		  // resetProgress();
+		  // updateProgress( 0 );
+	  	console.log('DONE  - all images have been successfully loaded');
 		});
 	}
 
   // return doc fragment with
 	function getItems() {
 	  var items = '';
-	  for ( var i = 0; i < 7; i++ ) {
+	  for ( var i = 0; i < 8; i++ ) {
 	    items += getImageItem();
 	  }
 	  return items;
@@ -46,6 +46,27 @@ $(document).ready(function(){
 	  var rando = Math.ceil( Math.random() * 1000 );
 	}
 
+	// triggered after each item is loaded
+	function onProgress( imgLoad, image ) {
+	  // change class if the image is loaded or broken
+	  var $item = $( image.img ).parent();
+	  $item.removeClass('is-loading');
+	  if ( !image.isLoaded ) {
+	    $item.addClass('is-broken');
+	  }
+	  // update progress element
+	  loadedImageCount++;
+	  // updateProgress( loadedImageCount );
+	}
+
+	// Reset progress
+	function resetProgress() {
+	  $status.css({ opacity: 1 });
+	  loadedImageCount = 0;
+	  if ( supportsProgress ) {
+	    $progress.attr( 'max', imageCount );
+	  }
+	}
 
  //Toggle mobilemenu if viewport width chages.
   function checkWidth(){

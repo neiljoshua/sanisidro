@@ -5,6 +5,8 @@
 #module control
 /wp-content/themes/sanisidro/node_modules
 /wp-content/themes/sanisidro/npm_log
+node_modules
+npm_log
 
 #Git flow
 gitflow-installer.sh

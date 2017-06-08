@@ -30,7 +30,7 @@ footer {
 
 }
 
-@include media(mobile){
+@include media-max-width(mobile) {
 	footer {
 		padding: 50px 0;
 		p{

@@ -72,7 +72,7 @@
 		}
 	}
 
-	@include media(tablet) {
+	@include media-max-width(tablet) {
 	
 		.image {
 			width: 50%;
@@ -85,7 +85,7 @@
 		}
 	}
 
-	@include media(mobile) {
+	@include media-max-width(mobile) {
 
 		.member-container {
 			&:nth-child(odd), &:nth-child(even){

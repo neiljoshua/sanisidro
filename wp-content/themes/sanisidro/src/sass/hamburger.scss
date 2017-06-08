@@ -1,6 +1,6 @@
-.c-hamburger {
+.site-header__hamburger {
     position: fixed;
-    visibility: hidden;
+    visibility: visible;
     top: 10px;
     right: 10px;
     margin: 0;
@@ -16,6 +16,14 @@
     cursor: pointer;
     transition: background 0.3s;
     z-index: 2500;
+    &.dark-hamburger {
+      span {
+        background: $gray;
+        &::before, &::after{
+          background-color: $gray;
+        } 
+      }
+    } 
     &:focus {
       outline: none;
     }
@@ -43,11 +51,13 @@
       &::after{
         bottom: -8px;
       }
+    }
+    @include media-min-width( large ) {
+      visibility: hidden;
     }  
 }
 
-.c-hamburger--rot {
-    // background-color: $blue;
+.site-header__hamburger--rot {
     opacity: 1;
     transition: opacity 0.3s 0.3s;
     span {
@@ -55,8 +65,7 @@
     }
 }
 /* active state, i.e. menu open */
-.c-hamburger--rot.is-active {
-    // background-color: $blue;
+.site-header__hamburger--rot.is-active {
     opacity:0.9;
     span {
       transform: rotate(90deg);

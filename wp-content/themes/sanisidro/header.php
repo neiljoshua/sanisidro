@@ -17,7 +17,12 @@
 		<!-- Site header -->
 		<header class="site-header">
 
-			<div class="site-nav">
+			<a class="site-header__logo" href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>"/></a>
+			
+
+			<a href="#" class="site-header__hamburger site-header__hamburger--rot"> <span></span> </a> 
+
+			<div class="site-header__menu">
 
 				<?php 
 				$args =array(
@@ -30,8 +35,5 @@
 
 		</header> <!--site-geader-->
 		
-		<div class="site-branding">
-		<a class="header-logo" href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>"/></a>
-		</div>
-
-		<a href="#" class="c-hamburger c-hamburger--rot"> <span>toggle menu</span> </a> 
+		
+		

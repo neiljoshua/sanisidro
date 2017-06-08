@@ -5,68 +5,15 @@ $(document).ready(function(){
   var $container = $('.home-gallery');	
   var $window = $(window);
   var $header = $('.site-header');
-  var $nav = $('.site-nav');
+  var $nav = $('.site-header__menu');
   var $mobile =$('.c-hamburger');
   var $body =$('body');
-  var loadedImageCount, imageCount;
+  
 
-
-  if ($body.hasClass('projects')) {
-  	$('.home-gallery').imagesLoaded( function() {
-  		console.log('loading images');
-		  var items = getItems();
-		  $container.prepend( $(items) );
-		  // use ImagesLoaded
-		  $container.imagesLoaded()
-		    .progress( onProgress );
-		  // reset progress counter
-		  imageCount = $container.find('img').length;
-		  // resetProgress();
-		  // updateProgress( 0 );
-	  	console.log('DONE  - all images have been successfully loaded');
-		});
-	}
-
-  // return doc fragment with
-	function getItems() {
-	  var items = '';
-	  for ( var i = 0; i < 8; i++ ) {
-	    items += getImageItem();
-	  }
-	  return items;
-	}
-
-	// return an <li> with a <img> in it
-	function getImageItem() {
-	  var item = '<li class="is-loading">';
-	  var size = Math.random() * 3 + 1;
-	  var width = Math.random() * 110 + 100;
-	  width = Math.round( width * size );
-	  var height = Math.round( 140 * size );
-	  var rando = Math.ceil( Math.random() * 1000 );
-	}
-
-	// triggered after each item is loaded
-	function onProgress( imgLoad, image ) {
-	  // change class if the image is loaded or broken
-	  var $item = $( image.img ).parent();
-	  $item.removeClass('is-loading');
-	  if ( !image.isLoaded ) {
-	    $item.addClass('is-broken');
-	  }
-	  // update progress element
-	  loadedImageCount++;
-	  // updateProgress( loadedImageCount );
-	}
-
-	// Reset progress
-	function resetProgress() {
-	  $status.css({ opacity: 1 });
-	  loadedImageCount = 0;
-	  if ( supportsProgress ) {
-	    $progress.attr( 'max', imageCount );
-	  }
-	}
+	$('img.lazy').lazyload({
+		// threshold: 100,
+		effect: 'fadeIn'
+	});
 
  //Toggle mobilemenu if viewport width chages.
   function checkWidth(){
@@ -89,30 +36,34 @@ $(document).ready(function(){
 	var startChange = $('#startchange');
 	var offset = 0;
 
-	$('.c-hamburger--rot').on('click', function(e){
+	$('.site-header__hamburger--rot').on('click', function(e){
       e.preventDefault();
         $(this).toggleClass('is-active');
         $('body').toggleClass('fixed');
-        $('.site-header').toggleClass('active');
-        $('site-branding').toggleClass('white-background');
-        $('.site-nav').toggleClass('active');
-        if( $('.site-nav').hasClass('white-background')){
-        	$('.site-nav').removeClass('white-background');
+        // $('.site-header').toggleClass('active');
+        $('site-header__logo').toggleClass('white-background');
+        $('.site-header__menu').toggleClass('active');
+        if( $('.site-header__menu').hasClass('white-background')){
+        	$('.site-header__menu').removeClass('white-background');
       	}
     });
 
 	function addWhiteBackGroundMenu() {
-		$('site-header').addClass('white-background');
-		$('.site-branding').addClass('white-background');
-		$('.site-nav').addClass('white-background');
-		$('a.c-hamburger').addClass('white-background');
+		$('.site-header').addClass('active');
+		$('.site-header__logo').addClass('active');
+		$('.current-menu-item a').addClass('dark-menu');
+		$('.site-header__menu a').addClass('dark-menu');
+	// 	$('.site-header__nav').addClass('white-background');
+		$('.site-header__hamburger').addClass('dark-hamburger');
 	}
 
 	function removeWhiteBackGroundMenu() {
-		$('site-header').removeClass('white-background');
-		$('.site-branding').removeClass('white-background');
-		$('.site-nav').removeClass('white-background');
-		$('a.c-hamburger').removeClass('white-background');
+		$('.site-header').removeClass('active');
+		$('.site-header__logo').removeClass('active');
+		$('.current-menu-item a').removeClass('dark-menu');
+		$('.site-header__menu a').removeClass('dark-menu');
+		// $('.site-header__nav').removeClass('white-background');
+		$('.site-header__hamburger').removeClass('dark-hamburger');
 	}
 
 	function changeMenuColor() {

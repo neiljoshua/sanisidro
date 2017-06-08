@@ -47,8 +47,8 @@
   #{$property}: $value;
 }
 
-// media queries
-@mixin media($type) {
+// media queries max-width()
+@mixin media-max-width($type) {
     @if $type == large {
         @media (max-width: 1024px) { @content; }
     }
@@ -57,5 +57,18 @@
     }
     @else if $type == mobile {
         @media (max-width: 600px)  { @content; }
+    }
+}
+
+// media queries min-width()
+@mixin media-min-width($type) {
+    @if $type == large {
+        @media (min-width: 1024px) { @content; }
+    }
+    @if $type == tablet {
+        @media (min-width: 768px)  { @content; }
+    }
+    @else if $type == mobile {
+        @media (min-width: 600px)  { @content; }
     }
 }

@@ -63,7 +63,7 @@
 		}
 		textarea {
 			display: block;
-		  width: 100%;
+			width: 100%;
 			border: 1px solid $seagreen;
 		  padding: 10px 0 80px 5px;
 		  margin: 20px auto 0;
@@ -74,10 +74,13 @@
 
 		input {
 			display: block;
-			width: 40%;
+			width: 100%;
 			margin-top: 20px;
 			border: 1px solid $seagreen;
 			padding: 10px 0 10px 5px;
+			@include media-min-width(mobile + 1) {
+				width: 40%;
+			}
 
 		}
 		input[type='submit']{
@@ -101,16 +104,6 @@
 		border: 1px solid $black;
 		width: 60px;
 		border: 1px solid $seagreen;
-	}
-
-	@include media(mobile) {
-
-		form {
-			input {
-				width: 100%;
-			}
-		}
-
 	}
 
 }

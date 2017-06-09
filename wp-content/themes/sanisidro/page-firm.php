@@ -57,7 +57,8 @@ get_header();
 ?>	
 		<div class="member-container">
 			<div class="image">
-				<img src="<?php echo $member['member_image']; ?>" />
+				<!-- <img src="<?php //echo $member['member_image']; ?>" /> -->
+				<img class="lazy" data-original="<?php echo $member['member_image']; ?>" wifth="300" height="300">
 			</div>
 			<div class="text"> 
 				<h2> <?php echo $member['member_name']; ?>	</h2>

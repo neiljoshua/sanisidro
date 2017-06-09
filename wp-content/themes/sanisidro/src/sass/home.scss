@@ -14,15 +14,18 @@
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
 	img {
-		max-height: 70px;
+	    @include media-max-width( mobile ) {
+	    	max-height: 50px;	
+	    }
+	    @include media-min-width ( mobile ) {
+	    	max-height: 100px;
+	    }
+		max-height: 50px;
 	    border: 2px solid white;
 	    border-radius: 117px;
 	    line-height: 120px;
 	    padding: 5px;
 	    opacity: 0.8;
-	    @include media-min-width( mobile + 1) {
-	    	max-height: 120px;	
-	    }
 	}
 }
 
@@ -73,7 +76,10 @@ div.text-slider {
 a.featured_link {
 	display: block;
 	text-align: right;
-	font-size: 18px;
+	font-size: 20px;
+	@include media-min-width ( tablet ) {
+		font-size: 25px;
+	}
 }
 
 .home-gallery {
@@ -81,32 +87,34 @@ a.featured_link {
 	margin: 20px 0;
 	.gallery-image {
 		width: 100%;
-		margin: 20px 0;
+		margin: 20px auto;
 		&.is-loading {
 			 background-color: $black;
 		}
-		@include media-min-width( tablet ) {
+		@include media-min-width( mobile ) {
 			float: left;
-			width: 50%;
+			width: 46%;
+			padding: 0 2%;
 		}
-		@include media-min-width( large ) {
+		@include media-min-width( tablet ) {
 			width: 25%;
+			padding: 0;
 		}	
 		img, p {
 			display: block;
 			width: 100%;
-			margin: 20px auto;
+			margin: 20px auto 30px;
 		}
 		img {
-			@include media-max-width ( mobile ) {
-				@include calc(min-height,100vw/(1200/694));
-				@include calc(max-height,100vw/(1200/694));
+			@include media-min-width( large ) {
+				min-height: auto;
 			}
 			@include media-min-width( tablet ) {
 				width: 90%;
 			}
-			@include media-min-width( large ) {
-				min-height: auto;
+			@include media-max-width ( mobile ) {
+				@include calc(min-height,100vw/(1200/694));
+				@include calc(max-height,100vw/(1200/694));
 			}
 		}
 		p {

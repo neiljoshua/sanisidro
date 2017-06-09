@@ -59,9 +59,9 @@
 
 .site-header__hamburger--rot {
     opacity: 1;
-    transition: opacity 0.3s 0.3s;
+    transition: opacity 0.6s 0.3s;
     span {
-      transition: transform 0.3s;
+      transition: transform 0.6s;
     }
 }
 /* active state, i.e. menu open */

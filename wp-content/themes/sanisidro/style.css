@@ -336,6 +336,7 @@ button {
   /* line 76, src/sass/header.scss */
   .site-header__menu ul {
     display: inline-block;
+    margin-left: 20px;
   }
 }
 @media (max-width: 1024px) {
@@ -343,7 +344,6 @@ button {
   .site-header__menu ul {
     display: block;
     position: absolute;
-    margin-left: 20px;
     text-align: center;
     top: 50%;
     -webkit-transform: translateY(-50%);

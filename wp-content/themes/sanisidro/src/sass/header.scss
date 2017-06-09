@@ -75,12 +75,12 @@
 	}
 	ul {
 		@include media-min-width ( large ) {
-	    	display: inline-block;
+	    display: inline-block;
+	    margin-left: 20px;
 		}
   	@include media-max-width ( large ) {
   		display: block;
 	    position: absolute;
-	    margin-left: 20px;
 	    text-align: center;
 	    top: 50%;
 	    @include prefix(transform, translateY(-50%), webkit ms o );

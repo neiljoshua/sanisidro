@@ -229,15 +229,14 @@ button {
   top: 0;
   left: 0;
   height: 60px;
-  overflow: hidden;
   z-index: 2000;
 }
-/* line 10, src/sass/header.scss */
+/* line 9, src/sass/header.scss */
 .site-header.active {
   background-color: #fff;
 }
 
-/* line 15, src/sass/header.scss */
+/* line 14, src/sass/header.scss */
 .site-header__logo {
   position: fixed;
   display: block;
@@ -246,24 +245,24 @@ button {
   left: 0;
   z-index: 2500;
 }
-/* line 22, src/sass/header.scss */
+/* line 21, src/sass/header.scss */
 .site-header__logo img {
   height: 30px;
   width: 30px;
   margin: 10px 20px;
   border-radius: 5px;
 }
-/* line 27, src/sass/header.scss */
+/* line 26, src/sass/header.scss */
 .site-header__logo img:hover {
   cursor: pointer;
 }
-/* line 31, src/sass/header.scss */
+/* line 30, src/sass/header.scss */
 .site-header__logo.active {
   visibility: visible;
 }
 
 /*Navigation Menu*/
-/* line 39, src/sass/header.scss */
+/* line 38, src/sass/header.scss */
 .site-header__menu {
   display: block;
   -webkit-transform: translateX(50%);
@@ -276,7 +275,7 @@ button {
   transition: all 0.6s ease-in-out;
 }
 @media (max-width: 1024px) {
-  /* line 39, src/sass/header.scss */
+  /* line 38, src/sass/header.scss */
   .site-header__menu {
     visibility: hidden;
     position: fixed;
@@ -290,7 +289,7 @@ button {
   }
 }
 @media (min-width: 1024px) {
-  /* line 39, src/sass/header.scss */
+  /* line 38, src/sass/header.scss */
   .site-header__menu {
     visibility: visible;
     position: fixed;
@@ -299,7 +298,7 @@ button {
     z-index: 90;
   }
 }
-/* line 61, src/sass/header.scss */
+/* line 60, src/sass/header.scss */
 .site-header__menu.active {
   visibility: visible;
   left: 0;
@@ -308,7 +307,7 @@ button {
   background-color: #000;
 }
 @media (max-width: 1024px) {
-  /* line 61, src/sass/header.scss */
+  /* line 60, src/sass/header.scss */
   .site-header__menu.active {
     -webkit-transform: translateX(50%);
     -ms-transform: translateX(50%);
@@ -321,7 +320,7 @@ button {
   }
 }
 @media (max-width: 600px) {
-  /* line 61, src/sass/header.scss */
+  /* line 60, src/sass/header.scss */
   .site-header__menu.active {
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
@@ -334,13 +333,13 @@ button {
   }
 }
 @media (min-width: 1024px) {
-  /* line 77, src/sass/header.scss */
+  /* line 76, src/sass/header.scss */
   .site-header__menu ul {
     display: inline-block;
   }
 }
 @media (max-width: 1024px) {
-  /* line 77, src/sass/header.scss */
+  /* line 76, src/sass/header.scss */
   .site-header__menu ul {
     display: block;
     position: absolute;
@@ -354,7 +353,7 @@ button {
   }
 }
 @media (max-width: 600px) {
-  /* line 77, src/sass/header.scss */
+  /* line 76, src/sass/header.scss */
   .site-header__menu ul {
     display: block;
     position: absolute;
@@ -366,64 +365,64 @@ button {
     transform: translateX(-50%) translateY(-50%);
   }
 }
-/* line 96, src/sass/header.scss */
+/* line 95, src/sass/header.scss */
 .site-header__menu ul li {
   margin-bottom: 30px;
 }
 @media (min-width: 1024px) {
-  /* line 96, src/sass/header.scss */
+  /* line 95, src/sass/header.scss */
   .site-header__menu ul li {
     display: inline-block;
     margin-right: 20px;
   }
 }
-/* line 103, src/sass/header.scss */
+/* line 102, src/sass/header.scss */
 .site-header__menu ul li.current-menu-item a {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
 @media (min-width: 1024px) {
-  /* line 103, src/sass/header.scss */
+  /* line 102, src/sass/header.scss */
   .site-header__menu ul li.current-menu-item a {
     color: #fff;
     border-bottom: 1px solid #fff;
     font-weight: 600;
   }
-  /* line 110, src/sass/header.scss */
+  /* line 109, src/sass/header.scss */
   .site-header__menu ul li.current-menu-item a.dark-menu {
     color: #000;
   }
 }
-/* line 116, src/sass/header.scss */
+/* line 115, src/sass/header.scss */
 .site-header__menu ul li a {
   margin-bottom: 20px;
   padding-bottom: 10px;
   letter-spacing: 2px;
 }
 @media (max-width: 1024px) {
-  /* line 116, src/sass/header.scss */
+  /* line 115, src/sass/header.scss */
   .site-header__menu ul li a {
     font-size: 25px;
     color: #595959;
   }
 }
 @media (min-width: 1024px) {
-  /* line 116, src/sass/header.scss */
+  /* line 115, src/sass/header.scss */
   .site-header__menu ul li a {
     font-size: 18px;
     color: #c0c0c0;
   }
-  /* line 128, src/sass/header.scss */
+  /* line 127, src/sass/header.scss */
   .site-header__menu ul li a.dark-menu:hover, .site-header__menu ul li a.dark-menu:active {
     color: #000;
     border-bottom: 1px solid #000;
   }
 }
-/* line 135, src/sass/header.scss */
+/* line 134, src/sass/header.scss */
 .site-header__menu ul li a:link, .site-header__menu ul li a:visited {
   margin-right: 5px;
 }
-/* line 138, src/sass/header.scss */
+/* line 137, src/sass/header.scss */
 .site-header__menu ul li a:hover, .site-header__menu ul li a:active {
   color: #fff;
   border-bottom: 1px solid #fff;
@@ -462,7 +461,7 @@ button {
 @media (min-width: 600px) {
   /* line 16, src/sass/home.scss */
   .logo img {
-    max-height: 100px;
+    max-height: 125px;
   }
 }
 
@@ -1105,13 +1104,13 @@ div.container {
 /* line 103, src/sass/style.scss */
 .content {
   font-size: 18px;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 @media (min-width: 600px) {
   /* line 103, src/sass/style.scss */
   .content {
-    margin: 0 0 5vh 12vw;
-    padding: 30px 0;
+    padding: 10px 0;
+    max-width: 780px;
   }
 }
 

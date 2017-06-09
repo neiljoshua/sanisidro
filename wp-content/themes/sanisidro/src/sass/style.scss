@@ -102,10 +102,10 @@ div.container {
 
 .content {
 	font-size: 18px;
-	margin: 20px 0;
+	margin: 40px 0;
 	@include media-min-width( mobile ) {
-		margin: 0 0 5vh 12vw;
-		padding: 30px 0;
+		padding: 10px 0;
+		max-width: 780px;
 	}
 }
 

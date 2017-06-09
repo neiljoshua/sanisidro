@@ -6,29 +6,39 @@ $(document).ready(function(){
   var $window = $(window);
   var $header = $('.site-header');
   var $nav = $('.site-header__menu');
-  var $mobile =$('.c-hamburger');
+  var $mobile = $('.site-header__hamburger');
   var $body =$('body');
   
 
-	$('img.lazy').lazyload({
-		// threshold: 100,
-		effect: 'fadeIn'
-	});
+ //  $(function() {
+ //    $("img.lazy").lazyload({
+ //        event : "iamges"
+ //    });
+ //  });
+
+ //  $(window).bind("load", function() {
+	// var timeout = setTimeout(function() { $("img.lazy").trigger("images") }, 500);
+ //  });
+
+  $('img.lazy').lazyload({
+	threshold: 150,
+	effect: 'fadeIn'
+  });
 
  //Toggle mobilemenu if viewport width chages.
   function checkWidth(){
     if ($window.width() < 1024) {
     	if($body.hasClass('fixed')){
     		$body.toggleClass('fixed');
-	      $mobile.removeClass('is-active');
+	     	$mobile.removeClass('is-active');
     		$header.removeClass('active');
-	      $nav.removeClass('active');
+	        $nav.removeClass('active');
     	}
     	ifHome();
     }
   };
 
-  checkWidth();
+  // checkWidth();
 
   $(window).resize(checkWidth);	
 
@@ -40,12 +50,7 @@ $(document).ready(function(){
       e.preventDefault();
         $(this).toggleClass('is-active');
         $('body').toggleClass('fixed');
-        // $('.site-header').toggleClass('active');
-        $('site-header__logo').toggleClass('white-background');
         $('.site-header__menu').toggleClass('active');
-        if( $('.site-header__menu').hasClass('white-background')){
-        	$('.site-header__menu').removeClass('white-background');
-      	}
     });
 
 	function addWhiteBackGroundMenu() {
@@ -53,7 +58,6 @@ $(document).ready(function(){
 		$('.site-header__logo').addClass('active');
 		$('.current-menu-item a').addClass('dark-menu');
 		$('.site-header__menu a').addClass('dark-menu');
-	// 	$('.site-header__nav').addClass('white-background');
 		$('.site-header__hamburger').addClass('dark-hamburger');
 	}
 
@@ -62,7 +66,6 @@ $(document).ready(function(){
 		$('.site-header__logo').removeClass('active');
 		$('.current-menu-item a').removeClass('dark-menu');
 		$('.site-header__menu a').removeClass('dark-menu');
-		// $('.site-header__nav').removeClass('white-background');
 		$('.site-header__hamburger').removeClass('dark-hamburger');
 	}
 

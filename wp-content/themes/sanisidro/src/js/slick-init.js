@@ -5,7 +5,7 @@
 			autoplay: true,
 			dots: true,
 		  	infinite: true,
-		  	speed: 160,
+		  	speed: 150,
 		  	fade: true,
 		  	cssEase: 'linear'
 		 });

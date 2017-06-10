@@ -52,7 +52,7 @@
 		visibility: visible;
 		position: fixed;
 		top: 20px;
-		right: 300px;
+		right: 250px;
 		z-index: 90;
 	}
 	@include prefix(transform, translateX(50%), webkit ms o);
@@ -74,30 +74,31 @@
 			
 	}
 	ul {
-		@include media-min-width ( large ) {
+		@include media-max-width ( large ) {
+			text-align: left;
+			display: block;
+			position: absolute;
+			top: 50%;
+			@include prefix(transform, translateY(-50%), webkit ms o );
+	  }
+		@include media-min-width ( tablet ) {
 	    display: inline-block;
 	    margin-left: 20px;
 		}
-  	@include media-max-width ( large ) {
-  		display: block;
-	    position: absolute;
-	    text-align: center;
-	    top: 50%;
-	    @include prefix(transform, translateY(-50%), webkit ms o );
-  	}
   	@include media-max-width ( mobile ) {
+	    text-align: center;
   		display: block;
 	    position: absolute;
   		top: 50%;
   		left: 50%;
   		@include prefix(transform, translateX(-50%) translateY(-50%), webkit ms o );
   	}
-	  li {
-    	margin-bottom: 30px;
-    	@include media-min-width ( large ) {
-    		display: inline-block;
-    		margin-right: 20px;
-    	}
+		li {
+			margin-bottom: 40px;
+			@include media-min-width ( large ) {
+				display: inline-block;
+				margin-right: 20px;
+			}
     	&.current-menu-item {
     		a {
     			color: $white;
@@ -108,12 +109,13 @@
 						font-weight: 600;
 	    			&.dark-menu {
 	    				color: $black;
+	    				border-bottom: 1px solid $black;
 	    			}
     			}
     		}
     	}
     	a {
-				margin-bottom: 20px;
+				margin-bottom: 40px;
 				padding-bottom: 10px;
 				letter-spacing: 2px;
 				@include media-max-width ( large ) {
@@ -141,5 +143,5 @@
 				}
 			}	
 		}	
-  }
+    }
 }

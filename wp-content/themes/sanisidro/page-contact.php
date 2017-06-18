@@ -96,7 +96,7 @@
         <div id="respond">
           <?php echo $response; ?>
 
-          <form action="<?php the_permalink(); ?>" method="POST">
+          <form action="<?php echo get_template_directory_uri(); ?>/src/inc/inquiry.php" method="POST">
             <p><label for="name">Name: <span>*</span> <br><input type="text" name="message_name" placeholder="John Smith"></label></p>
 
             <p><label for="message_email">Email: <span>*</span> <br><input type="text" name="message_email" placeholder="youremail@server.com"> </label></p>

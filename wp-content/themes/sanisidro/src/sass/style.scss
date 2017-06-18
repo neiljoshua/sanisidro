@@ -13,6 +13,7 @@ Version: 1.0
 @import 'header';
 @import 'home';
 @import 'projects';
+@import 'single-project';
 @import 'firm';
 @import 'news-content';
 @import 'contact';
@@ -102,7 +103,7 @@ div.container {
 
 .content {
 	font-size: 18px;
-	margin: 40px 0;
+	margin: 40px auto;
 	@include media-min-width( mobile ) {
 		padding: 10px 0;
 		max-width: 780px;

@@ -105,18 +105,18 @@
     			border-bottom: 1px solid $white;
     			@include media-min-width ( large ) {
 	    			color: $white;
-						border-bottom: 1px solid $white;
+						border-bottom: 2px solid $white;
 						font-weight: 600;
 	    			&.dark-menu {
 	    				color: $black;
-	    				border-bottom: 1px solid $black;
+	    				border-bottom: 2px solid $black;
 	    			}
     			}
     		}
     	}
     	a {
 				margin-bottom: 40px;
-				padding-bottom: 10px;
+				padding-bottom: 4px;
 				letter-spacing: 2px;
 				@include media-max-width ( large ) {
 					font-size: 25px;
@@ -128,7 +128,7 @@
 	    		&.dark-menu {
 	    			&:hover,&:active {
 							color: $black;
-							border-bottom: 1px solid $black;
+							border-bottom: 2px solid $black;
 	    			}
 					}
     		}
@@ -138,7 +138,7 @@
 				}
 				&:hover, &:active {
 					color: $white;
-					border-bottom: 1px solid $white;
+					border-bottom: 2px solid $white;
 					
 				}
 			}	

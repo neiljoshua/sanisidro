@@ -1,5 +1,6 @@
 .contact {
 
+	
 	section {
 		&:first-child {
 			text-align: center;
@@ -17,6 +18,7 @@
 				margin: 20px auto;
 				padding: 0 20px 30px;
 			}
+
 		}
 	}
 
@@ -29,26 +31,25 @@
 	  -o-background-size: cover;
 		background-size: cover;
 	}
-
+	
 
 	.error, .success {
-		font-size: 20px;
 	  border-radius: 3px;
 	  max-width: 720px;
-	  margin: 40px auto;
-	  padding: 15px 0;
-	  text-align: center;
+	  margin: 0 auto;
+	  padding: 15px 9px;
+	 text-align: center;
 	}
 
 	.error {
-	  border: 1px solid red;
+		border: 1px solid red;
 	  color: red;
 	}
 
 	.success{
 	  border: 1px solid green;
 	  color: green;
-
+	  
 	}
 
 	form {
@@ -56,8 +57,8 @@
 		max-width: 720px;
 		margin: 30px auto;
 		p {
+			width: 90%;
 			margin: 0 auto 20px;
-			font-size: 18px;
 			font-weight: 700;
 		}
 		textarea {
@@ -77,7 +78,6 @@
 			margin-top: 20px;
 			border: 1px solid $seagreen;
 			padding: 10px 0 10px 5px;
-			font-size: 18px;
 			@include media-min-width(mobile + 1) {
 				width: 40%;
 			}
@@ -85,6 +85,7 @@
 		}
 		input[type='submit']{
 			font-weight: 400;
+			font-size: 14px;
 			&:hover {
 				background-color: $seagreen;
 				color: $white;
@@ -93,6 +94,9 @@
 		span{
 		  color: red;
 		}
+		
+
+
 	}
 
 	input.human {

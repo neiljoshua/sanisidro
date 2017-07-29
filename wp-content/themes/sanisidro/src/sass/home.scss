@@ -7,6 +7,7 @@
 
 /** Section 1 Hero Section **/
 
+
 .logo {
 	position: absolute;
 	top: 50%;
@@ -14,7 +15,7 @@
 	transform: translateY(-50%) translateX(-50%);
 	img {
 	    @include media-max-width( mobile ) {
-	    	max-height: 50px;
+	    	max-height: 50px;	
 	    }
 	    @include media-min-width ( mobile ) {
 	    	max-height: 125px;
@@ -41,9 +42,6 @@ div.text-slider {
 .slider-for {
 	width: 100%;
 	margin: 0 auto;
-	.slick-dots {
-		bottom: -5px;
-	}
 }
 
 .slick-slide {
@@ -55,6 +53,7 @@ div.text-slider {
 .slick-container {
 	p {
 		text-align: right;
+		margin: 15px 0;
 	}
 }
 
@@ -101,7 +100,7 @@ a.featured_link {
 		@include media-min-width( tablet ) {
 			width: 25%;
 			padding: 0;
-		}
+		}	
 		img, p {
 			display: block;
 			width: 100%;

@@ -7,40 +7,47 @@
 	.image-news {
 		position: relative;
 		overflow: hidden;
-		width: 100%;
+		float: left;
+		margin: 50px auto;
+		@include prefix(background-size, cover, webkit ms o);
+		@include media-max-width(mobile) {
+			width: 100%;
+		}
+		@include media-min-width( mobile ) {
+			width: 50%;
+		}
 		&:before {
 			content: "";
 			display: block;
-			padding-bottom: 60%;
-		}
-		@include prefix(background-size, cover, webkit ms o);
-		@include media-min-width( mobile ) {
-			width: 50%;
 			float: left;
+			padding-bottom: 50%;
 		}
-		@include media-min-width( tablet ) {
-			&:nth-child(1){
-				width: 50%;
-				&:before{
-					padding-bottom: 100%;
-				}
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3), 
+		&:nth-child(4) {
+			margin: 0;
+		}
+
+		&:nth-child(1){
+			&:before{
+				padding-bottom: 100%;
 			}
-			&:nth-child(2){
-				width: 50%;
-				&:before{
-					padding-bottom: 50%;
-				}
+		}
+		&:nth-child(2){
+			&:before{
+				padding-bottom: 50%;
 			}
-			&:nth-child(3),
-			&:nth-child(4){
-				width: 25%;
-				&:before {
-					padding-bottom: 100%;
-				}
-				a{
-					font-size: 16px;
-					font-style: capitalize;
-				}
+		}
+		&:nth-child(3), 
+		&:nth-child(4){
+			width: 25%;
+			&:before {
+				padding-bottom: 100%;
+			}
+			a{
+				font-size: 16px;
+				font-style: capitalize;
 			}
 		}
 		a {
@@ -50,13 +57,7 @@
 			right: 0;
 			bottom: 0;
 			overflow: hidden;
-			font-size: 18px;
-			@include media-min-width( mobile) {
-				font-size: 20px;
-			}
-			@include media-min-width ( tablet) {
-				font-size: 25px;
-			}
+			font-size: 25px;
 			color: $white;
 			opacity: 1;
 			text-align: center;
@@ -70,12 +71,28 @@
 				line-height: 1.5;
 				z-index: 30;
 			}
-			&:hover{
+			&:hover{	
 				opacity: 0.7;
 				background-color: $black;
 				margin: -1px;
 			}
 		}
+	}
+
+	@include media-max-width(tablet) {
+		.image-news {
+			a{
+				font-size: 18px;
+			}
+			// &:nth-child(2), &:nth-child(3), &:nth-child(4){
+			// 	&:before {
+			// 		padding-bottom:100%;
+			// 	}
+			// }
+			// &:nth-child(3), &:nth-child(4){
+			// 	width: 50%;
+			// }
+		}	
 	}
 
 }

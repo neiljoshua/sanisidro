@@ -32,7 +32,7 @@ get_header();
 ?>
 	<section>
    		<div class="page-hero">
-   			<img class ="page-hero__image"  src="<?php echo $lead; ?>">
+   			<img class ="hero-page-image"  src="<?php echo $lead; ?>">
    		</div>
    		<div class="firm-description"> <?php echo $description; ?> </div>
    	</section>

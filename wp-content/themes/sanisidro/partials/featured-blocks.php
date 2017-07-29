@@ -9,7 +9,7 @@
 	?>
 		            <li class="gallery-image" >
 		                <a href="<?php the_permalink() ?>">
-		                     <img class="lazy" data-original="<?php echo $image; ?>" width="400" height="180">
+		                     <img class="lazy" data-original="<?php echo $image; ?>" wifth="270" height="170">
 		                </a>
 		                <p><?php echo $title ?></p>
 		            </li>

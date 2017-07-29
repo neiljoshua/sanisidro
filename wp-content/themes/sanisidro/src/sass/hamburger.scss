@@ -21,9 +21,9 @@
         background: $gray;
         &::before, &::after{
           background-color: $gray;
-        }
+        } 
       }
-    }
+    } 
     &:focus {
       outline: none;
     }
@@ -54,7 +54,7 @@
     }
     @include media-min-width( large ) {
       visibility: hidden;
-    }
+    }  
 }
 
 .site-header__hamburger--rot {

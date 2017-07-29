@@ -48,7 +48,7 @@ get_header();
  
  		 <section id="startchange">
  		 	<h2 class="title"> San Isidro </h2>
- 		 	<p class="copy"> <?php the_field('hero_content');?> </p>	
+ 		 	<p class="content"> <?php the_field('hero_content');?> </p>	
 
 			<?php if( have_rows('slider_home_page') ): ?>
 			
@@ -83,7 +83,7 @@ get_header();
 
 	  <section>
 	 		<h2 class="title"> <?php echo $aboutTitle; ?></h2>
-	 		<p class="copy"> <?php the_field('about_content');?></p>
+	 		<p class="content"> <?php the_field('about_content');?></p>
 	 	</section>	
 
   <?php

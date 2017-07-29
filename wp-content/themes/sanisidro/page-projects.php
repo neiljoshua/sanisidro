@@ -59,7 +59,7 @@ $posts = get_posts( $args );
    	if ($lead){
     ?>
    		<div class="page-hero">
-   			<img class ="hero-page-image" src="<?php echo $imagelead; ?>">
+   			<img class ="page-hero__image" src="<?php echo $imagelead; ?>">
    		</div>
     <?php
 	  }

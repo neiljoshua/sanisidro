@@ -1,57 +1,63 @@
-
-
-/* Footer*/
-
 footer {
-	padding: 40px 20px;
+	@include media-max-width(mobile) {
+		font-size: 16px;
+		padding: 50px 0;
+	}
+	@include media-min-width(mobile) {
+		font-size: 20px;
+		padding: 40px 20px;
+	}
 	background-color : $white;
 	color: $black;
 	p{
-		display: inline-block;
-		line-height: 1;
-	}
-	.footer-nav {
-		display: inline-block;
-		margin: 0;
-		float: right;
-		ul{
-			li{
-				display: inline-block;
-				margin: 0 20px;
-				a {
-					color: $black;
-					&:hover{
-						color: $gray;
-					}	
-				}
-			}
-		}		
-	}
-
-}
-
-@include media-max-width(mobile) {
-	footer {
-		padding: 50px 0;
-		p{
+		@include media-max-width(mobile) {
 			width: 100%;
 			display: block;
 			text-align: center;
 		}
-		.footer-nav {
-			display: block;
-			width: 100%;
-			float: none;
-			ul {
+		@include media-min-width(mobile) {
+			display: inline-block;
+		}
+		line-height: 1;
+	}
+
+}
+
+.footer-nav {
+
+	@include media-max-width(mobile) {
+		display: block;
+		width: 100%;
+	}
+	@include media-min-width(mobile) {
+		display: inline-block;
+		margin: 0;
+		float: right;
+	}
+	ul {
+		display: block;
+		width: 100%;
+		li {
+			@include media-max-width(mobile) {
 				display: block;
 				width: 100%;
-				li {
-				display: block;
-				width: 100%;
-				margin: 20px 0;
 				text-align: center;
+			}
+			@include media-min-width(mobile) {
+				display: inline-block;
+				margin: 0 20px;
+			}
+			margin: 20px 0;
+			a {
+				color: $black;
+				@include media-min-width(mobile) {
+					width: 100%;
+					&:hover{
+						color: $gray;
+					}
 				}
 			}
 		}
-	}	
+	}
 }
+

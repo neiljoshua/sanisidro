@@ -30,12 +30,12 @@ try {
 
     // sendConfirmationEmail($email, $first);
     // sendAdministratorEmail($email, $subscriber['leid'], $merge_vars);
-
-      echo json_encode( array('status' => 'success','message'=> 'The submission is complete.') );
+    generate_response("success", $message_sent);
+      // echo json_encode( array('status' => 'success','message'=> 'The submission is complete.') );
 
   } else {
 
-      echo json_encode( array('status' => 'error','message'=> 'An unknow error has occurred. Please try again.') );
+      // echo json_encode( array('status' => 'error','message'=> 'An unknow error has occurred. Please try again.') );
 
   }
 
@@ -103,4 +103,4 @@ try {
 
 // }
 
-exit;
+// exit;

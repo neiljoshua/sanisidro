@@ -1,10 +1,10 @@
 /*Header*/
 .site-header {
 	width:100%;
+	height: 60px;
 	position:fixed;
 	top: 0;
 	left: 0;
-	height: 60px;
 	z-index: 2000;
 	&.active {
 		background-color: $white;
@@ -31,7 +31,6 @@
  		visibility: visible;
  	}
 }
-
 
 /*Navigation Menu*/
 
@@ -71,7 +70,7 @@
 			@include prefix(transform, translateX(0%), webkit ms o);
 			@include prefix(transition, all 0.6s ease-in-out, webkit ms o);
 		}
-			
+
 	}
 	ul {
 		@include media-max-width ( large ) {
@@ -132,16 +131,16 @@
 	    			}
 					}
     		}
-	    	
+
 				&:link, &:visited {
 					margin-right: 5px;
 				}
 				&:hover, &:active {
 					color: $white;
 					border-bottom: 2px solid $white;
-					
+
 				}
-			}	
-		}	
+			}
+		}
     }
 }

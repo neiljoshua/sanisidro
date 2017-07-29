@@ -29,7 +29,7 @@
 	
 	<section >
 		<div class="page-hero">
-			<img class="hero-page-image" src="<?php echo $image ?>" />
+			<img class="page-hero__image" src="<?php echo $image ?>" />
 		</div>
 		<div class="projects-link-page">
 			<a  href="http://san-isidro.local/news/">View All</a>
@@ -44,7 +44,7 @@
 
 		<h2 class="title post-title"><?php echo $title; ?></h2>
 
-		<p class="content"> <?php echo $news_content; ?> </p>
+		<p class="copy"> <?php echo $news_content; ?> </p>
 	</section>
 <?php 	
 

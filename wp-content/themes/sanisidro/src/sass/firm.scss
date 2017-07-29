@@ -10,7 +10,7 @@
 			margin: 0 auto;
 			font-size: 18px;
 			font-weight: 400;
-		}	
+		}
 	}
 	.member-container {
 		overflow: hidden;
@@ -73,12 +73,12 @@
 	}
 
 	@include media-max-width(tablet) {
-	
+
 		.image {
 			width: 50%;
 			img {
 				max-height: 300px;
-			}	
+			}
 		}
 		.text {
 			width: 50%;
@@ -104,20 +104,20 @@
 						margin: 0 auto;
 					}
 				}
-			}	
+			}
 		}
-			
+
 		.image, .text {
-			
+
 			width: 100%;
 			h3,h2,p {
 				margin-right: 0;
 				margin-left: 0;
 			}
-		
+
 		}
 
 
-	}	
+	}
 
-}	
+}

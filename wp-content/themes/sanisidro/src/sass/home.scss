@@ -42,7 +42,16 @@ div.text-slider {
 	width: 100%;
 	margin: 0 auto;
 	.slick-dots {
-		bottom: -5px;
+		visibility: hidden;
+		@include media-min-width(mobile) {
+			visibility: visible;
+			bottom: -5px;
+			button{
+				&:before {
+					font-size: 10px;
+				}
+			}
+		}
 	}
 }
 

@@ -1,15 +1,15 @@
 <?php
- 
+
   /**
   *Template Name: Contact Page
   **/
-  
+
   add_action('contact_page_content', 'do_contact_page_content');
 
   add_filter('body_class', 'add_contact_page_body_class');
 
   function add_contact_page_body_class($classes) {
-    
+
     $classes[] = 'contact';
 
     return $classes;
@@ -23,12 +23,12 @@
 
   //function to generate response
   function generate_response($type, $message){
-    
+
     global $response;
 
     if($type == "success") $response = "<div class='success'>{$message}</div>";
     else $response = "<div class='error'>{$message}</div>";
-    
+
   }
 
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -51,11 +51,11 @@
     $subject = "Someone sent a message from ".get_bloginfo('name');
     $headers = 'From: '. $email . "\r\n" .
       'Reply-To: ' . $email . "\r\n";
-    
+
     if(!$human == 0){
       if($human != 2) generate_response("error", $not_human); //not human!
       else {
-        
+
         //validate email
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
           generate_response("error", $email_invalid);
@@ -69,14 +69,14 @@
           {
             $sent = mail($to, $subject, $message, $headers);
             if($sent) {
-              generate_response("success", $message_sent); 
+              generate_response("success", $message_sent);
               include("src/inc/inquiry.php"); //message sent!
-            }  
+            }
             else generate_response("error", $message_unsent); //message wasn't sent
           }
         }
       }
-    } 
+    }
     else if ($_POST['submitted']) generate_response("error", $missing_content);
 
   }
@@ -89,13 +89,13 @@
     <?php while ( have_posts() ) : the_post(); ?>
 
       <section>
-        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <h1 class="contact__title"><?php the_title(); ?></h1>
         <?php the_content(); ?>
-        <div class="contact-map"></div>
+        <div class="contact__map"></div>
       </section>
 
       <section class="entry-content">
-      
+
         <div id="respond">
           <?php echo $response; ?>
 
@@ -115,7 +115,7 @@
       </section><!-- .entry-content -->
 
     <?php endwhile; // end of the loop. ?>
-      
+
   </main><!-- #primary -->
 
 <?php get_footer(); ?>

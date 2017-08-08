@@ -12,112 +12,78 @@
 			font-weight: 400;
 		}
 	}
-	.member-container {
+
+	.member {
 		overflow: hidden;
-		margin: 20px;
 		padding-bottom: 20px;
-		&:nth-child(odd){
-			.image {
-				float:left;
-			}
-			.text{
-				float:right;
-				h3,h2,p {
-					margin-left: 25px;
+		@include media-min-width(tablet) {
+			margin: 20px;
+			&:nth-child(odd){
+				.member-image {
+					float:left;
 				}
-			}
-
-		}
-		&:nth-child(even){
-			.image {
-				float:right;
-				img {
+				.member-copy {
 					float:right;
-					margin-right: 0;
+					&__name,
+					&__title,
+					&__copy,
+					p {
+						margin-left: 25px;
+					}
 				}
 			}
-			.text{
-				float:left;
-				p {
-					margin-right: 25px;
+			&:nth-child(even){
+				.member-image {
+					float:right;
+					&__image {
+						float:right;
+						margin-right: 0;
+					}
+				}
+				.member-copy {
+					float:left;
+					&__copy {
+						margin-right: 25px;
+					}
 				}
 			}
-
 		}
 	}
 
-	.image {
-		width: 40%;
-		overflow: hidden;
+	.member-image {
 		height: 350px;
-
-		img {
-			width: 280px;
-			margin: 0;
+		width: 100%;
+		overflow: hidden;
+		@include media-min-width(tablet) {
+			width: 40%;
+		}
+		&__image {
+			display: block;
+			margin: 20px auto;
+			@include media-min-width(tablet) {
+				width: 300px;
+				margin: 0;
+			}
 		}
 	}
-	.text {
-		width: 60%;
 
-		h2,h3 {
+	.member-copy {
+		width: 100%;
+		@include media-min-width( tablet ) {
+			width: 60%;
+		}
+		&__name,
+		&__title {
 			margin-bottom: 20px;
 		}
-		h2{
+		&__name{
 			font-size: 18px;
 			font-weight: 700;
 		}
-		p {
+		&__copy {
 			max-width: $content-lenght;
 			font-size: 16px;
 		}
-	}
-
-	@include media-max-width(tablet) {
-
-		.image {
-			width: 50%;
-			img {
-				max-height: 300px;
-			}
-		}
-		.text {
-			width: 50%;
-		}
-	}
-
-	@include media-max-width(mobile) {
-
-		.member-container {
-			&:nth-child(odd), &:nth-child(even){
-				.text{
-					float: none;
-					h3,h2,p {
-						margin-right: 0;
-						margin-left: 0;
-					}
-				}
-				.image {
-					float: none;
-					img {
-						float: none;
-						display: block;
-						margin: 0 auto;
-					}
-				}
-			}
-		}
-
-		.image, .text {
-
-			width: 100%;
-			h3,h2,p {
-				margin-right: 0;
-				margin-left: 0;
-			}
-
-		}
-
-
 	}
 
 }

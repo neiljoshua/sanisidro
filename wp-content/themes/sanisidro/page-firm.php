@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 *Template Name: Firm Page
 **/
@@ -8,7 +8,7 @@ add_action('firm_page_content', 'do_firm_page_content');
 add_filter('body_class', 'add_firm_page_body_class');
 
 function add_firm_page_body_class($classes) {
-	
+
 	$classes[] = 'firm';
 
 	return $classes;
@@ -17,67 +17,67 @@ function add_firm_page_body_class($classes) {
 
 add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'nav',) );
 
-get_header(); 
+get_header();
 ?>
 
 <main>
 
 
-<?php 
+<?php
 
-   	$lead = get_field('firm_lead_image');
-   	if ($lead){
-   		$description = get_field('firm_lead_description');
+ 	$lead = get_field('firm_lead_image');
+ 	if ($lead){
+ 		$description = get_field('firm_lead_description');
 
 ?>
 	<section>
-   		<div class="page-hero">
-   			<img class ="page-hero__image"  src="<?php echo $lead; ?>">
-   		</div>
-   		<div class="firm-description"> <?php echo $description; ?> </div>
-   	</section>
+ 		<div class="page-hero">
+ 			<img class ="page-hero__image"  src="<?php echo $lead; ?>">
+ 		</div>
+ 		<div class="firm-description"> <?php echo $description; ?> </div>
+ 	</section>
 
 <?php
 
-   	}
+   }
 
 ?>
-<?php 
-		
+<?php
+
 	$members = get_field('member');
 	if ($members) {
-		
-		
+
+
 ?>
 	<section>
 <?php
 		foreach($members as $member)
 	{
-	
-?>	
-		<div class="member-container">
-			<div class="image">
-				<!-- <img src="<?php //echo $member['member_image']; ?>" /> -->
-				<img class="lazy" data-original="<?php echo $member['member_image']; ?>" wifth="300" height="300">
-			</div>
-			<div class="text"> 
-				<h2> <?php echo $member['member_name']; ?>	</h2>
-				<h3> <?php echo $member['member_title']; ?>	</h3>
-				<p> <?php echo $member['member_profile']; ?> </p>
-			</div>
+
+?>
+	<div class="member">
+		<div class="member-image">
+			<img class="member-image__image lazy" data-original="<?php echo $member['member_image']; ?>" wifth="300" height="300">
 		</div>
-<?php			
+		<div class="member-copy">
+			<h2 class="member-copy__name"> <?php echo $member['member_name']; ?>	</h2>
+			<h3 class="member-copy__title"> <?php echo $member['member_title']; ?>	</h3>
+			<p class="member-copy__copy"> <?php echo $member['member_profile']; ?> </p>
+		</div>
+	</div>
+
+<?php
 		}
-?>	
+?>
 	</section>
-<?php 
+<?php
 
 	}
 
 ?>
 
-</main>	
+</main>
 
 <?php
 
-get_footer(); 
+get_footer();

@@ -37,32 +37,37 @@
 				&:before {
 					padding-bottom: 100%;
 				}
-				a{
-					font-size: 16px;
+				a {
+					font-size: 15px;
 					font-style: capitalize;
 				}
 			}
 		}
-		a {
+		&__link {
 			position: absolute;
+			overflow: hidden;
 			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
-			overflow: hidden;
+			padding: 0;
 			font-size: 18px;
-			@include media-min-width( mobile) {
-				font-size: 20px;
-			}
-			@include media-min-width ( tablet) {
-				font-size: 25px;
-			}
 			color: $white;
 			opacity: 1;
 			text-align: center;
 			vertical-align: middle;
 			text-transform: capitalize;
-			padding: 0;
+			@include media-min-width( mobile) {
+				font-size: 20px;
+			}
+			@include media-min-width ( tablet) {
+				font-size: 25px;
+				&:hover{
+					opacity: 0.7;
+					background-color: $black;
+					margin: -1px;
+				}
+			}
 			span {
 				width: 100%;
 				color: $white;
@@ -70,11 +75,7 @@
 				line-height: 1.5;
 				z-index: 30;
 			}
-			&:hover{
-				opacity: 0.7;
-				background-color: $black;
-				margin: -1px;
-			}
+
 		}
 	}
 

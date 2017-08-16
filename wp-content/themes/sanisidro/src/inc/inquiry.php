@@ -1,8 +1,9 @@
 <?php
 require_once 'vendor/Mailchimp.php';
-// require_once 'vendor/Mandrill.php';
+require_once 'config.php';
 
-$api_key            = 'bd397178d444851afaab1bc85144fc9d-us14';
+
+$api_key            = Config::MC_KEY;
 $list_id            = 'bb33031de5';
 $double_optin       = false;
 $send_welcome       = false;

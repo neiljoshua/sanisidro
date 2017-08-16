@@ -9,4 +9,7 @@ npm-debug.log
 
 #Git flow
 gitflow-installer.sh
-gitflow/ 
+gitflow/
+
+# Config
+/wp-content/themes/sanisidro/src/inc/config.php

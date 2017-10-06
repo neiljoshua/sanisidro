@@ -44,6 +44,7 @@ get_header();
 						<a class="image-news__link" href="<?php the_permalink() ?>">
 							<span class="center"><?php echo $title; ?></span>
 						</a>
+						<!-- <a href="<?php //the_permalink() ?>"> Read </a> -->
 					</div>
 
 	<?php endforeach; ?>

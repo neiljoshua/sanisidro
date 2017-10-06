@@ -19,7 +19,7 @@
 	    @include media-min-width ( mobile ) {
 	    	max-height: 125px;
 	    }
-		max-height: 50px;
+			max-height: 50px;
 	    border: 2px solid white;
 	    border-radius: 117px;
 	    line-height: 120px;
@@ -96,6 +96,7 @@ a.featured_link {
 .home-gallery {
 	width: 100%;
 	margin: 20px 0;
+	overflow: hidden;
 	.gallery-image {
 		width: 100%;
 		margin: 20px auto;
@@ -137,5 +138,16 @@ a.featured_link {
 				width: 90%;
 			}
 		}
+	}
+	.gallery-image__inactive {
+		visibility: hidden;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	.gallery-image__active {
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.9s ease;
 	}
 }

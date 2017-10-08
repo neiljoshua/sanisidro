@@ -12,15 +12,6 @@ $(document).ready(function(){
   var $body =$('body');
 
 
- //  $(function() {
- //    $("img.lazy").lazyload({
- //        event : "iamges"
- //    });
- //  });
-
- //  $(window).bind("load", function() {
-	// var timeout = setTimeout(function() { $("img.lazy").trigger("images") }, 500);
- //  });
 
   $('img.lazy').lazyload({
 	threshold: 100,
@@ -157,7 +148,6 @@ $(document).ready(function(){
 
 		var selectedState = $('.states').find(":selected").val(); //check selected state variable value
 
-
     if (selectedState!=='Select State') {
       $('.cities').prop('disabled', false );
       filterByState(selectedState);
@@ -175,7 +165,6 @@ $(document).ready(function(){
 
 	var loadingProjectFilter = function() {
 
-
 		if ($('body').hasClass('page-template-page-projects')) {
 			$('.cities').prop('disabled', 'disabled');
 			// $(getCitiesByState);
@@ -185,28 +174,6 @@ $(document).ready(function(){
 	}
 
 	$(loadingProjectFilter);
-
-
-	// var loadingProjects = function() {
-
-	// 	if ($('body').hasClass('page-template-page-projects')) {
-	// 		var href = 'http://san-isidro.local/project-archive/';
-	// 		$.ajax({ // Use ajax to pull in archive projects.
-	// 		   url:href,
-	// 		   type:'GET',
-	// 		   success: function(data){
-	// 		   	// Save ajax results/contents to variableo $resultContents
-	// 		    var resultContents = $(data).find('.home-gallery').html();
-	// 		    resultContents.find("img.lazy").lazyload();
-	// 				// console.log(resultContents);
-	// 		   }
-	// 		});
-	// 	}
-
-	// }
-
-
-	// loadingProjects();
 
 
 	var userQuery = function() {
@@ -232,7 +199,6 @@ $(document).ready(function(){
 			   }
 			});
 		});
-
 
 		// Use .find for data attributes (city, state, project title)
 		// var projectCity = $resultContents.find("[data-city'" + $query + "']");

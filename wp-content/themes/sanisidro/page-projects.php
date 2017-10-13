@@ -74,7 +74,7 @@ $posts = get_posts( $args );
 
 	 <!-- display propject -->
 
-	 <section>
+	 <section class="project-filter">
 		 <h2 class="title">Feature Projects</h2>
 		 <?php
 				$args = array(
@@ -87,7 +87,7 @@ $posts = get_posts( $args );
 				$posts = get_posts( $args );
 			?>
 
-			<select class="states">
+			<select class="state-select" data-select="state">
 
 			<option class="filter-project" value="Select State" > Select State </option>
 
@@ -101,41 +101,41 @@ $posts = get_posts( $args );
 
 			</select>
 
-			<select class="cities">
+			<select class="city-select" data-select="city" disabled>
 
 				<option > Select City </option>
 
-			<?php global $cities ?>
+				<?php global $cities ?>
 
-			<?php foreach ($cities as $city) { ?>
+				<?php foreach ($cities as $city) { ?>
 
-				<!-- // query each city for project -->
-				<!-- // $projects_with_city -->
-				<?php $projects_with_city = get_posts( array(
-					'post_type' => 'project',
-					'posts_per_page' => 1,
-					'meta_query' => array(
-						 array(
-								'key' => 'city',
-								'value' => $city,
-								'compare' => '==' )
-						 )
-						)
-					);
-				?>
-				<?php
-				foreach($projects_with_city as $project)
-				{
-					$state = get_post_meta($project->ID, "state", true);
-				}
-				?>
-				<!-- // for each project get state
-				// apply data-state attribute to city option below -->
-			?>
+					<!-- // query each city for project -->
+					<!-- // $projects_with_city -->
+					<?php $projects_with_city = get_posts( array(
+						'post_type' => 'project',
+						'posts_per_page' => 1,
+						'meta_query' => array(
+							 array(
+									'key' => 'city',
+									'value' => $city,
+									'compare' => '==' )
+							 )
+							)
+						);
+					?>
+					<?php
+					foreach($projects_with_city as $project)
+					{
+						$state = get_post_meta($project->ID, "state", true);
+					}
+					?>
+					<!-- // for each project get state
+					// apply data-state attribute to city option below -->
+					?>
 
-				<option class="cities-item" value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>
+					<option class="cities-item" value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>
 
-			<?php } ?>
+				<?php } ?>
 
 			</select>
 
@@ -144,10 +144,7 @@ $posts = get_posts( $args );
 				<button class="proj-search-bttn" type="submit">SEARCH</button>
 			</form>
 
-		 <!-- <?php// include("partials/featured-blocks.php") ?> -->
-		 <ul class="projects-gallery">
 		 	<?php include("partials/featured-blocks.php") ?>
-		 </ul>
 
 
 	 </section>

@@ -19,8 +19,8 @@
 			padding: 0 25px 30px;
 		}
 	}
-	.states,
-	.cities,
+	.state-select,
+	.city-select,
 	.search-project,{
 		display: inline-block;
 		width: 250px;
@@ -38,7 +38,7 @@
 	}
 
 
-	.cities{
+	.city-select{
 		.cities-item--active {
 			display: block;
 		}
@@ -68,7 +68,7 @@
 		}
 	}
 
-	.projects-gallery{
+	.project-gallery{
 		width: 100%;
 		margin: 20px 0;
 		overflow: hidden;

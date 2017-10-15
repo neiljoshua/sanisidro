@@ -15,10 +15,16 @@ $(document).ready(function(){
 	var offset = 0;
 
 
+
   $('img.lazy').lazyload({
 	threshold: 100,
 	effect: 'fadeIn'
   });
+
+  $('.dropk').dropkick({
+  	mobile: true
+  });
+
 
  //Toggle mobilemenu if viewport width chages.
   function checkWidth(){
@@ -32,6 +38,9 @@ $(document).ready(function(){
     	ifHome();
     }
   };
+
+
+	ifHome();
 
   // checkWidth();
 
@@ -81,6 +90,7 @@ $(document).ready(function(){
 		}
 	}
 
+
 	function ifHome(){
 		if ( $('body').hasClass('home') ) {
 		changeMenuColor();
@@ -88,8 +98,6 @@ $(document).ready(function(){
 			addWhiteBackGroundMenu();
 		}
 	}
-
-	ifHome();
 
 
 	var updateCitySelect = function($state) {
@@ -103,7 +111,7 @@ $(document).ready(function(){
 
 	var getCityResults = function() {
 
-		var selectedCity = $('.city-select').find(":selected").val();
+		var selectedCity = $(this).find(":selected").val();
 		if(selectedCity !== 'Select City') {
 			projectQuery(selectedCity);
 		}
@@ -117,12 +125,17 @@ $(document).ready(function(){
 
 	var getStateResults = function () {
 
-		var selectedState = $('.state-select').find(":selected").val(); //check selected state variable value
+		var selectedState = $(this).find(":selected").val(); //check selected state variable value
 		var $selectedCity = $('.city-select');
+		var $citySelect = new Dropkick("#dk1-disabled");
+		debugger
+		console.log($citySelect);
     if (selectedState !== 'Select State') {
+    	$citySelect.disabled(false);
+    	$selectedCity.prop('selectedIndex',0);
       $selectedCity.prop('disabled', false );
-      projectQuery(selectedState);
-      updateCitySelect(selectedState);
+      // projectQuery(selectedState);
+      // updateCitySelect(selectedState);
       $selectedCity.change(getCityResults);
     }
     else if (selectedState == 'Select State') {
@@ -156,9 +169,11 @@ $(document).ready(function(){
 
 		$('#proj-search').on('submit', function(e){ // On form submit, get input value
 			e.preventDefault();
+			var $citySelect = new Dropkick("#dk1-disabled");
+			console.log($citySelect);
 			$('.state-select').prop('selectedIndex',0);// Reset state-select to default.
 			$('.city-select').prop('selectedIndex',0); // Reset city-selct to default.
-      $('.city-select').prop('disabled', 'disabled');// disable city-select.
+      $citySelect.disabled(false);// disable city-select.
 			var valEntered = $('.proj-search-input').val().toLowerCase();
 			projectQuery(valEntered);
 
@@ -169,7 +184,14 @@ $(document).ready(function(){
 	var loadingProjectFilter = function() {
 
 		if ($('body').hasClass('page-template-page-projects')) {
-			$('.state-select').change(getStateResults);
+			debugger
+			// $('.state-select').change(getStateResults);
+			// var valSelected = $('.dk-select-option').change(value);
+			$('.dk-select').on('click',function(){
+				console.log('clicked');
+			})
+			// console.log(valSelected);
+			// $('.project-filter select').change(getProjectResults);
 			$(userQuery);
 		}
 

@@ -87,23 +87,23 @@ $posts = get_posts( $args );
 				$posts = get_posts( $args );
 			?>
 
-			<select class="state-select" data-select="state">
+			<select name="states" class="dropk" class="state-select" data-select="state" tabindex="0">
 
-			<option class="filter-project" value="Select State" > Select State </option>
+				<option  class="filter-project" value="default" > Select State </option>
 
-			<?php global $states ?>
+				<?php global $states ?>
 
-			<?php foreach ($states as $state) { ?>
+				<?php foreach ($states as $state) { ?>
 
 				<option class="filter-project"  value="<?php echo $state; ?>"> <?php echo $state; ?> </option>
 
-			<?php } ?>
+				<?php } ?>
 
 			</select>
 
-			<select class="city-select" data-select="city" disabled>
+			<select name="cities" class="dropk" class="city-select" data-select="city"  tabindex="1" id="disabled" disabled>
 
-				<option > Select City </option>
+				<option class="cities-item" value="default" > Select City </option>
 
 				<?php global $cities ?>
 

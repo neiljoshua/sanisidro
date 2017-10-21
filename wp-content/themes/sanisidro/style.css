@@ -650,78 +650,74 @@ a.featured_link {
 .projects .state-select,
 .projects .city-select,
 .projects .search-project {
-  display: inline-block;
   width: 250px;
   font-size: 20px;
   margin-right: 20px;
   outline: none;
-  -webkit-padding: 10px;
-  -ms-padding: 10px;
-  -o-padding: 10px;
-  padding: 10px;
   -webkit-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 32, src/sass/projects.scss */
+/* line 30, src/sass/projects.scss */
 .projects .state-select option,
 .projects .city-select option,
 .projects .search-project option {
   display: block;
   width: 230px;
   font-size: 20px;
-  padding: 10px;
 }
-/* line 42, src/sass/projects.scss */
+/* line 39, src/sass/projects.scss */
 .projects .city-select .cities-item--active {
   display: block;
 }
-/* line 45, src/sass/projects.scss */
+/* line 42, src/sass/projects.scss */
 .projects .city-select .cities-item--inactive {
   display: none;
 }
-/* line 50, src/sass/projects.scss */
+/* line 47, src/sass/projects.scss */
 .projects .projects-form {
   display: inline-block;
-  border: 1px #000 solid;
+  border: 1px #c0c0c0 solid;
+  vertical-align: middle;
+  margin-left: 20px;
 }
-/* line 53, src/sass/projects.scss */
+/* line 52, src/sass/projects.scss */
 .projects .projects-form input,
 .projects .projects-form button {
-  color: #000;
+  color: #595959;
   display: inline-block;
   font-size: 20px;
 }
-/* line 59, src/sass/projects.scss */
+/* line 58, src/sass/projects.scss */
 .projects .projects-form input {
   width: 280px;
   margin-right: 0;
   border: none;
 }
-/* line 64, src/sass/projects.scss */
+/* line 63, src/sass/projects.scss */
 .projects .projects-form button {
   border: 1px #c0c0c0 solid;
   text-align: center;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
-/* line 71, src/sass/projects.scss */
+/* line 70, src/sass/projects.scss */
 .projects .project-gallery {
   width: 100%;
   margin: 20px 0;
   overflow: hidden;
 }
-/* line 75, src/sass/projects.scss */
+/* line 74, src/sass/projects.scss */
 .projects .project-gallery .gallery-image {
   width: 100%;
   margin: 20px auto;
 }
-/* line 78, src/sass/projects.scss */
+/* line 77, src/sass/projects.scss */
 .projects .project-gallery .gallery-image.is-loading {
   background-color: #000;
 }
 @media (min-width: 601px) {
-  /* line 75, src/sass/projects.scss */
+  /* line 74, src/sass/projects.scss */
   .projects .project-gallery .gallery-image {
     float: left;
     width: 46%;
@@ -729,32 +725,32 @@ a.featured_link {
   }
 }
 @media (min-width: 769px) {
-  /* line 75, src/sass/projects.scss */
+  /* line 74, src/sass/projects.scss */
   .projects .project-gallery .gallery-image {
     width: 25%;
     padding: 0;
   }
 }
-/* line 90, src/sass/projects.scss */
+/* line 89, src/sass/projects.scss */
 .projects .project-gallery .gallery-image img, .projects .project-gallery .gallery-image p {
   display: block;
   width: 100%;
   margin: 20px auto 30px;
 }
 @media (min-width: 1025px) {
-  /* line 95, src/sass/projects.scss */
+  /* line 94, src/sass/projects.scss */
   .projects .project-gallery .gallery-image img {
     min-height: auto;
   }
 }
 @media (min-width: 769px) {
-  /* line 95, src/sass/projects.scss */
+  /* line 94, src/sass/projects.scss */
   .projects .project-gallery .gallery-image img {
     width: 90%;
   }
 }
 @media (max-width: 600px) {
-  /* line 95, src/sass/projects.scss */
+  /* line 94, src/sass/projects.scss */
   .projects .project-gallery .gallery-image img {
     min-height: -webkit-calc(57.83333vw);
     min-height: -moz-calc(57.83333vw);
@@ -764,7 +760,7 @@ a.featured_link {
     max-height: calc(57.83333vw);
   }
 }
-/* line 107, src/sass/projects.scss */
+/* line 106, src/sass/projects.scss */
 .projects .project-gallery .gallery-image p {
   text-align: center;
   padding-bottom: 25px;
@@ -772,38 +768,10 @@ a.featured_link {
   text-transform: capitalize;
 }
 @media (min-width: 769px) {
-  /* line 107, src/sass/projects.scss */
+  /* line 106, src/sass/projects.scss */
   .projects .project-gallery .gallery-image p {
     width: 90%;
   }
-}
-/* line 118, src/sass/projects.scss */
-.projects .project-gallery .gallery-image__hide-city {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-/* line 126, src/sass/projects.scss */
-.projects .project-gallery .gallery-image__show-city {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.6s ease;
-}
-/* line 132, src/sass/projects.scss */
-.projects .project-gallery .gallery-image__hide-state {
-  visibility: hidden;
-  opacity: 0;
-  width: 0;
-  transition: opacity 0.6s ease;
-}
-/* line 139, src/sass/projects.scss */
-.projects .project-gallery .gallery-image__show-state {
-  visibility: visible;
-  display: block;
-  opacity: 1;
-  transition: opacity 0.6s ease;
 }
 
 /* line 3, src/sass/single-project.scss */

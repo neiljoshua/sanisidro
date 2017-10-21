@@ -4,7 +4,6 @@ $(document).ready(function(){
 
   var $container = $('.projects-gallery');
   var $featureProjects = $('.projects').find('.project-gallery').html();
-  console.log($featureProjects);
   var $window = $(window);
   var $header = $('.site-header');
   var $nav = $('.site-header__menu');
@@ -13,16 +12,12 @@ $(document).ready(function(){
   var scrollStart = 0;
 	var startChange = $('#startchange');
 	var offset = 0;
+	var currentState = '';
+	var defaultCities = $('#city-select');
 
-
-
-  $('img.lazy').lazyload({
-	threshold: 100,
-	effect: 'fadeIn'
-  });
-
-  $('.dropk').dropkick({
-  	mobile: true
+	$('img.lazy').lazyload({
+		threshold: 100,
+		effect: 'fadeIn'
   });
 
 
@@ -99,53 +94,53 @@ $(document).ready(function(){
 		}
 	}
 
-
-	var updateCitySelect = function($state) {
-
-		var activeCities = $('.city-select').find("[data-state='" + $state + "']");
-		$('.cities-item').removeClass('cities-item--active').addClass('cities-item--inactive');
-		activeCities.removeClass('cities-item--inactive').addClass('cities-item--active');
-
-	}
+	// Using DropKick
 
 
-	var getCityResults = function() {
+  $('.default').dropkick({
+  	mobile : true
+  });
 
-		var selectedCity = $(this).find(":selected").val();
-		if(selectedCity !== 'Select City') {
-			projectQuery(selectedCity);
-		}
-		else {
-			var $state = $('.state-select').val();
-			projectQuery($state);
-		}
+
+	var updateCitySelect = function(state) {
+
+		var selectActiveCities = $('#city-select').find("[data-state='" + state + "']");
+		$('#city-select').dropkick('refresh');
 
 	}
 
 
-	var getStateResults = function () {
+	var getProjects = function ($location) {
 
-		var selectedState = $(this).find(":selected").val(); //check selected state variable value
-		var $selectedCity = $('.city-select');
-		var $citySelect = new Dropkick("#dk1-disabled");
-		debugger
-		console.log($citySelect);
-    if (selectedState !== 'Select State') {
-    	$citySelect.disabled(false);
-    	$selectedCity.prop('selectedIndex',0);
-      $selectedCity.prop('disabled', false );
-      // projectQuery(selectedState);
-      // updateCitySelect(selectedState);
-      $selectedCity.change(getCityResults);
+    if ($location !== 'default') {
+      projectQuery($location);
+
     }
-    else if (selectedState == 'Select State') {
-    	$selectedCity.prop('selectedIndex',0); // Reset .city-select to "City Select"
-      $selectedCity.prop('disabled', 'disabled'); // Disable .city-select
+    else if ($location == 'default') {
       var htmlfeatureProjects = $('.project-gallery').html($featureProjects);
+      console.log(htmlfeatureProjects);
       htmlfeatureProjects.find("img.lazy").lazyload();
     }
 
 	};
+
+
+	var getLocations = function() {
+
+		 var selectType = $(this).data('select');
+		 var location = new Dropkick('#'+selectType+'-select')
+		 var location = location.value;
+
+	   switch (selectType) {
+	     case 'state':
+	     	 updateCitySelect(location);
+	     	 getProjects(location);
+	       break
+	     case 'city':
+	     	 getProjects(location);
+	       break
+	   }
+	}
 
 
 	var projectQuery = function($project) {
@@ -169,11 +164,6 @@ $(document).ready(function(){
 
 		$('#proj-search').on('submit', function(e){ // On form submit, get input value
 			e.preventDefault();
-			var $citySelect = new Dropkick("#dk1-disabled");
-			console.log($citySelect);
-			$('.state-select').prop('selectedIndex',0);// Reset state-select to default.
-			$('.city-select').prop('selectedIndex',0); // Reset city-selct to default.
-      $citySelect.disabled(false);// disable city-select.
 			var valEntered = $('.proj-search-input').val().toLowerCase();
 			projectQuery(valEntered);
 
@@ -184,14 +174,7 @@ $(document).ready(function(){
 	var loadingProjectFilter = function() {
 
 		if ($('body').hasClass('page-template-page-projects')) {
-			debugger
-			// $('.state-select').change(getStateResults);
-			// var valSelected = $('.dk-select-option').change(value);
-			$('.dk-select').on('click',function(){
-				console.log('clicked');
-			})
-			// console.log(valSelected);
-			// $('.project-filter select').change(getProjectResults);
+			$('.project-filter select').change(getLocations);
 			$(userQuery);
 		}
 

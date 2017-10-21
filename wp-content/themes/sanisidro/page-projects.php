@@ -87,7 +87,7 @@ $posts = get_posts( $args );
 				$posts = get_posts( $args );
 			?>
 
-			<select name="states" class="dropk" class="state-select" data-select="state" tabindex="0">
+			<select id="state-select" name="states" data-select="state">
 
 				<option  class="filter-project" value="default" > Select State </option>
 
@@ -101,7 +101,7 @@ $posts = get_posts( $args );
 
 			</select>
 
-			<select name="cities" class="dropk" class="city-select" data-select="city"  tabindex="1" id="disabled" disabled>
+			<select id="city-select" name="cities" data-select="city">
 
 				<option class="cities-item" value="default" > Select City </option>
 
@@ -109,8 +109,6 @@ $posts = get_posts( $args );
 
 				<?php foreach ($cities as $city) { ?>
 
-					<!-- // query each city for project -->
-					<!-- // $projects_with_city -->
 					<?php $projects_with_city = get_posts( array(
 						'post_type' => 'project',
 						'posts_per_page' => 1,
@@ -128,9 +126,6 @@ $posts = get_posts( $args );
 					{
 						$state = get_post_meta($project->ID, "state", true);
 					}
-					?>
-					<!-- // for each project get state
-					// apply data-state attribute to city option below -->
 					?>
 
 					<option class="cities-item" value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>

@@ -22,18 +22,15 @@
 	.state-select,
 	.city-select,
 	.search-project,{
-		display: inline-block;
 		width: 250px;
 		font-size: 20px;
 		margin-right: 20px;
 		outline: none;
-		@include prefix(padding, 10px, webkit ms o);
 		@include prefix(border-radius, 0, webkit ms o);
 		option {
 			display: block;
 			width: 230px;
 			font-size: 20px;
-			padding: 10px;
 		}
 	}
 
@@ -49,10 +46,12 @@
 
 	.projects-form {
 		display: inline-block;
-		border: 1px $black solid;
+		border: 1px $silver solid;
+		vertical-align: middle;
+		margin-left: 20px;
 		input,
 		button {
-			color: $black;
+			color: $gray;
 			display: inline-block;
 			font-size: 20px;
 		}
@@ -64,7 +63,7 @@
 		button {
 			border: 1px $silver solid;
 			text-align: center;
-			padding: 10px 20px;
+			padding: 0 20px;
 		}
 	}
 
@@ -115,33 +114,6 @@
 			}
 		}
 
-		.gallery-image__hide-city {
-			visibility: hidden;
-			width: 0;
-			height: 0;
-			opacity: 0;
-			transition: opacity 0.6s ease;
-		}
-
-		.gallery-image__show-city {
-			visibility: visible;
-			opacity: 1;
-			transition: opacity 0.6s ease;
-		}
-
-		.gallery-image__hide-state,{
-			visibility: hidden;
-			opacity: 0;
-			width: 0;
-			transition: opacity 0.6s ease;
-		}
-
-		.gallery-image__show-state {
-			visibility: visible;
-			display: block;
-			opacity: 1;
-			transition: opacity 0.6s ease;
-		}
 	}
 
 

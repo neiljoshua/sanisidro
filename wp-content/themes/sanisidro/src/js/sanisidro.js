@@ -13,7 +13,7 @@ $(document).ready(function(){
 	var startChange = $('#startchange');
 	var offset = 0;
 	var currentState = '';
-	var defaultCities = $('#city-select');
+	var defaultCities = $('#city-select').html();
 
 	$('img.lazy').lazyload({
 		threshold: 100,
@@ -101,12 +101,32 @@ $(document).ready(function(){
   	mobile : true
   });
 
+  var resetCitySelect = function() {
 
-	var updateCitySelect = function(state) {
+  	var $select = $('#city-select');
+		$select.removeData('dropkick');
+		$('#city-select').html(defaultCities);
+		$select.dropkick('refresh');
 
-		var selectActiveCities = $('#city-select').find("[data-state='" + state + "']");
-		$('#city-select').dropkick('refresh');
+  }
 
+	var updateCitySelect = function($state) {
+
+		if ($state !== 'default'){
+			var $select = $('#city-select');
+			var selectActiveCities = $('#city-select').find("[data-state='" + $state + "']");
+			$select.removeData('dropkick');
+			$select.html(selectActiveCities);
+			$select.dropkick('refresh');
+			$select.dropkick('reset','clear')
+		}
+
+	}
+
+	var resetProjects = function() {
+		var htmlfeatureProjects = $('.project-gallery').html($featureProjects);
+    console.log(htmlfeatureProjects);
+    htmlfeatureProjects.find("img.lazy").lazyload();
 	}
 
 
@@ -114,12 +134,9 @@ $(document).ready(function(){
 
     if ($location !== 'default') {
       projectQuery($location);
-
     }
     else if ($location == 'default') {
-      var htmlfeatureProjects = $('.project-gallery').html($featureProjects);
-      console.log(htmlfeatureProjects);
-      htmlfeatureProjects.find("img.lazy").lazyload();
+      $(resetProjects);
     }
 
 	};
@@ -133,9 +150,15 @@ $(document).ready(function(){
 
 	   switch (selectType) {
 	     case 'state':
-	     	 updateCitySelect(location);
-	     	 getProjects(location);
-	       break
+	     	 $('#city-select').html(defaultCities);
+	     	 if (location != 'default'){
+		     	 updateCitySelect(location);
+		     	 getProjects(location);
+		     	 break
+	     	 }
+	     	 $(resetCitySelect);
+	     	 $(resetProjects);
+	     	 break
 	     case 'city':
 	     	 getProjects(location);
 	       break
@@ -166,7 +189,6 @@ $(document).ready(function(){
 			e.preventDefault();
 			var valEntered = $('.proj-search-input').val().toLowerCase();
 			projectQuery(valEntered);
-
 		});
 
 	}

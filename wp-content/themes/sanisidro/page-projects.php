@@ -87,7 +87,7 @@ $posts = get_posts( $args );
 				$posts = get_posts( $args );
 			?>
 
-			<select id="state-select" name="states" data-select="state">
+			<select id="state-select" class="default" name="states" data-select="state">
 
 				<option  class="filter-project" value="default" > Select State </option>
 
@@ -101,9 +101,9 @@ $posts = get_posts( $args );
 
 			</select>
 
-			<select id="city-select" name="cities" data-select="city">
+			<select id="city-select" class="default" name="cities" data-select="city">
 
-				<option class="cities-item" value="default" > Select City </option>
+				<option class="cities-item" value="default" data-state="default" > Select City </option>
 
 				<?php global $cities ?>
 

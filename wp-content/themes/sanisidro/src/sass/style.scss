@@ -40,14 +40,14 @@ section {
 	max-width: $container-max-width;
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 20px 40px;
+	padding: 20px;
 	&:first-child {
 		max-width:100%;
 		width: 100%;
 		padding: 0;
 	}
 	@include media-min-width(tablet) {
-		padding: 20px;
+		padding: 20px 40px;
 	}
 }
 

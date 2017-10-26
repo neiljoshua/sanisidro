@@ -19,8 +19,7 @@
 			padding: 0 25px 30px;
 		}
 	}
-	.state-select,
-	.city-select,
+
 	.search-project,{
 		width: 250px;
 		font-size: 20px;
@@ -34,36 +33,72 @@
 		}
 	}
 
+	.project-filter {
 
-	.city-select{
-		.cities-item--active {
-			display: block;
+		.dk-select,
+		.dk-selected,
+		.dk-option,
+		.proj-search {
+			font-family: 'Roboto-Light';
+			font-size: 18px;
 		}
-		.cities-item--inactive {
-			display: none;
+
+		.dk-select {
+			margin-top: 20px;
+			@include media-min-width ( mobile ) {
+				margin-top: 0;
+			}
 		}
+
 	}
+
 
 	.projects-form {
 		display: inline-block;
+		position: relative;
 		border: 1px $silver solid;
 		vertical-align: middle;
-		margin-left: 20px;
+		width: 330px;
+		max-width: 100%;
+		margin-top: 20px;
+		@include prefix(border-radius, 6px, webkit ms o);
+		@include media-min-width( mobile ) {
+			width: 400px;
+		}
+		@include media-min-width ( tablet ) {
+			width: 300px;
+			margin-top: 0;
+			margin-left: 20px;
+		}
 		input,
 		button {
-			color: $gray;
 			display: inline-block;
-			font-size: 20px;
+			color: $gray;
+			font-size: 18px;
+			font-family: 'Roboto-Light';
 		}
 		input {
-			width: 280px;
 			margin-right: 0;
+			outline: none;
 			border: none;
+			width: 230px;
+			padding: 2px 0 2px 5px ;
+			@include prefix(border-radius, 6px, webkit ms o);
+			@include media-min-width( mobile ) {
+			}
+			@include media-min-width ( tablet ) {
+			}
 		}
-		button {
-			border: 1px $silver solid;
-			text-align: center;
-			padding: 0 20px;
+		.proj-search-bttn {
+			position: absolute;
+			right: 0;
+			border-left: 1px #c0c0c0 solid;
+	    text-align: center;
+	    padding: 2px 8px;
+	    @include media-min-width( mobile ) {
+	    	padding: 2px 5px;
+
+	    }
 		}
 	}
 
@@ -71,6 +106,7 @@
 		width: 100%;
 		margin: 20px 0;
 		overflow: hidden;
+
 		.gallery-image {
 			width: 100%;
 			margin: 20px auto;

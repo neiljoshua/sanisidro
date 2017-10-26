@@ -87,23 +87,23 @@ $posts = get_posts( $args );
 				$posts = get_posts( $args );
 			?>
 
-			<select id="state-select" class="default" name="states" data-select="state">
+			<select id="state-select" name="states" data-select="state">
 
-				<option  class="filter-project" value="default" > Select State </option>
+				<option value="default" > Select State </option>
 
 				<?php global $states ?>
 
 				<?php foreach ($states as $state) { ?>
 
-				<option class="filter-project"  value="<?php echo $state; ?>"> <?php echo $state; ?> </option>
+				<option value="<?php echo $state; ?>"> <?php echo $state; ?> </option>
 
 				<?php } ?>
 
 			</select>
 
-			<select id="city-select" class="default" name="cities" data-select="city">
+			<select id="city-select" name="cities" data-select="city" disabled="true">
 
-				<option class="cities-item" value="default" data-state="default" > Select City </option>
+				<option value="default" data-state="default" > Select City </option>
 
 				<?php global $cities ?>
 
@@ -128,15 +128,15 @@ $posts = get_posts( $args );
 					}
 					?>
 
-					<option class="cities-item" value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>
+					<option value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>
 
 				<?php } ?>
 
 			</select>
 
 			<form id="proj-search" class="projects-form" action="search">
-				<input class="proj-search-input" type="input" name="projects" placeholder="Enter City, State or Project">
-				<button class="proj-search-bttn" type="submit">SEARCH</button>
+				<input class="proj-search-input" type="input" name="projects" placeholder="Enter City or State">
+				<button class="proj-search-bttn" type="submit">Search</button>
 			</form>
 
 		 	<?php include("partials/featured-blocks.php") ?>

@@ -28,7 +28,7 @@ $(document).ready(function(){
     		$body.toggleClass('fixed');
 	     	$mobile.removeClass('is-active');
     		$header.removeClass('active');
-	        $nav.removeClass('active');
+	      $nav.removeClass('active');
     	}
     	ifHome();
     }
@@ -49,6 +49,7 @@ $(document).ready(function(){
         $('.site-header__menu').toggleClass('active');
     });
 
+
 	function addWhiteBackGroundMenu() {
 		$('.site-header').addClass('active');
 		$('.site-header__logo').addClass('active');
@@ -57,6 +58,7 @@ $(document).ready(function(){
 		$('.site-header__hamburger').addClass('dark-hamburger');
 	}
 
+
 	function removeWhiteBackGroundMenu() {
 		$('.site-header').removeClass('active');
 		$('.site-header__logo').removeClass('active');
@@ -64,6 +66,7 @@ $(document).ready(function(){
 		$('.site-header__menu a').removeClass('dark-menu');
 		$('.site-header__hamburger').removeClass('dark-hamburger');
 	}
+
 
 	function changeMenuColor() {
 
@@ -75,7 +78,6 @@ $(document).ready(function(){
 				offset = startChange.offset().top - 55 ;
 				if( scrollStart >= offset ){
 					addWhiteBackGroundMenu();
-
 				} else {
 					removeWhiteBackGroundMenu();
 				}
@@ -97,46 +99,65 @@ $(document).ready(function(){
 	// Using DropKick
 
 
-  $('.default').dropkick({
+  $('select').dropkick({
   	mobile : true
   });
+
 
   var resetCitySelect = function() {
 
   	var $select = $('#city-select');
 		$select.removeData('dropkick');
 		$('#city-select').html(defaultCities);
+		$select.attr('disabled','true');
 		$select.dropkick('refresh');
 
   }
 
+	var resetProjects = function() {
+
+		var htmlfeatureProjects = $('.project-gallery').html($featureProjects);
+    htmlfeatureProjects.find("img.lazy").lazyload();
+
+	}
+
+
 	var updateCitySelect = function($state) {
 
-		if ($state !== 'default'){
-			var $select = $('#city-select');
-			var selectActiveCities = $('#city-select').find("[data-state='" + $state + "']");
-			$select.removeData('dropkick');
-			$select.html(selectActiveCities);
-			$select.dropkick('refresh');
-			$select.dropkick('reset','clear')
-		}
+		var $select = $('#city-select');
+		var selectActiveCities = $('#city-select').find("[data-state='" + $state + "'], [data-state=default]");
+		$select.removeData('dropkick');
+		$select.html(selectActiveCities);
+		$select.removeAttr('disabled');
+		$select.dropkick('refresh');
+		$select.dropkick('reset','clear');
 
 	}
 
-	var resetProjects = function() {
-		var htmlfeatureProjects = $('.project-gallery').html($featureProjects);
-    console.log(htmlfeatureProjects);
-    htmlfeatureProjects.find("img.lazy").lazyload();
-	}
 
+	var getStateProjects = function ($location) {
 
-	var getProjects = function ($location) {
+    if ($location !== 'default') {
+    	updateCitySelect($location);
+      projectQuery($location);
+    }
+    else if ($location == 'default') {
+      resetCitySelect();
+      resetProjects();
+    }
+
+	};
+
+		var getCityProjects = function ($location) {
 
     if ($location !== 'default') {
       projectQuery($location);
     }
     else if ($location == 'default') {
-      $(resetProjects);
+    	var activeState = new Dropkick('#state-select');
+    	var location = activeState.value;
+    	updateCitySelect(location);
+      projectQuery(location);
     }
 
 	};
@@ -147,21 +168,16 @@ $(document).ready(function(){
 		 var selectType = $(this).data('select');
 		 var location = new Dropkick('#'+selectType+'-select')
 		 var location = location.value;
+		 $('.proj-search-input').val('');
 
 	   switch (selectType) {
 	     case 'state':
-	     	 $('#city-select').html(defaultCities);
-	     	 if (location != 'default'){
-		     	 updateCitySelect(location);
-		     	 getProjects(location);
-		     	 break
-	     	 }
-	     	 $(resetCitySelect);
-	     	 $(resetProjects);
-	     	 break
+	     	$('#city-select').html(defaultCities);
+	     	getStateProjects(location);
+	     	break
 	     case 'city':
-	     	 getProjects(location);
-	       break
+	     	getCityProjects(location);
+	     	break
 	   }
 	}
 
@@ -198,11 +214,15 @@ $(document).ready(function(){
 		if ($('body').hasClass('page-template-page-projects')) {
 			$('.project-filter select').change(getLocations);
 			$(userQuery);
+			$('.proj-search-input').on('focus',function(){
+				$('#state-select').dropkick('reset','clear');
+				resetCitySelect();
+			})
 		}
 
 	}
 
-	$(loadingProjectFilter);
+	loadingProjectFilter();
 
 
 	}); //End of Document ready.

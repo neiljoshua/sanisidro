@@ -213,7 +213,7 @@ $(document).ready(function(){
 
 		if ($('body').hasClass('page-template-page-projects')) {
 			$('.project-filter select').change(getLocations);
-			$(userQuery);
+			userQuery();
 			$('.proj-search-input').on('focus',function(){
 				$('#state-select').dropkick('reset','clear');
 				resetCitySelect();

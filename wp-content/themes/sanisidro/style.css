@@ -624,12 +624,12 @@ a.featured_link {
   transition: opacity 0.9s ease;
 }
 
-/* line 2, src/sass/projects.scss */
+/* line 3, src/sass/projects.scss */
 .projects .projects-link-page {
   text-align: right;
   font-size: 13px;
 }
-/* line 6, src/sass/projects.scss */
+/* line 7, src/sass/projects.scss */
 .projects .projects-link-page a {
   display: inline-block;
   font-weight: 300;
@@ -637,16 +637,16 @@ a.featured_link {
   text-align: center;
   margin-right: 5px;
 }
-/* line 15, src/sass/projects.scss */
+/* line 16, src/sass/projects.scss */
 .projects .about-project {
   width: 70%;
   margin: 0 auto;
 }
-/* line 18, src/sass/projects.scss */
+/* line 19, src/sass/projects.scss */
 .projects .about-project p {
   padding: 0 25px 30px;
 }
-/* line 23, src/sass/projects.scss */
+/* line 24, src/sass/projects.scss */
 .projects .search-project {
   width: 250px;
   font-size: 20px;
@@ -657,13 +657,13 @@ a.featured_link {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 29, src/sass/projects.scss */
+/* line 30, src/sass/projects.scss */
 .projects .search-project option {
   display: block;
   width: 230px;
   font-size: 20px;
 }
-/* line 38, src/sass/projects.scss */
+/* line 39, src/sass/projects.scss */
 .projects .project-filter .dk-select,
 .projects .project-filter .dk-selected,
 .projects .project-filter .dk-option,
@@ -671,23 +671,23 @@ a.featured_link {
   font-family: 'Roboto-Light';
   font-size: 18px;
 }
-/* line 46, src/sass/projects.scss */
+/* line 47, src/sass/projects.scss */
 .projects .project-filter .dk-select {
   margin-top: 20px;
 }
 @media (min-width: 601px) {
-  /* line 46, src/sass/projects.scss */
+  /* line 47, src/sass/projects.scss */
   .projects .project-filter .dk-select {
-    margin-top: 0;
+    margin-right: 20px;
   }
 }
-/* line 56, src/sass/projects.scss */
+/* line 57, src/sass/projects.scss */
 .projects .projects-form {
   display: inline-block;
   position: relative;
   border: 1px #c0c0c0 solid;
   vertical-align: middle;
-  width: 330px;
+  width: 270px;
   max-width: 100%;
   margin-top: 20px;
   -webkit-border-radius: 6px;
@@ -696,20 +696,18 @@ a.featured_link {
   border-radius: 6px;
 }
 @media (min-width: 601px) {
-  /* line 56, src/sass/projects.scss */
+  /* line 57, src/sass/projects.scss */
   .projects .projects-form {
-    width: 400px;
+    width: 250px;
   }
 }
 @media (min-width: 769px) {
-  /* line 56, src/sass/projects.scss */
+  /* line 57, src/sass/projects.scss */
   .projects .projects-form {
-    width: 300px;
-    margin-top: 0;
-    margin-left: 20px;
+    width: 270px;
   }
 }
-/* line 73, src/sass/projects.scss */
+/* line 74, src/sass/projects.scss */
 .projects .projects-form input,
 .projects .projects-form button {
   display: inline-block;
@@ -717,7 +715,7 @@ a.featured_link {
   font-size: 18px;
   font-family: 'Roboto-Light';
 }
-/* line 80, src/sass/projects.scss */
+/* line 81, src/sass/projects.scss */
 .projects .projects-form input {
   margin-right: 0;
   outline: none;
@@ -729,7 +727,7 @@ a.featured_link {
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 92, src/sass/projects.scss */
+/* line 93, src/sass/projects.scss */
 .projects .projects-form .proj-search-bttn {
   position: absolute;
   right: 0;
@@ -738,28 +736,28 @@ a.featured_link {
   padding: 2px 8px;
 }
 @media (min-width: 601px) {
-  /* line 92, src/sass/projects.scss */
+  /* line 93, src/sass/projects.scss */
   .projects .projects-form .proj-search-bttn {
     padding: 2px 5px;
   }
 }
-/* line 105, src/sass/projects.scss */
+/* line 106, src/sass/projects.scss */
 .projects .project-gallery {
   width: 100%;
   margin: 20px 0;
   overflow: hidden;
 }
-/* line 110, src/sass/projects.scss */
+/* line 111, src/sass/projects.scss */
 .projects .project-gallery .gallery-image {
   width: 100%;
   margin: 20px auto;
 }
-/* line 113, src/sass/projects.scss */
+/* line 114, src/sass/projects.scss */
 .projects .project-gallery .gallery-image.is-loading {
   background-color: #000;
 }
 @media (min-width: 601px) {
-  /* line 110, src/sass/projects.scss */
+  /* line 111, src/sass/projects.scss */
   .projects .project-gallery .gallery-image {
     float: left;
     width: 46%;
@@ -767,32 +765,32 @@ a.featured_link {
   }
 }
 @media (min-width: 769px) {
-  /* line 110, src/sass/projects.scss */
+  /* line 111, src/sass/projects.scss */
   .projects .project-gallery .gallery-image {
     width: 25%;
     padding: 0;
   }
 }
-/* line 125, src/sass/projects.scss */
+/* line 126, src/sass/projects.scss */
 .projects .project-gallery .gallery-image img, .projects .project-gallery .gallery-image p {
   display: block;
   width: 100%;
   margin: 20px auto 30px;
 }
 @media (min-width: 1025px) {
-  /* line 130, src/sass/projects.scss */
+  /* line 131, src/sass/projects.scss */
   .projects .project-gallery .gallery-image img {
     min-height: auto;
   }
 }
 @media (min-width: 769px) {
-  /* line 130, src/sass/projects.scss */
+  /* line 131, src/sass/projects.scss */
   .projects .project-gallery .gallery-image img {
     width: 90%;
   }
 }
 @media (max-width: 600px) {
-  /* line 130, src/sass/projects.scss */
+  /* line 131, src/sass/projects.scss */
   .projects .project-gallery .gallery-image img {
     min-height: -webkit-calc(57.83333vw);
     min-height: -moz-calc(57.83333vw);
@@ -802,7 +800,7 @@ a.featured_link {
     max-height: calc(57.83333vw);
   }
 }
-/* line 142, src/sass/projects.scss */
+/* line 143, src/sass/projects.scss */
 .projects .project-gallery .gallery-image p {
   text-align: center;
   padding-bottom: 25px;
@@ -810,7 +808,7 @@ a.featured_link {
   text-transform: capitalize;
 }
 @media (min-width: 769px) {
-  /* line 142, src/sass/projects.scss */
+  /* line 143, src/sass/projects.scss */
   .projects .project-gallery .gallery-image p {
     width: 90%;
   }
@@ -1343,7 +1341,7 @@ p {
 
 /* line 90, src/sass/style.scss */
 .title {
-  font-size: 40px;
+  font-size: 35px;
   padding: 30px 0;
   margin: 0 auto;
   text-transform: capitalize;
@@ -1352,7 +1350,7 @@ p {
 @media (min-width: 1025px) {
   /* line 90, src/sass/style.scss */
   .title {
-    font-size: 75px;
+    font-size: 70px;
   }
 }
 /* line 102, src/sass/style.scss */

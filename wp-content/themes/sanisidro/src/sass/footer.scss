@@ -9,7 +9,7 @@ footer {
 	}
 	background-color : $white;
 	color: $black;
-	p{
+	p {
 		@include media-max-width(mobile) {
 			width: 100%;
 			display: block;

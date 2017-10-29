@@ -1,4 +1,5 @@
 .projects {
+
 	.projects-link-page {
 
 		text-align: right;
@@ -19,59 +20,94 @@
 			padding: 0 25px 30px;
 		}
 	}
-	.states,
-	.cities,
+
 	.search-project,{
-		display: inline-block;
 		width: 250px;
 		font-size: 20px;
 		margin-right: 20px;
 		outline: none;
-		@include prefix(padding, 10px, webkit ms o);
 		@include prefix(border-radius, 0, webkit ms o);
 		option {
 			display: block;
 			width: 230px;
 			font-size: 20px;
-			padding: 10px;
 		}
 	}
 
+	.project-filter {
 
-	.cities{
-		.cities-item--active {
-			display: block;
+		.dk-select,
+		.dk-selected,
+		.dk-option,
+		.proj-search {
+			font-family: 'Roboto-Light';
+			font-size: 18px;
 		}
-		.cities-item--inactive {
-			display: none;
+
+		.dk-select {
+			margin-top: 20px;
+			@include media-min-width ( mobile ) {
+				margin-right: 20px;
+			}
 		}
+
 	}
+
 
 	.projects-form {
 		display: inline-block;
-		border: 1px $black solid;
+		position: relative;
+		border: 1px $silver solid;
+		vertical-align: middle;
+		width: 270px;
+		max-width: 100%;
+		margin-top: 20px;
+		@include prefix(border-radius, 6px, webkit ms o);
+		@include media-min-width( mobile ) {
+			width: 250px;
+		}
+		@include media-min-width ( tablet ) {
+			width: 270px;
+			// margin-top: 0;
+			// margin-left: 20px;
+		}
 		input,
 		button {
-			color: $black;
 			display: inline-block;
-			font-size: 20px;
+			color: $gray;
+			font-size: 18px;
+			font-family: 'Roboto-Light';
 		}
 		input {
-			width: 280px;
 			margin-right: 0;
+			outline: none;
 			border: none;
+			width: 230px;
+			padding: 2px 0 2px 5px ;
+			@include prefix(border-radius, 6px, webkit ms o);
+			@include media-min-width( mobile ) {
+			}
+			@include media-min-width ( tablet ) {
+			}
 		}
-		button {
-			border: 1px $silver solid;
-			text-align: center;
-			padding: 10px 20px;
+		.proj-search-bttn {
+			position: absolute;
+			right: 0;
+			border-left: 1px #c0c0c0 solid;
+	    text-align: center;
+	    padding: 2px 8px;
+	    @include media-min-width( mobile ) {
+	    	padding: 2px 5px;
+
+	    }
 		}
 	}
 
-	.projects-gallery{
+	.project-gallery{
 		width: 100%;
 		margin: 20px 0;
 		overflow: hidden;
+
 		.gallery-image {
 			width: 100%;
 			margin: 20px auto;
@@ -115,33 +151,6 @@
 			}
 		}
 
-		.gallery-image__hide-city {
-			visibility: hidden;
-			width: 0;
-			height: 0;
-			opacity: 0;
-			transition: opacity 0.6s ease;
-		}
-
-		.gallery-image__show-city {
-			visibility: visible;
-			opacity: 1;
-			transition: opacity 0.6s ease;
-		}
-
-		.gallery-image__hide-state,{
-			visibility: hidden;
-			opacity: 0;
-			width: 0;
-			transition: opacity 0.6s ease;
-		}
-
-		.gallery-image__show-state {
-			visibility: visible;
-			display: block;
-			opacity: 1;
-			transition: opacity 0.6s ease;
-		}
 	}
 
 

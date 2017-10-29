@@ -1,5 +1,5 @@
 
-	<ul class="home-gallery clear-float">
+	<ul class="project-gallery">
 
 	<?php 	foreach( $posts as $post ):
 			    setup_postdata( $post );

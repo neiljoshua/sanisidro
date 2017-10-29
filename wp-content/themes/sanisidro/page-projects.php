@@ -74,7 +74,7 @@ $posts = get_posts( $args );
 
 	 <!-- display propject -->
 
-	 <section>
+	 <section class="project-filter">
 		 <h2 class="title">Feature Projects</h2>
 		 <?php
 				$args = array(
@@ -87,67 +87,59 @@ $posts = get_posts( $args );
 				$posts = get_posts( $args );
 			?>
 
-			<select class="states">
+			<select id="state-select" name="states" data-select="state">
 
-			<option class="filter-project" value="Select State" > Select State </option>
+				<option value="default" > Select State </option>
 
-			<?php global $states ?>
+				<?php global $states ?>
 
-			<?php foreach ($states as $state) { ?>
+				<?php foreach ($states as $state) { ?>
 
-				<option class="filter-project"  value="<?php echo $state; ?>"> <?php echo $state; ?> </option>
+				<option value="<?php echo $state; ?>"> <?php echo $state; ?> </option>
 
-			<?php } ?>
+				<?php } ?>
 
 			</select>
 
-			<select class="cities">
+			<select id="city-select" name="cities" data-select="city" disabled="true">
 
-				<option > Select City </option>
+				<option value="default" data-state="default" > Select City </option>
 
-			<?php global $cities ?>
+				<?php global $cities ?>
 
-			<?php foreach ($cities as $city) { ?>
+				<?php foreach ($cities as $city) { ?>
 
-				<!-- // query each city for project -->
-				<!-- // $projects_with_city -->
-				<?php $projects_with_city = get_posts( array(
-					'post_type' => 'project',
-					'posts_per_page' => 1,
-					'meta_query' => array(
-						 array(
-								'key' => 'city',
-								'value' => $city,
-								'compare' => '==' )
-						 )
-						)
-					);
-				?>
-				<?php
-				foreach($projects_with_city as $project)
-				{
-					$state = get_post_meta($project->ID, "state", true);
-				}
-				?>
-				<!-- // for each project get state
-				// apply data-state attribute to city option below -->
-			?>
+					<?php $projects_with_city = get_posts( array(
+						'post_type' => 'project',
+						'posts_per_page' => 1,
+						'meta_query' => array(
+							 array(
+									'key' => 'city',
+									'value' => $city,
+									'compare' => '==' )
+							 )
+							)
+						);
+					?>
+					<?php
+					foreach($projects_with_city as $project)
+					{
+						$state = get_post_meta($project->ID, "state", true);
+					}
+					?>
 
-				<option class="cities-item" value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>
+					<option value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>
 
-			<?php } ?>
+				<?php } ?>
 
 			</select>
 
 			<form id="proj-search" class="projects-form" action="search">
-				<input class="proj-search-input" type="input" name="projects" placeholder="Enter City, State or Project">
-				<button class="proj-search-bttn" type="submit">SEARCH</button>
+				<input class="proj-search-input" type="input" name="projects" placeholder="Enter City or State">
+				<button class="proj-search-bttn" type="submit">Search</button>
 			</form>
 
-		 <!-- <?php// include("partials/featured-blocks.php") ?> -->
-		 <ul class="projects-gallery">
 		 	<?php include("partials/featured-blocks.php") ?>
-		 </ul>
 
 
 	 </section>

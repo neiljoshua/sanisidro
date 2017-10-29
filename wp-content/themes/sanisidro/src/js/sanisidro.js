@@ -184,7 +184,7 @@ $(document).ready(function(){
 
 	var projectQuery = function($project) {
 
-		var href = 'http://san-isidro.local/project-archive/';
+		var href = 'http://sanisidro.neiljoshua.com/project-archive/';
 			$.ajax({  // Use ajax to pull in archive projects.
 			   url:href,
 			   type:'GET',

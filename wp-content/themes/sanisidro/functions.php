@@ -1,7 +1,7 @@
 <?php
 // Load stylesheet for San Isidro Theme.
 function learningWordpress_resources() {
-	
+
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 }
@@ -14,10 +14,11 @@ function themeprefix_slick_enqueue_scripts_styles() {
 	 wp_enqueue_script( 'sanisidro', get_template_directory_uri() . '/src/js/sanisidro.js', array( 'jquery' ),true);
 	 wp_enqueue_script( 'slickjs', get_stylesheet_directory_uri() . '/src/js/vendors/slick.min.js', array( 'jquery' ), '1.6.0', true );
    wp_enqueue_script( 'jquery.lazyload.js', get_stylesheet_directory_uri() . '/src/js/vendors/jquery.lazyload.js', array( 'jquery' ), '1.9.3', true );
+   wp_enqueue_script( 'dropkick.js', get_stylesheet_directory_uri() . '/src/js/vendors/dropkick.js', array( 'jquery' ), '2.2.1', true );
 	 wp_enqueue_script( 'slickjs-init', get_stylesheet_directory_uri(). '/src/js/slick-init.js', array( 'slickjs' ), '1.6.0', true );
 	 wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/src/css/slick.css', '1.6.0', 'all');
 	 wp_enqueue_style( 'slickcsstheme', get_stylesheet_directory_uri(). '/src/css/slick-theme.css', '1.6.0', 'all');
-
+	 wp_enqueue_style( 'dropkickcss', get_stylesheet_directory_uri() . '/src/css/pluggins/dropkick.css', '1.6.0', 'all');
 }
 
 add_action( 'wp_enqueue_scripts', 'themeprefix_slick_enqueue_scripts_styles' );
@@ -49,11 +50,10 @@ function create_post_type() {
         'singular_name' => __( 'Project' )
       ),
       'public' => true,
-      'has_archive' => false,
+      'has_archive' => true,
       'rewrite' => array('slug' => 'project'),
       'menu_position' => 5,
-      // 'rewrite' => array( 'slug' => '/our-properties/%state%', 'with_front' => false )
-      'capability_type' => 'post',
+      'capability_type' => 'post'
     )
   );
 
@@ -66,14 +66,60 @@ function create_post_type() {
       'public' => true,
       'has_archive' => false,
       'rewrite' => array('slug' => 'news'),
-      'menu_position' => 5,
+      'menu_position' => 5
       // 'rewrite' => array( 'slug' => '/our-properties/%state%', 'with_front' => false )
     )
   );
 
  }
 
- flush_rewrite_rules();
+ function my_acf_load_field( $field ) {
+
+    $field['choices'] = array(
+        'custom' => 'My Custom Choice'
+    );
+
+    return $field;
+
+}
+
+add_filter('acf/load_field/type=select', 'my_acf_load_field');
 
 
-  
+function acf_load_state_field_choices( $field ) {
+
+    // reset choices
+    $field['choices'] = array();
+
+    // get the textarea value from options page without any formatting
+    $choices = get_field('state', 'project', false);
+
+    // explode the value so that each line is a new array piece
+    $choices = explode("\n", $choices);
+
+    // remove any unwanted white space
+    $choices = array_map('trim', $choices);
+
+    // loop through array and add to field 'choices'
+    if( is_array($choices) ) {
+
+        foreach( $choices as $choice ) {
+
+            $field['choices'][ $choice ] = $choice;
+
+        }
+
+    }
+
+    // return the field
+    return $field;
+
+}
+
+add_filter('acf/load_field/type=select', 'acf_load_state_field_choices');
+
+
+flush_rewrite_rules();
+
+
+

@@ -1,6 +1,6 @@
 .news-content {
 
-	main{
+	main {
 		padding-top: 60px;
 	}
 
@@ -21,6 +21,7 @@
 		@include media-min-width( tablet ) {
 			&:nth-child(1){
 				width: 50%;
+				margin-bottom: -1px;
 				&:before{
 					padding-bottom: 100%;
 				}

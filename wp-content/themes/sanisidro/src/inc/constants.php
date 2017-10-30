@@ -8,7 +8,6 @@ $GLOBALS['mailchimp_key']  = 'bd397178d444851afaab1bc85144fc9d-us14';
 $GLOBALS['mailchimp_list'] = 'bb33031de5';
 
 
-
 /* States */
 
 $projects = get_posts( array( 'post_type' => 'project', 'posts_per_page' => -1, 'order' => 'asc', 'orderby' => 'state', 'meta_key' => 'state' ) );
@@ -21,6 +20,8 @@ foreach ($projects as $project){
 	  	$states[] = $state;
 	  }
 	}
+
+$states_option = $states;
 
 /* Cities */
 

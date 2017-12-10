@@ -47,11 +47,12 @@ section {
 		padding: 0;
 	}
 	@include media-min-width(tablet) {
-		padding: 20px 40px;
+		padding: 30px 40px;
 	}
 }
 
 a {
+	position: relative;
 	text-transform: capitalize;
 	text-decoration: none;
 	color: $black;
@@ -61,7 +62,7 @@ p {
 	font-size: 16px;
 	font-family: 'Roboto-Light';
 	line-height: 1.8;
-	@include media-min-width( tablet ) {
+	@include media-min-width(tablet) {
 		font-size: 18px;
 	}
 }
@@ -82,21 +83,20 @@ p {
 	background-position: center;
 	@include calc(min-height,100vw/(1200/694));
 	@include calc(max-height,100vw/(1200/694));
-	@include media-max-width ( mobile ) {
+	@include media-max-width (mobile) {
 		padding-top: 60px;
 	}
 }
 
 .title {
 	font-size: 35px;
-	padding: 30px 0;
-	margin: 0 auto;
+	margin: 20px auto;
 	text-transform: capitalize;
 	text-align: left;
-	@include media-min-width( table ) {
+	@include media-min-width(table) {
 		font-size: 55px;
 	}
-	@include media-min-width( large ) {
+	@include media-min-width(desktop) {
 		font-size: 70px;
 	}
 	&.post-title {
@@ -107,7 +107,7 @@ p {
 .copy {
 	font-size: 20px;
 	margin: 40px 0;
-	@include media-min-width( mobile ) {
+	@include media-min-width(mobile) {
 		padding: 10px 0;
 		max-width: 780px;
 	}
@@ -119,8 +119,8 @@ p {
 	margin: 0 auto;
 	width: 100%;
 	overflow: hidden;
-	@include calc(min-height,100vw/(1200/694));
-	@include calc(max-height,100vw/(1200/694));
+	@include calc(min-height,80vw/(1200/694));
+	@include calc(max-height,80vw/(1200/694));
 	&__image {
 		position: absolute;
 		width: 100%;
@@ -130,7 +130,7 @@ p {
 		left: 0;
 		right: 0;
 	}
-	@include media-max-width ( mobile ) {
+	@include media-max-width(mobile) {
 		padding-top: 60px;
 	}
 }

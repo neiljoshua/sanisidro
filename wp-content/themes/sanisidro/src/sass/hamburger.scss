@@ -1,7 +1,7 @@
 .site-header__hamburger {
     position: fixed;
     visibility: visible;
-    top: 10px;
+    top: 0;
     right: 10px;
     margin: 0;
     padding: 0;
@@ -35,7 +35,8 @@
       right: 14px;
       height: 2px;
       background: $white;
-      &::before, &::after{
+      &::before,
+      &::after {
         position: absolute;
         display: block;
         left: 0;
@@ -52,8 +53,9 @@
         bottom: -8px;
       }
     }
-    @include media-min-width( large ) {
+    @include media-min-width(desktop) {
       visibility: hidden;
+      display: none;
     }
 }
 

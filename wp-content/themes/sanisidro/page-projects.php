@@ -135,7 +135,7 @@ $posts = get_posts( $args );
 			</select>
 
 			<form id="proj-search" class="projects-form" action="search">
-				<input class="proj-search-input" type="input" name="projects" placeholder="Enter City or State">
+				<input class="proj-search-input" type="input" name="projects" placeholder="Enter City or State" autocomplete="off">
 				<button class="proj-search-bttn" type="submit">Search</button>
 			</form>
 

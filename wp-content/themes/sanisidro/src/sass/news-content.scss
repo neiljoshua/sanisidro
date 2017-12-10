@@ -14,11 +14,11 @@
 			padding-bottom: 60%;
 		}
 		@include prefix(background-size, cover, webkit ms o);
-		@include media-min-width( mobile ) {
+		@include media-min-width(mobile) {
 			width: 50%;
 			float: left;
 		}
-		@include media-min-width( tablet ) {
+		@include media-min-width(tablet) {
 			&:nth-child(1){
 				width: 50%;
 				margin-bottom: -1px;
@@ -58,10 +58,10 @@
 			text-align: center;
 			vertical-align: middle;
 			text-transform: capitalize;
-			@include media-min-width( mobile) {
+			@include media-min-width(mobile) {
 				font-size: 20px;
 			}
-			@include media-min-width ( tablet) {
+			@include media-min-width (tablet) {
 				font-size: 25px;
 				&:hover{
 					opacity: 0.7;

@@ -21,7 +21,6 @@ foreach ($projects as $project){
 	  }
 	}
 
-$states_option = $states;
 
 /* Cities */
 

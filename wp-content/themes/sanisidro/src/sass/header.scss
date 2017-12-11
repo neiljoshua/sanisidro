@@ -1,7 +1,6 @@
 /*Header*/
 .site-header {
 	width:100%;
-	height: 60px;
 	position:fixed;
 	top: 0;
 	left: 0;
@@ -12,11 +11,9 @@
 }
 
 .site-header__logo {
- 	position: fixed;
- 	display: block;
+ 	display: inline-block;
+ 	width: 60px;
  	visibility: hidden;
- 	top: 8px;
- 	left: 0;
  	z-index: 2500;
  	img{
 	 	height: 30px;
@@ -36,113 +33,118 @@
 
 .site-header__menu {
 	display: block;
-	@include media-max-width(large) {
-		position: fixed;
-		visibility: hidden;
-		top: 0;
-		left: 100%;
-		right: -100%;
-		height: 100%;
-		z-index: 50;
-		margin: 0;
-		background-color: $gray;
-	}
-	@include media-min-width(large) {
-		visibility: visible;
-		position: fixed;
-		top: 20px;
-		right: 250px;
-		z-index: 90;
-	}
+	position: fixed;
+	top: 0;
+	left: 100%;
+	right: -100%;
+	bottom: 0;
+	margin: 0;
+	opacity: 0;
+	z-index: 50;
 	@include prefix(transform, translateX(50%), webkit ms o);
 	@include prefix(transition, all 0.6s ease-in-out, webkit ms o);
 	&.active {
-		visibility: visible;
 		left: 0;
 		right: 0;
-		bottom: 0;
 		opacity: 1;
 		background-color: $black;
-		@include media-max-width ( large ) {
+		@include prefix(transform, translateX(0%), webkit ms o);
+		@include prefix(transition, all 0.6s ease-in-out, webkit ms o);
+		@include media-min-width (tablet) {
 			@include prefix(transform, translateX(50%), webkit ms o);
 			@include prefix(transition, all 0.6s ease-in-out, webkit ms o);
 		}
-		@include media-max-width ( mobile ) {
-			@include prefix(transform, translateX(0%), webkit ms o);
-			@include prefix(transition, all 0.6s ease-in-out, webkit ms o);
-		}
-
+	}
+	@include media-min-width(desktop) {
+		margin-top: 10px;
+		margin-right: 20px;
+		display: block;
+		float: right;
+		position: static;
+		opacity: 1;
+		@include prefix(transform, none, webkit ms o);
+		z-index: 90;
 	}
 	ul {
-  	@include media-max-width (mobile) {
-	    text-align: center;
-  		display: block;
-	    position: absolute;
-  		top: 50%;
-  		left: 50%;
-  		@include prefix(transform, translateX(-50%) translateY(-50%), webkit ms o );
-  	}
-		@include media-min-width(mobile) {
-			position: absolute;
-			display: block;
-			top: 50%;
+    text-align: center;
+		display: block;
+    position: absolute;
+		top: 50%;
+		left: 50%;
+		@include prefix(transform, translateX(-50%) translateY(-50%), webkit ms o );
+		@include media-min-width(tablet) {
 			text-align: left;
-			margin-left: 20px;
-			@include prefix(transform, translateY(-50%), webkit ms o );
+			left: 10%;
 	  }
-		@include media-min-width (large) {
-			position: inherit;
+		@include media-min-width(desktop) {
 	    display: inline-block;
-	    margin-top: 30px;
+	    position: static;
+	    @include prefix(transform, none, webkit ms o);
 		}
 		li {
 			margin-bottom: 40px;
-			@include media-min-width ( large ) {
+			@include media-min-width(desktop) {
 				display: inline-block;
-				margin-right: 20px;
+				margin-bottom: 0;
 			}
     	&.current-menu-item {
     		a {
     			color: $white;
     			border-bottom: 1px solid $white;
-    			@include media-min-width ( large ) {
-	    			color: $white;
-						border-bottom: 2px solid $white;
-						font-weight: 600;
+    			@include media-min-width(desktop) {
+						border-bottom: 1px solid $white;
 	    			&.dark-menu {
 	    				color: $black;
-	    				border-bottom: 2px solid $black;
+	    				border-bottom: 1px solid $black;
 	    			}
     			}
     		}
     	}
     	a {
+    		position: relative; //Needed for :after hover effect.
+    		font-size: 18px;
 				margin-bottom: 40px;
 				padding-bottom: 4px;
 				letter-spacing: 2px;
-				@include media-max-width ( large ) {
+				color: $gray;
+				@include media-min-width(tablet) {
 					font-size: 25px;
-					color: $gray;
+					&::after {
+    				display:block;
+    				position: absolute;
+					  content: '';
+					  width: 0;
+					  top: 103%;
+					  height: 1px;
+					  background: $white;
+					  @include prefix(transition, width .8s ease .05s, webkit ms o);
+    			}
+    			&:hover {
+    				color: $white;
+    			  &::after {
+					  width:100%;
+    				@include prefix(transition, width .6s ease, webkit ms o);
+    				}
+    			}
 				}
-				@include media-min-width ( large ) {
-					font-size: 18px;
+				@include media-min-width(desktop) {
+					display: block;
 	    		color: $silver;
+	    		margin: 10px;
+	    		font-size: 18px;
 	    		&.dark-menu {
-	    			&:hover,&:active {
-							color: $black;
-							border-bottom: 2px solid $black;
+	    			&::after {
+						  background: $black;
+	    			}
+	    			&:hover {
+	    				color: $black;
+	    				&::after {
+					  	width:100%;
+    					@include prefix(transition, width .6s ease, webkit ms o);
+    					}
 	    			}
 					}
     		}
-
-				&:link, &:visited {
-					margin-right: 5px;
-				}
-				&:hover, &:active {
-					color: $white;
-					border-bottom: 2px solid $white;
-
-				}
 			}
 		}
     }

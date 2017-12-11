@@ -34,6 +34,13 @@ $(document).ready(function(){
     }
   };
 
+  function ifHome(){
+		if ( $('body').hasClass('home') ) {
+		changeMenuColor();
+		} else {
+			addWhiteBackGroundMenu();
+		}
+	}
 
 	ifHome();
 
@@ -84,15 +91,6 @@ $(document).ready(function(){
 
 			})
 
-		}
-	}
-
-
-	function ifHome(){
-		if ( $('body').hasClass('home') ) {
-		changeMenuColor();
-		} else {
-			addWhiteBackGroundMenu();
 		}
 	}
 
@@ -184,7 +182,7 @@ $(document).ready(function(){
 
 	var projectQuery = function($project) {
 
-		var href = window.location.origin + '/project-archive';
+		var href = window.location.origin + '/project-archive/';
 			$.ajax({  // Use ajax to pull in archive projects.
 			   url:href,
 			   type:'GET',
@@ -211,14 +209,12 @@ $(document).ready(function(){
 
 	var loadingProjectFilter = function() {
 
-		if ($('body').hasClass('page-template-page-projects')) {
-			$('.project-filter select').change(getLocations);
-			userQuery();
-			$('.proj-search-input').on('focus',function(){
-				$('#state-select').dropkick('reset','clear');
-				resetCitySelect();
-			})
-		}
+		$('.project-filter select').change(getLocations);
+		userQuery();
+		$('.proj-search-input').on('focus',function(){
+			$('#state-select').dropkick('reset','clear');
+			resetCitySelect();
+		})
 
 	}
 

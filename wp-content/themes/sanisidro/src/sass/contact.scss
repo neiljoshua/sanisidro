@@ -79,7 +79,7 @@
 			border: 1px solid $seagreen;
 			padding: 10px 0 10px 5px;
 			font-size: 18px;
-			@include media-min-width(mobile + 1) {
+			@include media-min-width(mobile) {
 				width: 40%;
 			}
 

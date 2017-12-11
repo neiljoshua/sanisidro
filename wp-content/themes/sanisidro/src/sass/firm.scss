@@ -69,7 +69,7 @@
 
 	.member-copy {
 		width: 100%;
-		@include media-min-width( tablet ) {
+		@include media-min-width(tablet) {
 			width: 60%;
 		}
 		&__name,

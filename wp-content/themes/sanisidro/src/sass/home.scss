@@ -58,6 +58,8 @@ div.text-slider {
 .slick-slide {
 	img {
 		width: 100%;
+		@include calc(min-height,90vw/(1200/694));
+		@include calc(max-height,90vw/(1200/694));
 	}
 }
 
@@ -117,7 +119,7 @@ a.featured_link {
 
 .project-gallery {
 	width: 100%;
-	margin: 20px 0;
+	margin: 35px 0;
 	overflow: hidden;
 }
 
@@ -128,7 +130,7 @@ a.featured_link {
 	margin: 20px auto;
 	@include media-min-width(mobile) {
 		width: 48%;
-		margin: 20px 0.9% 20px 0;
+		margin: 20px 0.8% 20px 0;
 		&:nth-child(2n) {
 			margin-right: 0;
 		}
@@ -136,7 +138,7 @@ a.featured_link {
 	@include media-min-width(tablet) {
 		width: 24%;
 		&:nth-child(2n) {
-			margin-right: 0.9%;
+			margin-right: 0.8%;
 		}
 		&:nth-child(4n) {
 			margin-right: 0;
@@ -152,7 +154,16 @@ a.featured_link {
 		width: 100%;
 	}
 	img {
-
+		@include calc(min-height,80vw/(1200/694));
+		@include calc(max-height,80vw/(1200/694));
+		@include media-min-width(mobile) {
+			@include calc(min-height,50vw/(1200/694));
+			@include calc(max-height,50vw/(1200/694));
+		}
+		@include media-min-width(tablet) {
+			@include calc(min-height,25vw/(1200/694));
+			@include calc(max-height,25vw/(1200/694));
+		}
 	}
 	p {
 		text-align: center;

@@ -88,13 +88,13 @@
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <section>
+      <section class="contact">
         <h1 class="contact__title"><?php the_title(); ?></h1>
         <?php the_content(); ?>
         <div class="contact__map"></div>
       </section>
 
-      <section class="entry-content">
+      <section>
 
         <div id="respond">
           <?php echo $response; ?>

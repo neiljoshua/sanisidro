@@ -43,19 +43,6 @@
 		}
 	}
 
-	.search-project,{
-		width: 250px;
-		font-size: 20px;
-		margin-right: 20px;
-		outline: none;
-		@include prefix(border-radius, 0, webkit ms o);
-		option {
-			display: block;
-			width: 230px;
-			font-size: 20px;
-		}
-	}
-
 	.project-filter {
 
 		.dk-select,
@@ -112,7 +99,7 @@
 		.proj-search-bttn {
 			position: absolute;
 			right: 0;
-			border-left: 1px #c0c0c0 solid;
+			border-left: 1px $silver solid;
 	    text-align: center;
 	    padding: 2px 8px;
 	    @include media-min-width(mobile) {

@@ -1,7 +1,7 @@
 (function ($, root, undefined) {
 
 	$(document).ready(function(){
-		$('.slider-for').slick({
+		$('.home-slider').slick({
 			autoplay: true,
 			dots: true,
 		  	infinite: true,

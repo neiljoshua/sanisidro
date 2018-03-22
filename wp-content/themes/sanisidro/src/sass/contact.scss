@@ -5,12 +5,6 @@
 			text-align: center;
 			padding-top:60px;
 			background-color: $seagreen;
-			p {
-				width: 90%;
-				max-width: 650px;
-				margin: 20px auto;
-				padding: 0 20px 30px;
-			}
 		}
 	}
 
@@ -19,8 +13,12 @@
 			margin: 20px 0;
 			padding-top: 20px;
 			font-size: 35px;
-			font-weight: 400;
 
+		}
+		p {
+			width: 90%;
+			max-width: 650px;
+			margin: 40px auto;
 		}
 		&__map {
 			width: 100%;
@@ -86,9 +84,11 @@
 		}
 		input[type='submit']{
 			font-weight: 400;
+			@include prefix(transition, all 0.6s ease-in-out, webkit ms );
 			&:hover {
 				background-color: $seagreen;
 				color: $white;
+				@include prefix(transition, all 0.6s ease-in-out, webkit ms );
 			}
 		}
 		span{
@@ -96,7 +96,7 @@
 		}
 	}
 
-	input.human {
+	.human {
 		display: inline-block;
 		border: 1px solid $black;
 		width: 60px;

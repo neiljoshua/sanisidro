@@ -16,7 +16,7 @@ $(document).ready(function(){
 	var defaultCities = $('#city-select').html();
 
 	$('img.lazy').lazyload({
-		threshold: 100,
+		threshold: 120,
 		effect: 'fadeIn'
   });
 

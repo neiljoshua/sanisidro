@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 *Template Name: Home Page
 **/
@@ -8,7 +8,7 @@
 add_filter('body_class', 'add_home_page_body_class');
 
 function add_home_page_body_class($classes) {
-	
+
 	$classes[] = 'home';
 
 	return $classes;
@@ -19,40 +19,40 @@ add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'na
 
 // function do_home_page_content() {
 
-get_header(); 
+get_header();
 ?>
 
 <main>
 
-<?php 
+<?php
 	$lead = get_field('hero_image');
 	if ($lead){
   ?>
-  
+
   <section>
  	<div class="hero" style="background-image: url(<?php the_field('hero_image') ?>)">
 		<div class="logo">
 			<img src="<?php the_field('hero_logo') ?>" />
 		</div>
 	</div>
-  </section>	
+  </section>
 
   <?php
   }
   ?>
 
-  <?php 
+  <?php
 	 	$sliderHome = get_field('slider_home_page');
 	 	if ($sliderHome){
 	  ?>
- 
+
  		 <section id="startchange">
  		 	<h2 class="title"> San Isidro </h2>
- 		 	<p class="copy"> <?php the_field('hero_content');?> </p>	
+ 		 	<p class="copy"> <?php the_field('hero_content');?> </p>
 
 			<?php if( have_rows('slider_home_page') ): ?>
-			
-			 	<div class="slider-for">
+
+			 	<div class="home-slider">
 
 				<?php while( have_rows('slider_home_page') ): the_row(); ?>
 					<?php $imageLink = get_sub_field('slider_image');?>
@@ -63,11 +63,9 @@ get_header();
 						 </div>
 
 				<?php endwhile; ?>
-				
+
 				</div>
-				<!-- <div class="slider-description">
-					<p><?php //the_sub_field('slider_about')?></p>
-				</div> -->
+
 			<?php endif; ?>
 
 		</section>
@@ -76,7 +74,7 @@ get_header();
   }
   ?>
 
-  <?php 
+  <?php
  	$aboutTitle = get_field('about_title');
  	if ($aboutTitle){
   ?>
@@ -84,21 +82,21 @@ get_header();
 	  <section>
 	 		<h2 class="title"> <?php echo $aboutTitle; ?></h2>
 	 		<p class="copy"> <?php the_field('about_content');?></p>
-	 	</section>	
+	 	</section>
 
   <?php
   }
-  ?>	
+  ?>
 
   <?php
-  $feautred_page = get_field('featured_page_option'); 
+  $feautred_page = get_field('featured_page_option');
   if($feautred_page) {
   ?>
 
 	  <section>
 			<h2 class="title">Featured </h2>
 			<a class="featured_link" href="/index.php?page_id=251"> View Projects</a>
-			<?php 
+			<?php
 				$args = array(
 				  'post_type' => 'project',
 				  'posts_per_page' => 8,
@@ -118,12 +116,12 @@ get_header();
 			<?php include("partials/featured-blocks.php") ?>
 		</section>
 
-	<?php 
+	<?php
 	}
-	?>	
+	?>
 
-</main>	
+</main>
 
 <?php
 
-get_footer(); 
+get_footer();

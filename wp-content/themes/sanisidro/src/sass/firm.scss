@@ -36,8 +36,6 @@
 	}
 
 	.member-image {
-		@include calc( width, '100% - 20px');
-		padding: 10px;
 		margin-bottom: 40px;
 		&__image {
 			display: block;

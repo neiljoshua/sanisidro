@@ -91,8 +91,7 @@
 
 .gallery-image {
 	display: inline-block;
-	@include calc( width, '100% - 10px');
-	padding: 5px;
+	width: 100%;
 	margin-bottom: 20px;
 	@include media-min-width(mobile) {
 		@include calc( width, '50% - 20px');

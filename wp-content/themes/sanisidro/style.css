@@ -553,10 +553,7 @@ input:-webkit-autofill {
 /* line 92, src/sass/home.scss */
 .gallery-image {
   display: inline-block;
-  width: -webkit-calc(100% - 10px);
-  width: -moz-calc(100% - 10px);
-  width: calc(100% - 10px);
-  padding: 5px;
+  width: 100%;
   margin-bottom: 20px;
 }
 @media (min-width: 601px) {
@@ -577,16 +574,16 @@ input:-webkit-autofill {
     padding: 5px;
   }
 }
-/* line 106, src/sass/home.scss */
+/* line 105, src/sass/home.scss */
 .gallery-image.is-loading {
   background-color: #000;
 }
-/* line 110, src/sass/home.scss */
+/* line 109, src/sass/home.scss */
 .gallery-image img {
   display: block;
   width: 100%;
 }
-/* line 115, src/sass/home.scss */
+/* line 114, src/sass/home.scss */
 .gallery-image p {
   padding: 30px 0;
   text-transform: capitalize;
@@ -786,13 +783,9 @@ input:-webkit-autofill {
 }
 /* line 38, src/sass/firm.scss */
 .firm .member-image {
-  width: -webkit-calc(100% - 20px);
-  width: -moz-calc(100% - 20px);
-  width: calc(100% - 20px);
-  padding: 10px;
   margin-bottom: 40px;
 }
-/* line 42, src/sass/firm.scss */
+/* line 40, src/sass/firm.scss */
 .firm .member-image__image {
   display: block;
   width: 100%;
@@ -815,27 +808,27 @@ input:-webkit-autofill {
     padding: 10px 15px;
   }
 }
-/* line 56, src/sass/firm.scss */
+/* line 54, src/sass/firm.scss */
 .firm .member-copy {
   width: 100%;
 }
-/* line 58, src/sass/firm.scss */
+/* line 56, src/sass/firm.scss */
 .firm .member-copy__name, .firm .member-copy__title {
   margin-bottom: 20px;
 }
-/* line 62, src/sass/firm.scss */
+/* line 60, src/sass/firm.scss */
 .firm .member-copy__name {
   font-size: 18px;
   font-weight: 700;
 }
-/* line 66, src/sass/firm.scss */
+/* line 64, src/sass/firm.scss */
 .firm .member-copy__copy,
 .firm .member-copy p {
   max-width: 720px;
   font-size: 16px;
 }
 @media (min-width: 601px) {
-  /* line 56, src/sass/firm.scss */
+  /* line 54, src/sass/firm.scss */
   .firm .member-copy {
     width: -webkit-calc(60% - 30px);
     width: -moz-calc(60% - 30px);
@@ -985,7 +978,7 @@ input:-webkit-autofill {
 /* line 23, src/sass/contact.scss */
 .contact .contact__map {
   width: 100%;
-  height: 400px;
+  height: 280px;
   background: url("src/images/contactmap.jpg") center center no-repeat;
   -webkit-background-size: cover;
   -ms-background-size: cover;

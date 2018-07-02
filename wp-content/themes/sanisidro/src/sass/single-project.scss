@@ -4,7 +4,20 @@
 		text-align: center;
 	}
 	.copy {
-		margin: 40px auto;
-		padding: 0;
+		margin: 20px;
+		@include calc( width, '100% - 40px');
+		@include media-min-width(mobile) {
+			margin: 30px;
+			@include calc( width, '100% - 60px');
+		}
+		@include media-min-width(tablet) {
+			margin: 20px 40px;
+			@include calc( width, '100% - 80px');
+			max-width: 780px;
+		}
+		@include media-min-width(desktop) {
+			width: 100%;
+			margin: 20px auto;
+		}
 	}
 }

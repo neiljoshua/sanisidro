@@ -1,21 +1,27 @@
 .firm {
 
 	.firm-description {
-		position: relative;
-		max-width: $container-max-width;
-		margin: 40px auto;
+		margin: 40px 20px;
+		@include calc( width, '100% - 40px');
+		@include media-min-width(mobile) {
+			margin: 40px;
+			@include calc( width, '100% - 80px');
+		}
+		@include media-min-width(tablet) {
+			margin: 60px auto;
+		}
 		p {
-			padding: 30px 20px;
 			max-width: $content-lenght;
 			margin: 0 auto;
-			font-size: 20px;
+			font-size: 18px;
 		}
 	}
 
 	.member {
 		overflow: hidden;
-		padding-bottom: 20px;
+		margin-bottom: 20px;
 		@include media-min-width(mobile) {
+			margin-bottom: 40px;
 			&:nth-child(odd){
 				.member-image {
 					float:left;
@@ -43,11 +49,11 @@
 		}
 		@include media-min-width(mobile) {
 			@include calc( width, '40% - 10px');
-			padding: 5px;
+			margin: 5px;
 		}
 		@include media-min-width(tablet) {
 			@include calc( width, '40% - 30px');
-			padding: 10px 15px;
+			margin: 10px 15px;
 		}
 	}
 

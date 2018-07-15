@@ -992,61 +992,62 @@ footer p {
   padding-top: 60px;
 }
 /* line 7, src/sass/news-content.scss */
-.news-content .image-news {
+.news-content .news-block {
   position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  margin: 0 10px;
+  border: 1px solid #fff;
+  width: -webkit-calc(100% - 22px);
+  width: -moz-calc(100% - 22px);
+  width: calc(100% - 22px);
 }
-/* line 10, src/sass/news-content.scss */
-.news-content .image-news:before {
+/* line 12, src/sass/news-content.scss */
+.news-content .news-block:before {
   content: "";
   display: block;
   padding-bottom: 60%;
 }
 @media (min-width: 601px) {
   /* line 7, src/sass/news-content.scss */
-  .news-content .image-news {
-    width: 50%;
+  .news-content .news-block {
+    margin: 0;
+    width: -webkit-calc(50% - 2px);
+    width: -moz-calc(50% - 2px);
+    width: calc(50% - 2px);
     float: left;
   }
 }
 @media (min-width: 769px) {
-  /* line 21, src/sass/news-content.scss */
-  .news-content .image-news:nth-child(1) {
+  /* line 7, src/sass/news-content.scss */
+  .news-content .news-block {
     width: 50%;
+    border: none;
+  }
+  /* line 25, src/sass/news-content.scss */
+  .news-content .news-block:nth-child(1) {
     margin-bottom: -1px;
   }
-  /* line 24, src/sass/news-content.scss */
-  .news-content .image-news:nth-child(1):before {
+  /* line 27, src/sass/news-content.scss */
+  .news-content .news-block:nth-child(1):before {
     padding-bottom: 100%;
   }
-  /* line 28, src/sass/news-content.scss */
-  .news-content .image-news:nth-child(2) {
-    width: 50%;
-  }
-  /* line 30, src/sass/news-content.scss */
-  .news-content .image-news:nth-child(2):before {
+  /* line 33, src/sass/news-content.scss */
+  .news-content .news-block:nth-child(2):before, .news-content .news-block:nth-child(3):before {
     padding-bottom: 50%;
   }
-  /* line 34, src/sass/news-content.scss */
-  .news-content .image-news:nth-child(3), .news-content .image-news:nth-child(4) {
-    width: 25%;
-  }
-  /* line 37, src/sass/news-content.scss */
-  .news-content .image-news:nth-child(3):before, .news-content .image-news:nth-child(4):before {
-    padding-bottom: 100%;
-  }
-  /* line 40, src/sass/news-content.scss */
-  .news-content .image-news:nth-child(3) a, .news-content .image-news:nth-child(4) a {
-    font-size: 15px;
-    font-style: capitalize;
-  }
 }
-/* line 46, src/sass/news-content.scss */
-.news-content .image-news__link {
+/* line 38, src/sass/news-content.scss */
+.news-content .news-block__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 48, src/sass/news-content.scss */
+.news-content .news-block__link {
   position: absolute;
   top: 0;
   left: 0;
@@ -1054,40 +1055,91 @@ footer p {
   bottom: 0;
   padding: 0;
   font-size: 18px;
-  color: #fff;
   text-align: center;
-  text-transform: capitalize;
+  opacity: 0.7;
+  background-color: #000;
+  z-index: 5;
 }
 @media (min-width: 601px) {
-  /* line 46, src/sass/news-content.scss */
-  .news-content .image-news__link {
+  /* line 48, src/sass/news-content.scss */
+  .news-content .news-block__link {
     font-size: 20px;
   }
 }
 @media (min-width: 769px) {
-  /* line 46, src/sass/news-content.scss */
-  .news-content .image-news__link {
+  /* line 48, src/sass/news-content.scss */
+  .news-content .news-block__link {
     opacity: 1;
-    font-size: 25px;
-    -webkit-transition: all 0.6s ease-in-out 0.1s;
-    -ms-transition: all 0.6s ease-in-out 0.1s;
-    transition: all 0.6s ease-in-out 0.1s;
+    background: none;
+    font-size: 20px;
+    -webkit-transition: all 0.8s ease-in-out 0.1s;
+    -ms-transition: all 0.8s ease-in-out 0.1s;
+    transition: all 0.8s ease-in-out 0.1s;
   }
-  /* line 64, src/sass/news-content.scss */
-  .news-content .image-news__link:hover {
-    opacity: 0.7;
+  /* line 68, src/sass/news-content.scss */
+  .news-content .news-block__link:hover {
+    opacity: 0.8;
     background-color: #000;
     margin: -1px;
-    -webkit-transition: all 0.6s ease-in-out 0.1s;
-    -ms-transition: all 0.6s ease-in-out 0.1s;
-    transition: all 0.6s ease-in-out 0.1s;
+    -webkit-transition: all 0.6s ease-in 0.1s;
+    -ms-transition: all 0.6s ease-in 0.1s;
+    transition: all 0.6s ease-in 0.1s;
+  }
+  /* line 73, src/sass/news-content.scss */
+  .news-content .news-block__link:hover .news-copy {
+    opacity: 1;
+    -webkit-transition: all 0.6s ease-in 0.1s;
+    -ms-transition: all 0.6s ease-in 0.1s;
+    transition: all 0.6s ease-in 0.1s;
+  }
+  /* line 77, src/sass/news-content.scss */
+  .news-content .news-block__link:hover .news-copy__line {
+    width: 25%;
+    -webkit-transition: width 0.9s ease-out 0.2s;
+    -ms-transition: width 0.9s ease-out 0.2s;
+    transition: width 0.9s ease-out 0.2s;
   }
 }
-/* line 71, src/sass/news-content.scss */
-.news-content .image-news__link span {
+/* line 87, src/sass/news-content.scss */
+.news-content .news-copy {
+  display: block;
+  position: relative;
   width: 100%;
   color: #fff;
-  z-index: 30;
+  opacity: 1;
+  z-index: 8;
+}
+@media (min-width: 769px) {
+  /* line 87, src/sass/news-content.scss */
+  .news-content .news-copy {
+    opacity: 0;
+    -webkit-transition: all 0.7s ease-out 0.1s;
+    -ms-transition: all 0.7s ease-out 0.1s;
+    transition: all 0.7s ease-out 0.1s;
+  }
+}
+/* line 98, src/sass/news-content.scss */
+.news-content .news-copy__caption {
+  display: block;
+  text-transform: capitalize;
+  font-family: "Merriweather-Light";
+}
+/* line 103, src/sass/news-content.scss */
+.news-content .news-copy__line {
+  display: block;
+  width: 20%;
+  height: 1px;
+  margin: 10px auto;
+  background-color: #fff;
+}
+@media (min-width: 769px) {
+  /* line 103, src/sass/news-content.scss */
+  .news-content .news-copy__line {
+    width: 0%;
+    -webkit-transition: width 0.7s ease-in 0.1s;
+    -ms-transition: width 0.7s ease-in 0.1s;
+    transition: width 0.7s ease-in 0.1s;
+  }
 }
 
 /* line 1, src/sass/archive-projects.scss */
@@ -1236,7 +1288,7 @@ body.fixed {
 
 /* line 34, src/sass/style.scss */
 h1, h2, h3, a {
-  font-family: 'Merriweather-Light', Arial;
+  font-family: "Merriweather-Light";
 }
 
 /* line 38, src/sass/style.scss */
@@ -1329,7 +1381,7 @@ a {
 /* line 96, src/sass/style.scss */
 p {
   font-size: 16px;
-  font-family: 'Roboto-Light';
+  font-family: "Roboto-Light";
   line-height: 1.5;
 }
 @media (min-width: 769px) {

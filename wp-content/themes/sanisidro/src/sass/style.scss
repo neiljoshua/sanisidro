@@ -94,12 +94,8 @@ a {
 }
 
 p {
-	font-size: 16px;
 	font-family: $sanserif;
 	line-height: 1.5;
-	@include media-min-width(tablet) {
-		font-size: 18px;
-	}
 }
 
 .container {

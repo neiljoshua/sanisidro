@@ -1030,12 +1030,21 @@ footer p {
   .news-content .news-block:nth-child(1):before {
     padding-bottom: 100%;
   }
-  /* line 33, src/sass/news-content.scss */
-  .news-content .news-block:nth-child(2):before, .news-content .news-block:nth-child(3):before {
+  /* line 32, src/sass/news-content.scss */
+  .news-content .news-block:nth-child(2):before {
     padding-bottom: 50%;
   }
+  /* line 36, src/sass/news-content.scss */
+  .news-content .news-block:nth-child(3), .news-content .news-block:nth-child(4) {
+    width: 25%;
+    padding-bottom: 10%;
+  }
+  /* line 40, src/sass/news-content.scss */
+  .news-content .news-block:nth-child(3) .news-block__link, .news-content .news-block:nth-child(4) .news-block__link {
+    font-size: 12px;
+  }
 }
-/* line 38, src/sass/news-content.scss */
+/* line 45, src/sass/news-content.scss */
 .news-content .news-block__image {
   position: absolute;
   top: 0;
@@ -1046,7 +1055,7 @@ footer p {
   width: 100%;
   height: 100%;
 }
-/* line 48, src/sass/news-content.scss */
+/* line 55, src/sass/news-content.scss */
 .news-content .news-block__link {
   position: absolute;
   top: 0;
@@ -1061,22 +1070,22 @@ footer p {
   z-index: 5;
 }
 @media (min-width: 601px) {
-  /* line 48, src/sass/news-content.scss */
+  /* line 55, src/sass/news-content.scss */
   .news-content .news-block__link {
     font-size: 20px;
   }
 }
 @media (min-width: 769px) {
-  /* line 48, src/sass/news-content.scss */
+  /* line 55, src/sass/news-content.scss */
   .news-content .news-block__link {
+    font-size: 20px;
     opacity: 1;
     background: none;
-    font-size: 20px;
     -webkit-transition: all 0.8s ease-in-out 0.1s;
     -ms-transition: all 0.8s ease-in-out 0.1s;
     transition: all 0.8s ease-in-out 0.1s;
   }
-  /* line 68, src/sass/news-content.scss */
+  /* line 75, src/sass/news-content.scss */
   .news-content .news-block__link:hover {
     opacity: 0.8;
     background-color: #000;
@@ -1085,14 +1094,14 @@ footer p {
     -ms-transition: all 0.6s ease-in 0.1s;
     transition: all 0.6s ease-in 0.1s;
   }
-  /* line 73, src/sass/news-content.scss */
+  /* line 80, src/sass/news-content.scss */
   .news-content .news-block__link:hover .news-copy {
     opacity: 1;
     -webkit-transition: all 0.6s ease-in 0.1s;
     -ms-transition: all 0.6s ease-in 0.1s;
     transition: all 0.6s ease-in 0.1s;
   }
-  /* line 77, src/sass/news-content.scss */
+  /* line 84, src/sass/news-content.scss */
   .news-content .news-block__link:hover .news-copy__line {
     width: 25%;
     -webkit-transition: width 0.9s ease-out 0.2s;
@@ -1100,7 +1109,7 @@ footer p {
     transition: width 0.9s ease-out 0.2s;
   }
 }
-/* line 87, src/sass/news-content.scss */
+/* line 94, src/sass/news-content.scss */
 .news-content .news-copy {
   display: block;
   position: relative;
@@ -1110,7 +1119,7 @@ footer p {
   z-index: 8;
 }
 @media (min-width: 769px) {
-  /* line 87, src/sass/news-content.scss */
+  /* line 94, src/sass/news-content.scss */
   .news-content .news-copy {
     opacity: 0;
     -webkit-transition: all 0.7s ease-out 0.1s;
@@ -1118,13 +1127,13 @@ footer p {
     transition: all 0.7s ease-out 0.1s;
   }
 }
-/* line 98, src/sass/news-content.scss */
+/* line 105, src/sass/news-content.scss */
 .news-content .news-copy__caption {
   display: block;
   text-transform: capitalize;
   font-family: "Merriweather-Light";
 }
-/* line 103, src/sass/news-content.scss */
+/* line 110, src/sass/news-content.scss */
 .news-content .news-copy__line {
   display: block;
   width: 20%;
@@ -1133,7 +1142,7 @@ footer p {
   background-color: #fff;
 }
 @media (min-width: 769px) {
-  /* line 103, src/sass/news-content.scss */
+  /* line 110, src/sass/news-content.scss */
   .news-content .news-copy__line {
     width: 0%;
     -webkit-transition: width 0.7s ease-in 0.1s;
@@ -1174,10 +1183,11 @@ footer p {
 /* line 18, src/sass/contact.scss */
 .contact .contact p {
   width: 90%;
+  font-size: 16px;
   max-width: 650px;
   margin: 40px auto;
 }
-/* line 23, src/sass/contact.scss */
+/* line 24, src/sass/contact.scss */
 .contact .contact__map {
   width: 100%;
   height: 280px;
@@ -1187,7 +1197,7 @@ footer p {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 31, src/sass/contact.scss */
+/* line 32, src/sass/contact.scss */
 .contact .error,
 .contact .success {
   font-size: 20px;
@@ -1197,29 +1207,29 @@ footer p {
   padding: 15px 0;
   text-align: center;
 }
-/* line 41, src/sass/contact.scss */
+/* line 42, src/sass/contact.scss */
 .contact .error {
   border: 1px solid red;
   color: red;
 }
-/* line 46, src/sass/contact.scss */
+/* line 47, src/sass/contact.scss */
 .contact .success {
   border: 1px solid green;
   color: green;
 }
-/* line 52, src/sass/contact.scss */
+/* line 53, src/sass/contact.scss */
 .contact form {
   width: 100%;
   max-width: 720px;
   margin: 30px auto;
 }
-/* line 56, src/sass/contact.scss */
+/* line 57, src/sass/contact.scss */
 .contact form p {
   margin: 0 auto 20px;
   font-size: 18px;
   font-weight: 700;
 }
-/* line 61, src/sass/contact.scss */
+/* line 62, src/sass/contact.scss */
 .contact form textarea {
   display: block;
   max-width: 720px;
@@ -1231,7 +1241,7 @@ footer p {
   resize: none;
   outline: none;
 }
-/* line 73, src/sass/contact.scss */
+/* line 74, src/sass/contact.scss */
 .contact form input {
   display: block;
   width: 100%;
@@ -1241,19 +1251,19 @@ footer p {
   font-size: 18px;
 }
 @media (min-width: 601px) {
-  /* line 73, src/sass/contact.scss */
+  /* line 74, src/sass/contact.scss */
   .contact form input {
     width: 40%;
   }
 }
-/* line 85, src/sass/contact.scss */
+/* line 86, src/sass/contact.scss */
 .contact form input[type='submit'] {
   font-weight: 400;
   -webkit-transition: all 0.6s ease-in-out;
   -ms-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-/* line 88, src/sass/contact.scss */
+/* line 89, src/sass/contact.scss */
 .contact form input[type='submit']:hover {
   background-color: #b9e2e0;
   color: #fff;
@@ -1261,11 +1271,11 @@ footer p {
   -ms-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-/* line 94, src/sass/contact.scss */
+/* line 95, src/sass/contact.scss */
 .contact form span {
   color: red;
 }
-/* line 99, src/sass/contact.scss */
+/* line 100, src/sass/contact.scss */
 .contact .human {
   display: inline-block;
   border: 1px solid #000;
@@ -1380,62 +1390,55 @@ a {
 
 /* line 96, src/sass/style.scss */
 p {
-  font-size: 16px;
   font-family: "Roboto-Light";
   line-height: 1.5;
 }
-@media (min-width: 769px) {
-  /* line 96, src/sass/style.scss */
-  p {
-    font-size: 18px;
-  }
-}
 
-/* line 105, src/sass/style.scss */
+/* line 101, src/sass/style.scss */
 .container {
   width: 100%;
   position: relative;
 }
 
-/* line 110, src/sass/style.scss */
+/* line 106, src/sass/style.scss */
 .clear-float {
   clear: both;
 }
 
-/* line 114, src/sass/style.scss */
+/* line 110, src/sass/style.scss */
 .hero {
   width: 100%;
   position: relative;
   background-size: cover;
   background-position: center;
 }
-/* line 119, src/sass/style.scss */
+/* line 115, src/sass/style.scss */
 .hero:after {
   content: "";
   display: block;
   padding-bottom: 50%;
 }
 @media (min-width: 769px) {
-  /* line 125, src/sass/style.scss */
+  /* line 121, src/sass/style.scss */
   .hero:after {
     padding-bottom: 55%;
   }
 }
 @media (min-width: 1025px) {
-  /* line 130, src/sass/style.scss */
+  /* line 126, src/sass/style.scss */
   .hero:after {
     padding-bottom: 60%;
   }
 }
 
-/* line 138, src/sass/style.scss */
+/* line 134, src/sass/style.scss */
 .page-hero {
   position: relative;
   width: 100%;
   margin: 60px auto 20px;
   padding: 10px 0;
 }
-/* line 143, src/sass/style.scss */
+/* line 139, src/sass/style.scss */
 .page-hero__image {
   position: absolute;
   width: 100%;
@@ -1445,18 +1448,18 @@ p {
   right: 0;
   bottom: 0;
 }
-/* line 152, src/sass/style.scss */
+/* line 148, src/sass/style.scss */
 .page-hero:after {
   content: "";
   display: block;
   padding-bottom: 50%;
 }
 @media (min-width: 769px) {
-  /* line 138, src/sass/style.scss */
+  /* line 134, src/sass/style.scss */
   .page-hero {
     padding: 50px 0;
   }
-  /* line 159, src/sass/style.scss */
+  /* line 155, src/sass/style.scss */
   .page-hero:after {
     content: "";
     display: block;
@@ -1464,7 +1467,7 @@ p {
   }
 }
 
-/* line 167, src/sass/style.scss */
+/* line 163, src/sass/style.scss */
 .center {
   position: absolute;
   top: 50%;

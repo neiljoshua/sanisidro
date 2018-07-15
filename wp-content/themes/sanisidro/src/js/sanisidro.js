@@ -20,6 +20,11 @@ $(document).ready(function(){
 		effect: 'fadeIn'
   });
 
+  $('div.lazy').lazyload({
+		threshold: 200,
+		effect: 'fadeIn'
+  });
+
 
  //Toggle mobilemenu if viewport width chages.
   function checkWidth(){

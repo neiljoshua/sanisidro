@@ -40,9 +40,13 @@ get_header();
 			    setup_postdata( $post );
 					$title = get_the_title();
 	?>
-					<div class="image-news" style="background-image: url(<?php the_field('image_news_blog'); ?>)">
-						<a class="image-news__link" href="<?php the_permalink() ?>">
-							<span class="center"><?php echo $title; ?></span>
+					<div class="news-block">
+						<img class="lazy news-block__image" data-original="<?php the_field('image_news_blog'); ?>" alt="<?php echo $title; ?>">
+						<a class="news-block__link" href="<?php the_permalink() ?>">
+							<div class="news-copy center" >
+								<p class="news-copy__caption"><?php echo $title; ?></p>
+								<p class="news-copy__line"></p>
+							</div>
 						</a>
 						<!-- <a href="<?php //the_permalink() ?>"> Read </a> -->
 					</div>

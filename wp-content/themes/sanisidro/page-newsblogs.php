@@ -26,7 +26,7 @@ get_header();
 	<?php
 		$args = array(
 		  'post_type' => 'newsblog',
-		  'posts_per_page' => 8,
+		  'posts_per_page' => 10,
 		  'order' => 'DESC',
 		  'orderby' => 'post_date',
 		  'meta_query' => array(

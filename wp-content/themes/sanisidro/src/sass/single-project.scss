@@ -1,23 +1,29 @@
 .single-project,
 .single-newsblog {
-	.title {
-		text-align: center;
+
+	section {
+		margin: 0 auto;
+		.title {
+			margin: 0 auto;
+			text-align: center;
+		}
+		.copy {
+			margin: 30px 20px;
+			@include calc( width, '100% - 40px');
+			@include media-min-width(mobile) {
+				margin: 30px;
+				@include calc( width, '100% - 60px');
+			}
+			@include media-min-width(tablet) {
+				margin: 40px auto;
+				@include calc( width, '100% - 80px');
+				max-width: 720px;
+			}
+			@include media-min-width(desktop) {
+				width: 80%;
+				margin: 50px auto;
+			}
+		}
 	}
-	.copy {
-		margin: 20px;
-		@include calc( width, '100% - 40px');
-		@include media-min-width(mobile) {
-			margin: 30px;
-			@include calc( width, '100% - 60px');
-		}
-		@include media-min-width(tablet) {
-			margin: 20px 40px;
-			@include calc( width, '100% - 80px');
-			max-width: 780px;
-		}
-		@include media-min-width(desktop) {
-			width: 100%;
-			margin: 20px auto;
-		}
-	}
+
 }

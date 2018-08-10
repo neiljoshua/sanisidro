@@ -24,13 +24,16 @@
 /** Section 2 Slider Section **/
 
 .home-slider {
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
+	@include media-min-width(mobile) {
+		width: 60%;
+	}
 	.slick-dots {
 		visibility: hidden;
 		@include media-min-width(mobile) {
 			visibility: visible;
-			bottom: -5px;
+			bottom: -20px;
 			button{
 				&:before {
 					font-size: 10px;
@@ -47,6 +50,7 @@
 			text-align: right;
 		}
 	}
+
 }
 
 /** Section 4 About Section **/
@@ -93,6 +97,7 @@
 	display: inline-block;
 	width: 100%;
 	margin-bottom: 20px;
+	font-size: 16px;
 	@include media-min-width(mobile) {
 		@include calc( width, '50% - 20px');
 		padding: 10px;
@@ -106,15 +111,33 @@
 		 background-color: $black;
 	}
 
-	img {
-		width: 100%;
-		opacity: 0;
-  	@include prefix(transition, opacity 0.5s ease-in, webkit ms o);
-  	&.lazy{
-  		opacity: 1;
-  	}
+	a {
+		position: relative;
+		display:  block;
+		margin: 0;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+	  	&.lazy{
+	  		opacity: 1;
+	  		@include prefix(transition, opacity 0.5s ease-in, webkit ms o);
+	  	}
+		}
+		&:before {
+			content: "";
+			display: block;
+			@include calc( padding-top, '591.44/1127.34*100%');
+			@include media-min-width(tablet) {
+				@include calc( padding-top, '691.44/1127.34*100%');
+			}
+		}
 	}
-
 	p {
 		padding: 30px 0;
 		text-transform: capitalize;

@@ -41,7 +41,7 @@
 	</section>
 
 	<section>
-		<h2 class="title post-title"><?php echo $title; ?></h2>
+		<h2 class="title"><?php echo $title; ?></h2>
 
 		<p class="copy"> <?php echo $project_description; ?></p>
 	</section>

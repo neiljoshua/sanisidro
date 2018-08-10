@@ -53,34 +53,33 @@ section {
 		@include calc( width, '100% - 80px');
 	}
 	@include media-min-width(desktop) {
-		margin: 20px auto;
+		margin: 0 auto;
 		width: 100%;
 		max-width: 980px;
 	}
 	.title {
-		font-size: 35px;
-		margin: 20px auto;
+		font-size: 22px;
+		margin: 30px auto;
 		text-transform: capitalize;
 		text-align: left;
+		@include media-min-width(mobile) {
+			font-size: 35px;
+		}
 		@include media-min-width(tablet) {
-			font-size: 55px;
+			font-size: 45px;
 			margin: 30px auto;
 		}
 		@include media-min-width(desktop) {
-			font-size: 60px;
+			font-size: 55px;
 			margin: 40px auto;
-		}
-		&.post-title {
-			font-size: 45px;
-			max-width: 720px;
 		}
 	}
 
 	.copy {
-		font-size: 20px;
-		margin: 30px 0;
+		font-size: 18px;
+		margin: 40px 0;
 		@include media-min-width(mobile) {
-			margin: 40px 0;
+			margin: 50px 0;
 			max-width: 780px;
 		}
 	}
@@ -112,30 +111,17 @@ p {
 	position: relative;
 	background-size: cover;
 	background-position: center;
-	&:after{
+	&:before {
 		content: "";
 		display: block;
-		padding-bottom: 50%;
-	}
-	@include media-min-width (tablet) {
-		&:after{
-			padding-bottom: 55%;
-		}
-	}
-	@include media-min-width (desktop) {
-		&:after{
-			padding-bottom: 60%;
-		}
+		@include calc( padding-top, '691.44/1127.34*100%');
 	}
 }
-
-
 
 .page-hero {
 	position: relative;
 	width: 100%;
-	margin: 60px auto 20px;
-	padding: 10px 0;
+	margin-top: 55px;
 	&__image {
 		position: absolute;
 		width: 100%;
@@ -145,17 +131,12 @@ p {
 		right: 0;
 		bottom: 0;
 	}
-	&:after{
+	&:before {
 		content: "";
 		display: block;
-		padding-bottom: 50%;
-	}
-	@include media-min-width(tablet) {
-		padding: 50px 0;
-		&:after{
-			content: "";
-			display: block;
-			padding-bottom: 45%;
+		@include calc( padding-top, '591.44/1127.34*100%');
+		@include media-min-width(tablet) {
+			@include calc( padding-top, '491.44/1127.34*100%');
 		}
 	}
 }

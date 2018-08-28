@@ -14,7 +14,7 @@
 	?>
 		            <li class="gallery-image" data-state="<?php echo $state ;?>" data-city="<?php echo $city ;?>" >
 		                <a href="<?php the_permalink() ?>">
-		                     <img class="lazy" data-original="<?php echo $image; ?>" width="400" height="180" >
+		                     <img class="lazy" data-original="<?php echo $image; ?>" width="400" height="180" alt="<?php echo $title ;?>" >
 		                </a>
 		                <p><?php echo $title ?></p>
 		            </li>

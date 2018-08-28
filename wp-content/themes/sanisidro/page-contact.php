@@ -104,9 +104,9 @@
 
             <p><label for="message_email">Email: <span>*</span> <br><input type="text" name="message_email" placeholder="youremail@server.com"> </label></p>
 
-            <p><label for="message_text">Message: <span>*</span> <br><textarea type="text" name="message_text"></textarea></label></p>
+            <p><label for="message_text">Message: <span>*</span> <br><textarea type="text" name="message_text" > </textarea> </label></p>
 
-            <p <label for="message_human">Human Verification: <span>*</span> <br><input class='human' type="text"  name="message_human"> + 3 = 5</label></p>
+            <p> <label for="message_human">Human Verification: <span>*</span> <br><input class='human' type="text"  name="message_human"> + 3 = 5</label></p>
             <input type="hidden" name="submitted" value="1">
             <p><input type="submit"></p>
           </form>

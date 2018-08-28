@@ -32,7 +32,7 @@ get_header();
   <section>
  	<div class="hero" style="background-image: url(<?php the_field('hero_image') ?>)">
 		<div class="logo">
-			<img src="<?php the_field('hero_logo') ?>" />
+			<img src="<?php the_field('hero_logo') ?>" alt="Logo"/>
 		</div>
 	</div>
   </section>
@@ -58,7 +58,7 @@ get_header();
 					<?php $imageLink = get_sub_field('slider_image');?>
 
 						 <div class="slick-container">
-						 	<img src="<?php echo $imageLink; ?>" alt="<?php echo $imageLink; ?>"/>
+						 	<img src="<?php echo $imageLink; ?>" alt="<?php echo $imageLink; ?>" alt="<?php the_sub_field('slider_name')?>" />
 						 	<p> <?php the_sub_field('slider_name')?></p>
 						 </div>
 

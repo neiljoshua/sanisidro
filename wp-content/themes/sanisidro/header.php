@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
+		<meta name = "Description" content = "<?php bloginfo('description')?>;">
 		<meta name = "<?php bloginfo('name');?>" content = "<?php bloginfo('description')?>;">
 		<meta name="viewport" content="width=device-width">
 		<title><?php bloginfo('name'); ?></title>
@@ -15,7 +16,7 @@
 
 		<header class="site-header">
 
-			<a class="site-header__logo" href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>"/></a>
+			<a class="site-header__logo" href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>" alt= "Logo"/></a>
 
 
 			<a href="#" class="site-header__hamburger site-header__hamburger--rot"> <span></span> </a>

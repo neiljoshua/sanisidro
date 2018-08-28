@@ -32,7 +32,7 @@ get_header();
 ?>
 	<section>
  		<div class="page-hero">
- 			<img class ="page-hero__image"  src="<?php echo $lead; ?>">
+ 			<img class ="page-hero__image"  src="<?php echo $lead; ?>"" alt="Hero Image">
  		</div>
  		<div class="firm-description"> <?php echo $description; ?> </div>
  	</section>
@@ -57,7 +57,7 @@ get_header();
 ?>
 	<div class="member">
 		<div class="member-image">
-			<img class="member-image__image lazy" data-original="<?php echo $member['member_image']; ?>" wifth="300" height="300">
+			<img class="member-image__image lazy" data-original="<?php echo $member['member_image']; ?>" wifth="300" height="300" alt="<?php echo $member['member_name']; ?>">
 		</div>
 		<div class="member-copy">
 			<h2 class="member-copy__name"> <?php echo $member['member_name']; ?>	</h2>

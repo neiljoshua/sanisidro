@@ -114,7 +114,7 @@ p {
 	&:before {
 		content: "";
 		display: block;
-		@include calc( padding-top, '691.44/1127.34*100%');
+		@include calc( padding-top, '591.44/1127.34*100%');
 	}
 }
 

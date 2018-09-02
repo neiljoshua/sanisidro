@@ -29,7 +29,7 @@
 
 	<section >
 		<div class="page-hero">
-			<img class="page-hero__image" src="<?php echo $image ?>" alt="Hero Image" />
+			<img class="lazy page-hero__image" data-original="<?php echo $image ?>" alt="Hero Image" />
 		</div>
 		<div class="projects-link-page">
 			<a  href="http://san-isidro.local/projects/">View all </a>

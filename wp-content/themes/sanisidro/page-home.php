@@ -30,11 +30,12 @@ get_header();
   ?>
 
   <section>
- 	<div class="hero" style="background-image: url(<?php the_field('hero_image') ?>)">
-		<div class="logo">
-			<img src="<?php the_field('hero_logo') ?>" alt="Logo"/>
+		<div class="hero">
+			<img class="lazy page-hero__image" data-original="<?php echo $lead; ?>"" alt="Hero Image">
+			<div class="logo">
+				<img src="<?php the_field('hero_logo') ?>" alt="Logo"/>
+			</div>
 		</div>
-	</div>
   </section>
 
   <?php
@@ -58,8 +59,8 @@ get_header();
 					<?php $imageLink = get_sub_field('slider_image');?>
 
 						 <div class="slick-container">
-						 	<img src="<?php echo $imageLink; ?>" alt="<?php echo $imageLink; ?>" alt="<?php the_sub_field('slider_name')?>" />
-						 	<p> <?php the_sub_field('slider_name')?></p>
+							 <img class="lazy" data-original="<?php echo $imageLink; ?>" width="900"  alt="<?php the_sub_field('slider_name')?>" >
+							 	<p> <?php the_sub_field('slider_name')?></p>
 						 </div>
 
 				<?php endwhile; ?>

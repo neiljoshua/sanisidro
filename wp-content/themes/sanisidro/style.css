@@ -214,17 +214,17 @@ input:-webkit-autofill {
   width: 100%;
   opacity: 1;
   background-color: #000;
-  -webkit-transition: all 0.6s ease-in-out;
-  -ms-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.7s linear;
+  -ms-transition: all 0.7s linear;
+  transition: all 0.7s linear;
 }
 @media (min-width: 769px) {
   /* line 55, src/sass/globals/header.scss */
   .site-header__menu.active {
     width: 50%;
-    -webkit-transition: all 0.6s ease-in-out;
-    -ms-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.7s linear;
+    -ms-transition: all 0.7s linear;
+    transition: all 0.7s linear;
   }
 }
 /* line 66, src/sass/globals/header.scss */
@@ -725,9 +725,9 @@ footer p {
 @media (min-width: 769px) {
   /* line 132, src/sass/home.scss */
   .gallery-image a:before {
-    padding-top: -webkit-calc(691.44/1127.34*100%);
-    padding-top: -moz-calc(691.44/1127.34*100%);
-    padding-top: calc(691.44/1127.34*100%);
+    padding-top: -webkit-calc(591.44/1127.34*100%);
+    padding-top: -moz-calc(591.44/1127.34*100%);
+    padding-top: calc(591.44/1127.34*100%);
   }
 }
 /* line 141, src/sass/home.scss */
@@ -1230,7 +1230,6 @@ footer p {
   background: url("src/images/contactmap.jpg") center center no-repeat;
   -webkit-background-size: cover;
   -ms-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 /* line 32, src/sass/contact.scss */
@@ -1453,9 +1452,9 @@ p {
 .hero:before {
   content: "";
   display: block;
-  padding-top: -webkit-calc(691.44/1127.34*100%);
-  padding-top: -moz-calc(691.44/1127.34*100%);
-  padding-top: calc(691.44/1127.34*100%);
+  padding-top: -webkit-calc(591.44/1127.34*100%);
+  padding-top: -moz-calc(591.44/1127.34*100%);
+  padding-top: calc(591.44/1127.34*100%);
 }
 
 /* line 121, src/sass/style.scss */

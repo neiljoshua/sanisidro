@@ -35,6 +35,15 @@ h1, h2, h3, a {
 	font-family: $serif;
 }
 
+img {
+	opacity: 0;
+	@include prefix(transition, opacity 0.5s ease-out, webkit ms o);
+	&.lazy{
+		opacity: 1;
+		@include prefix(transition, opacity 0.5s ease-out, webkit ms o);
+	}
+}
+
 section {
 	margin: 20px;
 	@include calc( width, '100% - 40px');
@@ -114,7 +123,7 @@ p {
 	&:before {
 		content: "";
 		display: block;
-		@include calc( padding-top, '591.44/1127.34*100%');
+		@include calc( padding-top, '591.44/1127.34 * 100%');
 	}
 }
 

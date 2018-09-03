@@ -16,13 +16,15 @@ $(document).ready(function(){
 	var defaultCities = $('#city-select').html();
 
 	$('img.lazy').lazyload({
-		threshold: 200,
-		effect: 'fadeIn'
+		effect: 'fadeIn',
+		effectTime: 2000,
+		threshold: 0
   });
 
   $('div.lazy').lazyload({
-		threshold: 200,
-		effect: 'fadeIn'
+		effect: 'fadeIn',
+		effectTime: 2000,
+		threshold: 0
   });
 
 

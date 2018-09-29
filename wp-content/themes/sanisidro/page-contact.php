@@ -53,7 +53,7 @@
       'Reply-To: ' . $email . "\r\n";
 
     if(!$human == 0){
-      if($human != 2) generate_response("error", $not_human); //not human!
+      if($human != 2) generate_response("error", $not_human);
       else {
 
         //validate email
@@ -112,10 +112,10 @@
           </form>
         </div>
 
-      </section><!-- .entry-content -->
+      </section>
 
     <?php endwhile; // end of the loop. ?>
 
-  </main><!-- #primary -->
+  </main>
 
 <?php get_footer(); ?>

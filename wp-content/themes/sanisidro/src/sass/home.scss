@@ -1,144 +1,155 @@
-/** Section 1 Hero Section **/
+.home {
 
-.logo {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateY(-50%) translateX(-50%);
-	img {
-		width: 40px;
-		border: 1px solid $white;
-		border-radius: 50px;
-		padding: 5px;
-		opacity: 0.9;
-		@include media-min-width(mobile) {
-			border: 2px solid $white;
-			width: 60px;
+	.site-header {
+		background: none;
+		&__logo {
+			visibility: hidden;
 		}
-		@include media-min-width(desktop) {
-			width: 80px;
+		&__hamburger {
+			span {
+				background: $white;
+				&::after,
+				&::before {
+					background-color: $white;
+				}
+			}
+		}
+		&.white-menu {
+			background-color: $white;
+			.site-header__logo {
+				visibility: visible;
+			}
+			.current-menu-item {
+				a {
+					color: $black;
+					border-bottom: 1px solid $black;
+				}
+			}
+			.menu-item {
+				a {
+					&:hover {
+						color: $black;
+						&::after {
+							background: $black;
+					  	width:100%;
+							@include prefix(transition, width .6s ease, webkit ms);
+						}
+					}
+				}
+			}
+			.site-header__hamburger {
+				span {
+					background: $gray;
+					&::after,
+					&::before {
+						background-color: $gray;
+					}
+				}
+			}
+		}
+		.menu-item {
+			a {
+				&:hover {
+					color: $white;
+					&::after {
+						background: $white;
+				  	width:100%;
+						@include prefix(transition, width .6s ease, webkit ms);
+					}
+				}
+			}
+		}
+		.current-menu-item {
+			a {
+				color: $white;
+				border-bottom: 1px solid $white;
+			}
+		}
+
+	}
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		img {
+			width: 40px;
+			border: 1px solid $white;
+			border-radius: 50px;
+			padding: 5px;
+			opacity: 0.9;
+			@include media-min-width(mobile) {
+				border: 2px solid $white;
+				width: 60px;
+			}
+			@include media-min-width(desktop) {
+				width: 80px;
+			}
 		}
 	}
-}
 
-/** Section 2 Slider Section **/
-
-.home-slider {
-	width: 90%;
-	margin: 0 auto;
-	@include media-min-width(mobile) {
-		width: 60%;
-	}
-	.slick-dots {
-		visibility: hidden;
+	.home-slider {
+		width: 90%;
+		margin: 0 auto;
 		@include media-min-width(mobile) {
-			visibility: visible;
-			bottom: -20px;
-			button{
-				&:before {
-					font-size: 10px;
+			width: 60%;
+		}
+		.slick-dots {
+			visibility: hidden;
+			@include media-min-width(mobile) {
+				visibility: visible;
+				bottom: -20px;
+				button{
+					&:before {
+						font-size: 10px;
+					}
+				}
+			}
+		}
+		.slick-slide {
+			img {
+				width: 100%;
+			}
+			p {
+				margin-top: 5px;
+				text-align: right;
+			}
+		}
+
+	}
+
+	.featured_link {
+		float: right;
+		font-size: 20px;
+		margin-bottom: 20px;
+		padding-right: 5px;
+		@include media-min-width (mobile) {
+			font-size: 25px;
+		}
+		@include media-min-width(tablet) {
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 1px;
+				left: 0;
+				background-color: $black;
+				visibility: hidden;
+				@include prefix(transform, scaleX(0), webkit ms );
+				@include prefix(transition, all 0.3s ease-in-out .3s, webkit ms );
+			}
+			&:hover{
+				&::after {
+					visibility: visible;
+					@include prefix(transform, scaleX(1), webkit ms );
+					@include prefix(transition, all 0.3s ease-in-out 0s, webkit ms );
 				}
 			}
 		}
 	}
-	.slick-slide {
-		img {
-			width: 100%;
-		}
-		p {
-			margin-top: 5px;
-			text-align: right;
-		}
-	}
 
-}
-
-/** Section 4 About Section **/
-
-.featured_link {
-	float: right;
-	font-size: 20px;
-	margin-bottom: 20px;
-	padding-right: 5px;
-	@include media-min-width (mobile) {
-		font-size: 25px;
-	}
-	@include media-min-width(tablet) {
-		&::after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 100%;
-			height: 1px;
-			left: 0;
-			background-color: $black;
-			visibility: hidden;
-			@include prefix(transform, scaleX(0), webkit ms );
-			@include prefix(transition, all 0.3s ease-in-out .3s, webkit ms );
-		}
-		&:hover{
-			&::after {
-				visibility: visible;
-				@include prefix(transform, scaleX(1), webkit ms );
-				@include prefix(transition, all 0.3s ease-in-out 0s, webkit ms );
-			}
-		}
-	}
-}
-
-.project-gallery {
-	width: 100%;
-	margin: 35px 0;
-	font-size: 0;
-	clear:right;
-}
-
-.gallery-image {
-	display: inline-block;
-	width: 100%;
-	margin-bottom: 20px;
-	font-size: 16px;
-	@include media-min-width(mobile) {
-		@include calc( width, '50% - 20px');
-		padding: 10px;
-	}
-	@include media-min-width(tablet) {
-		@include calc(width, '25% - 10px');
-		padding: 5px;
-	}
-
-	&.is-loading {
-		 background-color: $black;
-	}
-
-	a {
-		position: relative;
-		display:  block;
-		margin: 0;
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			height: 100%;
-		}
-		&:before {
-			content: "";
-			display: block;
-			@include calc( padding-top, '(591.44/1127.34)*100%');
-			@include media-min-width(tablet) {
-				@include calc( padding-top, '(591.44/1127.34)*100%');
-			}
-		}
-	}
-	p {
-		padding: 30px 0;
-		text-transform: capitalize;
-		text-align: center;
-		border-bottom: 1px solid $black;
-	}
 
 }
 

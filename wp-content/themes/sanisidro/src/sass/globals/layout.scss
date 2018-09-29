@@ -1,0 +1,181 @@
+/* General Layout */
+body  {
+	height:100%;
+	font-size: 14px;
+	color: #333;
+	&.fixed {
+		top: 0;
+		overflow: hidden;
+	}
+}
+
+h1, h2, h3, a {
+	font-family: $serif;
+}
+
+section {
+	margin: 20px;
+	@include calc( width, '100% - 40px');
+	overflow: hidden;
+	&:first-child {
+		min-width: 100%;
+		width: 100%;
+		margin: 0;
+	}
+	@include media-min-width(mobile) {
+		margin: 20px 30px;
+		@include calc( width, '100% - 60px');
+	}
+	@include media-min-width(tablet) {
+		margin: 20px 40px;
+		@include calc( width, '100% - 80px');
+	}
+	@include media-min-width(desktop) {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 980px;
+	}
+	.title {
+		font-size: 22px;
+		margin: 30px auto;
+		text-transform: capitalize;
+		text-align: left;
+		@include media-min-width(mobile) {
+			font-size: 35px;
+		}
+		@include media-min-width(tablet) {
+			font-size: 40px;
+			margin: 30px auto;
+		}
+		@include media-min-width(desktop) {
+			font-size: 45px;
+			margin: 40px auto;
+		}
+	}
+
+	.copy {
+		font-size: 18px;
+		margin: 40px 0;
+		@include media-min-width(mobile) {
+			margin: 50px 0;
+			max-width: 780px;
+		}
+	}
+}
+
+a {
+	position: relative;
+	text-transform: capitalize;
+	text-decoration: none;
+	color: $black;
+}
+
+p {
+	font-family: $sanserif;
+	line-height: 1.5;
+}
+
+.container {
+	width:100%;
+	position: relative;
+}
+
+.clear-float {
+	clear: both;
+}
+
+.hero {
+	width: 100%;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	&:before {
+		content: "";
+		display: block;
+		@include calc( padding-top, '591.44/1127.34 * 100%');
+	}
+}
+
+.page-hero {
+	position: relative;
+	width: 100%;
+	margin-top: 50px;
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	&:before {
+		content: "";
+		display: block;
+		@include calc( padding-top, '591.44/1127.34*100%');
+		@include media-min-width(tablet) {
+			@include calc( padding-top, '491.44/1127.34*100%');
+		}
+	}
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include prefix(transform, translateY(-50%) translateX(-50%), webkit ms);
+}
+
+.project-gallery {
+	width: 100%;
+	margin: 35px 0;
+	font-size: 0;
+	clear:right;
+}
+
+.gallery-image {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 16px;
+	@include media-min-width(mobile) {
+		@include calc( width, '50% - 20px');
+		padding: 10px;
+	}
+	@include media-min-width(tablet) {
+		@include calc(width, '25% - 10px');
+		padding: 5px;
+	}
+
+	&.is-loading {
+		 background-color: $black;
+	}
+
+	a {
+		position: relative;
+		display:  block;
+		margin: 0;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&:before {
+			content: "";
+			display: block;
+			@include calc( padding-top, '(591.44/1127.34)*100%');
+		}
+	}
+	p {
+		padding: 30px 0;
+		text-transform: capitalize;
+		text-align: center;
+		border-bottom: 1px solid $black;
+	}
+
+}
+

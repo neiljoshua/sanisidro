@@ -2,27 +2,26 @@
 .single-newsblog {
 
 	section {
-		margin: 0 auto;
+		padding: 0 20px;
+		@include calc( width, '100% - 40px');
+		@include media-min-width(mobile) {
+			padding: 0 30px;
+			@include calc( width, '100% - 60px');
+		}
+		@include media-min-width(tablet) {
+			padding: 0 40px;
+			@include calc( width, '100% - 80px');
+			max-width: 720px;
+		}
+		&:first-child {
+			padding: 0;
+			width: 100%;
+		}
 		.title {
-			margin: 0 auto;
-			text-align: center;
+			margin: 0 0 20px 0;
 		}
 		.copy {
-			margin: 30px 20px;
-			@include calc( width, '100% - 40px');
-			@include media-min-width(mobile) {
-				margin: 30px;
-				@include calc( width, '100% - 60px');
-			}
-			@include media-min-width(tablet) {
-				margin: 40px auto;
-				@include calc( width, '100% - 80px');
-				max-width: 720px;
-			}
-			@include media-min-width(desktop) {
-				width: 80%;
-				margin: 50px auto;
-			}
+			margin: 0 0 20px 0;
 		}
 	}
 

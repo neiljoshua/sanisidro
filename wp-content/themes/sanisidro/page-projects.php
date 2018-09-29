@@ -46,7 +46,6 @@ $posts = get_posts( $args );
 
 ?>
 	<section >
-		<!-- display lead image. -->
 	<?php
 
 	foreach ($posts as $post){
@@ -71,8 +70,6 @@ $posts = get_posts( $args );
 	}
 	?>
 	</section>
-
-	 <!-- display propject -->
 
 	 <section class="project-filter">
 		 <h2 class="title">Feature Projects</h2>

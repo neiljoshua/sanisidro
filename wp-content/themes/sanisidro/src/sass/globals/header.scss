@@ -5,31 +5,22 @@
 	top: 0;
 	left: 0;
 	z-index: 2000;
-	&.active {
-		background-color: $white;
-	}
+	background-color: $white;
 }
 
 .site-header__logo {
  	display: inline-block;
- 	width: 60px;
- 	visibility: hidden;
+ 	vertical-align: middle;
+ 	height: 100%;
  	z-index: 2500;
  	img {
- 		opacity: 1;
 	 	height: 30px;
 	 	width: 30px;
-	 	margin: 10px;
+	 	margin: 15px;
 	 	border-radius: 5px;
-	 	@include media-min-width(mobile) {
-	 		margin: 10px 20px;
-	 	}
 	 	&:hover {
 	 		cursor: pointer;
 	 	}
- 	}
- 	&.active {
- 		visibility: visible;
  	}
 }
 
@@ -47,8 +38,8 @@
 	@include prefix(transition, all 0.6s ease-in-out, webkit ms);
 	@include media-min-width(desktop) {
 		position: absolute;
+		margin-right: 40px;
 		width: auto;
-		top: 0;
 		opacity: 1;
 		@include prefix(transform, none, webkit ms);
 		z-index: 90;
@@ -70,10 +61,9 @@
 		top: 50%;
 		@include prefix(transform, translateY(-50%), webkit ms);
 		@include media-min-width(desktop) {
-			position: relative;
-			padding-top: 7px;
-			margin-right: 20px;
-	    display: inline-block;
+			position: static;
+			display: inline-block;
+			height: 100%;
 	    @include prefix(transform, none, webkit ms);
 		}
 		li {
@@ -86,8 +76,10 @@
 				padding-left: 20px;
 			}
 			@include media-min-width(desktop) {
-				padding-left: 0;
 				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+				padding-left: 0;
 				margin-bottom: 0;
 			}
     	&.current-menu-item {
@@ -95,17 +87,14 @@
     			color: $white;
     			border-bottom: 1px solid $white;
     			@include media-min-width(desktop) {
-						border-bottom: 1px solid $white;
-	    			&.dark-menu {
-	    				color: $black;
-	    				border-bottom: 1px solid $black;
-	    			}
+    				color: $black;
+    				border-bottom: 1px solid $black;
     			}
     		}
     	}
     	a {
+    		position: relative;
     		text-align: center;
-    		position: relative; //Needed for :after hover effect.
     		font-size: 24px;
 				margin-bottom: 40px;
 				padding-bottom: 4px;
@@ -127,6 +116,7 @@
     			}
     			&:hover {
     				color: $white;
+    				@include prefix(transition, color .6s ease-in-out, webkit ms);
     			  &::after {
 					  width:100%;
     				@include prefix(transition, width .6s ease-in-out, webkit ms);
@@ -136,22 +126,20 @@
 				@include media-min-width(desktop) {
 					display: block;
 	    		color: $silver;
-	    		margin: 10px;
+	    		margin: 20px 10px;
 	    		font-size: 18px;
-	    		&.dark-menu {
-	    			&::after {
-						  background: $black;
-	    			}
-	    			&:hover {
-	    				color: $black;
-	    				&::after {
-					  	width:100%;
-    					@include prefix(transition, width .6s ease, webkit ms);
-    					}
-	    			}
-					}
+    			&::after {
+					  background: $black;
+    			}
+    			&:hover {
+    				color: $black;
+    				&::after {
+				  	width:100%;
+  					@include prefix(transition, width .6s ease, webkit ms);
+  					}
+    			}
     		}
 			}
 		}
-    }
+  }
 }

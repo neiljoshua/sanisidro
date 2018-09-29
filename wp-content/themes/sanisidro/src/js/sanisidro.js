@@ -9,23 +9,15 @@
 	  		$currentTag = $('.current-menu-item'),
 	  		$nav = $('.site-header__menu'),
 	  		$mobile = $('.site-header__hamburger'),
-	  		$container = $('.projects-gallery'),
 	  		$featureProjects = $('.projects').find('.project-gallery').html(),
-	  		scrollStart = 0,
-				offset = 0,
-				currentState = '',
 				defaultCities = $('#city-select').html();
 
 		$('img.lazy').lazyload({
 			effect: 'fadeIn',
 			effectTime: 1000,
-			threshold: 100
-	  });
-
-	  $('div.lazy').lazyload({
-			effect: 'fadeIn',
-			effectTime: 2000,
-			threshold: 200
+			threshold: 100,
+			cssEase: 'linear',
+	  	pauseOnHover: false
 	  });
 
 	  $(window).resize(checkWidth);
@@ -48,7 +40,6 @@
 					heroTop = $('.hero').offset().top,
 					heroBott = heroTop + $('.hero').height(),
 					windowWidth = $window.innerWidth();
-					console.log(windowWidth);
 
 			if ( $body.hasClass('home') ){
 
@@ -65,6 +56,7 @@
     });
 
 	  function checkWidth(){
+
 	    if ($window.width() < 1024) {
 
 	    	if($body.hasClass('fixed')){
@@ -75,6 +67,7 @@
 	    	}
 
 	    }
+
 	  };
 
 	  var resetCitySelect = function() {
@@ -96,8 +89,9 @@
 
 		var updateCitySelect = function($state) {
 
-			var $select = $('#city-select');
-			var selectActiveCities = $('#city-select').find("[data-state='" + $state + "'], [data-state=default]");
+			var $select = $('#city-select'),
+					selectActiveCities = $('#city-select').find("[data-state='" + $state + "'], [data-state=default]");
+
 			$select.removeData('dropkick');
 			$select.html(selectActiveCities);
 			$select.removeAttr('disabled');
@@ -125,8 +119,9 @@
 	      projectQuery($location);
 	    }
 	    else if ($location == 'default') {
-	    	var activeState = new Dropkick('#state-select');
-	    	var location = activeState.value;
+	    	var activeState = new Dropkick('#state-select'),
+	    			location = activeState.value;
+
 	    	updateCitySelect(location);
 	      projectQuery(location);
 	    }
@@ -135,20 +130,20 @@
 
 		var getLocations = function() {
 
-			 var selectType = $(this).data('select');
-			 var location = new Dropkick('#'+selectType+'-select')
-			 var location = location.value;
-			 $('.proj-search-input').val('');
+			var selectType = $(this).data('select'),
+				  location = new Dropkick('#'+selectType+'-select'),
+				  location = location.value;
 
-		   switch (selectType) {
-		     case 'state':
-		     	$('#city-select').html(defaultCities);
-		     	getStateProjects(location);
-		     	break
-		     case 'city':
-		     	getCityProjects(location);
-		     	break
-		   }
+			$('.proj-search-input').val('');
+			switch (selectType) {
+				case 'state':
+					$('#city-select').html(defaultCities);
+					getStateProjects(location);
+					break
+				case 'city':
+					getCityProjects(location);
+					break
+   		}
 		}
 
 		var projectQuery = function($project) {

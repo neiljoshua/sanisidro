@@ -138,8 +138,7 @@ input:-webkit-autofill {
   src: url("src/fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
-/*Header*/
-/* line 2, src/sass/globals/header.scss */
+/* line 1, src/sass/globals/header.scss */
 .site-header {
   width: 100%;
   position: fixed;
@@ -149,27 +148,26 @@ input:-webkit-autofill {
   background-color: #fff;
 }
 
-/* line 11, src/sass/globals/header.scss */
+/* line 10, src/sass/globals/header.scss */
 .site-header__logo {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
   z-index: 2500;
 }
-/* line 16, src/sass/globals/header.scss */
+/* line 15, src/sass/globals/header.scss */
 .site-header__logo img {
   height: 30px;
   width: 30px;
   margin: 15px;
   border-radius: 5px;
 }
-/* line 21, src/sass/globals/header.scss */
+/* line 20, src/sass/globals/header.scss */
 .site-header__logo img:hover {
   cursor: pointer;
 }
 
-/*Navigation Menu*/
-/* line 29, src/sass/globals/header.scss */
+/* line 26, src/sass/globals/header.scss */
 .site-header__menu {
   display: block;
   position: fixed;
@@ -184,7 +182,7 @@ input:-webkit-autofill {
   transition: all 0.6s ease-in-out;
 }
 @media (min-width: 1025px) {
-  /* line 29, src/sass/globals/header.scss */
+  /* line 26, src/sass/globals/header.scss */
   .site-header__menu {
     position: absolute;
     margin-right: 40px;
@@ -196,7 +194,7 @@ input:-webkit-autofill {
     z-index: 90;
   }
 }
-/* line 47, src/sass/globals/header.scss */
+/* line 44, src/sass/globals/header.scss */
 .site-header__menu.active {
   width: 100%;
   opacity: 1;
@@ -206,12 +204,12 @@ input:-webkit-autofill {
   transition: all 0.6s ease-in-out;
 }
 @media (min-width: 769px) {
-  /* line 47, src/sass/globals/header.scss */
+  /* line 44, src/sass/globals/header.scss */
   .site-header__menu.active {
     width: 50%;
   }
 }
-/* line 57, src/sass/globals/header.scss */
+/* line 54, src/sass/globals/header.scss */
 .site-header__menu ul {
   display: block;
   width: 100%;
@@ -222,7 +220,7 @@ input:-webkit-autofill {
   transform: translateY(-50%);
 }
 @media (min-width: 1025px) {
-  /* line 57, src/sass/globals/header.scss */
+  /* line 54, src/sass/globals/header.scss */
   .site-header__menu ul {
     position: static;
     display: inline-block;
@@ -232,14 +230,14 @@ input:-webkit-autofill {
     transform: none;
   }
 }
-/* line 69, src/sass/globals/header.scss */
+/* line 66, src/sass/globals/header.scss */
 .site-header__menu ul li {
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
 }
 @media (min-width: 769px) {
-  /* line 69, src/sass/globals/header.scss */
+  /* line 66, src/sass/globals/header.scss */
   .site-header__menu ul li {
     width: auto;
     text-align: left;
@@ -247,7 +245,7 @@ input:-webkit-autofill {
   }
 }
 @media (min-width: 1025px) {
-  /* line 69, src/sass/globals/header.scss */
+  /* line 66, src/sass/globals/header.scss */
   .site-header__menu ul li {
     display: inline-block;
     height: 100%;
@@ -256,19 +254,19 @@ input:-webkit-autofill {
     margin-bottom: 0;
   }
 }
-/* line 86, src/sass/globals/header.scss */
+/* line 83, src/sass/globals/header.scss */
 .site-header__menu ul li.current-menu-item a {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
 @media (min-width: 1025px) {
-  /* line 86, src/sass/globals/header.scss */
+  /* line 83, src/sass/globals/header.scss */
   .site-header__menu ul li.current-menu-item a {
     color: #000;
     border-bottom: 1px solid #000;
   }
 }
-/* line 95, src/sass/globals/header.scss */
+/* line 92, src/sass/globals/header.scss */
 .site-header__menu ul li a {
   position: relative;
   text-align: center;
@@ -279,13 +277,13 @@ input:-webkit-autofill {
   color: #595959;
 }
 @media (min-width: 601px) {
-  /* line 95, src/sass/globals/header.scss */
+  /* line 92, src/sass/globals/header.scss */
   .site-header__menu ul li a {
     font-size: 26px;
   }
 }
 @media (min-width: 769px) {
-  /* line 107, src/sass/globals/header.scss */
+  /* line 104, src/sass/globals/header.scss */
   .site-header__menu ul li a::after {
     display: block;
     position: absolute;
@@ -298,14 +296,14 @@ input:-webkit-autofill {
     -ms-transition: width 0.6s ease-in-out;
     transition: width 0.6s ease-in-out;
   }
-  /* line 117, src/sass/globals/header.scss */
+  /* line 114, src/sass/globals/header.scss */
   .site-header__menu ul li a:hover {
     color: #fff;
     -webkit-transition: color 0.6s ease-in-out;
     -ms-transition: color 0.6s ease-in-out;
     transition: color 0.6s ease-in-out;
   }
-  /* line 120, src/sass/globals/header.scss */
+  /* line 117, src/sass/globals/header.scss */
   .site-header__menu ul li a:hover::after {
     width: 100%;
     -webkit-transition: width 0.6s ease-in-out;
@@ -314,22 +312,22 @@ input:-webkit-autofill {
   }
 }
 @media (min-width: 1025px) {
-  /* line 95, src/sass/globals/header.scss */
+  /* line 92, src/sass/globals/header.scss */
   .site-header__menu ul li a {
     display: block;
     color: #c0c0c0;
     margin: 20px 10px;
     font-size: 18px;
   }
-  /* line 131, src/sass/globals/header.scss */
+  /* line 128, src/sass/globals/header.scss */
   .site-header__menu ul li a::after {
     background: #000;
   }
-  /* line 134, src/sass/globals/header.scss */
+  /* line 131, src/sass/globals/header.scss */
   .site-header__menu ul li a:hover {
     color: #000;
   }
-  /* line 136, src/sass/globals/header.scss */
+  /* line 133, src/sass/globals/header.scss */
   .site-header__menu ul li a:hover::after {
     width: 100%;
     -webkit-transition: width 0.6s ease;

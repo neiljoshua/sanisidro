@@ -24,9 +24,9 @@
 
     $('.site-header__hamburger--rot').on('click', function(e){
       e.preventDefault();
-        $(this).toggleClass('is-active');
-        $('body').toggleClass('fixed');
-        $('.site-header__menu').toggleClass('active');
+      $(this).toggleClass('is-active');
+      $('body').toggleClass('fixed');
+      $('.site-header__menu').toggleClass('active');
     });
 
     $('select').dropkick({
@@ -113,7 +113,7 @@
 
     };
 
-      var getCityProjects = function ($location) {
+    var getCityProjects = function ($location) {
 
       if ($location !== 'default') {
         projectQuery($location);

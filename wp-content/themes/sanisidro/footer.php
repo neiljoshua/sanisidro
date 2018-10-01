@@ -1,25 +1,24 @@
-	<footer>
+    <footer>
 
-		<p>
-		<?php bloginfo('name')?> - &copy; <?php echo date('Y'); ?>
-		</p>
+      <p>
+      <?php bloginfo('name')?> - &copy; <?php echo date('Y'); ?>
+      </p>
 
-		<nav class="footer-nav">
-				<?php
-				$args =array(
-					'theme_location'=> 'footer'
-					);
-				?>
+      <nav class="footer-nav">
+        <?php
+        $args =array(
+          'theme_location'=> 'footer'
+          );
+        ?>
 
-				<?php wp_nav_menu($args); ?>
+        <?php wp_nav_menu($args); ?>
 
-		</nav>
+      </nav>
 
+    </footer>
 
-	</footer>
+  </div>
 
-</div>
-
-<?php wp_footer(); ?>
-</body>
+  <?php wp_footer(); ?>
+  </body>
 </html>

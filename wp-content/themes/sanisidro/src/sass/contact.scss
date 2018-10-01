@@ -1,107 +1,107 @@
 .contact {
 
-	section {
-		&:first-child {
-			text-align: center;
-			padding-top:60px;
-			background-color: $seagreen;
-		}
-	}
+  section {
+    &:first-child {
+      text-align: center;
+      padding-top:60px;
+      background-color: $seagreen;
+    }
+  }
 
-	.contact {
-		&__title {
-			margin: 20px 0;
-			padding-top: 20px;
-			font-size: 35px;
+  .contact {
+    &__title {
+      margin: 20px 0;
+      padding-top: 20px;
+      font-size: 35px;
 
-		}
-		p {
-			width: 90%;
-			font-size: 16px;
-			max-width: 650px;
-			margin: 40px auto;
-		}
-		&__map {
-			width: 100%;
-			height: 280px;
-			background: url('src/images/contactmap.jpg') center center no-repeat;
-			@include prefix( background-size, cover , webkit ms);
-		}
-	}
+    }
+    p {
+      width: 90%;
+      font-size: 16px;
+      max-width: 650px;
+      margin: 40px auto;
+    }
+    &__map {
+      width: 100%;
+      height: 280px;
+      background: url('src/images/contactmap.jpg') center center no-repeat;
+      @include prefix( background-size, cover , webkit ms);
+    }
+  }
 
-	.error,
-	.success {
-		font-size: 20px;
-	  border-radius: 3px;
-	  max-width: 720px;
-	  margin: 40px auto;
-	  padding: 15px 0;
-	  text-align: center;
-	}
+  .error,
+  .success {
+    font-size: 20px;
+    border-radius: 3px;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 15px 0;
+    text-align: center;
+  }
 
-	.error {
-	  border: 1px solid red;
-	  color: red;
-	}
+  .error {
+    border: 1px solid red;
+    color: red;
+  }
 
-	.success{
-	  border: 1px solid green;
-	  color: green;
+  .success{
+    border: 1px solid green;
+    color: green;
 
-	}
+  }
 
-	form {
-		width: 100%;
-		max-width: 720px;
-		margin: 30px auto;
-		p {
-			margin: 0 auto 20px;
-			font-size: 18px;
-			font-weight: 700;
-		}
-		textarea {
-			display: block;
-		  max-width: 720px;
-		  margin: 20px auto 0;
-		  padding: 10px 0 80px 5px;
-			border: 1px solid $seagreen;
-			width: 100%;
-			font-size: 18px;
-		  resize: none;
-		  outline: none;
-		}
+  form {
+    width: 100%;
+    max-width: 720px;
+    margin: 30px auto;
+    p {
+      margin: 0 auto 20px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    textarea {
+      display: block;
+      max-width: 720px;
+      margin: 20px auto 0;
+      padding: 10px 0 80px 5px;
+      border: 1px solid $seagreen;
+      width: 100%;
+      font-size: 18px;
+      resize: none;
+      outline: none;
+    }
 
-		input {
-			display: block;
-			width: 100%;
-			margin-top: 20px;
-			border: 1px solid $seagreen;
-			padding: 10px 0 10px 5px;
-			font-size: 18px;
-			@include media-min-width(mobile) {
-				width: 40%;
-			}
+    input {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      border: 1px solid $seagreen;
+      padding: 10px 0 10px 5px;
+      font-size: 18px;
+      @include media-min-width(mobile) {
+        width: 40%;
+      }
 
-		}
-		input[type='submit']{
-			font-weight: 400;
-			@include prefix(transition, all 0.6s ease-in-out, webkit ms );
-			&:hover {
-				background-color: $seagreen;
-				color: $white;
-				@include prefix(transition, all 0.6s ease-in-out, webkit ms );
-			}
-		}
-		span{
-		  color: red;
-		}
-	}
+    }
+    input[type='submit']{
+      font-weight: 400;
+      @include prefix(transition, all 0.6s ease-in-out, webkit ms );
+      &:hover {
+        background-color: $seagreen;
+        color: $white;
+        @include prefix(transition, all 0.6s ease-in-out, webkit ms );
+      }
+    }
+    span{
+      color: red;
+    }
+  }
 
-	.human {
-		display: inline-block;
-		border: 1px solid $black;
-		width: 60px;
-		border: 1px solid $seagreen;
-	}
+  .human {
+    display: inline-block;
+    border: 1px solid $black;
+    width: 60px;
+    border: 1px solid $seagreen;
+  }
 
 }

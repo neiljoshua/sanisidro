@@ -1,191 +1,191 @@
 (function ($, root, undefined) {
 
-	$(document).ready(function(){
+  $(document).ready(function(){
 
-	  var $window = $(window),
-	  		$body = $('body'),
-	  		$header = $('.site-header'),
-	  		$logo = $('.site-header__logo'),
-	  		$currentTag = $('.current-menu-item'),
-	  		$nav = $('.site-header__menu'),
-	  		$mobile = $('.site-header__hamburger'),
-	  		$featureProjects = $('.projects').find('.project-gallery').html(),
-				defaultCities = $('#city-select').html();
+    var $window = $(window),
+        $body = $('body'),
+        $header = $('.site-header'),
+        $logo = $('.site-header__logo'),
+        $currentTag = $('.current-menu-item'),
+        $nav = $('.site-header__menu'),
+        $mobile = $('.site-header__hamburger'),
+        $featureProjects = $('.projects').find('.project-gallery').html(),
+        defaultCities = $('#city-select').html();
 
-		$('img.lazy').lazyload({
-			effect: 'fadeIn',
-			effectTime: 1000,
-			threshold: 100,
-			cssEase: 'linear',
-	  	pauseOnHover: false
-	  });
+    $('img.lazy').lazyload({
+      effect: 'fadeIn',
+      effectTime: 1000,
+      threshold: 100,
+      cssEase: 'linear',
+      pauseOnHover: false
+    });
 
-	  $(window).resize(checkWidth);
+    $(window).resize(checkWidth);
 
-		$('.site-header__hamburger--rot').on('click', function(e){
+    $('.site-header__hamburger--rot').on('click', function(e){
       e.preventDefault();
         $(this).toggleClass('is-active');
         $('body').toggleClass('fixed');
         $('.site-header__menu').toggleClass('active');
     });
 
-	  $('select').dropkick({
-	  	mobile : true
-	  });
+    $('select').dropkick({
+      mobile : true
+    });
 
     $window.scroll(function(){
 
-    	var docViewTop = $window.scrollTop(),
-					docViewBottom =docViewTop + $window.height(),
-					heroTop = $('.hero').offset().top,
-					heroBott = heroTop + $('.hero').height(),
-					windowWidth = $window.innerWidth();
+      var docViewTop = $window.scrollTop(),
+          docViewBottom =docViewTop + $window.height(),
+          heroTop = $('.hero').offset().top,
+          heroBott = heroTop + $('.hero').height(),
+          windowWidth = $window.innerWidth();
 
-			if ( $body.hasClass('home') ){
+      if ( $body.hasClass('home') ){
 
-				if( (docViewBottom >= heroTop - 60) && (heroBott-60 >= docViewTop) ) {
-					$header.removeClass('white-menu');
-					$currentTag.removeClass('white-menu');
-	    	} else {
-	    		$header.addClass('white-menu');
-	    		$currentTag.addClass('white-menu');
-	    	}
+        if( (docViewBottom >= heroTop - 60) && (heroBott-60 >= docViewTop) ) {
+          $header.removeClass('white-menu');
+          $currentTag.removeClass('white-menu');
+        } else {
+          $header.addClass('white-menu');
+          $currentTag.addClass('white-menu');
+        }
 
-			}
+      }
 
     });
 
-	  function checkWidth(){
+    function checkWidth(){
 
-	    if ($window.width() < 1024) {
+      if ($window.width() < 1024) {
 
-	    	if($body.hasClass('fixed')){
-	    		$body.toggleClass('fixed');
-		     	$mobile.removeClass('is-active');
-	    		$header.removeClass('active');
-		      $nav.removeClass('active');
-	    	}
+        if($body.hasClass('fixed')){
+          $body.toggleClass('fixed');
+          $mobile.removeClass('is-active');
+          $header.removeClass('active');
+          $nav.removeClass('active');
+        }
 
-	    }
+      }
 
-	  };
+    };
 
-	  var resetCitySelect = function() {
+    var resetCitySelect = function() {
 
-	  	var $select = $('#city-select');
-			$select.removeData('dropkick');
-			$('#city-select').html(defaultCities);
-			$select.attr('disabled','true');
-			$select.dropkick('refresh');
+      var $select = $('#city-select');
+      $select.removeData('dropkick');
+      $('#city-select').html(defaultCities);
+      $select.attr('disabled','true');
+      $select.dropkick('refresh');
 
-	  }
+    }
 
-		var resetProjects = function() {
+    var resetProjects = function() {
 
-			var htmlfeatureProjects = $('.project-gallery').html($featureProjects);
-	    htmlfeatureProjects.find("img.lazy").lazyload();
+      var htmlfeatureProjects = $('.project-gallery').html($featureProjects);
+      htmlfeatureProjects.find("img.lazy").lazyload();
 
-		}
+    }
 
-		var updateCitySelect = function($state) {
+    var updateCitySelect = function($state) {
 
-			var $select = $('#city-select'),
-					selectActiveCities = $('#city-select').find("[data-state='" + $state + "'], [data-state=default]");
+      var $select = $('#city-select'),
+          selectActiveCities = $('#city-select').find("[data-state='" + $state + "'], [data-state=default]");
 
-			$select.removeData('dropkick');
-			$select.html(selectActiveCities);
-			$select.removeAttr('disabled');
-			$select.dropkick('refresh');
-			$select.dropkick('reset','clear');
+      $select.removeData('dropkick');
+      $select.html(selectActiveCities);
+      $select.removeAttr('disabled');
+      $select.dropkick('refresh');
+      $select.dropkick('reset','clear');
 
-		}
+    }
 
-		var getStateProjects = function ($location) {
+    var getStateProjects = function ($location) {
 
-	    if ($location !== 'default') {
-	    	updateCitySelect($location);
-	      projectQuery($location);
-	    }
-	    else if ($location == 'default') {
-	      resetCitySelect();
-	      resetProjects();
-	    }
+      if ($location !== 'default') {
+        updateCitySelect($location);
+        projectQuery($location);
+      }
+      else if ($location == 'default') {
+        resetCitySelect();
+        resetProjects();
+      }
 
-		};
+    };
 
-			var getCityProjects = function ($location) {
+      var getCityProjects = function ($location) {
 
-	    if ($location !== 'default') {
-	      projectQuery($location);
-	    }
-	    else if ($location == 'default') {
-	    	var activeState = new Dropkick('#state-select'),
-	    			location = activeState.value;
+      if ($location !== 'default') {
+        projectQuery($location);
+      }
+      else if ($location == 'default') {
+        var activeState = new Dropkick('#state-select'),
+            location = activeState.value;
 
-	    	updateCitySelect(location);
-	      projectQuery(location);
-	    }
+        updateCitySelect(location);
+        projectQuery(location);
+      }
 
-		};
+    };
 
-		var getLocations = function() {
+    var getLocations = function() {
 
-			var selectType = $(this).data('select'),
-				  location = new Dropkick('#'+selectType+'-select'),
-				  location = location.value;
+      var selectType = $(this).data('select'),
+          location = new Dropkick('#'+selectType+'-select'),
+          location = location.value;
 
-			$('.proj-search-input').val('');
-			switch (selectType) {
-				case 'state':
-					$('#city-select').html(defaultCities);
-					getStateProjects(location);
-					break
-				case 'city':
-					getCityProjects(location);
-					break
-   		}
-		}
+      $('.proj-search-input').val('');
+      switch (selectType) {
+        case 'state':
+          $('#city-select').html(defaultCities);
+          getStateProjects(location);
+          break
+        case 'city':
+          getCityProjects(location);
+          break
+      }
+    }
 
-		var projectQuery = function($project) {
+    var projectQuery = function($project) {
 
-			var href = window.location.origin + '/project-archive/';
+      var href = window.location.origin + '/project-archive/';
 
-			$.ajax({
-			   url:href,
-			   type:'GET',
-			   success: function(data){
-			    var resultContents = $(data).find('.project-gallery');
-					var filteredProjects = $(resultContents).find("[data-state='" + $project + "'], [data-city='" + $project + "']");
-					htmlfilteredProjects = $('.project-gallery').html(filteredProjects);
-					htmlfilteredProjects.find("img.lazy").lazyload();
-			   }
-			});
+      $.ajax({
+         url:href,
+         type:'GET',
+         success: function(data){
+          var resultContents = $(data).find('.project-gallery');
+          var filteredProjects = $(resultContents).find("[data-state='" + $project + "'], [data-city='" + $project + "']");
+          htmlfilteredProjects = $('.project-gallery').html(filteredProjects);
+          htmlfilteredProjects.find("img.lazy").lazyload();
+         }
+      });
 
-		}
+    }
 
-		var userQuery = function() {
+    var userQuery = function() {
 
-			$('#proj-search').on('submit', function(e) {
-				e.preventDefault();
-				var valEntered = $('.proj-search-input').val().toLowerCase();
-				projectQuery(valEntered);
-			});
+      $('#proj-search').on('submit', function(e) {
+        e.preventDefault();
+        var valEntered = $('.proj-search-input').val().toLowerCase();
+        projectQuery(valEntered);
+      });
 
-		}
+    }
 
-		var loadingProjectFilter = function() {
+    var loadingProjectFilter = function() {
 
-			$('.project-filter select').change(getLocations);
-			userQuery();
-			$('.proj-search-input').on('focus',function(){
-				$('#state-select').dropkick('reset','clear');
-				resetCitySelect();
-			})
+      $('.project-filter select').change(getLocations);
+      userQuery();
+      $('.proj-search-input').on('focus',function(){
+        $('#state-select').dropkick('reset','clear');
+        resetCitySelect();
+      })
 
-		}
+    }
 
-		loadingProjectFilter();
+    loadingProjectFilter();
 
-	});
+  });
 
 })(jQuery, this);

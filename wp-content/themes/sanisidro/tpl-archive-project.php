@@ -13,9 +13,9 @@ add_filter('body_class', 'add_projects_page_body_class');
 
 function add_projects_page_body_class($classes) {
 
-	$classes[] = 'projects';
+  $classes[] = 'projects';
 
-	return $classes;
+  return $classes;
 
 }
 
@@ -27,8 +27,6 @@ add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'na
 
 
 <main>
-
-   <!-- display propject -->
 
    <section>
 
@@ -47,7 +45,7 @@ add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'na
       wp_reset_postdata();
       ?>
 
-	 	 <?php include("partials/featured-blocks.php") ?>
+     <?php include("partials/featured-blocks.php") ?>
 
    </section>
 

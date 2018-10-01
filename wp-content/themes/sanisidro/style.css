@@ -375,31 +375,31 @@ footer p {
 }
 
 @media (max-width: 600px) {
-  /* line 26, src/sass/globals/footer.scss */
+  /* line 25, src/sass/globals/footer.scss */
   .footer-nav {
     display: block;
     width: 100%;
   }
 }
 @media (min-width: 601px) {
-  /* line 26, src/sass/globals/footer.scss */
+  /* line 25, src/sass/globals/footer.scss */
   .footer-nav {
     display: inline-block;
     margin: 0;
     float: right;
   }
 }
-/* line 37, src/sass/globals/footer.scss */
+/* line 36, src/sass/globals/footer.scss */
 .footer-nav ul {
   display: block;
   width: 100%;
 }
-/* line 40, src/sass/globals/footer.scss */
+/* line 39, src/sass/globals/footer.scss */
 .footer-nav ul li {
   margin: 20px 0;
 }
 @media (max-width: 600px) {
-  /* line 40, src/sass/globals/footer.scss */
+  /* line 39, src/sass/globals/footer.scss */
   .footer-nav ul li {
     display: block;
     width: 100%;
@@ -407,22 +407,22 @@ footer p {
   }
 }
 @media (min-width: 601px) {
-  /* line 40, src/sass/globals/footer.scss */
+  /* line 39, src/sass/globals/footer.scss */
   .footer-nav ul li {
     display: inline-block;
     margin: 0 20px;
   }
 }
-/* line 51, src/sass/globals/footer.scss */
+/* line 50, src/sass/globals/footer.scss */
 .footer-nav ul li a {
   color: #000;
 }
 @media (min-width: 601px) {
-  /* line 51, src/sass/globals/footer.scss */
+  /* line 50, src/sass/globals/footer.scss */
   .footer-nav ul li a {
     width: 100%;
   }
-  /* line 55, src/sass/globals/footer.scss */
+  /* line 54, src/sass/globals/footer.scss */
   .footer-nav ul li a:hover {
     color: #595959;
   }

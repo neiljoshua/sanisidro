@@ -78,7 +78,6 @@
       }
     }
     else if ($_POST['submitted']) generate_response("error", $missing_content);
-
   }
 ?>
 
@@ -88,33 +87,33 @@
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <section class="contact">
-        <h1 class="contact__title"><?php the_title(); ?></h1>
-        <?php the_content(); ?>
-        <div class="contact__map"></div>
-      </section>
+    <section class="contact">
+      <h1 class="contact__title"><?php the_title(); ?></h1>
+      <?php the_content(); ?>
+      <div class="contact__map"></div>
+    </section>
 
-      <section>
+    <section>
 
-        <div id="respond">
-          <?php echo $response; ?>
+      <div id="respond">
+        <?php echo $response; ?>
 
-          <form action="<?php the_permalink(); ?>" method="POST">
-            <p><label for="name">Name: <span>*</span> <br><input type="text" name="message_name" placeholder="John Smith"></label></p>
+        <form action="<?php the_permalink(); ?>" method="POST">
+          <p><label for="name">Name: <span>*</span> <br><input type="text" name="message_name" placeholder="John Smith"></label></p>
 
-            <p><label for="message_email">Email: <span>*</span> <br><input type="text" name="message_email" placeholder="youremail@server.com"> </label></p>
+          <p><label for="message_email">Email: <span>*</span> <br><input type="text" name="message_email" placeholder="youremail@server.com"> </label></p>
 
-            <p><label for="message_text">Message: <span>*</span> <br><textarea type="text" name="message_text" > </textarea> </label></p>
+          <p><label for="message_text">Message: <span>*</span> <br><textarea type="text" name="message_text" > </textarea> </label></p>
 
-            <p> <label for="message_human">Human Verification: <span>*</span> <br><input class='human' type="text"  name="message_human"> + 3 = 5</label></p>
-            <input type="hidden" name="submitted" value="1">
-            <p><input type="submit"></p>
-          </form>
-        </div>
+          <p> <label for="message_human">Human Verification: <span>*</span> <br><input class='human' type="text"  name="message_human"> + 3 = 5</label></p>
+          <input type="hidden" name="submitted" value="1">
+          <p><input type="submit"></p>
+        </form>
+      </div>
 
-      </section>
+    </section>
 
-    <?php endwhile; // end of the loop. ?>
+    <?php endwhile; ?>
 
   </main>
 

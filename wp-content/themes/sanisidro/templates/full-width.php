@@ -32,28 +32,28 @@ if( have_rows('flexible_content') ): ?>
 
   <?php   // check current row layout ?>
   <?php   if( get_row_layout() == 'hero'): ?>
-      <section>
-        <div class="hero" style="background-image: url(<?php the_sub_field('hero_image') ?>)">
-          <div class="cta_container">
-            <div class="cta_content">
-              <div class="cta_content wrap">
-                <?php the_sub_field('hero_text'); ?>
+    <section>
+      <div class="hero" style="background-image: url(<?php the_sub_field('hero_image') ?>)">
+        <div class="cta_container">
+          <div class="cta_content">
+            <div class="cta_content wrap">
+              <?php the_sub_field('hero_text'); ?>
 
-                  <?php $selected = get_sub_field('display_cta_button'); ?>
+                <?php $selected = get_sub_field('display_cta_button'); ?>
 
-                  <?php if( in_array( true, [$selected]) ){ ?>
+                <?php if( in_array( true, [$selected]) ){ ?>
 
-                    <a class="button" href="<?php the_sub_field('hero_cta_button_url') ?>">
-                    <?php the_sub_field('hero_button_text') ?></a>
-                    <?php
-                    }
-                  else { ?>
-                  <!-- no content --> <?php } ?>
-              </div>
+                  <a class="button" href="<?php the_sub_field('hero_cta_button_url') ?>">
+                  <?php the_sub_field('hero_button_text') ?></a>
+                  <?php
+                  }
+                else { ?>
+                <!-- no content --> <?php } ?>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     <?php endif; ?>
 
   <?php   // check current row layout ?>

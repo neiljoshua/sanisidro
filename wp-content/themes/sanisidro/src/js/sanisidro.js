@@ -1,18 +1,16 @@
 (function ($, root, undefined) {
 
-  $(document).ready(function(){
+  $(document).ready(function() {
 
-    var $window = $(window),
-        $body = $('body'),
-        $header = $('.site-header'),
-        $logo = $('.site-header__logo'),
-        $currentTag = $('.current-menu-item'),
-        $nav = $('.site-header__menu'),
-        $mobile = $('.site-header__hamburger'),
-        $featureProjects = $('.projects').find('.project-gallery').html(),
+    var bodySite = $('body'),
+        headerSite = $('.site-header'),
+        currentTag = $('.current-menu-item'),
+        headerSiteMenu = $('.site-header__menu'),
+        mobileNav = $('.site-header__hamburger'),
+        featureProjects = $('.projects').find('.project-gallery').html(),
         defaultCities = $('#city-select').html();
 
-    $('img.lazy').lazyload({
+    $('.lazy').lazyload({
       effect: 'fadeIn',
       effectTime: 1000,
       threshold: 100,
@@ -33,41 +31,38 @@
       mobile : true
     });
 
-    $window.scroll(function(){
+    $(window).scroll(function() {
 
-      var docViewTop = $window.scrollTop(),
-          docViewBottom =docViewTop + $window.height(),
+      var docViewTop = $(this).scrollTop(),
+          docViewBottom =docViewTop + $(this).height(),
           heroTop = $('.hero').offset().top,
           heroBott = heroTop + $('.hero').height(),
-          windowWidth = $window.innerWidth();
+          windowWidth = $(this).innerWidth();
 
-      if ( $body.hasClass('home') ){
+      if ( bodySite.hasClass('home') ){
 
         if( (docViewBottom >= heroTop - 60) && (heroBott-60 >= docViewTop) ) {
-          $header.removeClass('white-menu');
-          $currentTag.removeClass('white-menu');
+          headerSite.removeClass('white-menu');
+          currentTag.removeClass('white-menu');
         } else {
-          $header.addClass('white-menu');
-          $currentTag.addClass('white-menu');
+          headerSite.addClass('white-menu');
+          currentTag.addClass('white-menu');
         }
 
       }
 
     });
 
-    function checkWidth(){
+    function checkWidth() {
 
-      if ($window.width() < 1024) {
-
-        if($body.hasClass('fixed')){
-          $body.toggleClass('fixed');
-          $mobile.removeClass('is-active');
-          $header.removeClass('active');
-          $nav.removeClass('active');
+      if ( $(window).width() < 1024 ) {
+        if(bodySite.hasClass('fixed')) {
+          bodySite.toggleClass('fixed');
+          mobileNav.removeClass('is-active');
+          headerSite.removeClass('active');
+          headerSiteMenu.removeClass('active');
         }
-
       }
-
     };
 
     var resetCitySelect = function() {
@@ -82,7 +77,7 @@
 
     var resetProjects = function() {
 
-      var htmlfeatureProjects = $('.project-gallery').html($featureProjects);
+      var htmlfeatureProjects = $('.project-gallery').html(featureProjects);
       htmlfeatureProjects.find("img.lazy").lazyload();
 
     }

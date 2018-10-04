@@ -46,7 +46,6 @@ get_header();
   $members = get_field('member');
   if ($members) {
 
-
 ?>
   <section>
 <?php

@@ -22,7 +22,7 @@
     @include media-min-width(tablet) {
       width: 50%;
       border: none;
-      &:nth-child(1){
+      &:nth-child(1) {
         margin-bottom: -1px;
         &:before{
           padding-bottom: 100%;
@@ -80,7 +80,6 @@
         }
       }
     }
-
   }
 
   .news-copy {
@@ -103,5 +102,4 @@
       }
     }
   }
-
 }

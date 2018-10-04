@@ -71,73 +71,72 @@ $posts = get_posts( $args );
   ?>
   </section>
 
-   <section class="project-filter">
-     <h2 class="title">Feature Projects</h2>
-     <?php
-        $args = array(
+  <section class="project-filter">
+    <h2 class="title">Feature Projects</h2>
+    <?php
+      $args = array(
+        'post_type' => 'project',
+        'posts_per_page' => 8,
+        'order' => 'DESC',
+        'orderby' => 'post_date'
+      );
+
+      $posts = get_posts( $args );
+    ?>
+
+    <select id="state-select" name="states" data-select="state">
+
+      <option value="default" > Select State </option>
+
+      <?php global $states ?>
+
+      <?php foreach ($states as $state) { ?>
+
+      <option value="<?php echo $state; ?>"> <?php echo $state; ?> </option>
+
+      <?php } ?>
+
+    </select>
+
+    <select id="city-select" name="cities" data-select="city" disabled="true">
+
+      <option value="default" data-state="default" > Select City </option>
+
+      <?php global $cities ?>
+
+      <?php foreach ($cities as $city) { ?>
+
+        <?php $projects_with_city = get_posts( array(
           'post_type' => 'project',
-          'posts_per_page' => 8,
-          'order' => 'DESC',
-          'orderby' => 'post_date'
-        );
+          'posts_per_page' => 1,
+          'meta_query' => array(
+             array(
+                'key' => 'city',
+                'value' => $city,
+                'compare' => '==' )
+             )
+            )
+          );
+        ?>
+        <?php
+        foreach($projects_with_city as $project)
+        {
+          $state = get_post_meta($project->ID, "state", true);
+        }
+        ?>
 
-        $posts = get_posts( $args );
-      ?>
-
-      <select id="state-select" name="states" data-select="state">
-
-        <option value="default" > Select State </option>
-
-        <?php global $states ?>
-
-        <?php foreach ($states as $state) { ?>
-
-        <option value="<?php echo $state; ?>"> <?php echo $state; ?> </option>
-
-        <?php } ?>
-
-      </select>
-
-      <select id="city-select" name="cities" data-select="city" disabled="true">
-
-        <option value="default" data-state="default" > Select City </option>
-
-        <?php global $cities ?>
-
-        <?php foreach ($cities as $city) { ?>
-
-          <?php $projects_with_city = get_posts( array(
-            'post_type' => 'project',
-            'posts_per_page' => 1,
-            'meta_query' => array(
-               array(
-                  'key' => 'city',
-                  'value' => $city,
-                  'compare' => '==' )
-               )
-              )
-            );
-          ?>
-          <?php
-          foreach($projects_with_city as $project)
-          {
-            $state = get_post_meta($project->ID, "state", true);
-          }
-          ?>
-
-          <option value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>
+        <option value="<?php echo strtolower($city); ?>" data-state="<?php echo $state; ?>"><?php echo $city; ?> </option>
 
         <?php } ?>
 
-      </select>
+    </select>
 
-      <form id="proj-search" class="projects-form" action="search">
-        <input class="proj-search-input" type="input" name="projects" placeholder="Enter City or State" autocomplete="off">
-        <button class="proj-search-bttn" type="submit">Search</button>
-      </form>
+    <form id="proj-search" class="projects-form" action="search">
+      <input class="proj-search-input" type="input" name="projects" placeholder="Enter City or State" autocomplete="off">
+      <button class="proj-search-bttn" type="submit">Search</button>
+    </form>
 
-      <?php include("partials/featured-blocks.php") ?>
-
+    <?php include("partials/featured-blocks.php") ?>
 
    </section>
 

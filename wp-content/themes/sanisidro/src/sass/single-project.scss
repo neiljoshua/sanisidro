@@ -1,28 +1,27 @@
 .single-project,
 .single-newsblog {
 
-	section {
-		padding: 0 20px;
-		@include calc( width, '100% - 40px');
-		@include media-min-width(mobile) {
-			padding: 0 30px;
-			@include calc( width, '100% - 60px');
-		}
-		@include media-min-width(tablet) {
-			padding: 0 40px;
-			@include calc( width, '100% - 80px');
-			max-width: 720px;
-		}
-		&:first-child {
-			padding: 0;
-			width: 100%;
-		}
-		.title {
-			margin: 0 0 20px 0;
-		}
-		.copy {
-			margin: 0 0 20px 0;
-		}
-	}
-
+  section {
+    padding: 0 20px;
+    @include calc( width, '100% - 40px');
+    @include media-min-width(mobile) {
+      padding: 0 30px;
+      @include calc( width, '100% - 60px');
+    }
+    @include media-min-width(tablet) {
+      padding: 0 40px;
+      @include calc( width, '100% - 80px');
+      max-width: 720px;
+    }
+    &:first-child {
+      padding: 0;
+      width: 100%;
+    }
+    .title {
+      margin: 0 0 20px 0;
+    }
+    .copy {
+      margin: 0 0 20px 0;
+    }
+  }
 }

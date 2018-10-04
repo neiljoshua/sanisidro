@@ -24,7 +24,7 @@ get_header();
 
 <main>
 
-<?php
+  <?php
   $lead = get_field('hero_image');
   if ($lead){
   ?>
@@ -47,7 +47,7 @@ get_header();
     if ($sliderHome){
     ?>
 
-     <section id="startchange">
+    <section id="startchange">
       <h2 class="title"> San Isidro </h2>
       <p class="copy"> <?php the_field('hero_content');?> </p>
 
@@ -58,10 +58,10 @@ get_header();
         <?php while( have_rows('slider_home_page') ): the_row(); ?>
           <?php $imageLink = get_sub_field('slider_image');?>
 
-             <div class="slick-container">
-               <img class="lazy" data-original="<?php echo $imageLink; ?>" width="900"  alt="<?php the_sub_field('slider_name')?>" >
-                <p> <?php the_sub_field('slider_name')?></p>
-             </div>
+          <div class="slick-container">
+            <img class="lazy" data-original="<?php echo $imageLink; ?>" width="900"  alt="<?php the_sub_field('slider_name')?>" >
+            <p> <?php the_sub_field('slider_name')?></p>
+          </div>
 
         <?php endwhile; ?>
 

@@ -1023,7 +1023,7 @@ p {
     margin-right: 20px;
   }
 }
-/* line 65, src/sass/projects.scss */
+/* line 64, src/sass/projects.scss */
 .projects .projects-form {
   display: inline-block;
   position: relative;
@@ -1039,18 +1039,18 @@ p {
   border-radius: 6px;
 }
 @media (min-width: 601px) {
-  /* line 65, src/sass/projects.scss */
+  /* line 64, src/sass/projects.scss */
   .projects .projects-form {
     width: 250px;
   }
 }
 @media (min-width: 769px) {
-  /* line 65, src/sass/projects.scss */
+  /* line 64, src/sass/projects.scss */
   .projects .projects-form {
     width: 270px;
   }
 }
-/* line 81, src/sass/projects.scss */
+/* line 80, src/sass/projects.scss */
 .projects .projects-form input,
 .projects .projects-form button {
   display: inline-block;
@@ -1058,7 +1058,7 @@ p {
   font-size: 18px;
   font-family: 'Roboto-Light';
 }
-/* line 88, src/sass/projects.scss */
+/* line 87, src/sass/projects.scss */
 .projects .projects-form input {
   margin-right: 0;
   outline: none;
@@ -1071,12 +1071,12 @@ p {
   border-radius: 6px;
 }
 @media (min-width: 769px) {
-  /* line 88, src/sass/projects.scss */
+  /* line 87, src/sass/projects.scss */
   .projects .projects-form input {
     width: 200px;
   }
 }
-/* line 99, src/sass/projects.scss */
+/* line 98, src/sass/projects.scss */
 .projects .projects-form .proj-search-bttn {
   position: absolute;
   right: 0;
@@ -1085,7 +1085,7 @@ p {
   padding: 2px 8px;
 }
 @media (min-width: 601px) {
-  /* line 99, src/sass/projects.scss */
+  /* line 98, src/sass/projects.scss */
   .projects .projects-form .proj-search-bttn {
     padding: 2px 5px;
   }
@@ -1357,18 +1357,18 @@ p {
     width: 20%;
   }
 }
-/* line 86, src/sass/news-content.scss */
+/* line 85, src/sass/news-content.scss */
 .news-content .news-copy {
   width: 100%;
   z-index: 10;
 }
-/* line 89, src/sass/news-content.scss */
+/* line 88, src/sass/news-content.scss */
 .news-content .news-copy__caption {
   color: #fff;
   text-transform: capitalize;
   font-family: "Merriweather-Light";
 }
-/* line 94, src/sass/news-content.scss */
+/* line 93, src/sass/news-content.scss */
 .news-content .news-copy__line {
   display: block;
   width: 20%;
@@ -1377,7 +1377,7 @@ p {
   background-color: #fff;
 }
 @media (min-width: 769px) {
-  /* line 94, src/sass/news-content.scss */
+  /* line 93, src/sass/news-content.scss */
   .news-content .news-copy__line {
     width: 0%;
     -webkit-transition: width 0.7s ease-in 0.1s;
@@ -1451,19 +1451,19 @@ p {
   border: 1px solid green;
   color: green;
 }
-/* line 53, src/sass/contact.scss */
+/* line 52, src/sass/contact.scss */
 .contact form {
   width: 100%;
   max-width: 720px;
   margin: 30px auto;
 }
-/* line 57, src/sass/contact.scss */
+/* line 56, src/sass/contact.scss */
 .contact form p {
   margin: 0 auto 20px;
   font-size: 18px;
   font-weight: 700;
 }
-/* line 62, src/sass/contact.scss */
+/* line 61, src/sass/contact.scss */
 .contact form textarea {
   display: block;
   max-width: 720px;
@@ -1475,7 +1475,7 @@ p {
   resize: none;
   outline: none;
 }
-/* line 74, src/sass/contact.scss */
+/* line 73, src/sass/contact.scss */
 .contact form input {
   display: block;
   width: 100%;
@@ -1485,19 +1485,19 @@ p {
   font-size: 18px;
 }
 @media (min-width: 601px) {
-  /* line 74, src/sass/contact.scss */
+  /* line 73, src/sass/contact.scss */
   .contact form input {
     width: 40%;
   }
 }
-/* line 86, src/sass/contact.scss */
+/* line 85, src/sass/contact.scss */
 .contact form input[type='submit'] {
   font-weight: 400;
   -webkit-transition: all 0.6s ease-in-out;
   -ms-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-/* line 89, src/sass/contact.scss */
+/* line 88, src/sass/contact.scss */
 .contact form input[type='submit']:hover {
   background-color: #b9e2e0;
   color: #fff;
@@ -1505,11 +1505,11 @@ p {
   -ms-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-/* line 95, src/sass/contact.scss */
+/* line 94, src/sass/contact.scss */
 .contact form span {
   color: red;
 }
-/* line 100, src/sass/contact.scss */
+/* line 99, src/sass/contact.scss */
 .contact .human {
   display: inline-block;
   border: 1px solid #000;

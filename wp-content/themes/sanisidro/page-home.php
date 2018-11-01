@@ -31,7 +31,7 @@ get_header();
 
   <section>
     <div class="hero">
-      <img class="lazy page-hero__image" data-original="<?php echo $lead; ?>"" alt="Hero Image">
+      <img class="page-hero__image" src="<?php echo $lead; ?>"" alt="Hero Image">
       <div class="logo">
         <img src="<?php the_field('hero_logo') ?>" alt="Logo"/>
       </div>
@@ -59,7 +59,7 @@ get_header();
           <?php $imageLink = get_sub_field('slider_image');?>
 
           <div class="slick-container">
-            <img class="lazy" data-original="<?php echo $imageLink; ?>" width="900"  alt="<?php the_sub_field('slider_name')?>" >
+            <img src="<?php echo $imageLink; ?>" width="900"  alt="<?php the_sub_field('slider_name')?>" >
             <p> <?php the_sub_field('slider_name')?></p>
           </div>
 

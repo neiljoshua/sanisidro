@@ -1,3 +1,12 @@
+(function($) {
+  'use strict';
+    $(window).on('load', function () {
+      if ($('.loader').length > 0) {
+        $('.loader').fadeOut(1000, function(){ $('.loader').remove(); } );
+        $('.container').addClass('loaded');
+      }
+    });
+})(jQuery);
 (function ($, root, undefined) {
 
   $(document).ready(function() {
@@ -12,8 +21,8 @@
 
     $('.lazy').lazyload({
       effect: 'fadeIn',
-      effectTime: 1000,
-      threshold: 100,
+      effectTime: 100,
+      threshold: 200,
       cssEase: 'linear',
       pauseOnHover: false
     });

@@ -9,6 +9,7 @@ Version: 1.0
 @import 'globals/variables';
 @import 'globals/mixin';
 @import 'globals/fonts';
+@import 'globals/animations';
 @import 'globals/header';
 @import 'globals/footer';
 @import 'globals/layout';
@@ -20,4 +21,5 @@ Version: 1.0
 @import 'news-content';
 @import 'archive-projects';
 @import 'contact';
+@import 'preloader';
 

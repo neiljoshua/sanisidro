@@ -2,8 +2,10 @@
   'use strict';
     $(window).on('load', function () {
       if ($('.loader').length > 0) {
-        $('.loader').fadeOut(1000, function(){ $('.loader').remove(); } );
-        $('.container').addClass('loaded');
+        $('.loader').fadeOut(500, function(){
+          $('.loader').remove();
+          $('.container').addClass('loaded');
+        });
       }
     });
 })(jQuery);
@@ -152,7 +154,8 @@
 
     var projectQuery = function($project) {
 
-      var href = window.location.origin + '/project-archive/';
+      var href = window.location.origin + '/project-archive/',
+          projectName = $project;
 
       $.ajax({
          url:href,
@@ -160,8 +163,12 @@
          success: function(data){
           var resultContents = $(data).find('.project-gallery');
           var filteredProjects = $(resultContents).find("[data-state='" + $project + "'], [data-city='" + $project + "']");
-          htmlfilteredProjects = $('.project-gallery').html(filteredProjects);
-          htmlfilteredProjects.find("img.lazy").lazyload();
+          if ( filteredProjects.length == 0 ) {
+            $('.project-gallery').load( window.location.origin + '/project-notfound/');
+          } else {
+            htmlfilteredProjects = $('.project-gallery').html(filteredProjects);
+            htmlfilteredProjects.find("img.lazy").lazyload();
+          }
          }
       });
 

@@ -32,7 +32,7 @@
      &:nth-child(#{$i}) {
        left: ($i - 1) * 15px;
        @include prefix(transform, scaleX(1,$i*.2), webkit ms );
-       @include prefix(animation, barUp#{$i} 4s infinite, webkit ms );
+       @include prefix(animation, barUp#{$i} 3.5s infinite, webkit ms );
       }
   }
 }
@@ -45,5 +45,5 @@
   height: 10px;
   background: $black;
   border-radius: 50%;
-  @include prefix(animation, ball 4s infinite, webkit ms );
+  @include prefix(animation, ball 3.5s infinite, webkit ms );
 }

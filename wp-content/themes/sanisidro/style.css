@@ -679,16 +679,16 @@ p {
   width: 100%;
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 0.6s ease-in 1.1s;
-  -ms-transition: opacity 0.6s ease-in 1.1s;
-  transition: opacity 0.6s ease-in 1.1s;
+  -webkit-transition: opacity 0.8s ease-out;
+  -ms-transition: opacity 0.8s ease-out;
+  transition: opacity 0.8s ease-out;
 }
 /* line 82, src/sass/globals/layout.scss */
 .container.loaded {
   opacity: 1;
-  -webkit-transition: opacity 0.6s ease-in 1.1s;
-  -ms-transition: opacity 0.6s ease-in 1.1s;
-  transition: opacity 0.6s ease-in 1.1s;
+  -webkit-transition: opacity 0.8s ease-out;
+  -ms-transition: opacity 0.8s ease-out;
+  transition: opacity 0.8s ease-out;
 }
 
 /* line 88, src/sass/globals/layout.scss */
@@ -1168,7 +1168,43 @@ p {
     margin-right: 20px;
   }
 }
-/* line 64, src/sass/projects.scss */
+/* line 65, src/sass/projects.scss */
+.projects .error {
+  position: relative;
+  width: 100%;
+}
+/* line 68, src/sass/projects.scss */
+.projects .error:before {
+  content: "";
+  display: block;
+  padding-top: -webkit-calc(56.25%);
+  padding-top: -moz-calc(56.25%);
+  padding-top: calc(56.25%);
+}
+/* line 73, src/sass/projects.scss */
+.projects .error__box {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  padding: 40px;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+/* line 81, src/sass/projects.scss */
+.projects .error__box .error__image {
+  display: block;
+  margin: 20px auto;
+}
+/* line 85, src/sass/projects.scss */
+.projects .error__box .error__copy {
+  font-size: 20px;
+  margin: 40px auto;
+  color: #000;
+}
+/* line 93, src/sass/projects.scss */
 .projects .projects-form {
   display: inline-block;
   position: relative;
@@ -1184,18 +1220,18 @@ p {
   border-radius: 6px;
 }
 @media (min-width: 601px) {
-  /* line 64, src/sass/projects.scss */
+  /* line 93, src/sass/projects.scss */
   .projects .projects-form {
     width: 250px;
   }
 }
 @media (min-width: 769px) {
-  /* line 64, src/sass/projects.scss */
+  /* line 93, src/sass/projects.scss */
   .projects .projects-form {
     width: 270px;
   }
 }
-/* line 80, src/sass/projects.scss */
+/* line 109, src/sass/projects.scss */
 .projects .projects-form input,
 .projects .projects-form button {
   display: inline-block;
@@ -1203,7 +1239,7 @@ p {
   font-size: 18px;
   font-family: 'Roboto-Light';
 }
-/* line 87, src/sass/projects.scss */
+/* line 116, src/sass/projects.scss */
 .projects .projects-form input {
   margin-right: 0;
   outline: none;
@@ -1216,12 +1252,12 @@ p {
   border-radius: 6px;
 }
 @media (min-width: 769px) {
-  /* line 87, src/sass/projects.scss */
+  /* line 116, src/sass/projects.scss */
   .projects .projects-form input {
     width: 200px;
   }
 }
-/* line 98, src/sass/projects.scss */
+/* line 127, src/sass/projects.scss */
 .projects .projects-form .proj-search-bttn {
   position: absolute;
   right: 0;
@@ -1230,7 +1266,7 @@ p {
   padding: 2px 8px;
 }
 @media (min-width: 601px) {
-  /* line 98, src/sass/projects.scss */
+  /* line 127, src/sass/projects.scss */
   .projects .projects-form .proj-search-bttn {
     padding: 2px 5px;
   }
@@ -1702,9 +1738,9 @@ p {
   -webkit-transform: scaleX(1, 0.2);
   -ms-transform: scaleX(1, 0.2);
   transform: scaleX(1, 0.2);
-  -webkit-animation: barUp1 4s infinite;
-  -ms-animation: barUp1 4s infinite;
-  animation: barUp1 4s infinite;
+  -webkit-animation: barUp1 3.5s infinite;
+  -ms-animation: barUp1 3.5s infinite;
+  animation: barUp1 3.5s infinite;
 }
 /* line 32, src/sass/preloader.scss */
 .loader__bar:nth-child(2) {
@@ -1712,9 +1748,9 @@ p {
   -webkit-transform: scaleX(1, 0.4);
   -ms-transform: scaleX(1, 0.4);
   transform: scaleX(1, 0.4);
-  -webkit-animation: barUp2 4s infinite;
-  -ms-animation: barUp2 4s infinite;
-  animation: barUp2 4s infinite;
+  -webkit-animation: barUp2 3.5s infinite;
+  -ms-animation: barUp2 3.5s infinite;
+  animation: barUp2 3.5s infinite;
 }
 /* line 32, src/sass/preloader.scss */
 .loader__bar:nth-child(3) {
@@ -1722,9 +1758,9 @@ p {
   -webkit-transform: scaleX(1, 0.6);
   -ms-transform: scaleX(1, 0.6);
   transform: scaleX(1, 0.6);
-  -webkit-animation: barUp3 4s infinite;
-  -ms-animation: barUp3 4s infinite;
-  animation: barUp3 4s infinite;
+  -webkit-animation: barUp3 3.5s infinite;
+  -ms-animation: barUp3 3.5s infinite;
+  animation: barUp3 3.5s infinite;
 }
 /* line 32, src/sass/preloader.scss */
 .loader__bar:nth-child(4) {
@@ -1732,9 +1768,9 @@ p {
   -webkit-transform: scaleX(1, 0.8);
   -ms-transform: scaleX(1, 0.8);
   transform: scaleX(1, 0.8);
-  -webkit-animation: barUp4 4s infinite;
-  -ms-animation: barUp4 4s infinite;
-  animation: barUp4 4s infinite;
+  -webkit-animation: barUp4 3.5s infinite;
+  -ms-animation: barUp4 3.5s infinite;
+  animation: barUp4 3.5s infinite;
 }
 /* line 32, src/sass/preloader.scss */
 .loader__bar:nth-child(5) {
@@ -1742,9 +1778,9 @@ p {
   -webkit-transform: scaleX(1, 1);
   -ms-transform: scaleX(1, 1);
   transform: scaleX(1, 1);
-  -webkit-animation: barUp5 4s infinite;
-  -ms-animation: barUp5 4s infinite;
-  animation: barUp5 4s infinite;
+  -webkit-animation: barUp5 3.5s infinite;
+  -ms-animation: barUp5 3.5s infinite;
+  animation: barUp5 3.5s infinite;
 }
 
 /* line 40, src/sass/preloader.scss */
@@ -1756,7 +1792,7 @@ p {
   height: 10px;
   background: #000;
   border-radius: 50%;
-  -webkit-animation: ball 4s infinite;
-  -ms-animation: ball 4s infinite;
-  animation: ball 4s infinite;
+  -webkit-animation: ball 3.5s infinite;
+  -ms-animation: ball 3.5s infinite;
+  animation: ball 3.5s infinite;
 }

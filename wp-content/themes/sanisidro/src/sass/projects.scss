@@ -59,7 +59,36 @@
         margin-right: 20px;
       }
     }
+
   }
+
+  .error {
+      position: relative;
+      width: 100%;
+      &:before {
+        content: "";
+        display: block;
+        @include calc( padding-top, '56.25%');
+      }
+      &__box {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        padding: 40px;
+        @include prefix(transform, translateY(-50%) translateX(-50%), webkit ms);
+        .error__image {
+          display: block;
+          margin: 20px auto;
+        }
+        .error__copy {
+          font-size: 20px;
+          margin: 40px auto;
+          color: $black;
+        }
+      }
+    }
 
   .projects-form {
     display: inline-block;
@@ -106,5 +135,6 @@
 
       }
     }
+
   }
 }

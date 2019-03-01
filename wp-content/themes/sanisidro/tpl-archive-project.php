@@ -53,7 +53,6 @@ add_theme_support('sanisidro-structural-wraps', array( 'header' , 'footer' , 'na
 
 <?php
 
-
 get_footer();
 
 ?>

@@ -60,7 +60,7 @@ $posts = get_posts( $args );
     if ($lead){
     ?>
       <div class="page-hero">
-        <img class ="page-hero__image" src="<?php echo $imagelead; ?>" alt="PAge Hero">
+        <img class ="page-hero__image" src="<?php echo $imagelead; ?>" alt="San Isidro Properties">
       </div>
     <?php
     }

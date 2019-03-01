@@ -1,0 +1,77 @@
+.site-header__hamburger {
+  position: fixed;
+  visibility: visible;
+  top: 5px;
+  right: 5px;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  z-index: 2500;
+  @include prefix(transition, background 0.3s,webit ms);
+  &:focus {
+    outline: none;
+  }
+  span {
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background: $gray;
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $gray;
+      content: "";
+      opacity: 1;
+    }
+    &::before {
+      top: -8px;
+    }
+    &::after{
+      bottom: -8px;
+    }
+  }
+  &.over-hero {
+    span {
+      background: $white;
+      &::before,
+      &::after {
+        background-color: $white;
+      }
+    }
+  }
+  @include media-min-width(mobile) {
+    right: 10px;
+  }
+  @include media-min-width(desktop) {
+    display: none;
+  }
+}
+
+.site-header__hamburger--rot {
+  opacity: 1;
+  @include prefix(transition, opacity 0.6s 0.3s, webkit ms);
+  span {
+    @include prefix(transition, transform 0.6s, webkit ms);
+  }
+  &.is-active {
+    opacity:1;
+    span {
+      transform: rotate(90deg);
+    }
+  }
+}

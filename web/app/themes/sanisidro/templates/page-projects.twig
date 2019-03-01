@@ -1,0 +1,44 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% if post %}
+
+    {% for post in projects %}
+      {% if post.project_lead %}
+        <section>
+          <div class="page-hero">
+            <img class ="page-hero__image" src="{{ post.meta('project_image') }}" alt="{{ post.project_description }}">
+          </div>
+        </section>
+      {% endif %}
+    {% endfor %}
+
+    <section class="select-container">
+      <h2 class="title">Feature Projects</h2>
+
+      <select id="state-select" name="states" data-select="state">
+        <option value="default" > Select State </option>
+        {% for state in states %}
+          <option value="{{ state }}">{{ state|capitalize }}</option>
+        {% endfor %}
+      </select>
+
+      <select id="city-select" name="cities" data-select="city" disabled="true">
+        <option value="default" data-state="default" > Select City </option>
+        {% for item in citieslist %}
+          <option value="{{ item.city|lower }}" data-state="{{ item.state }}">{{ item.city }}</option>
+        {% endfor %}
+      </select>
+
+      <form id="project-form" class="project-form" action="search">
+        <input class="project-form__input" type="input" name="projects" placeholder="Enter City or State" autocomplete="off">
+        <button class="project-form__bttn" type="submit">Search</button>
+      </form>
+
+      {% include 'partial/featured-projects.twig'%}
+      {% include 'partial/not-projects-found.twig'%}
+    </section>
+
+  {% endif %}
+
+{% endblock %}

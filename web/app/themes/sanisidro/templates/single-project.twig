@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% if post %}
+    <section >
+      <div class="page-hero">
+        <img class="lazy page-hero__image" data-original="{{ post.meta('project_image') }}" alt="{{ post.title}}" />
+      </div>
+      <div class="pagination">
+        <a class="pagination__links" href="/projects">View all </a>
+        <a class="pagination__links" href="{{ post._next.link }}">Previous </a>
+        <a class="pagination__links" href="{{ post._prev.link }}" >Next </a>
+      </div>
+    </section>
+    <section>
+      <h2 class="title"> {{post.title}}</h2>
+      <p class="copy">{{post.meta('project_description')}}</p>
+    </section>
+  {% endif %}
+{% endblock %}
+

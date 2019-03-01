@@ -1,0 +1,51 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+  {% block head %}
+  {% endblock %}
+  </head>
+{% endblock %}
+
+  <body class="{{body_class}} {{ post.name|lower }}">
+
+    <div class="loader">
+      <div class="loader__box">
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__ball"></div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <header class="site-header">
+        {% block header %}
+          <a class="site-header__logo" href="{{ site.link() }}"><img src="{{ site.icon() }}" alt= "Logo"/></a>
+          <a href="#" class="site-header__hamburger site-header__hamburger--rot"> <span></span></a>
+          <div class="site-header__menu">
+            {% include "menu.twig" with {'menu': menu.get_items} %}
+          </div>
+        {% endblock %}
+      </header>
+
+      <main>
+        {# {{ dump(site) }} #}
+
+        {% block content %}
+
+            <p>SORRY! No content found!</p>
+
+        {% endblock %}
+
+      </main>
+
+    {% include "footer.twig" %}
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,47 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% if post %}
+
+    <section>
+      <div class="hero">
+        <img class="page-hero__image" src="{{ post.meta('hero_image')}}" alt="{{ post.title }}">
+        <div class="logo">
+          <img src="{{ post.meta('hero_logo')}}" alt="{{ post.title }}"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="startchange">
+      <h2 class="title">{{ post.title }}</h2>
+      <p class="copy">"{{ post.meta('hero_content')}}"</p>
+      {% if post.meta('slider_home_page')%}
+        <div class="home-slider">
+          {% for item in post.meta('slider_home_page') %}
+            <div class="slick-container">
+              <img src="{{ item.slider_image }}" width="900"  alt="{{ item.slider_name }}" >
+              <p>{{ item.slider_name }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </section>
+
+    <section>
+      <h2 class="title">{{ post.meta('about_title') }}</h2>
+      <p class="copy">{{ post.meta('about_content') }}</p>
+    </section>
+
+    <section>
+      <h2 class="title">Featured</h2>
+      <a class="featured_link" href="/projects"> View Projects</a>
+      {% if projects %}
+        {% include 'partial/featured-projects.twig'%}
+      {% else %}
+        {% include 'partial/not-projects-found.twig'%}
+      {% endif %}
+    </section>
+
+  {% endif %}
+
+{% endblock %}

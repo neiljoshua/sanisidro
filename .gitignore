@@ -1,15 +1,22 @@
-.DS_Store
-#sass files
-/wp-content/themes/sanisidro/.sass-cache
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
 
-#module control
-/wp-content/themes/sanisidro/node_modules
-/wp-content/themes/sanisidro/npm_log
-npm-debug.log
+# WordPress
+web/wp
+web/.htaccess
 
-#Git flow
-gitflow-installer.sh
-gitflow/
+# Dotenv
+.env
+.env.*
+!.env.example
 
-# Config
-/wp-content/themes/sanisidro/src/inc/config.php
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml

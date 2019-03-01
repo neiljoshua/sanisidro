@@ -1,0 +1,11 @@
+<ul class="project-gallery">
+  {% for post in projects %}
+    <li class="gallery-image" data-state="{{ post.state }}" data-city="{{ post.city }}" >
+      <a href="{{ post.link }}{{ post.slug }}">
+        <img class="lazy" data-original="{{ post.meta('project_image')}}" alt="{{ post.project_description}}" >
+      </a>
+      <p> {{ post.title }} </p>
+    </li>
+  {% endfor %}
+</ul>
+

@@ -1,0 +1,1362 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'jquery-lazyload' ]
+2 info using npm@3.10.8
+3 info using node@v6.4.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData jquery-lazyload
+8 silly fetchNamedPackageData jquery-lazyload
+9 silly mapToRegistry name jquery-lazyload
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'jquery-lazyload',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'jquery-lazyload',
+12 silly mapToRegistry   name: 'jquery-lazyload',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/jquery-lazyload
+14 verbose request uri https://registry.npmjs.org/jquery-lazyload
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 9:42:51 PM
+17 verbose request id 01b7e31609f68195
+18 verbose etag W/"58b6d258-23f0"
+19 verbose lastModified Wed, 01 Mar 2017 13:53:28 GMT
+20 http request GET https://registry.npmjs.org/jquery-lazyload
+21 http 304 https://registry.npmjs.org/jquery-lazyload
+22 verbose headers { date: 'Wed, 12 Apr 2017 01:42:51 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   etag: 'W/"58b6d258-23f0"',
+22 verbose headers   age: '0',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-jfk8133-JFK',
+22 verbose headers   'x-cache': 'MISS',
+22 verbose headers   'x-cache-hits': '0',
+22 verbose headers   'x-timer': 'S1491961372.775457,VS0,VE8',
+22 verbose headers   vary: 'Accept-Encoding' }
+23 silly get cb [ 304,
+23 silly get   { date: 'Wed, 12 Apr 2017 01:42:51 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: 'W/"58b6d258-23f0"',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-jfk8133-JFK',
+23 silly get     'x-cache': 'MISS',
+23 silly get     'x-cache-hits': '0',
+23 silly get     'x-timer': 'S1491961372.775457,VS0,VE8',
+23 silly get     vary: 'Accept-Encoding' } ]
+24 verbose etag https://registry.npmjs.org/jquery-lazyload from cache
+25 verbose get saving jquery-lazyload to /Users/neiljoshua/.npm/registry.npmjs.org/jquery-lazyload/.cache.json
+26 verbose correctMkdir /Users/neiljoshua/.npm correctMkdir not in flight; initializing
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule jquery-lazyload@1.9.7 checking installable status
+40 silly cache add args [ 'jquery-lazyload', null ]
+41 verbose cache add spec jquery-lazyload
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: 'jquery-lazyload',
+42 silly cache add   scope: null,
+42 silly cache add   escapedName: 'jquery-lazyload',
+42 silly cache add   name: 'jquery-lazyload',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed jquery-lazyload@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for jquery-lazyload
+45 info addNameTag [ 'jquery-lazyload', 'latest' ]
+46 silly mapToRegistry name jquery-lazyload
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data Result {
+49 silly mapToRegistry   raw: 'jquery-lazyload',
+49 silly mapToRegistry   scope: null,
+49 silly mapToRegistry   escapedName: 'jquery-lazyload',
+49 silly mapToRegistry   name: 'jquery-lazyload',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/jquery-lazyload
+51 verbose addNameTag registry:https://registry.npmjs.org/jquery-lazyload not in flight; fetching
+52 verbose get https://registry.npmjs.org/jquery-lazyload not expired, no request
+53 silly addNameTag next cb for jquery-lazyload with tag latest
+54 silly addNamed jquery-lazyload@1.9.7
+55 verbose addNamed "1.9.7" is a plain semver version for jquery-lazyload
+56 silly cache afterAdd jquery-lazyload@1.9.7
+57 verbose afterAdd /Users/neiljoshua/.npm/jquery-lazyload/1.9.7/package/package.json not in flight; writing
+58 verbose correctMkdir /Users/neiljoshua/.npm correctMkdir not in flight; initializing
+59 verbose afterAdd /Users/neiljoshua/.npm/jquery-lazyload/1.9.7/package/package.json written
+60 silly loadAllDepsIntoIdealTree Finishing
+61 silly loadIdealTree Finishing
+62 silly currentTree sanisdro@1.0.0
+62 silly currentTree ├── abbrev
+62 silly currentTree ├── ansi-regex
+62 silly currentTree ├── ansi-styles
+62 silly currentTree ├── argparse
+62 silly currentTree ├── array-find-index
+62 silly currentTree ├── array-uniq
+62 silly currentTree ├── async
+62 silly currentTree ├── balanced-match
+62 silly currentTree ├── bin-version
+62 silly currentTree ├─┬ bin-version-check
+62 silly currentTree │ └── semver
+62 silly currentTree ├─┬ body-parser
+62 silly currentTree │ ├── iconv-lite
+62 silly currentTree │ └── qs
+62 silly currentTree ├── brace-expansion
+62 silly currentTree ├── builtin-modules
+62 silly currentTree ├── bytes
+62 silly currentTree ├── camelcase
+62 silly currentTree ├── camelcase-keys
+62 silly currentTree ├── chalk
+62 silly currentTree ├── coffee-script
+62 silly currentTree ├── colors
+62 silly currentTree ├── concat-map
+62 silly currentTree ├── content-type
+62 silly currentTree ├── cross-spawn
+62 silly currentTree ├── currently-unhandled
+62 silly currentTree ├── dargs
+62 silly currentTree ├── dateformat
+62 silly currentTree ├── debug
+62 silly currentTree ├── decamelize
+62 silly currentTree ├── depd
+62 silly currentTree ├── ee-first
+62 silly currentTree ├── error-ex
+62 silly currentTree ├── escape-string-regexp
+62 silly currentTree ├── esprima
+62 silly currentTree ├── eventemitter2
+62 silly currentTree ├── exit
+62 silly currentTree ├── faye-websocket
+62 silly currentTree ├── find-up
+62 silly currentTree ├── find-versions
+62 silly currentTree ├─┬ findup-sync
+62 silly currentTree │ └── glob
+62 silly currentTree ├── fs.realpath
+62 silly currentTree ├── gaze
+62 silly currentTree ├── get-stdin
+62 silly currentTree ├── getobject
+62 silly currentTree ├── glob
+62 silly currentTree ├─┬ globule
+62 silly currentTree │ ├── glob
+62 silly currentTree │ └── lodash
+62 silly currentTree ├── graceful-fs
+62 silly currentTree ├─┬ grunt-contrib-compass@1.1.1
+62 silly currentTree │ ├── array-find-index@1.0.2
+62 silly currentTree │ ├── array-uniq@1.0.3
+62 silly currentTree │ ├── async@1.5.2
+62 silly currentTree │ ├── bin-version-check@2.1.0
+62 silly currentTree │ ├── bin-version@1.0.4
+62 silly currentTree │ ├── builtin-modules@1.1.1
+62 silly currentTree │ ├── camelcase-keys@2.1.0
+62 silly currentTree │ ├── camelcase@2.1.1
+62 silly currentTree │ ├── currently-unhandled@0.4.1
+62 silly currentTree │ ├── dargs@2.1.0
+62 silly currentTree │ ├── decamelize@1.2.0
+62 silly currentTree │ ├── error-ex@1.3.1
+62 silly currentTree │ ├── find-up@1.1.2
+62 silly currentTree │ ├── find-versions@1.2.1
+62 silly currentTree │ ├── get-stdin@4.0.1
+62 silly currentTree │ ├── graceful-fs@4.1.11
+62 silly currentTree │ ├── hosted-git-info@2.2.0
+62 silly currentTree │ ├── indent-string@2.1.0
+62 silly currentTree │ ├── is-arrayish@0.2.1
+62 silly currentTree │ ├── is-builtin-module@1.0.0
+62 silly currentTree │ ├── is-finite@1.0.2
+62 silly currentTree │ ├── is-utf8@0.2.1
+62 silly currentTree │ ├── isexe@1.1.2
+62 silly currentTree │ ├── load-json-file@1.1.0
+62 silly currentTree │ ├── loud-rejection@1.6.0
+62 silly currentTree │ ├── map-obj@1.0.1
+62 silly currentTree │ ├── meow@3.7.0
+62 silly currentTree │ ├── minimist@1.2.0
+62 silly currentTree │ ├── normalize-package-data@2.3.6
+62 silly currentTree │ ├── number-is-nan@1.0.1
+62 silly currentTree │ ├── object-assign@4.1.1
+62 silly currentTree │ ├── onetime@1.1.0
+62 silly currentTree │ ├── os-tmpdir@1.0.2
+62 silly currentTree │ ├── parse-json@2.2.0
+62 silly currentTree │ ├── path-exists@2.1.0
+62 silly currentTree │ ├── path-type@1.1.0
+62 silly currentTree │ ├── pify@2.3.0
+62 silly currentTree │ ├── pinkie-promise@2.0.1
+62 silly currentTree │ ├── pinkie@2.0.4
+62 silly currentTree │ ├── read-pkg-up@1.0.1
+62 silly currentTree │ ├── read-pkg@1.1.0
+62 silly currentTree │ ├── redent@1.0.0
+62 silly currentTree │ ├── repeating@2.0.1
+62 silly currentTree │ ├── semver-regex@1.0.0
+62 silly currentTree │ ├─┬ semver-truncate@1.1.2
+62 silly currentTree │ │ └── semver@5.3.0
+62 silly currentTree │ ├── semver@4.3.6
+62 silly currentTree │ ├── signal-exit@3.0.2
+62 silly currentTree │ ├── spdx-correct@1.0.2
+62 silly currentTree │ ├── spdx-expression-parse@1.0.4
+62 silly currentTree │ ├── spdx-license-ids@1.2.2
+62 silly currentTree │ ├── strip-bom@2.0.0
+62 silly currentTree │ ├── strip-indent@1.0.1
+62 silly currentTree │ ├── tmp@0.0.28
+62 silly currentTree │ ├── trim-newlines@1.0.0
+62 silly currentTree │ ├── validate-npm-package-license@3.0.1
+62 silly currentTree │ └── which@1.2.12
+62 silly currentTree ├─┬ grunt-contrib-sass@1.0.0
+62 silly currentTree │ ├── ansi-regex@2.1.1
+62 silly currentTree │ ├── ansi-styles@2.2.1
+62 silly currentTree │ ├── async@0.9.2
+62 silly currentTree │ ├── chalk@1.1.3
+62 silly currentTree │ ├── cross-spawn@0.2.9
+62 silly currentTree │ ├── dargs@4.1.0
+62 silly currentTree │ ├── escape-string-regexp@1.0.5
+62 silly currentTree │ ├── has-ansi@2.0.0
+62 silly currentTree │ ├── isexe@1.1.2
+62 silly currentTree │ ├── lru-cache@2.7.3
+62 silly currentTree │ ├── number-is-nan@1.0.1
+62 silly currentTree │ ├── strip-ansi@3.0.1
+62 silly currentTree │ ├── supports-color@2.0.0
+62 silly currentTree │ └── which@1.2.12
+62 silly currentTree ├─┬ grunt-contrib-watch@1.0.0
+62 silly currentTree │ ├── async@1.5.2
+62 silly currentTree │ ├── balanced-match@0.4.2
+62 silly currentTree │ ├─┬ body-parser@1.14.2
+62 silly currentTree │ │ └── qs@5.2.0
+62 silly currentTree │ ├── brace-expansion@1.1.6
+62 silly currentTree │ ├── bytes@2.2.0
+62 silly currentTree │ ├── concat-map@0.0.1
+62 silly currentTree │ ├── content-type@1.0.2
+62 silly currentTree │ ├── debug@2.2.0
+62 silly currentTree │ ├── depd@1.1.0
+62 silly currentTree │ ├── ee-first@1.1.1
+62 silly currentTree │ ├── faye-websocket@0.10.0
+62 silly currentTree │ ├── fs.realpath@1.0.0
+62 silly currentTree │ ├── gaze@1.1.2
+62 silly currentTree │ ├── glob@7.1.1
+62 silly currentTree │ ├─┬ globule@1.1.0
+62 silly currentTree │ │ └── lodash@4.16.6
+62 silly currentTree │ ├── http-errors@1.3.1
+62 silly currentTree │ ├── iconv-lite@0.4.13
+62 silly currentTree │ ├── inflight@1.0.6
+62 silly currentTree │ ├── inherits@2.0.3
+62 silly currentTree │ ├── livereload-js@2.2.2
+62 silly currentTree │ ├── lodash@3.10.1
+62 silly currentTree │ ├── media-typer@0.3.0
+62 silly currentTree │ ├── mime-db@1.26.0
+62 silly currentTree │ ├── mime-types@2.1.14
+62 silly currentTree │ ├── minimatch@3.0.3
+62 silly currentTree │ ├── ms@0.7.1
+62 silly currentTree │ ├── on-finished@2.3.0
+62 silly currentTree │ ├── once@1.4.0
+62 silly currentTree │ ├── parseurl@1.3.1
+62 silly currentTree │ ├── path-is-absolute@1.0.1
+62 silly currentTree │ ├── qs@5.1.0
+62 silly currentTree │ ├─┬ raw-body@2.1.7
+62 silly currentTree │ │ └── bytes@2.4.0
+62 silly currentTree │ ├── statuses@1.3.1
+62 silly currentTree │ ├── tiny-lr@0.2.1
+62 silly currentTree │ ├── type-is@1.6.14
+62 silly currentTree │ ├── unpipe@1.0.0
+62 silly currentTree │ ├── websocket-driver@0.6.5
+62 silly currentTree │ ├── websocket-extensions@0.1.1
+62 silly currentTree │ └── wrappy@1.0.2
+62 silly currentTree ├── grunt-known-options
+62 silly currentTree ├── grunt-legacy-log
+62 silly currentTree ├─┬ grunt-legacy-log-utils
+62 silly currentTree │ └── lodash
+62 silly currentTree ├─┬ grunt-legacy-util
+62 silly currentTree │ └── lodash
+62 silly currentTree ├─┬ grunt@1.0.1
+62 silly currentTree │ ├── abbrev@1.1.0
+62 silly currentTree │ ├── ansi-regex@2.1.1
+62 silly currentTree │ ├── ansi-styles@2.2.1
+62 silly currentTree │ ├── argparse@1.0.9
+62 silly currentTree │ ├── array-find-index@1.0.2
+62 silly currentTree │ ├── async@1.5.2
+62 silly currentTree │ ├── balanced-match@0.4.2
+62 silly currentTree │ ├── brace-expansion@1.1.6
+62 silly currentTree │ ├── builtin-modules@1.1.1
+62 silly currentTree │ ├── camelcase-keys@2.1.0
+62 silly currentTree │ ├── camelcase@2.1.1
+62 silly currentTree │ ├── chalk@1.1.3
+62 silly currentTree │ ├── coffee-script@1.10.0
+62 silly currentTree │ ├── colors@1.1.2
+62 silly currentTree │ ├── concat-map@0.0.1
+62 silly currentTree │ ├── currently-unhandled@0.4.1
+62 silly currentTree │ ├── dateformat@1.0.12
+62 silly currentTree │ ├── decamelize@1.2.0
+62 silly currentTree │ ├── error-ex@1.3.1
+62 silly currentTree │ ├── escape-string-regexp@1.0.5
+62 silly currentTree │ ├── esprima@2.7.3
+62 silly currentTree │ ├── eventemitter2@0.4.14
+62 silly currentTree │ ├── exit@0.1.2
+62 silly currentTree │ ├── find-up@1.1.2
+62 silly currentTree │ ├─┬ findup-sync@0.3.0
+62 silly currentTree │ │ └── glob@5.0.15
+62 silly currentTree │ ├── fs.realpath@1.0.0
+62 silly currentTree │ ├── get-stdin@4.0.1
+62 silly currentTree │ ├── getobject@0.1.0
+62 silly currentTree │ ├── glob@7.0.6
+62 silly currentTree │ ├── graceful-fs@4.1.11
+62 silly currentTree │ ├── grunt-cli@1.2.0
+62 silly currentTree │ ├── grunt-known-options@1.1.0
+62 silly currentTree │ ├─┬ grunt-legacy-log-utils@1.0.0
+62 silly currentTree │ │ └── lodash@4.3.0
+62 silly currentTree │ ├── grunt-legacy-log@1.0.0
+62 silly currentTree │ ├─┬ grunt-legacy-util@1.0.0
+62 silly currentTree │ │ └── lodash@4.3.0
+62 silly currentTree │ ├── has-ansi@2.0.0
+62 silly currentTree │ ├── hooker@0.2.3
+62 silly currentTree │ ├── hosted-git-info@2.2.0
+62 silly currentTree │ ├── iconv-lite@0.4.15
+62 silly currentTree │ ├── indent-string@2.1.0
+62 silly currentTree │ ├── inflight@1.0.6
+62 silly currentTree │ ├── inherits@2.0.3
+62 silly currentTree │ ├── is-arrayish@0.2.1
+62 silly currentTree │ ├── is-builtin-module@1.0.0
+62 silly currentTree │ ├── is-finite@1.0.2
+62 silly currentTree │ ├── is-utf8@0.2.1
+62 silly currentTree │ ├── isexe@1.1.2
+62 silly currentTree │ ├── js-yaml@3.5.5
+62 silly currentTree │ ├── load-json-file@1.1.0
+62 silly currentTree │ ├── lodash@3.10.1
+62 silly currentTree │ ├── loud-rejection@1.6.0
+62 silly currentTree │ ├── map-obj@1.0.1
+62 silly currentTree │ ├── meow@3.7.0
+62 silly currentTree │ ├── minimatch@3.0.3
+62 silly currentTree │ ├── minimist@1.2.0
+62 silly currentTree │ ├── nopt@3.0.6
+62 silly currentTree │ ├── normalize-package-data@2.3.6
+62 silly currentTree │ ├── number-is-nan@1.0.1
+62 silly currentTree │ ├── object-assign@4.1.1
+62 silly currentTree │ ├── once@1.4.0
+62 silly currentTree │ ├── parse-json@2.2.0
+62 silly currentTree │ ├── path-exists@2.1.0
+62 silly currentTree │ ├── path-is-absolute@1.0.1
+62 silly currentTree │ ├── path-type@1.1.0
+62 silly currentTree │ ├── pify@2.3.0
+62 silly currentTree │ ├── pinkie-promise@2.0.1
+62 silly currentTree │ ├── pinkie@2.0.4
+62 silly currentTree │ ├── read-pkg-up@1.0.1
+62 silly currentTree │ ├── read-pkg@1.1.0
+62 silly currentTree │ ├── redent@1.0.0
+62 silly currentTree │ ├── repeating@2.0.1
+62 silly currentTree │ ├── resolve@1.1.7
+62 silly currentTree │ ├── rimraf@2.2.8
+62 silly currentTree │ ├── semver@5.3.0
+62 silly currentTree │ ├── signal-exit@3.0.2
+62 silly currentTree │ ├── spdx-correct@1.0.2
+62 silly currentTree │ ├── spdx-expression-parse@1.0.4
+62 silly currentTree │ ├── spdx-license-ids@1.2.2
+62 silly currentTree │ ├── sprintf-js@1.0.3
+62 silly currentTree │ ├── strip-ansi@3.0.1
+62 silly currentTree │ ├── strip-bom@2.0.0
+62 silly currentTree │ ├── strip-indent@1.0.1
+62 silly currentTree │ ├── supports-color@2.0.0
+62 silly currentTree │ ├── trim-newlines@1.0.0
+62 silly currentTree │ ├── underscore.string@3.2.3
+62 silly currentTree │ ├── validate-npm-package-license@3.0.1
+62 silly currentTree │ ├── which@1.2.12
+62 silly currentTree │ └── wrappy@1.0.2
+62 silly currentTree ├── has-ansi
+62 silly currentTree ├── hooker
+62 silly currentTree ├── hosted-git-info
+62 silly currentTree ├── http-errors
+62 silly currentTree ├── iconv-lite
+62 silly currentTree ├── indent-string
+62 silly currentTree ├── inflight
+62 silly currentTree ├── inherits
+62 silly currentTree ├── is-arrayish
+62 silly currentTree ├── is-builtin-module
+62 silly currentTree ├── is-finite
+62 silly currentTree ├── is-utf8
+62 silly currentTree ├── isexe
+62 silly currentTree ├── jquery-lazyload@1.9.7
+62 silly currentTree ├── js-yaml
+62 silly currentTree ├── livereload-js
+62 silly currentTree ├── load-json-file
+62 silly currentTree ├── lodash
+62 silly currentTree ├── loud-rejection
+62 silly currentTree ├── lru-cache
+62 silly currentTree ├── map-obj
+62 silly currentTree ├── media-typer
+62 silly currentTree ├── meow
+62 silly currentTree ├── mime-db
+62 silly currentTree ├── mime-types
+62 silly currentTree ├── minimatch
+62 silly currentTree ├── minimist
+62 silly currentTree ├── ms
+62 silly currentTree ├── nopt
+62 silly currentTree ├── normalize-package-data
+62 silly currentTree ├── number-is-nan
+62 silly currentTree ├── object-assign
+62 silly currentTree ├── on-finished
+62 silly currentTree ├── once
+62 silly currentTree ├── onetime
+62 silly currentTree ├── os-tmpdir
+62 silly currentTree ├── parse-json
+62 silly currentTree ├── parseurl
+62 silly currentTree ├── path-exists
+62 silly currentTree ├── path-is-absolute
+62 silly currentTree ├── path-type
+62 silly currentTree ├── pify
+62 silly currentTree ├── pinkie
+62 silly currentTree ├── pinkie-promise
+62 silly currentTree ├── qs
+62 silly currentTree ├─┬ raw-body
+62 silly currentTree │ ├── bytes
+62 silly currentTree │ └── iconv-lite
+62 silly currentTree ├── read-pkg
+62 silly currentTree ├── read-pkg-up
+62 silly currentTree ├── redent
+62 silly currentTree ├── repeating
+62 silly currentTree ├── resolve
+62 silly currentTree ├── rimraf
+62 silly currentTree ├── semver
+62 silly currentTree ├── semver-regex
+62 silly currentTree ├── semver-truncate
+62 silly currentTree ├── signal-exit
+62 silly currentTree ├── spdx-correct
+62 silly currentTree ├── spdx-expression-parse
+62 silly currentTree ├── spdx-license-ids
+62 silly currentTree ├── sprintf-js
+62 silly currentTree ├── statuses
+62 silly currentTree ├── strip-ansi
+62 silly currentTree ├── strip-bom
+62 silly currentTree ├── strip-indent
+62 silly currentTree ├── supports-color
+62 silly currentTree ├── tiny-lr
+62 silly currentTree ├── tmp
+62 silly currentTree ├── trim-newlines
+62 silly currentTree ├── type-is
+62 silly currentTree ├── underscore.string
+62 silly currentTree ├── unpipe
+62 silly currentTree ├── validate-npm-package-license
+62 silly currentTree ├── websocket-driver
+62 silly currentTree ├── websocket-extensions
+62 silly currentTree ├── which
+62 silly currentTree └── wrappy
+63 silly idealTree sanisdro@1.0.0
+63 silly idealTree ├── abbrev
+63 silly idealTree ├── ansi-regex
+63 silly idealTree ├── ansi-styles
+63 silly idealTree ├── argparse
+63 silly idealTree ├── array-find-index
+63 silly idealTree ├── array-uniq
+63 silly idealTree ├── async
+63 silly idealTree ├── balanced-match
+63 silly idealTree ├── bin-version
+63 silly idealTree ├─┬ bin-version-check
+63 silly idealTree │ └── semver
+63 silly idealTree ├─┬ body-parser
+63 silly idealTree │ ├── iconv-lite
+63 silly idealTree │ └── qs
+63 silly idealTree ├── brace-expansion
+63 silly idealTree ├── builtin-modules
+63 silly idealTree ├── bytes
+63 silly idealTree ├── camelcase
+63 silly idealTree ├── camelcase-keys
+63 silly idealTree ├── chalk
+63 silly idealTree ├── coffee-script
+63 silly idealTree ├── colors
+63 silly idealTree ├── concat-map
+63 silly idealTree ├── content-type
+63 silly idealTree ├── cross-spawn
+63 silly idealTree ├── currently-unhandled
+63 silly idealTree ├── dargs
+63 silly idealTree ├── dateformat
+63 silly idealTree ├── debug
+63 silly idealTree ├── decamelize
+63 silly idealTree ├── depd
+63 silly idealTree ├── ee-first
+63 silly idealTree ├── error-ex
+63 silly idealTree ├── escape-string-regexp
+63 silly idealTree ├── esprima
+63 silly idealTree ├── eventemitter2
+63 silly idealTree ├── exit
+63 silly idealTree ├── faye-websocket
+63 silly idealTree ├── find-up
+63 silly idealTree ├── find-versions
+63 silly idealTree ├─┬ findup-sync
+63 silly idealTree │ └── glob
+63 silly idealTree ├── fs.realpath
+63 silly idealTree ├── gaze
+63 silly idealTree ├── get-stdin
+63 silly idealTree ├── getobject
+63 silly idealTree ├── glob
+63 silly idealTree ├─┬ globule
+63 silly idealTree │ ├── glob
+63 silly idealTree │ └── lodash
+63 silly idealTree ├── graceful-fs
+63 silly idealTree ├─┬ grunt-contrib-compass@1.1.1
+63 silly idealTree │ ├── array-find-index@1.0.2
+63 silly idealTree │ ├── array-uniq@1.0.3
+63 silly idealTree │ ├── async@1.5.2
+63 silly idealTree │ ├── bin-version-check@2.1.0
+63 silly idealTree │ ├── bin-version@1.0.4
+63 silly idealTree │ ├── builtin-modules@1.1.1
+63 silly idealTree │ ├── camelcase-keys@2.1.0
+63 silly idealTree │ ├── camelcase@2.1.1
+63 silly idealTree │ ├── currently-unhandled@0.4.1
+63 silly idealTree │ ├── dargs@2.1.0
+63 silly idealTree │ ├── decamelize@1.2.0
+63 silly idealTree │ ├── error-ex@1.3.1
+63 silly idealTree │ ├── find-up@1.1.2
+63 silly idealTree │ ├── find-versions@1.2.1
+63 silly idealTree │ ├── get-stdin@4.0.1
+63 silly idealTree │ ├── graceful-fs@4.1.11
+63 silly idealTree │ ├── hosted-git-info@2.2.0
+63 silly idealTree │ ├── indent-string@2.1.0
+63 silly idealTree │ ├── is-arrayish@0.2.1
+63 silly idealTree │ ├── is-builtin-module@1.0.0
+63 silly idealTree │ ├── is-finite@1.0.2
+63 silly idealTree │ ├── is-utf8@0.2.1
+63 silly idealTree │ ├── isexe@1.1.2
+63 silly idealTree │ ├── load-json-file@1.1.0
+63 silly idealTree │ ├── loud-rejection@1.6.0
+63 silly idealTree │ ├── map-obj@1.0.1
+63 silly idealTree │ ├── meow@3.7.0
+63 silly idealTree │ ├── minimist@1.2.0
+63 silly idealTree │ ├── normalize-package-data@2.3.6
+63 silly idealTree │ ├── number-is-nan@1.0.1
+63 silly idealTree │ ├── object-assign@4.1.1
+63 silly idealTree │ ├── onetime@1.1.0
+63 silly idealTree │ ├── os-tmpdir@1.0.2
+63 silly idealTree │ ├── parse-json@2.2.0
+63 silly idealTree │ ├── path-exists@2.1.0
+63 silly idealTree │ ├── path-type@1.1.0
+63 silly idealTree │ ├── pify@2.3.0
+63 silly idealTree │ ├── pinkie-promise@2.0.1
+63 silly idealTree │ ├── pinkie@2.0.4
+63 silly idealTree │ ├── read-pkg-up@1.0.1
+63 silly idealTree │ ├── read-pkg@1.1.0
+63 silly idealTree │ ├── redent@1.0.0
+63 silly idealTree │ ├── repeating@2.0.1
+63 silly idealTree │ ├── semver-regex@1.0.0
+63 silly idealTree │ ├─┬ semver-truncate@1.1.2
+63 silly idealTree │ │ └── semver@5.3.0
+63 silly idealTree │ ├── semver@4.3.6
+63 silly idealTree │ ├── signal-exit@3.0.2
+63 silly idealTree │ ├── spdx-correct@1.0.2
+63 silly idealTree │ ├── spdx-expression-parse@1.0.4
+63 silly idealTree │ ├── spdx-license-ids@1.2.2
+63 silly idealTree │ ├── strip-bom@2.0.0
+63 silly idealTree │ ├── strip-indent@1.0.1
+63 silly idealTree │ ├── tmp@0.0.28
+63 silly idealTree │ ├── trim-newlines@1.0.0
+63 silly idealTree │ ├── validate-npm-package-license@3.0.1
+63 silly idealTree │ └── which@1.2.12
+63 silly idealTree ├─┬ grunt-contrib-sass@1.0.0
+63 silly idealTree │ ├── ansi-regex@2.1.1
+63 silly idealTree │ ├── ansi-styles@2.2.1
+63 silly idealTree │ ├── async@0.9.2
+63 silly idealTree │ ├── chalk@1.1.3
+63 silly idealTree │ ├── cross-spawn@0.2.9
+63 silly idealTree │ ├── dargs@4.1.0
+63 silly idealTree │ ├── escape-string-regexp@1.0.5
+63 silly idealTree │ ├── has-ansi@2.0.0
+63 silly idealTree │ ├── isexe@1.1.2
+63 silly idealTree │ ├── lru-cache@2.7.3
+63 silly idealTree │ ├── number-is-nan@1.0.1
+63 silly idealTree │ ├── strip-ansi@3.0.1
+63 silly idealTree │ ├── supports-color@2.0.0
+63 silly idealTree │ └── which@1.2.12
+63 silly idealTree ├─┬ grunt-contrib-watch@1.0.0
+63 silly idealTree │ ├── async@1.5.2
+63 silly idealTree │ ├── balanced-match@0.4.2
+63 silly idealTree │ ├─┬ body-parser@1.14.2
+63 silly idealTree │ │ └── qs@5.2.0
+63 silly idealTree │ ├── brace-expansion@1.1.6
+63 silly idealTree │ ├── bytes@2.2.0
+63 silly idealTree │ ├── concat-map@0.0.1
+63 silly idealTree │ ├── content-type@1.0.2
+63 silly idealTree │ ├── debug@2.2.0
+63 silly idealTree │ ├── depd@1.1.0
+63 silly idealTree │ ├── ee-first@1.1.1
+63 silly idealTree │ ├── faye-websocket@0.10.0
+63 silly idealTree │ ├── fs.realpath@1.0.0
+63 silly idealTree │ ├── gaze@1.1.2
+63 silly idealTree │ ├── glob@7.1.1
+63 silly idealTree │ ├─┬ globule@1.1.0
+63 silly idealTree │ │ └── lodash@4.16.6
+63 silly idealTree │ ├── http-errors@1.3.1
+63 silly idealTree │ ├── iconv-lite@0.4.13
+63 silly idealTree │ ├── inflight@1.0.6
+63 silly idealTree │ ├── inherits@2.0.3
+63 silly idealTree │ ├── livereload-js@2.2.2
+63 silly idealTree │ ├── lodash@3.10.1
+63 silly idealTree │ ├── media-typer@0.3.0
+63 silly idealTree │ ├── mime-db@1.26.0
+63 silly idealTree │ ├── mime-types@2.1.14
+63 silly idealTree │ ├── minimatch@3.0.3
+63 silly idealTree │ ├── ms@0.7.1
+63 silly idealTree │ ├── on-finished@2.3.0
+63 silly idealTree │ ├── once@1.4.0
+63 silly idealTree │ ├── parseurl@1.3.1
+63 silly idealTree │ ├── path-is-absolute@1.0.1
+63 silly idealTree │ ├── qs@5.1.0
+63 silly idealTree │ ├─┬ raw-body@2.1.7
+63 silly idealTree │ │ └── bytes@2.4.0
+63 silly idealTree │ ├── statuses@1.3.1
+63 silly idealTree │ ├── tiny-lr@0.2.1
+63 silly idealTree │ ├── type-is@1.6.14
+63 silly idealTree │ ├── unpipe@1.0.0
+63 silly idealTree │ ├── websocket-driver@0.6.5
+63 silly idealTree │ ├── websocket-extensions@0.1.1
+63 silly idealTree │ └── wrappy@1.0.2
+63 silly idealTree ├── grunt-known-options
+63 silly idealTree ├── grunt-legacy-log
+63 silly idealTree ├─┬ grunt-legacy-log-utils
+63 silly idealTree │ └── lodash
+63 silly idealTree ├─┬ grunt-legacy-util
+63 silly idealTree │ └── lodash
+63 silly idealTree ├─┬ grunt@1.0.1
+63 silly idealTree │ ├── abbrev@1.1.0
+63 silly idealTree │ ├── ansi-regex@2.1.1
+63 silly idealTree │ ├── ansi-styles@2.2.1
+63 silly idealTree │ ├── argparse@1.0.9
+63 silly idealTree │ ├── array-find-index@1.0.2
+63 silly idealTree │ ├── async@1.5.2
+63 silly idealTree │ ├── balanced-match@0.4.2
+63 silly idealTree │ ├── brace-expansion@1.1.6
+63 silly idealTree │ ├── builtin-modules@1.1.1
+63 silly idealTree │ ├── camelcase-keys@2.1.0
+63 silly idealTree │ ├── camelcase@2.1.1
+63 silly idealTree │ ├── chalk@1.1.3
+63 silly idealTree │ ├── coffee-script@1.10.0
+63 silly idealTree │ ├── colors@1.1.2
+63 silly idealTree │ ├── concat-map@0.0.1
+63 silly idealTree │ ├── currently-unhandled@0.4.1
+63 silly idealTree │ ├── dateformat@1.0.12
+63 silly idealTree │ ├── decamelize@1.2.0
+63 silly idealTree │ ├── error-ex@1.3.1
+63 silly idealTree │ ├── escape-string-regexp@1.0.5
+63 silly idealTree │ ├── esprima@2.7.3
+63 silly idealTree │ ├── eventemitter2@0.4.14
+63 silly idealTree │ ├── exit@0.1.2
+63 silly idealTree │ ├── find-up@1.1.2
+63 silly idealTree │ ├─┬ findup-sync@0.3.0
+63 silly idealTree │ │ └── glob@5.0.15
+63 silly idealTree │ ├── fs.realpath@1.0.0
+63 silly idealTree │ ├── get-stdin@4.0.1
+63 silly idealTree │ ├── getobject@0.1.0
+63 silly idealTree │ ├── glob@7.0.6
+63 silly idealTree │ ├── graceful-fs@4.1.11
+63 silly idealTree │ ├── grunt-cli@1.2.0
+63 silly idealTree │ ├── grunt-known-options@1.1.0
+63 silly idealTree │ ├─┬ grunt-legacy-log-utils@1.0.0
+63 silly idealTree │ │ └── lodash@4.3.0
+63 silly idealTree │ ├── grunt-legacy-log@1.0.0
+63 silly idealTree │ ├─┬ grunt-legacy-util@1.0.0
+63 silly idealTree │ │ └── lodash@4.3.0
+63 silly idealTree │ ├── has-ansi@2.0.0
+63 silly idealTree │ ├── hooker@0.2.3
+63 silly idealTree │ ├── hosted-git-info@2.2.0
+63 silly idealTree │ ├── iconv-lite@0.4.15
+63 silly idealTree │ ├── indent-string@2.1.0
+63 silly idealTree │ ├── inflight@1.0.6
+63 silly idealTree │ ├── inherits@2.0.3
+63 silly idealTree │ ├── is-arrayish@0.2.1
+63 silly idealTree │ ├── is-builtin-module@1.0.0
+63 silly idealTree │ ├── is-finite@1.0.2
+63 silly idealTree │ ├── is-utf8@0.2.1
+63 silly idealTree │ ├── isexe@1.1.2
+63 silly idealTree │ ├── js-yaml@3.5.5
+63 silly idealTree │ ├── load-json-file@1.1.0
+63 silly idealTree │ ├── lodash@3.10.1
+63 silly idealTree │ ├── loud-rejection@1.6.0
+63 silly idealTree │ ├── map-obj@1.0.1
+63 silly idealTree │ ├── meow@3.7.0
+63 silly idealTree │ ├── minimatch@3.0.3
+63 silly idealTree │ ├── minimist@1.2.0
+63 silly idealTree │ ├── nopt@3.0.6
+63 silly idealTree │ ├── normalize-package-data@2.3.6
+63 silly idealTree │ ├── number-is-nan@1.0.1
+63 silly idealTree │ ├── object-assign@4.1.1
+63 silly idealTree │ ├── once@1.4.0
+63 silly idealTree │ ├── parse-json@2.2.0
+63 silly idealTree │ ├── path-exists@2.1.0
+63 silly idealTree │ ├── path-is-absolute@1.0.1
+63 silly idealTree │ ├── path-type@1.1.0
+63 silly idealTree │ ├── pify@2.3.0
+63 silly idealTree │ ├── pinkie-promise@2.0.1
+63 silly idealTree │ ├── pinkie@2.0.4
+63 silly idealTree │ ├── read-pkg-up@1.0.1
+63 silly idealTree │ ├── read-pkg@1.1.0
+63 silly idealTree │ ├── redent@1.0.0
+63 silly idealTree │ ├── repeating@2.0.1
+63 silly idealTree │ ├── resolve@1.1.7
+63 silly idealTree │ ├── rimraf@2.2.8
+63 silly idealTree │ ├── semver@5.3.0
+63 silly idealTree │ ├── signal-exit@3.0.2
+63 silly idealTree │ ├── spdx-correct@1.0.2
+63 silly idealTree │ ├── spdx-expression-parse@1.0.4
+63 silly idealTree │ ├── spdx-license-ids@1.2.2
+63 silly idealTree │ ├── sprintf-js@1.0.3
+63 silly idealTree │ ├── strip-ansi@3.0.1
+63 silly idealTree │ ├── strip-bom@2.0.0
+63 silly idealTree │ ├── strip-indent@1.0.1
+63 silly idealTree │ ├── supports-color@2.0.0
+63 silly idealTree │ ├── trim-newlines@1.0.0
+63 silly idealTree │ ├── underscore.string@3.2.3
+63 silly idealTree │ ├── validate-npm-package-license@3.0.1
+63 silly idealTree │ ├── which@1.2.12
+63 silly idealTree │ └── wrappy@1.0.2
+63 silly idealTree ├── has-ansi
+63 silly idealTree ├── hooker
+63 silly idealTree ├── hosted-git-info
+63 silly idealTree ├── http-errors
+63 silly idealTree ├── iconv-lite
+63 silly idealTree ├── indent-string
+63 silly idealTree ├── inflight
+63 silly idealTree ├── inherits
+63 silly idealTree ├── is-arrayish
+63 silly idealTree ├── is-builtin-module
+63 silly idealTree ├── is-finite
+63 silly idealTree ├── is-utf8
+63 silly idealTree ├── isexe
+63 silly idealTree ├── jquery-lazyload@1.9.7
+63 silly idealTree ├── js-yaml
+63 silly idealTree ├── livereload-js
+63 silly idealTree ├── load-json-file
+63 silly idealTree ├── lodash
+63 silly idealTree ├── loud-rejection
+63 silly idealTree ├── lru-cache
+63 silly idealTree ├── map-obj
+63 silly idealTree ├── media-typer
+63 silly idealTree ├── meow
+63 silly idealTree ├── mime-db
+63 silly idealTree ├── mime-types
+63 silly idealTree ├── minimatch
+63 silly idealTree ├── minimist
+63 silly idealTree ├── ms
+63 silly idealTree ├── nopt
+63 silly idealTree ├── normalize-package-data
+63 silly idealTree ├── number-is-nan
+63 silly idealTree ├── object-assign
+63 silly idealTree ├── on-finished
+63 silly idealTree ├── once
+63 silly idealTree ├── onetime
+63 silly idealTree ├── os-tmpdir
+63 silly idealTree ├── parse-json
+63 silly idealTree ├── parseurl
+63 silly idealTree ├── path-exists
+63 silly idealTree ├── path-is-absolute
+63 silly idealTree ├── path-type
+63 silly idealTree ├── pify
+63 silly idealTree ├── pinkie
+63 silly idealTree ├── pinkie-promise
+63 silly idealTree ├── qs
+63 silly idealTree ├─┬ raw-body
+63 silly idealTree │ ├── bytes
+63 silly idealTree │ └── iconv-lite
+63 silly idealTree ├── read-pkg
+63 silly idealTree ├── read-pkg-up
+63 silly idealTree ├── redent
+63 silly idealTree ├── repeating
+63 silly idealTree ├── resolve
+63 silly idealTree ├── rimraf
+63 silly idealTree ├── semver
+63 silly idealTree ├── semver-regex
+63 silly idealTree ├── semver-truncate
+63 silly idealTree ├── signal-exit
+63 silly idealTree ├── spdx-correct
+63 silly idealTree ├── spdx-expression-parse
+63 silly idealTree ├── spdx-license-ids
+63 silly idealTree ├── sprintf-js
+63 silly idealTree ├── statuses
+63 silly idealTree ├── strip-ansi
+63 silly idealTree ├── strip-bom
+63 silly idealTree ├── strip-indent
+63 silly idealTree ├── supports-color
+63 silly idealTree ├── tiny-lr
+63 silly idealTree ├── tmp
+63 silly idealTree ├── trim-newlines
+63 silly idealTree ├── type-is
+63 silly idealTree ├── underscore.string
+63 silly idealTree ├── unpipe
+63 silly idealTree ├── validate-npm-package-license
+63 silly idealTree ├── websocket-driver
+63 silly idealTree ├── websocket-extensions
+63 silly idealTree ├── which
+63 silly idealTree └── wrappy
+64 silly generateActionsToTake Starting
+65 silly install generateActionsToTake
+66 warn checkPermissions Missing write access to /Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules
+67 silly rollbackFailedOptional Starting
+68 silly rollbackFailedOptional Finishing
+69 silly runTopLevelLifecycles Finishing
+70 silly install printInstalled
+71 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/abbrev/package.json'
+72 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/abbrev/package.json'
+72 verbose enoent This is most likely not a problem with npm itself
+72 verbose enoent and is related to npm not being able to find a file.
+73 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/ansi-styles/package.json'
+74 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/ansi-styles/package.json'
+74 verbose enoent This is most likely not a problem with npm itself
+74 verbose enoent and is related to npm not being able to find a file.
+75 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/ansi-regex/package.json'
+76 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/ansi-regex/package.json'
+76 verbose enoent This is most likely not a problem with npm itself
+76 verbose enoent and is related to npm not being able to find a file.
+77 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/argparse/package.json'
+78 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/argparse/package.json'
+78 verbose enoent This is most likely not a problem with npm itself
+78 verbose enoent and is related to npm not being able to find a file.
+79 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/array-find-index/package.json'
+80 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/array-find-index/package.json'
+80 verbose enoent This is most likely not a problem with npm itself
+80 verbose enoent and is related to npm not being able to find a file.
+81 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/array-uniq/package.json'
+82 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/array-uniq/package.json'
+82 verbose enoent This is most likely not a problem with npm itself
+82 verbose enoent and is related to npm not being able to find a file.
+83 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/async/package.json'
+84 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/async/package.json'
+84 verbose enoent This is most likely not a problem with npm itself
+84 verbose enoent and is related to npm not being able to find a file.
+85 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/bin-version/package.json'
+86 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/bin-version/package.json'
+86 verbose enoent This is most likely not a problem with npm itself
+86 verbose enoent and is related to npm not being able to find a file.
+87 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/balanced-match/package.json'
+88 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/balanced-match/package.json'
+88 verbose enoent This is most likely not a problem with npm itself
+88 verbose enoent and is related to npm not being able to find a file.
+89 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/bin-version-check/package.json'
+90 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/bin-version-check/package.json'
+90 verbose enoent This is most likely not a problem with npm itself
+90 verbose enoent and is related to npm not being able to find a file.
+91 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/body-parser/package.json'
+92 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/body-parser/package.json'
+92 verbose enoent This is most likely not a problem with npm itself
+92 verbose enoent and is related to npm not being able to find a file.
+93 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/brace-expansion/package.json'
+94 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/brace-expansion/package.json'
+94 verbose enoent This is most likely not a problem with npm itself
+94 verbose enoent and is related to npm not being able to find a file.
+95 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/builtin-modules/package.json'
+96 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/builtin-modules/package.json'
+96 verbose enoent This is most likely not a problem with npm itself
+96 verbose enoent and is related to npm not being able to find a file.
+97 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/bytes/package.json'
+98 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/bytes/package.json'
+98 verbose enoent This is most likely not a problem with npm itself
+98 verbose enoent and is related to npm not being able to find a file.
+99 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/camelcase/package.json'
+100 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/camelcase/package.json'
+100 verbose enoent This is most likely not a problem with npm itself
+100 verbose enoent and is related to npm not being able to find a file.
+101 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/camelcase-keys/package.json'
+102 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/camelcase-keys/package.json'
+102 verbose enoent This is most likely not a problem with npm itself
+102 verbose enoent and is related to npm not being able to find a file.
+103 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/coffee-script/package.json'
+104 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/coffee-script/package.json'
+104 verbose enoent This is most likely not a problem with npm itself
+104 verbose enoent and is related to npm not being able to find a file.
+105 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/chalk/package.json'
+106 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/chalk/package.json'
+106 verbose enoent This is most likely not a problem with npm itself
+106 verbose enoent and is related to npm not being able to find a file.
+107 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/colors/package.json'
+108 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/colors/package.json'
+108 verbose enoent This is most likely not a problem with npm itself
+108 verbose enoent and is related to npm not being able to find a file.
+109 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/concat-map/package.json'
+110 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/concat-map/package.json'
+110 verbose enoent This is most likely not a problem with npm itself
+110 verbose enoent and is related to npm not being able to find a file.
+111 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/content-type/package.json'
+112 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/content-type/package.json'
+112 verbose enoent This is most likely not a problem with npm itself
+112 verbose enoent and is related to npm not being able to find a file.
+113 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/cross-spawn/package.json'
+114 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/cross-spawn/package.json'
+114 verbose enoent This is most likely not a problem with npm itself
+114 verbose enoent and is related to npm not being able to find a file.
+115 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/currently-unhandled/package.json'
+116 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/currently-unhandled/package.json'
+116 verbose enoent This is most likely not a problem with npm itself
+116 verbose enoent and is related to npm not being able to find a file.
+117 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/dargs/package.json'
+118 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/dargs/package.json'
+118 verbose enoent This is most likely not a problem with npm itself
+118 verbose enoent and is related to npm not being able to find a file.
+119 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/dateformat/package.json'
+120 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/dateformat/package.json'
+120 verbose enoent This is most likely not a problem with npm itself
+120 verbose enoent and is related to npm not being able to find a file.
+121 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/debug/package.json'
+122 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/debug/package.json'
+122 verbose enoent This is most likely not a problem with npm itself
+122 verbose enoent and is related to npm not being able to find a file.
+123 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/decamelize/package.json'
+124 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/decamelize/package.json'
+124 verbose enoent This is most likely not a problem with npm itself
+124 verbose enoent and is related to npm not being able to find a file.
+125 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/depd/package.json'
+126 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/depd/package.json'
+126 verbose enoent This is most likely not a problem with npm itself
+126 verbose enoent and is related to npm not being able to find a file.
+127 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/ee-first/package.json'
+128 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/ee-first/package.json'
+128 verbose enoent This is most likely not a problem with npm itself
+128 verbose enoent and is related to npm not being able to find a file.
+129 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/error-ex/package.json'
+130 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/error-ex/package.json'
+130 verbose enoent This is most likely not a problem with npm itself
+130 verbose enoent and is related to npm not being able to find a file.
+131 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/escape-string-regexp/package.json'
+132 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/escape-string-regexp/package.json'
+132 verbose enoent This is most likely not a problem with npm itself
+132 verbose enoent and is related to npm not being able to find a file.
+133 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/esprima/package.json'
+134 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/esprima/package.json'
+134 verbose enoent This is most likely not a problem with npm itself
+134 verbose enoent and is related to npm not being able to find a file.
+135 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/eventemitter2/package.json'
+136 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/eventemitter2/package.json'
+136 verbose enoent This is most likely not a problem with npm itself
+136 verbose enoent and is related to npm not being able to find a file.
+137 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/exit/package.json'
+138 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/exit/package.json'
+138 verbose enoent This is most likely not a problem with npm itself
+138 verbose enoent and is related to npm not being able to find a file.
+139 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/faye-websocket/package.json'
+140 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/faye-websocket/package.json'
+140 verbose enoent This is most likely not a problem with npm itself
+140 verbose enoent and is related to npm not being able to find a file.
+141 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/find-up/package.json'
+142 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/find-up/package.json'
+142 verbose enoent This is most likely not a problem with npm itself
+142 verbose enoent and is related to npm not being able to find a file.
+143 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/find-versions/package.json'
+144 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/find-versions/package.json'
+144 verbose enoent This is most likely not a problem with npm itself
+144 verbose enoent and is related to npm not being able to find a file.
+145 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/findup-sync/package.json'
+146 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/findup-sync/package.json'
+146 verbose enoent This is most likely not a problem with npm itself
+146 verbose enoent and is related to npm not being able to find a file.
+147 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/fs.realpath/package.json'
+148 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/fs.realpath/package.json'
+148 verbose enoent This is most likely not a problem with npm itself
+148 verbose enoent and is related to npm not being able to find a file.
+149 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/gaze/package.json'
+150 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/gaze/package.json'
+150 verbose enoent This is most likely not a problem with npm itself
+150 verbose enoent and is related to npm not being able to find a file.
+151 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/get-stdin/package.json'
+152 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/get-stdin/package.json'
+152 verbose enoent This is most likely not a problem with npm itself
+152 verbose enoent and is related to npm not being able to find a file.
+153 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/getobject/package.json'
+154 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/getobject/package.json'
+154 verbose enoent This is most likely not a problem with npm itself
+154 verbose enoent and is related to npm not being able to find a file.
+155 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/glob/package.json'
+156 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/glob/package.json'
+156 verbose enoent This is most likely not a problem with npm itself
+156 verbose enoent and is related to npm not being able to find a file.
+157 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/globule/package.json'
+158 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/globule/package.json'
+158 verbose enoent This is most likely not a problem with npm itself
+158 verbose enoent and is related to npm not being able to find a file.
+159 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/graceful-fs/package.json'
+160 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/graceful-fs/package.json'
+160 verbose enoent This is most likely not a problem with npm itself
+160 verbose enoent and is related to npm not being able to find a file.
+161 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-known-options/package.json'
+162 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-known-options/package.json'
+162 verbose enoent This is most likely not a problem with npm itself
+162 verbose enoent and is related to npm not being able to find a file.
+163 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-log/package.json'
+164 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-log/package.json'
+164 verbose enoent This is most likely not a problem with npm itself
+164 verbose enoent and is related to npm not being able to find a file.
+165 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-log-utils/package.json'
+166 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-log-utils/package.json'
+166 verbose enoent This is most likely not a problem with npm itself
+166 verbose enoent and is related to npm not being able to find a file.
+167 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-util/package.json'
+168 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-util/package.json'
+168 verbose enoent This is most likely not a problem with npm itself
+168 verbose enoent and is related to npm not being able to find a file.
+169 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/hooker/package.json'
+170 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/hooker/package.json'
+170 verbose enoent This is most likely not a problem with npm itself
+170 verbose enoent and is related to npm not being able to find a file.
+171 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/has-ansi/package.json'
+172 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/has-ansi/package.json'
+172 verbose enoent This is most likely not a problem with npm itself
+172 verbose enoent and is related to npm not being able to find a file.
+173 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/hosted-git-info/package.json'
+174 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/hosted-git-info/package.json'
+174 verbose enoent This is most likely not a problem with npm itself
+174 verbose enoent and is related to npm not being able to find a file.
+175 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/http-errors/package.json'
+176 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/http-errors/package.json'
+176 verbose enoent This is most likely not a problem with npm itself
+176 verbose enoent and is related to npm not being able to find a file.
+177 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/iconv-lite/package.json'
+178 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/iconv-lite/package.json'
+178 verbose enoent This is most likely not a problem with npm itself
+178 verbose enoent and is related to npm not being able to find a file.
+179 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/inflight/package.json'
+180 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/inflight/package.json'
+180 verbose enoent This is most likely not a problem with npm itself
+180 verbose enoent and is related to npm not being able to find a file.
+181 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/indent-string/package.json'
+182 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/indent-string/package.json'
+182 verbose enoent This is most likely not a problem with npm itself
+182 verbose enoent and is related to npm not being able to find a file.
+183 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/inherits/package.json'
+184 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/inherits/package.json'
+184 verbose enoent This is most likely not a problem with npm itself
+184 verbose enoent and is related to npm not being able to find a file.
+185 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/is-arrayish/package.json'
+186 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/is-arrayish/package.json'
+186 verbose enoent This is most likely not a problem with npm itself
+186 verbose enoent and is related to npm not being able to find a file.
+187 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/is-builtin-module/package.json'
+188 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/is-builtin-module/package.json'
+188 verbose enoent This is most likely not a problem with npm itself
+188 verbose enoent and is related to npm not being able to find a file.
+189 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/is-finite/package.json'
+190 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/is-finite/package.json'
+190 verbose enoent This is most likely not a problem with npm itself
+190 verbose enoent and is related to npm not being able to find a file.
+191 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/is-utf8/package.json'
+192 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/is-utf8/package.json'
+192 verbose enoent This is most likely not a problem with npm itself
+192 verbose enoent and is related to npm not being able to find a file.
+193 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/isexe/package.json'
+194 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/isexe/package.json'
+194 verbose enoent This is most likely not a problem with npm itself
+194 verbose enoent and is related to npm not being able to find a file.
+195 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/js-yaml/package.json'
+196 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/js-yaml/package.json'
+196 verbose enoent This is most likely not a problem with npm itself
+196 verbose enoent and is related to npm not being able to find a file.
+197 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/load-json-file/package.json'
+198 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/load-json-file/package.json'
+198 verbose enoent This is most likely not a problem with npm itself
+198 verbose enoent and is related to npm not being able to find a file.
+199 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/livereload-js/package.json'
+200 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/livereload-js/package.json'
+200 verbose enoent This is most likely not a problem with npm itself
+200 verbose enoent and is related to npm not being able to find a file.
+201 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/lodash/package.json'
+202 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/lodash/package.json'
+202 verbose enoent This is most likely not a problem with npm itself
+202 verbose enoent and is related to npm not being able to find a file.
+203 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/loud-rejection/package.json'
+204 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/loud-rejection/package.json'
+204 verbose enoent This is most likely not a problem with npm itself
+204 verbose enoent and is related to npm not being able to find a file.
+205 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/lru-cache/package.json'
+206 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/lru-cache/package.json'
+206 verbose enoent This is most likely not a problem with npm itself
+206 verbose enoent and is related to npm not being able to find a file.
+207 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/map-obj/package.json'
+208 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/map-obj/package.json'
+208 verbose enoent This is most likely not a problem with npm itself
+208 verbose enoent and is related to npm not being able to find a file.
+209 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/media-typer/package.json'
+210 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/media-typer/package.json'
+210 verbose enoent This is most likely not a problem with npm itself
+210 verbose enoent and is related to npm not being able to find a file.
+211 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/meow/package.json'
+212 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/meow/package.json'
+212 verbose enoent This is most likely not a problem with npm itself
+212 verbose enoent and is related to npm not being able to find a file.
+213 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/mime-db/package.json'
+214 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/mime-db/package.json'
+214 verbose enoent This is most likely not a problem with npm itself
+214 verbose enoent and is related to npm not being able to find a file.
+215 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/mime-types/package.json'
+216 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/mime-types/package.json'
+216 verbose enoent This is most likely not a problem with npm itself
+216 verbose enoent and is related to npm not being able to find a file.
+217 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/minimatch/package.json'
+218 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/minimatch/package.json'
+218 verbose enoent This is most likely not a problem with npm itself
+218 verbose enoent and is related to npm not being able to find a file.
+219 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/minimist/package.json'
+220 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/minimist/package.json'
+220 verbose enoent This is most likely not a problem with npm itself
+220 verbose enoent and is related to npm not being able to find a file.
+221 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/ms/package.json'
+222 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/ms/package.json'
+222 verbose enoent This is most likely not a problem with npm itself
+222 verbose enoent and is related to npm not being able to find a file.
+223 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/nopt/package.json'
+224 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/nopt/package.json'
+224 verbose enoent This is most likely not a problem with npm itself
+224 verbose enoent and is related to npm not being able to find a file.
+225 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/normalize-package-data/package.json'
+226 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/normalize-package-data/package.json'
+226 verbose enoent This is most likely not a problem with npm itself
+226 verbose enoent and is related to npm not being able to find a file.
+227 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/number-is-nan/package.json'
+228 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/number-is-nan/package.json'
+228 verbose enoent This is most likely not a problem with npm itself
+228 verbose enoent and is related to npm not being able to find a file.
+229 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/object-assign/package.json'
+230 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/object-assign/package.json'
+230 verbose enoent This is most likely not a problem with npm itself
+230 verbose enoent and is related to npm not being able to find a file.
+231 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/on-finished/package.json'
+232 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/on-finished/package.json'
+232 verbose enoent This is most likely not a problem with npm itself
+232 verbose enoent and is related to npm not being able to find a file.
+233 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/once/package.json'
+234 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/once/package.json'
+234 verbose enoent This is most likely not a problem with npm itself
+234 verbose enoent and is related to npm not being able to find a file.
+235 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/onetime/package.json'
+236 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/onetime/package.json'
+236 verbose enoent This is most likely not a problem with npm itself
+236 verbose enoent and is related to npm not being able to find a file.
+237 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/os-tmpdir/package.json'
+238 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/os-tmpdir/package.json'
+238 verbose enoent This is most likely not a problem with npm itself
+238 verbose enoent and is related to npm not being able to find a file.
+239 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/parse-json/package.json'
+240 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/parse-json/package.json'
+240 verbose enoent This is most likely not a problem with npm itself
+240 verbose enoent and is related to npm not being able to find a file.
+241 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/parseurl/package.json'
+242 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/parseurl/package.json'
+242 verbose enoent This is most likely not a problem with npm itself
+242 verbose enoent and is related to npm not being able to find a file.
+243 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/path-exists/package.json'
+244 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/path-exists/package.json'
+244 verbose enoent This is most likely not a problem with npm itself
+244 verbose enoent and is related to npm not being able to find a file.
+245 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/path-is-absolute/package.json'
+246 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/path-is-absolute/package.json'
+246 verbose enoent This is most likely not a problem with npm itself
+246 verbose enoent and is related to npm not being able to find a file.
+247 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/path-type/package.json'
+248 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/path-type/package.json'
+248 verbose enoent This is most likely not a problem with npm itself
+248 verbose enoent and is related to npm not being able to find a file.
+249 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/pify/package.json'
+250 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/pify/package.json'
+250 verbose enoent This is most likely not a problem with npm itself
+250 verbose enoent and is related to npm not being able to find a file.
+251 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/pinkie/package.json'
+252 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/pinkie/package.json'
+252 verbose enoent This is most likely not a problem with npm itself
+252 verbose enoent and is related to npm not being able to find a file.
+253 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/pinkie-promise/package.json'
+254 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/pinkie-promise/package.json'
+254 verbose enoent This is most likely not a problem with npm itself
+254 verbose enoent and is related to npm not being able to find a file.
+255 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/qs/package.json'
+256 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/qs/package.json'
+256 verbose enoent This is most likely not a problem with npm itself
+256 verbose enoent and is related to npm not being able to find a file.
+257 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/raw-body/package.json'
+258 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/raw-body/package.json'
+258 verbose enoent This is most likely not a problem with npm itself
+258 verbose enoent and is related to npm not being able to find a file.
+259 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/read-pkg/package.json'
+260 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/read-pkg/package.json'
+260 verbose enoent This is most likely not a problem with npm itself
+260 verbose enoent and is related to npm not being able to find a file.
+261 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/read-pkg-up/package.json'
+262 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/read-pkg-up/package.json'
+262 verbose enoent This is most likely not a problem with npm itself
+262 verbose enoent and is related to npm not being able to find a file.
+263 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/redent/package.json'
+264 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/redent/package.json'
+264 verbose enoent This is most likely not a problem with npm itself
+264 verbose enoent and is related to npm not being able to find a file.
+265 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/repeating/package.json'
+266 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/repeating/package.json'
+266 verbose enoent This is most likely not a problem with npm itself
+266 verbose enoent and is related to npm not being able to find a file.
+267 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/resolve/package.json'
+268 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/resolve/package.json'
+268 verbose enoent This is most likely not a problem with npm itself
+268 verbose enoent and is related to npm not being able to find a file.
+269 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/rimraf/package.json'
+270 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/rimraf/package.json'
+270 verbose enoent This is most likely not a problem with npm itself
+270 verbose enoent and is related to npm not being able to find a file.
+271 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/semver/package.json'
+272 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/semver/package.json'
+272 verbose enoent This is most likely not a problem with npm itself
+272 verbose enoent and is related to npm not being able to find a file.
+273 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/semver-regex/package.json'
+274 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/semver-regex/package.json'
+274 verbose enoent This is most likely not a problem with npm itself
+274 verbose enoent and is related to npm not being able to find a file.
+275 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/semver-truncate/package.json'
+276 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/semver-truncate/package.json'
+276 verbose enoent This is most likely not a problem with npm itself
+276 verbose enoent and is related to npm not being able to find a file.
+277 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/signal-exit/package.json'
+278 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/signal-exit/package.json'
+278 verbose enoent This is most likely not a problem with npm itself
+278 verbose enoent and is related to npm not being able to find a file.
+279 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/spdx-correct/package.json'
+280 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/spdx-correct/package.json'
+280 verbose enoent This is most likely not a problem with npm itself
+280 verbose enoent and is related to npm not being able to find a file.
+281 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/spdx-expression-parse/package.json'
+282 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/spdx-expression-parse/package.json'
+282 verbose enoent This is most likely not a problem with npm itself
+282 verbose enoent and is related to npm not being able to find a file.
+283 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/spdx-license-ids/package.json'
+284 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/spdx-license-ids/package.json'
+284 verbose enoent This is most likely not a problem with npm itself
+284 verbose enoent and is related to npm not being able to find a file.
+285 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/sprintf-js/package.json'
+286 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/sprintf-js/package.json'
+286 verbose enoent This is most likely not a problem with npm itself
+286 verbose enoent and is related to npm not being able to find a file.
+287 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/statuses/package.json'
+288 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/statuses/package.json'
+288 verbose enoent This is most likely not a problem with npm itself
+288 verbose enoent and is related to npm not being able to find a file.
+289 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/strip-ansi/package.json'
+290 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/strip-ansi/package.json'
+290 verbose enoent This is most likely not a problem with npm itself
+290 verbose enoent and is related to npm not being able to find a file.
+291 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/strip-bom/package.json'
+292 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/strip-bom/package.json'
+292 verbose enoent This is most likely not a problem with npm itself
+292 verbose enoent and is related to npm not being able to find a file.
+293 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/strip-indent/package.json'
+294 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/strip-indent/package.json'
+294 verbose enoent This is most likely not a problem with npm itself
+294 verbose enoent and is related to npm not being able to find a file.
+295 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/supports-color/package.json'
+296 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/supports-color/package.json'
+296 verbose enoent This is most likely not a problem with npm itself
+296 verbose enoent and is related to npm not being able to find a file.
+297 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/tiny-lr/package.json'
+298 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/tiny-lr/package.json'
+298 verbose enoent This is most likely not a problem with npm itself
+298 verbose enoent and is related to npm not being able to find a file.
+299 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/tmp/package.json'
+300 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/tmp/package.json'
+300 verbose enoent This is most likely not a problem with npm itself
+300 verbose enoent and is related to npm not being able to find a file.
+301 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/trim-newlines/package.json'
+302 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/trim-newlines/package.json'
+302 verbose enoent This is most likely not a problem with npm itself
+302 verbose enoent and is related to npm not being able to find a file.
+303 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/type-is/package.json'
+304 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/type-is/package.json'
+304 verbose enoent This is most likely not a problem with npm itself
+304 verbose enoent and is related to npm not being able to find a file.
+305 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/underscore.string/package.json'
+306 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/underscore.string/package.json'
+306 verbose enoent This is most likely not a problem with npm itself
+306 verbose enoent and is related to npm not being able to find a file.
+307 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/unpipe/package.json'
+308 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/unpipe/package.json'
+308 verbose enoent This is most likely not a problem with npm itself
+308 verbose enoent and is related to npm not being able to find a file.
+309 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/validate-npm-package-license/package.json'
+310 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/validate-npm-package-license/package.json'
+310 verbose enoent This is most likely not a problem with npm itself
+310 verbose enoent and is related to npm not being able to find a file.
+311 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/websocket-driver/package.json'
+312 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/websocket-driver/package.json'
+312 verbose enoent This is most likely not a problem with npm itself
+312 verbose enoent and is related to npm not being able to find a file.
+313 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/websocket-extensions/package.json'
+314 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/websocket-extensions/package.json'
+314 verbose enoent This is most likely not a problem with npm itself
+314 verbose enoent and is related to npm not being able to find a file.
+315 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/which/package.json'
+316 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/which/package.json'
+316 verbose enoent This is most likely not a problem with npm itself
+316 verbose enoent and is related to npm not being able to find a file.
+317 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/wrappy/package.json'
+318 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/wrappy/package.json'
+318 verbose enoent This is most likely not a problem with npm itself
+318 verbose enoent and is related to npm not being able to find a file.
+319 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/bin-version-check/node_modules/semver/package.json'
+320 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/bin-version-check/node_modules/semver/package.json'
+320 verbose enoent This is most likely not a problem with npm itself
+320 verbose enoent and is related to npm not being able to find a file.
+321 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/body-parser/node_modules/iconv-lite/package.json'
+322 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/body-parser/node_modules/iconv-lite/package.json'
+322 verbose enoent This is most likely not a problem with npm itself
+322 verbose enoent and is related to npm not being able to find a file.
+323 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/body-parser/node_modules/qs/package.json'
+324 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/body-parser/node_modules/qs/package.json'
+324 verbose enoent This is most likely not a problem with npm itself
+324 verbose enoent and is related to npm not being able to find a file.
+325 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/globule/node_modules/glob/package.json'
+326 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/globule/node_modules/glob/package.json'
+326 verbose enoent This is most likely not a problem with npm itself
+326 verbose enoent and is related to npm not being able to find a file.
+327 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/globule/node_modules/lodash/package.json'
+328 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/globule/node_modules/lodash/package.json'
+328 verbose enoent This is most likely not a problem with npm itself
+328 verbose enoent and is related to npm not being able to find a file.
+329 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/findup-sync/node_modules/glob/package.json'
+330 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/findup-sync/node_modules/glob/package.json'
+330 verbose enoent This is most likely not a problem with npm itself
+330 verbose enoent and is related to npm not being able to find a file.
+331 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-log-utils/node_modules/lodash/package.json'
+332 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-log-utils/node_modules/lodash/package.json'
+332 verbose enoent This is most likely not a problem with npm itself
+332 verbose enoent and is related to npm not being able to find a file.
+333 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-util/node_modules/lodash/package.json'
+334 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/grunt-legacy-util/node_modules/lodash/package.json'
+334 verbose enoent This is most likely not a problem with npm itself
+334 verbose enoent and is related to npm not being able to find a file.
+335 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/raw-body/node_modules/bytes/package.json'
+336 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/raw-body/node_modules/bytes/package.json'
+336 verbose enoent This is most likely not a problem with npm itself
+336 verbose enoent and is related to npm not being able to find a file.
+337 warn enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/raw-body/node_modules/iconv-lite/package.json'
+338 verbose enoent ENOENT: no such file or directory, open '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules/raw-body/node_modules/iconv-lite/package.json'
+338 verbose enoent This is most likely not a problem with npm itself
+338 verbose enoent and is related to npm not being able to find a file.
+339 warn sanisdro@1.0.0 No repository field.
+340 verbose If you need help, you may report this error at:
+340 verbose     <https://github.com/npm/npm/issues>
+341 verbose stack Error: EACCES: permission denied, access '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules'
+341 verbose stack     at Error (native)
+342 verbose cwd /Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro
+343 error Darwin 16.5.0
+344 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "jquery-lazyload"
+345 error node v6.4.0
+346 error npm  v3.10.8
+347 error path /Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules
+348 error code EACCES
+349 error errno -13
+350 error syscall access
+351 error Error: EACCES: permission denied, access '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules'
+351 error     at Error (native)
+351 error  { Error: EACCES: permission denied, access '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules'
+351 error     at Error (native)
+351 error   errno: -13,
+351 error   code: 'EACCES',
+351 error   syscall: 'access',
+351 error   path: '/Users/neiljoshua/Projects/san-isidro/wp-content/themes/sanisidro/node_modules' }
+352 error Please try running this command again as root/Administrator.
+353 verbose exit [ -13, true ]

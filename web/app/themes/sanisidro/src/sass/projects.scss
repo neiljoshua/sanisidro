@@ -1,0 +1,103 @@
+.projects {
+
+  .about-project {
+    width: 70%;
+    margin: 0 auto;
+    p {
+      padding: 0 25px 30px;
+    }
+  }
+
+  .select-container {
+
+    .dk-select,
+    .dk-selected,
+    .dk-option,
+    .proj-search {
+      font-family: 'Roboto-Light';
+      font-size: 18px;
+    }
+
+    .dk-select {
+      margin-top: 20px;
+      @include media-min-width ( mobile ) {
+        margin-right: 20px;
+      }
+    }
+
+  }
+
+  .error {
+    position: relative;
+    width: 100%;
+    &:before {
+      content: "";
+      display: block;
+      @include calc( padding-top, '56.25%');
+    }
+    &__box {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      padding: 40px;
+      @include prefix(transform, translateY(-50%) translateX(-50%), webkit ms);
+      .error__image {
+        display: block;
+        margin: 20px auto;
+      }
+      .error__copy {
+        font-size: 20px;
+        margin: 40px auto;
+        color: $black;
+      }
+    }
+  }
+
+  .project-form {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    width: 270px;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 1px $silver solid;
+    overflow: hidden;
+    @include prefix(border-radius, 6px, webkit ms o);
+    @include media-min-width(mobile) {
+      width: 250px;
+    }
+    @include media-min-width (tablet) {
+      width: 270px;
+    }
+    input,
+    button {
+      display: inline-block;
+      color: $gray;
+      font-size: 18px;
+      font-family: 'Roboto-Light';
+    }
+    &__input {
+      margin-right: 0;
+      outline: none;
+      border: none;
+      width: 230px;
+      padding: 3px 0 3px 5px ;
+      @include prefix(border-radius, 6px, webkit ms o);
+      @include media-min-width (tablet) {
+        width: 200px;
+      }
+    }
+    &__bttn {
+      position: absolute;
+      right: 0;
+      border-left: 1px $silver solid;
+      text-align: center;
+      padding: 2px 8px;
+      @include media-min-width(mobile) {
+        padding: 2px 5px;
+      }
+    }
+  }
+}

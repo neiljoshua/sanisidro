@@ -1,14 +1,16 @@
 footer {
+  padding: 50px 20px;
+  font-size: 14px;
+  color: $black;
+  background-color: $lightgray;
   @include media-max-width(mobile) {
     font-size: 16px;
-    padding: 50px 0;
+    padding: 60px 20px;
   }
-  @include media-min-width(mobile) {
+  @include media-min-width(tablet) {
     font-size: 20px;
-    padding: 40px 20px;
+    padding: 60px 40px;
   }
-  background-color: $lightgray;
-  color: $black;
   p {
     @include media-max-width(mobile) {
       width: 100%;
@@ -19,43 +21,5 @@ footer {
       display: inline-block;
     }
     line-height: 1;
-  }
-}
-
-.footer-nav {
-
-  @include media-max-width(mobile) {
-    display: block;
-    width: 100%;
-  }
-  @include media-min-width(mobile) {
-    display: inline-block;
-    margin: 0;
-    float: right;
-  }
-  ul {
-    display: block;
-    width: 100%;
-    li {
-      @include media-max-width(mobile) {
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-      @include media-min-width(mobile) {
-        display: inline-block;
-        margin: 0 20px;
-      }
-      margin: 20px 0;
-      a {
-        color: $black;
-        @include media-min-width(mobile) {
-          width: 100%;
-          &:hover{
-            color: $gray;
-          }
-        }
-      }
-    }
   }
 }

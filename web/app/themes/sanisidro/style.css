@@ -478,29 +478,31 @@ input:-webkit-autofill {
 
 /* line 1, src/sass/globals/footer.scss */
 footer {
-  background-color: #eeeeee;
+  padding: 50px 20px;
+  font-size: 14px;
   color: #000;
+  background-color: #eeeeee;
 }
 @media (max-width: 600px) {
   /* line 1, src/sass/globals/footer.scss */
   footer {
     font-size: 16px;
-    padding: 50px 0;
+    padding: 60px 20px;
   }
 }
-@media (min-width: 601px) {
+@media (min-width: 769px) {
   /* line 1, src/sass/globals/footer.scss */
   footer {
     font-size: 20px;
-    padding: 40px 20px;
+    padding: 60px 40px;
   }
 }
-/* line 12, src/sass/globals/footer.scss */
+/* line 14, src/sass/globals/footer.scss */
 footer p {
   line-height: 1;
 }
 @media (max-width: 600px) {
-  /* line 12, src/sass/globals/footer.scss */
+  /* line 14, src/sass/globals/footer.scss */
   footer p {
     width: 100%;
     display: block;
@@ -508,63 +510,9 @@ footer p {
   }
 }
 @media (min-width: 601px) {
-  /* line 12, src/sass/globals/footer.scss */
+  /* line 14, src/sass/globals/footer.scss */
   footer p {
     display: inline-block;
-  }
-}
-
-@media (max-width: 600px) {
-  /* line 25, src/sass/globals/footer.scss */
-  .footer-nav {
-    display: block;
-    width: 100%;
-  }
-}
-@media (min-width: 601px) {
-  /* line 25, src/sass/globals/footer.scss */
-  .footer-nav {
-    display: inline-block;
-    margin: 0;
-    float: right;
-  }
-}
-/* line 36, src/sass/globals/footer.scss */
-.footer-nav ul {
-  display: block;
-  width: 100%;
-}
-/* line 39, src/sass/globals/footer.scss */
-.footer-nav ul li {
-  margin: 20px 0;
-}
-@media (max-width: 600px) {
-  /* line 39, src/sass/globals/footer.scss */
-  .footer-nav ul li {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-@media (min-width: 601px) {
-  /* line 39, src/sass/globals/footer.scss */
-  .footer-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
-  }
-}
-/* line 50, src/sass/globals/footer.scss */
-.footer-nav ul li a {
-  color: #000;
-}
-@media (min-width: 601px) {
-  /* line 50, src/sass/globals/footer.scss */
-  .footer-nav ul li a {
-    width: 100%;
-  }
-  /* line 54, src/sass/globals/footer.scss */
-  .footer-nav ul li a:hover {
-    color: #595959;
   }
 }
 
@@ -709,16 +657,16 @@ p {
   width: 100%;
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 0.8s ease-out;
-  -ms-transition: opacity 0.8s ease-out;
-  transition: opacity 0.8s ease-out;
+  -webkit-transition: opacity 0.6s ease-out;
+  -ms-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
 }
 /* line 106, src/sass/globals/layout.scss */
 .container.loaded {
   opacity: 1;
-  -webkit-transition: opacity 0.8s ease-out;
-  -ms-transition: opacity 0.8s ease-out;
-  transition: opacity 0.8s ease-out;
+  -webkit-transition: opacity 0.6s ease-out;
+  -ms-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
 }
 
 /* line 112, src/sass/globals/layout.scss */
@@ -769,13 +717,21 @@ p {
 @media (min-width: 769px) {
   /* line 141, src/sass/globals/layout.scss */
   .page-hero:before {
-    padding-top: -webkit-calc(40.25%);
-    padding-top: -moz-calc(40.25%);
-    padding-top: calc(40.25%);
+    padding-top: -webkit-calc(46.25%);
+    padding-top: -moz-calc(46.25%);
+    padding-top: calc(46.25%);
+  }
+}
+@media (min-width: 1025px) {
+  /* line 141, src/sass/globals/layout.scss */
+  .page-hero:before {
+    padding-top: -webkit-calc(42.25%);
+    padding-top: -moz-calc(42.25%);
+    padding-top: calc(42.25%);
   }
 }
 
-/* line 151, src/sass/globals/layout.scss */
+/* line 154, src/sass/globals/layout.scss */
 .center {
   position: absolute;
   top: 50%;
@@ -785,19 +741,19 @@ p {
   transform: translateY(-50%) translateX(-50%);
 }
 
-/* line 158, src/sass/globals/layout.scss */
+/* line 161, src/sass/globals/layout.scss */
 .project-gallery {
   width: 100%;
   margin: 35px 0;
   font-size: 0;
   clear: right;
 }
-/* line 163, src/sass/globals/layout.scss */
+/* line 166, src/sass/globals/layout.scss */
 .project-gallery.invisible {
   display: none;
 }
 
-/* line 168, src/sass/globals/layout.scss */
+/* line 171, src/sass/globals/layout.scss */
 .gallery-image {
   display: inline-block;
   width: 100%;
@@ -805,7 +761,7 @@ p {
   font-size: 16px;
 }
 @media (min-width: 601px) {
-  /* line 168, src/sass/globals/layout.scss */
+  /* line 171, src/sass/globals/layout.scss */
   .gallery-image {
     width: -webkit-calc(50% - 20px);
     width: -moz-calc(50% - 20px);
@@ -814,7 +770,7 @@ p {
   }
 }
 @media (min-width: 769px) {
-  /* line 168, src/sass/globals/layout.scss */
+  /* line 171, src/sass/globals/layout.scss */
   .gallery-image {
     width: -webkit-calc(25% - 10px);
     width: -moz-calc(25% - 10px);
@@ -822,17 +778,35 @@ p {
     padding: 5px;
   }
 }
-/* line 182, src/sass/globals/layout.scss */
+/* line 185, src/sass/globals/layout.scss */
 .gallery-image.is-loading {
   background-color: #595959;
 }
-/* line 186, src/sass/globals/layout.scss */
+/* line 189, src/sass/globals/layout.scss */
 .gallery-image a {
   position: relative;
   display: block;
   margin: 0;
+  -webkit-transition: filter 0.8s ease-in-out 0.2s;
+  -ms-transition: filter 0.8s ease-in-out 0.2s;
+  transition: filter 0.8s ease-in-out 0.2s;
 }
-/* line 190, src/sass/globals/layout.scss */
+/* line 194, src/sass/globals/layout.scss */
+.gallery-image a:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+/* line 199, src/sass/globals/layout.scss */
+.gallery-image a:hover {
+  -webkit-filter: sepia(0.8);
+  -ms-filter: sepia(0.8);
+  filter: sepia(0.8);
+  -webkit-transition: filter 0.7s ease-in-out;
+  -ms-transition: filter 0.7s ease-in-out;
+  transition: filter 0.7s ease-in-out;
+}
+/* line 203, src/sass/globals/layout.scss */
 .gallery-image a img {
   position: absolute;
   top: 0;
@@ -842,15 +816,7 @@ p {
   width: 100%;
   height: 100%;
 }
-/* line 199, src/sass/globals/layout.scss */
-.gallery-image a:before {
-  content: "";
-  display: block;
-  padding-top: -webkit-calc(56.25%);
-  padding-top: -moz-calc(56.25%);
-  padding-top: calc(56.25%);
-}
-/* line 205, src/sass/globals/layout.scss */
+/* line 213, src/sass/globals/layout.scss */
 .gallery-image p {
   padding: 30px 0;
   text-transform: capitalize;
@@ -1262,66 +1228,73 @@ p {
 /* line 4, src/sass/single-project.scss */
 .single-project section,
 .single-newsblog section {
-  padding: 0 20px;
-  width: -webkit-calc(100% - 40px);
-  width: -moz-calc(100% - 40px);
-  width: calc(100% - 40px);
+  padding: 0 30px 60px;
+  width: -webkit-calc(100% - 60px);
+  width: -moz-calc(100% - 60px);
+  width: calc(100% - 60px);
 }
 @media (min-width: 601px) {
   /* line 4, src/sass/single-project.scss */
   .single-project section,
   .single-newsblog section {
-    padding: 0 30px;
-    width: -webkit-calc(100% - 60px);
-    width: -moz-calc(100% - 60px);
-    width: calc(100% - 60px);
+    padding: 0 40px 60px;
+    width: -webkit-calc(100% - 80px);
+    width: -moz-calc(100% - 80px);
+    width: calc(100% - 80px);
   }
 }
 @media (min-width: 769px) {
   /* line 4, src/sass/single-project.scss */
   .single-project section,
   .single-newsblog section {
-    padding: 40px;
+    padding: 40px 40px 60px;
     width: -webkit-calc(100% - 80px);
     width: -moz-calc(100% - 80px);
     width: calc(100% - 80px);
     max-width: 720px;
+    margin: 0 auto;
   }
 }
-/* line 16, src/sass/single-project.scss */
+/* line 17, src/sass/single-project.scss */
 .single-project section:first-child,
 .single-newsblog section:first-child {
   padding: 0;
   width: 100%;
 }
-/* line 20, src/sass/single-project.scss */
+/* line 21, src/sass/single-project.scss */
 .single-project section .title,
 .single-newsblog section .title {
-  margin: 20px 0;
+  margin: 40px 0;
 }
-/* line 23, src/sass/single-project.scss */
+/* line 24, src/sass/single-project.scss */
 .single-project section .copy,
 .single-newsblog section .copy {
-  margin: 20px 0;
+  margin: 40px 0;
 }
-/* line 27, src/sass/single-project.scss */
+@media (min-width: 1025px) {
+  /* line 24, src/sass/single-project.scss */
+  .single-project section .copy,
+  .single-newsblog section .copy {
+    margin: 50px 0;
+  }
+}
+/* line 31, src/sass/single-project.scss */
 .single-project section .pagination,
 .single-newsblog section .pagination {
   text-align: right;
   font-size: 13px;
   margin: 10px 15px;
 }
-/* line 31, src/sass/single-project.scss */
+/* line 35, src/sass/single-project.scss */
 .single-project section .pagination__links,
 .single-newsblog section .pagination__links {
   display: inline-block;
   font-weight: 300;
   text-align: center;
   margin-right: 8px;
-  padding-bottom: 10px;
 }
 @media (min-width: 769px) {
-  /* line 38, src/sass/single-project.scss */
+  /* line 41, src/sass/single-project.scss */
   .single-project section .pagination__links::after,
   .single-newsblog section .pagination__links::after {
     content: "";
@@ -1339,12 +1312,12 @@ p {
     -ms-transition: all 0.4s ease-in-out 0.3s;
     transition: all 0.4s ease-in-out 0.3s;
   }
-  /* line 50, src/sass/single-project.scss */
+  /* line 53, src/sass/single-project.scss */
   .single-project section .pagination__links:hover,
   .single-newsblog section .pagination__links:hover {
     font-weight: 400;
   }
-  /* line 52, src/sass/single-project.scss */
+  /* line 55, src/sass/single-project.scss */
   .single-project section .pagination__links:hover::after,
   .single-newsblog section .pagination__links:hover::after {
     visibility: visible;
@@ -1358,7 +1331,7 @@ p {
 }
 
 /* line 3, src/sass/firm.scss */
-.firm .firm-description {
+.firm-copy {
   margin: 40px 20px;
   width: -webkit-calc(100% - 40px);
   width: -moz-calc(100% - 40px);
@@ -1366,7 +1339,7 @@ p {
 }
 @media (min-width: 601px) {
   /* line 3, src/sass/firm.scss */
-  .firm .firm-description {
+  .firm-copy {
     margin: 40px;
     width: -webkit-calc(100% - 80px);
     width: -moz-calc(100% - 80px);
@@ -1375,12 +1348,12 @@ p {
 }
 @media (min-width: 769px) {
   /* line 3, src/sass/firm.scss */
-  .firm .firm-description {
+  .firm-copy {
     margin: 60px auto;
   }
 }
 /* line 13, src/sass/firm.scss */
-.firm .firm-description p {
+.firm-copy p {
   max-width: 720px;
   margin: 0 auto;
   font-size: 18px;
@@ -1388,83 +1361,102 @@ p {
 /* line 20, src/sass/firm.scss */
 .firm .member {
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 @media (min-width: 601px) {
   /* line 20, src/sass/firm.scss */
   .firm .member {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   /* line 26, src/sass/firm.scss */
   .firm .member:nth-child(odd) .member-image {
     float: left;
+    margin: 10px 20px 10px 10px;
   }
-  /* line 29, src/sass/firm.scss */
+  /* line 30, src/sass/firm.scss */
   .firm .member:nth-child(odd) .member-copy {
     float: right;
+    margin: 10px 10px 10px 20px;
   }
-  /* line 34, src/sass/firm.scss */
+  /* line 36, src/sass/firm.scss */
   .firm .member:nth-child(even) .member-image {
     float: right;
+    margin: 10px 10px 10px 20px;
   }
-  /* line 37, src/sass/firm.scss */
+  /* line 40, src/sass/firm.scss */
   .firm .member:nth-child(even) .member-copy {
     float: left;
+    margin: 10px 20px 10px 10px;
   }
 }
-/* line 43, src/sass/firm.scss */
+/* line 47, src/sass/firm.scss */
 .firm .member-image {
-  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
 }
-/* line 45, src/sass/firm.scss */
+/* line 50, src/sass/firm.scss */
+.firm .member-image:before {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+/* line 56, src/sass/firm.scss */
 .firm .member-image__image {
+  position: absolute;
   display: block;
   width: 100%;
-}
-@media (min-width: 601px) {
-  /* line 43, src/sass/firm.scss */
-  .firm .member-image {
-    width: -webkit-calc(40% - 10px);
-    width: -moz-calc(40% - 10px);
-    width: calc(40% - 10px);
-    margin: 5px;
-  }
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 @media (min-width: 769px) {
-  /* line 43, src/sass/firm.scss */
+  /* line 47, src/sass/firm.scss */
   .firm .member-image {
     width: -webkit-calc(40% - 30px);
     width: -moz-calc(40% - 30px);
     width: calc(40% - 30px);
-    margin: 10px 15px;
   }
 }
-/* line 59, src/sass/firm.scss */
+/* line 72, src/sass/firm.scss */
 .firm .member-copy {
   width: 100%;
 }
-/* line 61, src/sass/firm.scss */
+/* line 74, src/sass/firm.scss */
 .firm .member-copy__name, .firm .member-copy__title {
   margin-bottom: 20px;
 }
-/* line 65, src/sass/firm.scss */
+/* line 78, src/sass/firm.scss */
 .firm .member-copy__name {
   font-size: 18px;
   font-weight: 700;
 }
-/* line 69, src/sass/firm.scss */
+/* line 82, src/sass/firm.scss */
 .firm .member-copy__copy,
 .firm .member-copy p {
   max-width: 720px;
   font-size: 16px;
 }
-@media (min-width: 601px) {
-  /* line 59, src/sass/firm.scss */
+@media (min-width: 769px) {
+  /* line 72, src/sass/firm.scss */
   .firm .member-copy {
     width: -webkit-calc(60% - 30px);
     width: -moz-calc(60% - 30px);
     width: calc(60% - 30px);
-    padding: 10px 15px;
+  }
+}
+/* line 93, src/sass/firm.scss */
+.firm .member-copy, .firm .member-image {
+  margin: 20px 0;
+}
+@media (min-width: 601px) {
+  /* line 93, src/sass/firm.scss */
+  .firm .member-copy, .firm .member-image {
+    width: -webkit-calc(50% - 30px);
+    width: -moz-calc(50% - 30px);
+    width: calc(50% - 30px);
+    margin: 5px;
   }
 }
 
@@ -1485,7 +1477,7 @@ p {
 .news .news-block:before {
   content: "";
   display: block;
-  padding-bottom: 60%;
+  padding-top: 60%;
 }
 @media (min-width: 601px) {
   /* line 7, src/sass/news-content.scss */
@@ -1509,16 +1501,16 @@ p {
   }
   /* line 27, src/sass/news-content.scss */
   .news .news-block:nth-child(1):before {
-    padding-bottom: 100%;
+    padding-top: 100%;
   }
   /* line 32, src/sass/news-content.scss */
   .news .news-block:nth-child(2):before {
-    padding-bottom: 50%;
+    padding-top: 50%;
   }
   /* line 36, src/sass/news-content.scss */
   .news .news-block:nth-child(3), .news .news-block:nth-child(4) {
     width: 25%;
-    padding-bottom: 10%;
+    padding-top: 10%;
   }
   /* line 40, src/sass/news-content.scss */
   .news .news-block:nth-child(3) .news-block__link, .news .news-block:nth-child(4) .news-block__link {
@@ -1566,7 +1558,7 @@ p {
   }
   /* line 73, src/sass/news-content.scss */
   .news .news-block__link:hover {
-    opacity: 0.8;
+    opacity: 0.6;
     background-color: #000;
     -webkit-transition: all 0.5s ease-in;
     -ms-transition: all 0.5s ease-in;

@@ -20,6 +20,13 @@ $args = array(
           'posts_per_page' => 8,
           'order' => 'DESC',
           'orderby' => 'post_date',
+          'meta_query' => array(
+            array(
+              'key' => 'project_featured',
+              'value' => '1',
+              'compare' => '=='
+            )
+          )
         );
 $data['projects'] = Timber::get_posts($args);
 $data['citieslist'] = Timber::get_posts($citieslist);

@@ -1,6 +1,6 @@
 .DS_Store
 #sass files
-/wp-content/themes/sanisidro/.sass-cache
+.sass-cache/
 
 #module control
 /wp-content/themes/sanisidro/node_modules

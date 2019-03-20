@@ -8,7 +8,7 @@
       <div class="page-hero">
         <img class ="page-hero__image"  src="{{ post.meta('firm_lead_image') }}" alt="{{ post.meta('firm_lead_description') }}">
       </div>
-      <div class="firm-description">{{ post.meta('firm_lead_description') }}</div>
+      <div class="firm-copy">{{ post.meta('firm_lead_description') }}</div>
     </section>
 
     <section>
@@ -20,8 +20,8 @@
             </div>
             <div class="member-copy">
               <h2 class="member-copy__name">{{ member.member_name }}</h2>
-              <h3 class="member-copy__title"> {{ member.member_title }}</h3>
-              <p class="member-copy__copy"> {{ member.member_profile }}</p>
+              <h3 class="member-copy__title">{{ member.member_title }}</h3>
+              <p class="member-copy__copy">{{ member.member_profile }}</p>
             </div>
           </div>
         {% endfor %}

@@ -34,7 +34,7 @@
   bottom: 0;
   opacity: 0;
   z-index: 50;
-  @include prefix(transition, all 0.6s ease-in-out, webkit ms);
+  @include prefix(transition, all .6s ease-in-out, webkit ms);
   @include media-min-width(desktop) {
     position: absolute;
     margin-right: 40px;
@@ -50,7 +50,7 @@
     @include media-min-width (tablet) {
       width: 50%;
     }
-    @include prefix(transition, all 0.6s ease-in-out, webkit ms);
+    @include prefix(transition, all .6s ease-in-out, webkit ms);
   }
 
   ul {
@@ -111,14 +111,14 @@
             top: 103%;
             height: 1px;
             background: $white;
-            @include prefix(transition, width 0.6s ease-in-out, webkit ms);
+            @include prefix(transition, width .6s ease-in-out, webkit ms);
           }
           &:hover {
             color: $white;
-            @include prefix(transition, color 0.6s ease-in-out, webkit ms);
+            @include prefix(transition, color .6s ease-in-out, webkit ms);
             &::after {
             width:100%;
-            @include prefix(transition, width 0.6s ease-in-out, webkit ms);
+            @include prefix(transition, width .6s ease-in-out, webkit ms);
             }
           }
         }
@@ -134,7 +134,7 @@
             color: $black;
             &::after {
             width:100%;
-            @include prefix(transition, width 0.6s ease, webkit ms);
+            @include prefix(transition, width .6s ease-in, webkit ms);
             }
           }
         }

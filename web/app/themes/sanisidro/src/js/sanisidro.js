@@ -2,13 +2,12 @@
   'use strict';
     $(window).on('load', function () {
       if ($('.loader').length > 0) {
-        $('.loader').fadeOut(300, function(){
-          $('.loader').remove();
-          $('.container').addClass('loaded');
-        });
+        $('.loader').fadeOut('slow');
+        $('.container').addClass('loaded');
       }
     });
 })(jQuery);
+
 (function ($, root, undefined) {
 
   $(document).ready(function() {

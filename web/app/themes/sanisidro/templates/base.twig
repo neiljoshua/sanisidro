@@ -23,7 +23,7 @@
 
       <header class="site-header">
         {% block header %}
-          <a class="site-header__logo" href="{{ site.link() }}"><img src="{{ site.icon() }}" alt= "Logo"/></a>
+          <a class="site-header__logo" href="{{ site.link() }}"><img class="lazy" data-original="{{ site.icon() }}" alt= "Logo"/></a>
           <a href="#" class="site-header__hamburger site-header__hamburger--rot"> <span></span></a>
           <div class="site-header__menu">
             {% include "menu.twig" with {'menu': menu.get_items} %}

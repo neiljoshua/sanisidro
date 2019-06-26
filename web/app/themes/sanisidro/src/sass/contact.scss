@@ -84,11 +84,11 @@
     }
     input[type='submit']{
       font-weight: 400;
-      @include prefix(transition, all 0.6s ease-in-out, webkit ms );
+      @include prefix(transition, all .6s ease-in-out, webkit ms );
       &:hover {
         background-color: $seagreen;
         color: $white;
-        @include prefix(transition, all 0.6s ease-in-out, webkit ms );
+        @include prefix(transition, all .6s ease-in-out, webkit ms );
       }
     }
     span{

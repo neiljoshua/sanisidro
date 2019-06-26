@@ -64,9 +64,9 @@
 
 .site-header__hamburger--rot {
   opacity: 1;
-  @include prefix(transition, opacity 0.6s 0.3s, webkit ms);
+  @include prefix(transition, opacity .6s ease-in .3s, webkit ms);
   span {
-    @include prefix(transition, transform 0.6s, webkit ms);
+    @include prefix(transition, transform .6s, webkit ms);
   }
   &.is-active {
     opacity:1;

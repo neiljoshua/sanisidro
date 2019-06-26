@@ -19,31 +19,46 @@
       .site-header__logo {
         visibility: visible;
       }
+      .site-header__hamburger {
+        span {
+          background: $black;
+          &::after,
+          &::before {
+            background-color: $black;
+          }
+        }
+      }
       .current-menu-item {
         a {
           color: $black;
           border-bottom: 1px solid $black;
         }
       }
-      .menu-item {
-        a {
-          &:hover {
-            color: $black;
-            &::after {
-              background: $black;
-              width:100%;
-              @include prefix(transition, width 0.6s ease, webkit ms);
-            }
+    }
+    .current-menu-item {
+      a {
+        color: $white;
+        border-bottom: 1px solid $white;
+      }
+    }
+    .menu-item {
+      a {
+        &:hover {
+          color: $black;
+          &::after {
+            background: $black;
+            width:100%;
+            @include prefix(transition, width .6s ease, webkit ms);
           }
         }
       }
-      .site-header__hamburger {
-        span {
-          background: $gray;
-          &::after,
-          &::before {
-            background-color: $gray;
-          }
+    }
+    .site-header__hamburger {
+      span {
+        background: $white;
+        &::after,
+        &::before {
+          background-color: $white;
         }
       }
     }
@@ -54,18 +69,11 @@
           &::after {
             background: $white;
             width:100%;
-            @include prefix(transition, width 0.6s ease, webkit ms);
+            @include prefix(transition, width .6s ease, webkit ms);
           }
         }
       }
     }
-    .current-menu-item {
-      a {
-        color: $white;
-        border-bottom: 1px solid $white;
-      }
-    }
-
   }
 
   .logo {
@@ -116,7 +124,6 @@
         text-align: right;
       }
     }
-
   }
 
   .featured_link {
@@ -138,13 +145,13 @@
         background-color: $black;
         visibility: hidden;
         @include prefix(transform, scaleX(0), webkit ms );
-        @include prefix(transition, all 0.3s ease-in-out 0.3s, webkit ms );
+        @include prefix(transition, all .3s ease-in-out .3s, webkit ms );
       }
       &:hover{
         &::after {
           visibility: visible;
           @include prefix(transform, scaleX(1), webkit ms );
-          @include prefix(transition, all 0.3s ease-in-out 0s, webkit ms );
+          @include prefix(transition, all .3s ease-in-out .1s, webkit ms );
         }
       }
     }

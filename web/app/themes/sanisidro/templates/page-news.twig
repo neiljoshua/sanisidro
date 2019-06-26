@@ -5,7 +5,7 @@
     {% if post %}
       {% for item in news %}
         <div class="news-block">
-          <img class="lazy news-block__image" src="{{  item.meta('image_news_blog') }}" data-original="{{  item.meta('image_news_blog') }}"  alt="{{ item.post_name }}">
+          <img class="lazy news-block__image" data-original="{{  item.meta('image_news_blog') }}"  alt="{{ item.post_name }}">
           <a class="news-block__link" href="{{ post.link }}{{item.slug}}">
             <div class="news-copy center" >
               <p class="news-copy__caption">{{ item.post_name }}</p>

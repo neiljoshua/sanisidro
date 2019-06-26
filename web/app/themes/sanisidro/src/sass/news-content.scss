@@ -69,14 +69,14 @@
         font-size: 20px;
         opacity: 0;
         background: none;
-        @include prefix(transition, all 0.5s ease-out 0.1s, webkit ms );
+        @include prefix(transition, all .5s ease-out .1s, webkit ms );
         &:hover{
           opacity: 0.6;
           background-color: $black;
           .news-copy__line {
             width: 20%;
           }
-          @include prefix(transition, all 0.5s ease-in, webkit ms );
+          @include prefix(transition, all .5s ease-in, webkit ms );
         }
       }
     }
@@ -98,7 +98,7 @@
       background-color: $white;
       @include media-min-width (tablet) {
         width: 0%;
-        @include prefix(transition, width 0.5s ease-in 0.1s, webkit ms );
+        @include prefix(transition, width .5s ease-in .1s, webkit ms );
       }
     }
   }

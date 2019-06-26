@@ -6,7 +6,7 @@
 
     <section>
       <div class="page-hero">
-        <img class ="page-hero__image"  src="{{ post.meta('firm_lead_image') }}" alt="{{ post.meta('firm_lead_description') }}">
+        <img class ="lazy page-hero__image"  data-original="{{ post.meta('firm_lead_image') }}" alt="{{ post.meta('firm_lead_description') }}">
       </div>
       <div class="firm-copy">{{ post.meta('firm_lead_description') }}</div>
     </section>
@@ -16,7 +16,7 @@
         {% for member in post.meta('member') %}
           <div class="member">
             <div class="member-image">
-              <img class="member-image__image lazy" data-original="{{ member.member_image }}" wifth="300" height="300" alt="{{ member.member_name }}">
+              <img class="member-image__image lazy" data-original="{{ member.member_image }}" alt="{{ member.member_name }}">
             </div>
             <div class="member-copy">
               <h2 class="member-copy__name">{{ member.member_name }}</h2>

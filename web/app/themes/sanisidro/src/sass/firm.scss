@@ -89,18 +89,6 @@
       }
     }
 
-
-    &-copy,
-    &-image {
-      margin: 20px 0;
-
-      @include media-min-width(mobile) {
-        @include calc( width, '50% - 30px');
-        margin: 5px;
-      }
-
-    }
-
   }
 
 }

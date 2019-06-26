@@ -3,7 +3,7 @@
 {% block content %}
   {% if post %}
 
-    <section>
+    <section class="lazy">
       <div class="hero">
         <img class="page-hero__image" src="{{ post.meta('hero_image')}}" alt="{{ post.title }}">
         <div class="logo">
@@ -19,7 +19,7 @@
         <div class="home-slider">
           {% for item in post.meta('slider_home_page') %}
             <div class="slick-container">
-              <img src="{{ item.slider_image }}" width="900"  alt="{{ item.slider_name }}" >
+              <img class="lazy" data-original="{{ item.slider_image }}" alt="{{ item.slider_name }}" >
               <p>{{ item.slider_name }}</p>
             </div>
           {% endfor %}

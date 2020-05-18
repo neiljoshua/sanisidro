@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       userRequest.onreadystatechange = function() {
         if (userRequest.readyState === 4) {
-          console.log('data saved from response', userRequest.response);
           userSearchGallery(userRequest.response);
         }
       }

@@ -3,8 +3,9 @@
 {% block content %}
   {% if post %}
     <section >
-      <div class="page-hero">
-        <img class="lazy page-hero__image" data-original="{{ post.meta('project_image') }}" alt="{{ post.title}}" />
+      <div class="hero">
+        {% set hero_image = post.get_field('project_image') %}
+        <img class="hero__image" src="{{ hero_image.sizes.medium_large }}" alt="{{ post.title }}" />
       </div>
       <div class="pagination">
         <a class="pagination__links" href="/projects">View all </a>
@@ -18,4 +19,6 @@
     </section>
   {% endif %}
 {% endblock %}
+
+
 

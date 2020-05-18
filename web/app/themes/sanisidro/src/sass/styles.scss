@@ -8,10 +8,10 @@ Version: 1.0
 @import 'globals/variables';
 @import 'globals/mixin';
 @import 'globals/fonts';
-@import 'globals/animations';
 @import 'globals/header';
 @import 'globals/footer';
 @import 'globals/layout';
+@import 'globals/menu';
 @import 'hamburger';
 @import 'home';
 @import 'projects';
@@ -20,5 +20,4 @@ Version: 1.0
 @import 'news-content';
 @import 'archive-projects';
 @import 'contact';
-@import 'preloader';
 

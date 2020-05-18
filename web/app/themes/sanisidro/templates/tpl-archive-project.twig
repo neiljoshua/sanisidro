@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% if projects %}
+    {# {{ dump(projects)}} #}
+    <section>
+      {% include 'partial/featured-projects.twig'%}
+    </section>
+  {% endif %}
+
+{% endblock %}

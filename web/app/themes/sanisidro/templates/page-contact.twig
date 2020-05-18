@@ -7,12 +7,11 @@
     <section class="contact">
       <h1 class="contact__title">{{ post.title }}</h1>
       {{ post.content }}
-      <div class="lazy contact__map"></div>
+      <div class="contact__map"></div>
     </section>
 
-    <section>
+    <section id="respond">
 
-      <div id="respond">
         {{ response }}
         <form action="{{ post.link }}" method="POST">
           <p><label for="name">Name: <span>*</span> <br><input type="text" name="message_name" placeholder="John Smith"></label></p>
@@ -25,8 +24,6 @@
           <input type="hidden" name="submitted" value="1">
           <p><input type="submit"></p>
         </form>
-
-      </div>
 
     </section>
 

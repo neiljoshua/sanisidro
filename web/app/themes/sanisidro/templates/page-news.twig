@@ -4,15 +4,16 @@
   <section>
     {% if post %}
       {% for item in news %}
-        <div class="news-block">
-          <img class="lazy news-block__image" data-original="{{  item.meta('image_news_blog') }}"  alt="{{ item.post_name }}">
+        <article class="news-block">
+          {% set image = item.get_field('image_news_blog') %}
+           <img class="lazy news-block__image" src="{{ image.sizes.thumbnail }}" data-src="{{ image.sizes.medium_large }}" data-srcset="{{ image.sizes.medium_large }}"  alt="{{ item.post_name }}" />
           <a class="news-block__link" href="{{ post.link }}{{item.slug}}">
-            <div class="news-copy center" >
+            <div class="news-copy" >
               <p class="news-copy__caption">{{ item.post_name }}</p>
               <p class="news-copy__line"></p>
             </div>
           </a>
-        </div>
+        </article>
       {% endfor %}
     {% endif %}
   </section>

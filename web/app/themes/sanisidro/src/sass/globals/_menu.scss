@@ -1,0 +1,98 @@
+.site-header__menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 50;
+  transition: all .6s ease-in-out;
+  @include media-min-width(desktop) {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
+    opacity: 1;
+    transform: none;
+    width: auto;
+    z-index: 90;
+  }
+  &.active {
+    width: 100%;
+    opacity: 1;
+    background-color: $black;
+    @include media-min-width (tablet) {
+      width: 50%;
+    }
+    transition: all .6s ease-in-out;
+  }
+
+  .menu-item {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    margin-bottom: 40px;
+    padding-bottom: 4px;
+    letter-spacing: 2px;
+    color: $gray;
+    margin: auto;
+    @include media-min-width(mobile) {
+      font-size: 26px;
+    }
+    @include media-min-width(tablet) {
+      &::after {
+        display:block;
+        position: absolute;
+        content: '';
+        width: 0;
+        top: 96%;
+        height: 1px;
+        background: $white;
+        transition: width .6s ease-in-out;
+      }
+      &:hover {
+        color: $white;
+        transition: color .6s ease-in-out;
+        &::after {
+        width:100%;
+        transition: width .6s ease-in-out;
+        }
+      }
+    }
+    @include media-min-width(desktop) {
+      display: block;
+      color: $black;
+      margin-bottom: 0;
+      margin-left: 15px;
+      font-size: 18px;
+      &::after {
+        background: $black;
+      }
+      &:hover {
+        color: $black;
+        &::after {
+        width:100%;
+        transition: width .6s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .current-menu-item {
+    color: $white;
+    border-bottom: 1px solid $white;
+    &:hover {
+      transition: none;
+      &:after {
+        width: 0;
+        transition: none;
+      }
+    }
+    @include media-min-width(desktop) {
+      color: $black;
+      border-bottom: 1px solid $black;
+    }
+  }
+}

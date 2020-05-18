@@ -2,30 +2,34 @@
 
 {% block content %}
   {% if post %}
-
-    <section class="lazy">
-      <div class="hero">
-        <img class="page-hero__image" src="{{ post.meta('hero_image')}}" alt="{{ post.title }}">
-        <div class="logo">
-          <img src="{{ post.meta('hero_logo')}}" alt="{{ post.title }}"/>
-        </div>
+    <section class="home__hero">
+      {% set hero_image = post.get_field('hero_image') %}
+      <img class="lazy hero__image" src="{{ hero_image.sizes.thumbnail }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ post.title }}" />
+      <div class="home__logo">
+        <img src="{{ post.meta('hero_logo')}}" alt="{{ post.title }}"/>
       </div>
     </section>
 
     <section id="startchange">
       <h2 class="title">{{ site.name }}</h2>
       <p class="copy">"{{ post.meta('hero_content')}}"</p>
-      {% if post.meta('slider_home_page')%}
-        <div class="home-slider">
-          {% for item in post.meta('slider_home_page') %}
-            <div class="slick-container">
-              <img class="lazy" data-original="{{ item.slider_image }}" alt="{{ item.slider_name }}" >
-              <p>{{ item.slider_name }}</p>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
     </section>
+
+    {% set slider = post.get_field('slider_home_page') %}
+    {# {{ dump(slider)}} #}
+    {% if post.meta('slider_home_page')%}
+      <section>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            {% for slide in slider %}
+              {# {{ dump(slide)}} #}
+                <img class="lazy swiper-slide" src="{{ slide.slider_image.sizes.thumbnail }}" data-src="{{ slide.slider_image.sizes.medium }}" data-srcset="{{ slide.slider_image.sizes.medium }}" alt="{{ slide.slider_image.name }}" >
+                <p>{{ item.slider_name }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
 
     <section>
       <h2 class="title">{{ post.meta('about_title') }}</h2>
@@ -33,8 +37,10 @@
     </section>
 
     <section>
-      <h2 class="title">Featured</h2>
-      <a class="featured_link" href="/projects"> View Projects</a>
+      <div class="gallery__copy">
+        <h2>Featured</h2>
+        <a> View Projects</a>
+      </div>
       {% if projects %}
         {% include 'partial/featured-projects.twig'%}
       {% else %}

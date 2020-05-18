@@ -3,14 +3,13 @@
 
   section {
     padding: 0 30px 60px;
-    @include calc( width, '100% - 60px');
+    width:calc(100% - 60px);
     @include media-min-width(mobile) {
       padding: 0 40px 60px;
-      @include calc( width, '100% - 80px');
+      width:calc(100% - 80px);
     }
     @include media-min-width(tablet) {
       padding: 40px 40px 60px;
-      @include calc( width, '100% - 80px');
       max-width: 720px;
       margin: 0 auto;
     }
@@ -47,15 +46,15 @@
             left: 0;
             background-color: $black;
             visibility: hidden;
-            @include prefix(transform, scaleX(0), webkit ms );
-            @include prefix(transition, all 0.4s ease-in-out 0.3s, webkit ms );
+            transform: scaleX(0);
+            transition: all 0.4s ease-in-out 0.3s;
           }
           &:hover{
             font-weight: 400;
             &::after {
               visibility: visible;
-              @include prefix(transform, scaleX(1), webkit ms );
-              @include prefix(transition, all 0.3s ease-in-out 0s, webkit ms );
+              transform: scaleX(1);
+              transition: all 0.3s ease-in-out 0s;
             }
           }
         }

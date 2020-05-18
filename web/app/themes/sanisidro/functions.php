@@ -34,8 +34,8 @@ add_filter( 'timber_context', 'add_to_context' );
 
 // Load stylesheet for San Isidro Theme.
 function sanisidro_resources() {
-	wp_enqueue_style( 'style', get_stylesheet_uri(), '', null, 'all');
-  wp_enqueue_script( 'sanisidro', get_template_directory_uri() . '/sanisidro.js', array( 'jquery' ),null,true);
+	wp_enqueue_style( 'styles', get_template_directory_uri().'/dist/styles.css',null,false);
+  wp_enqueue_script( 'build', get_template_directory_uri() . '/dist/build.js',null,false);
 }
 
 add_action('wp_enqueue_scripts','sanisidro_resources');

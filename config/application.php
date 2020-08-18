@@ -103,3 +103,16 @@ Config::apply();
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+/**
+ * S3 ACCESS
+ */
+
+define( 'AS3CF_SETTINGS', serialize( array(
+    'provider' => 'aws',
+    'access-key-id' => 'AKIARFBUIHXNEJAGGVXO',
+    'secret-access-key' => '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',
+) ) );
+
+// define( 'DBI_AWS_ACCESS_KEY_ID', 'AKIARFBUIHXNEJAGGVXO' );
+// define( 'DBI_AWS_SECRET_ACCESS_KEY', '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' );

@@ -13,3 +13,5 @@ gitflow-installer.sh
 gitflow/
 
 *-old.php
+
+web/app/themes/twentytwenty/

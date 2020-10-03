@@ -108,13 +108,10 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
 
-/**
- * S3 Settings
- */
-
 define( 'AS3CF_SETTINGS', serialize( array(
     'provider' => $AWS_PROVIDER,
     'access-key-id' => $AWS_ACCESS_KEY_ID,
     'secret-access-key' => $AWS_SECRET_ACCESS_KEY,
 ) ) );
+
 

@@ -72,6 +72,10 @@ Config::define('SECURE_AUTH_SALT', env('SECURE_AUTH_SALT'));
 Config::define('LOGGED_IN_SALT', env('LOGGED_IN_SALT'));
 Config::define('NONCE_SALT', env('NONCE_SALT'));
 
+$AWS_PROVIDER = env('AWS_PROVIDER');
+$AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID');
+$AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY');
+
 /**
  * Custom Settings
  */
@@ -103,3 +107,14 @@ Config::apply();
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+/**
+ * S3 Settings
+ */
+
+define( 'AS3CF_SETTINGS', serialize( array(
+    'provider' => $AWS_PROVIDER,
+    'access-key-id' => $AWS_ACCESS_KEY_ID,
+    'secret-access-key' => $AWS_SECRET_ACCESS_KEY,
+) ) );
+

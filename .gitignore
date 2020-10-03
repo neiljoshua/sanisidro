@@ -25,3 +25,12 @@ wp-cli.local.yml
 .sass-cache/
 
 .DS_Store
+
+web/app/themes/sanisidro/node_modules/
+web/app/themes/sanisidro/vendor/
+web/app/themes/sanisidro/.sass-cache/
+
+web/app/themes/twentytwenty/
+
+projects_notes
+

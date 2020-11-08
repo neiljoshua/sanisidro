@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c4ecf8be935ec3c9523ee79a421080d",
+    "content-hash": "87fc0e7c417735a38d548e05119df8e9",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.8.12",
+            "version": "5.9.0",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.8.12"
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.9.0"
             },
             "require": {
                 "composer/installers": "^1.0",
                 "philippbaschke/acf-pro-installer": "^1.0"
             },
-            "type": "library"
+            "type": "wordpress-plugin"
         },
         {
             "name": "composer/installers",

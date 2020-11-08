@@ -15,7 +15,7 @@
 
     <li class="gallery-image" data-state="<?php echo $state ;?>" data-city="<?php echo $city ;?>" >
         <a href="<?php the_permalink() ?>">
-             <img class="lazy" data-original="<?php echo $image; ?>" alt="<?php echo $title ;?>" >
+             <img class="lazy" src="<?php echo $image; ?>" alt="<?php echo $title ;?>" >
         </a>
         <p><?php echo $title ?></p>
     </li>

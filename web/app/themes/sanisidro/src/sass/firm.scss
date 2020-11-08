@@ -54,8 +54,9 @@
       @include media-min-width(tablet) {
         width: calc( 35% - 30px );
       }
+
       @include media-min-width(desktop) {
-        width: calc( 40% - 30px );
+        width: calc( 30% - 30px );
       }
     }
 
@@ -79,7 +80,7 @@
         width: calc( 65% - 30px );
       }
       @include media-min-width(desktop) {
-        width: calc( 60% - 30px );
+        width: calc( 70% - 30px );
       }
     }
 

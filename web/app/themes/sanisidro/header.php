@@ -22,16 +22,6 @@
     <?php body_class();
       $body_class = body_class();
     ?>>
-    <div class="loader">
-      <div class="loader__box">
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__ball"></div>
-      </div>
-    </div>
     <div class="container">
       <header class="site-header">
         <a class="site-header__logo" href="<?php echo home_url(); ?>"><img src="<?php echo site_icon_url();?>" alt= "Logo"/></a>

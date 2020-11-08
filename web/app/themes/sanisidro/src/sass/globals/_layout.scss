@@ -189,11 +189,11 @@ p {
   }
 
   img {
-    filter: none;
-    transition: 0.9s filter ease-in-out .1s;
+    opacity: 1;
+    transition: opacity ease-in-out 1s;
     &.lazy {
-       filter: blur(5px);
-       transition: 0.9s filter ease-in-out .1s;
+       opacity: .4;
+       transition: opacity ease-in-out 1s;
     }
   }
 }

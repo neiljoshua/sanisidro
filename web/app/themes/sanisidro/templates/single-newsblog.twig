@@ -5,7 +5,7 @@
     <section >
       <div class="hero">
         {% set hero_image = post.get_field('image_news_blog') %}
-        <img class="hero__image" src="{{ hero_image.sizes.medium_large }}" alt="{{ post.post_title }}" />
+        <img class="lazy hero__image" src="{{ hero_image.sizes.medium }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ post.title }}" />
       </div>
       <div class="pagination">
           <a class="pagination__links" href="/news">View all </a>

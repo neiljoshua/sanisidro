@@ -4,7 +4,7 @@
   {% if post %}
     <section class="home__hero">
       {% set hero_image = post.get_field('hero_image') %}
-      <img class="lazy hero__image" src="{{ hero_image.sizes.thumbnail }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ post.title }}" />
+      <img class="lazy hero__image" src="{{ hero_image.sizes.medium }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ post.title }}" />
       <div class="home__logo">
         <img src="{{ post.meta('hero_logo')}}" alt="{{ post.title }}"/>
       </div>
@@ -23,7 +23,7 @@
           <div class="swiper-wrapper">
             {% for slide in slider %}
               {# {{ dump(slide)}} #}
-                <img class="lazy swiper-slide" src="{{ slide.slider_image.sizes.thumbnail }}" data-src="{{ slide.slider_image.sizes.medium }}" data-srcset="{{ slide.slider_image.sizes.medium }}" alt="{{ slide.slider_image.name }}" >
+                <img class="lazy swiper-slide" src="{{ slide.slider_image.sizes.medium }}" data-src="{{ slide.slider_image.sizes.large }}" data-srcset="{{ slide.slider_image.sizes.large }}" alt="{{ slide.slider_image.name }}" >
                 <p>{{ item.slider_name }}</p>
             {% endfor %}
           </div>

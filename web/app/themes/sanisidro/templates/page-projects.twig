@@ -8,7 +8,7 @@
         {# {{ dump(post.get_field('project_image'))}} #}
         {% set hero_image = post.get_field('project_image') %}
         <section class="hero">
-          <img class="lazy hero__image" src="{{ hero_image.sizes.thumbnail }}" data-src="{{ hero_image.sizes.medium_large }}" data-srcset="{{ hero_image.sizes.medium_large }}"  alt="{{ post.project_description }}" />
+          <img class="lazy hero__image" src="{{ hero_image.sizes.medium }}" data-src="{{ hero_image.sizes.medium_large }}" data-srcset="{{ hero_image.sizes.medium_large }}"  alt="{{ post.project_description }}" />
         </section>
       {% endif %}
     {% endfor %}

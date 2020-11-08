@@ -6,17 +6,18 @@
 
     <section class="hero">
         {% set hero_image = post.get_field('firm_lead_image') %}
-        <img class="lazy hero__image" src="{{ hero_image.sizes.thumbnail }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ firm_lead_description }}" />
+        <img class="lazy hero__image" src="{{ hero_image.sizes.medium }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ firm_lead_description }}" />
 
     </section>
-    <section class="firm-copy"> {{ post.meta('firm_lead_description') }}
+    <section class="firm-copy">
+      {{ post.meta('firm_lead_description') }}
     </section>
     <section>
       {% if post.meta('member')%}
         {% for member in post.meta('member') %}
           <article class="member">
             <div class="member-image">
-              <img class="lazy member-image__image" src="{{member.member_image.sizes.thumbnail}}" data-src="{{ member.member_image.sizes.medium }}" data-srcset="{{ member.member_image.sizes.medium }}" alt="{{ member.member_name }}">
+              <img class="lazy member-image__image" src="{{member.member_image.sizes.medium}}" data-src="{{ member.member_image.sizes.medium }}" data-srcset="{{ member.member_image.sizes.medium }}" alt="{{ member.member_name }}">
             </div>
             <div class="member-copy">
               <h2 class="member-copy__name">{{ member.member_name }}</h2>

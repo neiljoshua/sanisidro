@@ -1,6 +1,7 @@
 .DS_Store
 #sass files
 .sass-cache/
+.projectnotes
 
 #module control
 /wp-content/themes/sanisidro/node_modules

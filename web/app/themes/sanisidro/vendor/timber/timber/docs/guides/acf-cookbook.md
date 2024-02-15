@@ -41,7 +41,7 @@ $post = new Timber\Post();
 if (isset($post->hero_image) && strlen($post->hero_image)){
 	$post->hero_image = new Timber\Image($post->hero_image);
 }
-$data = Timber::get_context();
+$data = Timber::context();
 $data['post'] = $post;
 Timber::render('single.twig', $data);
 ```
@@ -71,11 +71,23 @@ You can now use all the above functions to transform your custom images in the s
 {{ post.meta('group').first_field }}
 {{ post.meta('group').second_field }}
 ```
-or 
+or
 ```twig
 {% set group = post.meta('group') %}
 {{ group.first_field }}
 {{ group.second_field }}
+```
+* * *
+
+## Relationship field
+
+The post data returned from a relationship field will not contain the Timber methods needed for easy handling inside of your Twig file. To get these, you'll need to convert them into a proper Timber `Post` object like so:
+
+```twig
+{% for item in Post(post.relationship_field) %} 
+   {{ item.title }}
+   {# Do something with item #}
+{% endfor %}
 ```
 
 * * *

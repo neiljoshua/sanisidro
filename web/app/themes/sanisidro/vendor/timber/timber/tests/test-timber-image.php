@@ -749,6 +749,7 @@ class TestTimberImage extends TimberImage_UnitTestCase {
 		}
 		if ( !file_exists($img_dir) ) {
 			$parent = dirname($img_dir);
+			// error_log($parent);
 			chmod($parent, 0777);
     		$res = mkdir($img_dir, 0777, true);
 		}
@@ -759,13 +760,6 @@ class TestTimberImage extends TimberImage_UnitTestCase {
 		$img_dir = get_stylesheet_directory_uri().'/images';
 		if ( file_exists($img_dir) ) {
 			exec(sprintf("rm -rf %s", escapeshellarg($img_dir)));
-		}
-		$uploads = wp_upload_dir();
-		$files = glob($uploads['basedir'].date('/Y/m/').'*');
-		foreach($files as $file){
-			if(is_file($file)) {
-				unlink($file);
-			}
 		}
 		parent::tearDown();
 	}
@@ -1156,17 +1150,6 @@ class TestTimberImage extends TimberImage_UnitTestCase {
 		$data['test_image'] = $upload_dir['url'].'/icon-twitter.svg';
 		$str = Timber::compile_string( '<img src="{{ test_image|tojpg }}" />', $data );
 		$this->assertEquals('<img src="http://example.org/wp-content/uploads/'.date('Y/m').'/icon-twitter.svg" />', trim($str));
-	}
-
-
- 	function testSVGDimensions() {
-		$pid = $this->factory->post->create();
-		$filename = self::copyTestImage( 'icon-twitter.svg' );
-		$attachment = array( 'post_title' => 'Twitter Icon', 'post_content' => '' );
-		$iid = wp_insert_attachment( $attachment, $filename, $pid );
-		$image = new TimberImage( $iid );
-		$this->assertEquals( 23, $image->width() );
-		$this->assertEquals( 20, $image->height() );
 	}
 
 }

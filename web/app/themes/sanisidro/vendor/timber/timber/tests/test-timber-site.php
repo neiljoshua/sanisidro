@@ -9,13 +9,6 @@ class TestTimberSite extends Timber_UnitTestCase {
 		$this->assertEquals( $content_subdir.'/themes/twentyfifteen', $site->theme->path );
 	}
 
-	function testLanguageAttributes() {
-		$this->restore_locale();
-		$site = new TimberSite();
-		$lang = $site->language_attributes();
-		$this->assertEquals('lang="en-US"', $lang);
-	}
-
 	function testChildParentThemeLocation() {
 		TestTimberLoader::_setupChildTheme();
 		$content_subdir = Timber\URLHelper::get_content_subdir();
@@ -28,13 +21,13 @@ class TestTimberSite extends Timber_UnitTestCase {
 
 	function testThemeFromContext() {
 		switch_theme( 'twentyfifteen' );
-		$context = Timber::context();
+		$context = Timber::get_context();
 		$this->assertEquals( 'twentyfifteen', $context['theme']->slug );
 	}
 
 	function testThemeFromSiteContext() {
 		switch_theme( 'twentyfifteen' );
-		$context = Timber::context();
+		$context = Timber::get_context();
 		$this->assertEquals( 'twentyfifteen', $context['site']->theme->slug );
 	}
 

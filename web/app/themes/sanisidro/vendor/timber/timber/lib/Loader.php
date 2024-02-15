@@ -54,10 +54,6 @@ class Loader {
 			}
 		}
 
-		if ( $expires === 0 ) {
-			$expires = false;
-		}
-
 		$key = null;
 		$output = false;
 		if ( false !== $expires ) {
@@ -75,8 +71,7 @@ class Loader {
 			}
 			$data = apply_filters('timber_loader_render_data', $data);
 			$data = apply_filters('timber/loader/render_data', $data, $file);
-			$template = $twig->load($file);
-			$output = $template->render($data);
+			$output = $twig->render($file, $data);
 		}
 
 		if ( false !== $output && false !== $expires && null !== $key ) {
@@ -108,9 +103,6 @@ class Loader {
 
 		// Run through template array
 		foreach ( $templates as $template ) {
-
-			// Remove any whitespace around the template name
-			$template = trim( $template );
 			// Use the Twig loader to test for existance
 			if ( $loader->exists($template) ) {
 				// Return name of existing template
@@ -135,7 +127,7 @@ class Loader {
 
 
 	/**
-	 * @return \Twig\Loader\FilesystemLoader
+	 * @return \Twig_Loader_Filesystem
 	 */
 	public function get_loader() {
 		$open_basedir = ini_get('open_basedir');
@@ -146,18 +138,18 @@ class Loader {
 		if ( $open_basedir ) {
 			$rootPath = null;
 		}
-		$fs = new \Twig\Loader\FilesystemLoader($paths, $rootPath);
-		$fs = apply_filters('timber/loader/loader', $fs, $paths, $rootPath);
+		$fs = new \Twig_Loader_Filesystem($paths, $rootPath);
+		$fs = apply_filters('timber/loader/loader', $fs);
 		return $fs;
 	}
 
 
 	/**
-	 * @return \Twig\Environment
+	 * @return \Twig_Environment
 	 */
 	public function get_twig() {
 		$loader = $this->get_loader();
-		$params = array('debug' => WP_DEBUG,'autoescape' => false);
+		$params = array('debug' => WP_DEBUG, 'autoescape' => false);
 		if ( isset(Timber::$autoescape) ) {
 			$params['autoescape'] = Timber::$autoescape === true ? 'html' : Timber::$autoescape;
 		}
@@ -171,13 +163,9 @@ class Loader {
 			}
 			$params['cache'] = $twig_cache_loc;
 		}
-		$twig = new \Twig\Environment($loader, $params);
+		$twig = new \Twig_Environment($loader, $params);
 		if ( WP_DEBUG ) {
-			$twig->addExtension(new \Twig\Extension\DebugExtension());
-		} else {
-			$twig->addFunction(new Twig_Function('dump', function() {
-				return null;
-			}));
+			$twig->addExtension(new \Twig_Extension_Debug());
 		}
 		$twig->addExtension($this->_get_cache_extension());
 
@@ -186,14 +174,6 @@ class Loader {
 		$twig = apply_filters('timber/twig/functions', $twig);
 		$twig = apply_filters('timber/twig/escapers', $twig);
 		$twig = apply_filters('timber/loader/twig', $twig);
-
-		$twig = apply_filters('timber/twig', $twig);
-
-		/**
-		 * get_twig is deprecated, use timber/twig
-		 */
-		$twig = apply_filters('get_twig', $twig);
-
 		return $twig;
 	}
 
@@ -214,10 +194,7 @@ class Loader {
 
 	protected static function clear_cache_timber_database() {
 		global $wpdb;
-		$query = $wpdb->prepare(
-			"DELETE FROM $wpdb->options WHERE option_name LIKE '%s'",
-			'_transient%timberloader_%'
-		);
+		$query = $wpdb->prepare("DELETE FROM $wpdb->options WHERE option_name LIKE '%s'", '_transient_timberloader_%');
 		return $wpdb->query($query);
 	}
 
@@ -249,8 +226,6 @@ class Loader {
 	}
 
 	/**
-	 * Remove a directory and everything inside
-	 *
 	 * @param string|false $dirPath
 	 */
 	public static function rrmdir( $dirPath ) {
@@ -272,15 +247,15 @@ class Loader {
 	}
 
 	/**
-	 * @return \Twig\CacheExtension\Extension
+	 * @return \Asm89\Twig\CacheExtension\Extension
 	 */
 	private function _get_cache_extension() {
 
 		$key_generator   = new \Timber\Cache\KeyGenerator();
 		$cache_provider  = new \Timber\Cache\WPObjectCacheAdapter($this);
 		$cache_lifetime  = apply_filters('timber/cache/extension/lifetime', 0);
-		$cache_strategy  = new \Twig\CacheExtension\CacheStrategy\GenerationalCacheStrategy($cache_provider, $key_generator, $cache_lifetime);
-		$cache_extension = new \Twig\CacheExtension\Extension($cache_strategy);
+		$cache_strategy  = new \Asm89\Twig\CacheExtension\CacheStrategy\GenerationalCacheStrategy($cache_provider, $key_generator, $cache_lifetime);
+		$cache_extension = new \Asm89\Twig\CacheExtension\Extension($cache_strategy);
 
 		return $cache_extension;
 	}

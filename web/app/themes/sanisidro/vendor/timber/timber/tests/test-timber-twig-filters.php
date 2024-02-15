@@ -65,9 +65,7 @@
 				$data['day'] = '1983-09-28 20:14:48';
 				$str = Timber::compile_string("{{day|date('F jS, Y g:ia')}}", $data);
 				$this->assertEquals('septiembre 28th, 1983 8:14pm', $str);
-				return;
 			}
-			$this->markTestSkipped('WPLANG needs to be set to `es_ES` to test');
 		}
 
 		function testTwigFilterDateI18nWordPressOption(){
@@ -76,9 +74,7 @@
 				$data['day'] = '1983-09-28';
 				$str = Timber::compile_string("{{day|date}}", $data);
 				$this->assertEquals('28 septiembre, 1983', $str);
-				return;
 			}
-			$this->markTestSkipped('WPLANG needs to be set to `es_ES` to test');
 		}
 
 		function testTwigFilterDateWordPressOption(){
@@ -92,12 +88,6 @@
 			$data['authors'] = array('Tom','Rick','Harry','Mike');
 			$str = Timber::compile_string("{{authors|list}}", $data);
 			$this->assertEquals('Tom, Rick, Harry and Mike', $str);
-		}
-
-		function testTwigFilterListOxford() {
-			$data['authors'] = array('Tom','Rick','Harry','Mike');
-			$str = Timber::compile_string("{{authors|list(',', ', and')}}", $data);
-			$this->assertEquals('Tom, Rick, Harry, and Mike', $str);
 		}
 
 

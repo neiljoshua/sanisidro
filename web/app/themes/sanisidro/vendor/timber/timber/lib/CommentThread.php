@@ -4,44 +4,6 @@ namespace Timber;
 
 use Timber\Comment;
 
-/**
- * This object is a special type of array that hold WordPress comments as `Timber\Comment` objects. 
- * You probably won't use this directly. This object is returned when calling `{{ post.comments }}` 
- * in Twig.
- *
- * @example 
- * ```twig
- * {# single.twig #}
- * <div id="post-comments">
- *   <h4>Comments on {{ post.title }}</h4>
- *   <ul>
- *     {% for comment in post.comments %}
- *       {% include 'comment.twig' %}
- *     {% endfor %}
- *   </ul>
- *   <div class="comment-form">
- *     {{ function('comment_form') }}
- *   </div>
- * </div>
- * ```
- *
- * ```twig
- * {# comment.twig #}
- * <li>
- *   <div>{{ comment.content }}</div>
- *   <p class="comment-author">{{ comment.author.name }}</p>
- *   {{ function('comment_form') }}
- *   <!-- nested comments here -->
- *   {% if comment.children %}
- *     <div class="replies"> 
- *	     {% for child_comment in comment.children %}
- *         {% include 'comment.twig' with { comment:child_comment } %}
- *       {% endfor %}
- *     </div> 
- *   {% endif %}    
- * </li>
- * ```
- */
 class CommentThread extends \ArrayObject {
 
 	var $CommentClass = 'Timber\Comment';
@@ -62,9 +24,6 @@ class CommentThread extends \ArrayObject {
 		}
 	}
 
-	/**
-	 * @internal
-	 */
 	protected function fetch_comments( $args = array() ) {
 		$args['post_id'] = $this->post_id;
 		$comments = get_comments($args);
@@ -72,25 +31,6 @@ class CommentThread extends \ArrayObject {
 	}
 
 	/**
-	 * @internal
-	 */
-	protected function merge_args( $args ) {
-		$base = array('status' => 'approve', 'order' => $this->_order);
-		return array_merge($base, $args);
-	}
-
-	/**
-	 * @internal
-	 * @experimental
-	 */
-	public function order( $order = 'ASC' ) {
-		$this->_order = $order;
-		$this->init();
-		return $this;
-	}
-
-	/**
-	 * @internal
 	 * @experimental
 	 */
 	public function orderby( $orderby = 'wp' ) {
@@ -99,9 +39,21 @@ class CommentThread extends \ArrayObject {
 		return $this;
 	}
 
+	protected function merge_args( $args ) {
+		$base = array('status' => 'approve');
+		$overrides = array('order' => $this->_order);
+		return array_merge($base, $args, $overrides);
+	}
+
 	/**
-	 * @internal
+	 * @experimental
 	 */
+	public function order( $order = 'ASC' ) {
+		$this->_order = $order;
+		$this->init();
+		return $this;
+	}
+
 	public function init( $args = array() ) {
 		global $overridden_cpage;
 		$args = self::merge_args($args);
@@ -127,6 +79,8 @@ class CommentThread extends \ArrayObject {
 			}
 		}
 
+		
+
 		foreach ( $children as &$comment ) {
 			$parent_id = $comment->comment_parent;
 			if ( isset($parents[$parent_id]) ) {
@@ -144,16 +98,10 @@ class CommentThread extends \ArrayObject {
 		$this->import_comments($parents);
 	}
 
-	/**
-	 * @internal
-	 */
 	protected function clear() {
 		$this->exchangeArray(array());
 	}
 
-	/**
-	 * @internal
-	 */
 	protected function import_comments( $arr ) {
 		$this->clear();
 		$i = 0;

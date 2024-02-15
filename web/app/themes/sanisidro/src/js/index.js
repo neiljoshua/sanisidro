@@ -55,15 +55,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
 
-  function menuToggle(e) {
+  function menuToggle() {
     e.preventDefault();
     var burger = document.querySelector('.site-header__hamburger--rot'),
         body = document.body,
         siteMenu = document.querySelector('.site-header__menu');
 
-    burger.classList.toggle('is-active');
-    body.classList.toggle('fixed');
-    siteMenu.classList.toggle('active');
+    burger.toggle('is-active');
+    body.toggle('fixed');
+    siteMenu.toggle('active');
 
   }
 
@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function checkWidth() {
-    var body = document.querySelector('body');
 
     if ( window.outerWidth < 1024 ) {
       if( body.classList.contains('fixed') ) {

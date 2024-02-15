@@ -11,5 +11,5 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
-    '' => array($vendorDir . '/twig/cache-extension/lib'),
+    '' => array($vendorDir . '/asm89/twig-cache-extension/lib'),
 );

@@ -34,9 +34,6 @@ class CoAuthorsPlusUser extends \Timber\User {
 			$avatar_url = get_avatar_url($coauthor->user_email);
 		}
 		if ( $avatar_url ) {
-			/**
-		 	 * @property string url to use for avatar image
-		 	 */
 			$this->avatar = new \Timber\Image($avatar_url);
 		}
 	}

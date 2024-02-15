@@ -2,8 +2,6 @@
 
 namespace Timber;
 
-use Timber\PathHelper;
-
 class LocationManager {
 
 	
@@ -83,7 +81,7 @@ class LocationManager {
 	public static function get_calling_script_dir( $offset = 0 ) {
 		$caller = self::get_calling_script_file($offset);
 		if ( !is_null($caller) ) {
-			$pathinfo = PathHelper::pathinfo($caller);
+			$pathinfo = pathinfo($caller);
 			$dir = $pathinfo['dirname'];
 			return $dir;
 		}

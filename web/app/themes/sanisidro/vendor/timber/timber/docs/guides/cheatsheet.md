@@ -5,11 +5,11 @@ menu:
     parent: "guides"
 ---
 
-Here are some helpful conversions for functions you’re probably well familiar with in WordPress and their Timber equivalents. These assume a PHP file with the `Timber::context();` function at the top. For example:
+Here are some helpful conversions for functions you’re probably well familiar with in WordPress and their Timber equivalents. These assume a PHP file with the `Timber::get_context();` function at the top. For example:
 
 ```php
-$context = Timber::context();
-$context['post'] = new Timber\Post();
+$context = Timber::get_context();
+$context['post'] = new TimberPost();
 Timber::render( 'single.twig', $context );
 ```
 

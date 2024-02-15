@@ -56,11 +56,11 @@
 
         function testFileSystemToURLWithWPML() {
             self::_setLanguage();
-            add_filter('home_url', array($this, 'addWPMLHomeFilterForRegExTest'), 10, 2);
+            add_filter('site_url', array($this, 'addWPMLHomeFilterForRegExTest'), 10, 2);
             $image = TestTimberImage::copyTestImage();
             $url = Timber\URLHelper::file_system_to_url($image);
             $this->assertStringEndsWith('://example2.org/wp-content/uploads/'.date('Y/m').'/arch.jpg', $url);
-            remove_filter('home_url', array($this, 'addWPMLHomeFilterForRegExTest'));
+            remove_filter('site_url', array($this, 'addWPMLHomeFilterForRegExTest'));
         }
 
         function addWPMLHomeFilterForRegExTest($url, $path) {
@@ -175,20 +175,6 @@
             $this->assertEquals($expected_url, $url);
         }
 
-        function testDoubleSlashesWithS3() {
-            $url = 's3://bucket/folder//thing.html';
-            $expected_url = 's3://bucket/folder/thing.html';
-            $url = Timber\URLHelper::remove_double_slashes($url);
-            $this->assertEquals($expected_url, $url);
-        }
-		
-	function testDoubleSlashesWithGS() {
-            $url = 'gs://bucket/folder//thing.html';
-            $expected_url = 'gs://bucket/folder/thing.html';
-            $url = Timber\URLHelper::remove_double_slashes($url);
-            $this->assertEquals($expected_url, $url);
-        }
-
         function testUserTrailingSlashItFailure() {
             $link = 'http:///example.com';
             $url = Timber\URLHelper::user_trailingslashit($link);
@@ -279,12 +265,10 @@
         function testIsExternal(){
             $local = 'http://example.org';
             $subdomain = 'http://cdn.example.org';
-			$external = 'http://upstatement.com';
-			$protocol_relative = '//upstatement.com';
+            $external = 'http://upstatement.com';
             $this->assertFalse(TimberURLHelper::is_external($local));
             $this->assertFalse(TimberURLHelper::is_external($subdomain));
-			$this->assertTrue(TimberURLHelper::is_external($external));
-			$this->assertTrue(TimberURLHelper::is_external($protocol_relative));
+            $this->assertTrue(TimberURLHelper::is_external($external));
         }
 
 		function testIsExternalContent() {

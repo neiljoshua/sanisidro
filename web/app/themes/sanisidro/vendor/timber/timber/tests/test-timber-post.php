@@ -9,6 +9,13 @@
 			$this->assertEquals($post_id, $post->ID);
 		}
 
+		function testIDDataType() {
+			$uid = $this->factory->post->create(array('title' => 'Air Force Once'));
+			$post = new Timber\Post($uid);
+			$this->assertEquals('integer', gettype($post->id));
+			$this->assertEquals('integer', gettype($post->ID));
+		}
+
 		function testPostPasswordReqd(){
 			$post_id = $this->factory->post->create();
 			$post = new TimberPost($post_id);
@@ -317,6 +324,47 @@
             $post = Timber::get_post();
 
 			$this->assertEquals($page2, trim(strip_tags( $post->get_paged_content() )));
+		}
+
+		function testMetaCustomPreFilterDisable(){
+
+			$callable = function(){ return false; };
+
+			add_filter( 'timber_post_get_meta_pre', $callable );
+
+			$post_id = $this->factory->post->create();
+
+			update_post_meta($post_id, 'hidden_value', 'Super secret value');
+
+			$post = new TimberPost($post_id);
+
+			$this->assertCount( 0, $post->custom);
+
+			remove_filter( 'timber_post_get_meta_pre', $callable );
+		}
+
+		function testMetaCustomPreFilterAlter(){
+
+			$callable = function( $customs, $pid, $post ) {
+				$key = 'critical_value';
+
+				return [
+					$key => get_post_meta( $pid, $key ),
+				];
+			};
+
+			add_filter( 'timber_post_get_meta_pre', $callable , 10, 3);
+
+			$post_id = $this->factory->post->create();
+
+			update_post_meta($post_id, 'hidden_value', 'super-big-secret');
+			update_post_meta($post_id, 'critical_value', 'I am needed, all the time');
+
+			$post = new TimberPost($post_id);
+			$this->assertCount( 1, $post->custom );
+			$this->assertEquals( $post->custom, array( 'critical_value' => 'I am needed, all the time' ) );
+
+			remove_filter( 'timber_post_get_meta_pre', $callable );
 		}
 
 		function testMetaCustomArrayFilter(){
@@ -923,12 +971,14 @@
 			$quote .= "No, try not. Do or do not. There is no try.";
 
 			$pid = $this->factory->post->create(array('post_content' => $quote));
-			$post = new TimberPost($pid);
-			$expected = array(
-				'<iframe width="500" height="281" src="https://www.youtube.com/embed/Jf37RalsnEs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-			);
+			$post = new Timber\Post($pid);
 
-			$this->assertEquals($expected, $post->video());
+			$video    = $post->video();
+			if ( is_array($video) ) {
+				$video = array_shift( $video );
+			}
+			$expected = '/<iframe [^>]+ src="https:\/\/www\.youtube\.com\/embed\/Jf37RalsnEs\?feature=oembed" [^>]+>/i';
+ 			$this->assertRegExp( $expected, $video );;
 		}
 
 		function testPostWithVideoCustomField() {

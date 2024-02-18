@@ -49,10 +49,6 @@
 
 		function testTwigFilterNow(){
 			$now = date('M jS, Y');
-			$str = Timber::compile_string("{{now|date('M jS, Y')}}");
-			$this->assertSame($now, $str);
-			$str = Timber::compile_string("{{null|date('M jS, Y')}}");
-			$this->assertSame($now, $str);
 			$str = Timber::compile_string("{{'now'|date('M jS, Y')}}");
 			$this->assertSame($now, $str);
 		}
@@ -65,7 +61,9 @@
 				$data['day'] = '1983-09-28 20:14:48';
 				$str = Timber::compile_string("{{day|date('F jS, Y g:ia')}}", $data);
 				$this->assertEquals('septiembre 28th, 1983 8:14pm', $str);
+				return;
 			}
+			$this->markTestSkipped('WPLANG needs to be set to `es_ES` to test');
 		}
 
 		function testTwigFilterDateI18nWordPressOption(){
@@ -74,13 +72,15 @@
 				$data['day'] = '1983-09-28';
 				$str = Timber::compile_string("{{day|date}}", $data);
 				$this->assertEquals('28 septiembre, 1983', $str);
+				return;
 			}
+			$this->markTestSkipped('WPLANG needs to be set to `es_ES` to test');
 		}
 
 		function testTwigFilterDateWordPressOption(){
 			$format = get_option('date_format');
-			$str = Timber::compile_string("{{now|date('".$format."')}}");
-			$empty = Timber::compile_string("{{now|date}}");
+			$str = Timber::compile_string("{{'now'|date('".$format."')}}");
+			$empty = Timber::compile_string("{{'now'|date}}");
 			$this->assertSame($str, $empty);
 		}
 
@@ -88,6 +88,12 @@
 			$data['authors'] = array('Tom','Rick','Harry','Mike');
 			$str = Timber::compile_string("{{authors|list}}", $data);
 			$this->assertEquals('Tom, Rick, Harry and Mike', $str);
+		}
+
+		function testTwigFilterListOxford() {
+			$data['authors'] = array('Tom','Rick','Harry','Mike');
+			$str = Timber::compile_string("{{authors|list(',', ', and')}}", $data);
+			$this->assertEquals('Tom, Rick, Harry, and Mike', $str);
 		}
 
 

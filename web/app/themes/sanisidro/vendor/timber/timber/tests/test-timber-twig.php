@@ -2,7 +2,7 @@
 
 	class TestTimberTwig extends Timber_UnitTestCase {
 
-		function tearDown() {
+		function tear_down() {
 			$lang_dir = get_stylesheet_directory().'/languages';
 			if (file_exists($lang_dir.'/en_US.po' )) {
 				unlink($lang_dir.'/en_US.po');
@@ -23,7 +23,7 @@
 
 		function _setupTranslationFiles() {
 			$lang_dir = get_stylesheet_directory().'/languages';
-			
+
 			if ( !file_exists($lang_dir.'/en_US.po') ) {
 				$this->installTranlsationFiles($lang_dir);
 			}
@@ -124,14 +124,14 @@
 				$php_unit->assertContains('my_action_context_vars', $action_context_tally);
 				$php_unit->assertContains('my_action_context', $action_context_tally);
 			});
-			$post_id = $this->factory->post->create(array('post_title' => "Jaredz Post", 'post_content' => 'stuff to say'));
+			$post_id = self::factory()->post->create(array('post_title' => "Jaredz Post", 'post_content' => 'stuff to say'));
 			$context['post'] = new TimberPost($post_id);
 			$str = Timber::compile('assets/test-action-context.twig', $context);
 			$this->assertEquals('Here: stuff to say', trim($str));
 		}
 
 		function testWordPressPasswordFilters(){
-			$post_id = $this->factory->post->create(array('post_title' => 'My Private Post', 'post_password' => 'abc123'));
+			$post_id = self::factory()->post->create(array('post_title' => 'My Private Post', 'post_password' => 'abc123'));
 			$context = array();
 			add_filter('protected_title_format', function($title){
 				return 'Protected: '.$title;
@@ -166,7 +166,7 @@
 		}
 
 		function testFilterFunction() {
-			$pid = $this->factory->post->create(array('post_title' => 'Foo'));
+			$pid = self::factory()->post->create(array('post_title' => 'Foo'));
 			$post = new TimberPost( $pid );
 			$str = 'I am a {{post | get_class }}';
 			$this->assertEquals('I am a Timber\Post', Timber::compile_string($str, array('post' => $post)));
@@ -241,11 +241,9 @@
 
 		}
 
-		/**
-     	* @expectedException Twig_Error_Syntax
-     	*/
 		function testSetObject() {
-			$pid = $this->factory->post->create(array('post_title' => 'Spaceballs'));
+			$this->expectException(Twig\Error\SyntaxError::class);
+			$pid = self::factory()->post->create(array('post_title' => 'Spaceballs'));
 			$post = new TimberPost( $pid );
 			$result = Timber::compile('assets/set-object.twig', array('post' => $post));
 			$this->assertEquals('Spaceballs: may the schwartz be with you', trim($result));
@@ -259,7 +257,7 @@
 
 		function testAddToTwig() {
 			add_filter('get_twig', function( $twig ) {
-				$twig->addFilter( new Twig_SimpleFilter( 'foobar', function( $text ) {
+				$twig->addFilter( new Timber\Twig_Filter( 'foobar', function( $text ) {
 					return $text . 'foobar';
 				}) );
 				return $twig;
@@ -270,7 +268,7 @@
 
 		function testTimberTwigObjectFilter() {
 			add_filter('timber/twig', function( $twig ) {
-				$twig->addFilter( new Twig_SimpleFilter( 'quack', function( $text ) {
+				$twig->addFilter( new Timber\Twig_Filter( 'quack', function( $text ) {
 					return $text . ' Quack!';
 				}) );
 				return $twig;

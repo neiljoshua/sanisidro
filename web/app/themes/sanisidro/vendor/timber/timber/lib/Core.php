@@ -2,6 +2,7 @@
 
 namespace Timber;
 
+#[\AllowDynamicProperties]
 abstract class Core {
 
 	public $id;
@@ -50,7 +51,7 @@ abstract class Core {
 	 * @example
 	 * ```php
 	 * $data = array('airplane' => '757-200', 'flight' => '5316');
-	 * $post = new TimberPost()
+	 * $post = new Timber\Post()
 	 * $post->import(data);
 	 * echo $post->airplane; //757-200
 	 * ```

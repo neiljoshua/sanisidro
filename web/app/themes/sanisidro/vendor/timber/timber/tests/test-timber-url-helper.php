@@ -4,7 +4,7 @@
 
 		private $mockUploadDir = false;
 
-        function setUp() {
+        function set_up() {
             $_SERVER['SERVER_PORT'] = 80;
         }
 
@@ -56,11 +56,11 @@
 
         function testFileSystemToURLWithWPML() {
             self::_setLanguage();
-            add_filter('site_url', array($this, 'addWPMLHomeFilterForRegExTest'), 10, 2);
+            add_filter('home_url', array($this, 'addWPMLHomeFilterForRegExTest'), 10, 2);
             $image = TestTimberImage::copyTestImage();
             $url = Timber\URLHelper::file_system_to_url($image);
             $this->assertStringEndsWith('://example2.org/wp-content/uploads/'.date('Y/m').'/arch.jpg', $url);
-            remove_filter('site_url', array($this, 'addWPMLHomeFilterForRegExTest'));
+            remove_filter('home_url', array($this, 'addWPMLHomeFilterForRegExTest'));
         }
 
         function addWPMLHomeFilterForRegExTest($url, $path) {
@@ -106,8 +106,8 @@
             $file = TimberURLHelper::url_to_file_system($url);
             $this->assertStringStartsWith(ABSPATH, $file);
             $this->assertStringEndsWith('/2012/06/mypic.jpg', $file);
-            $this->assertNotContains($file, 'http://example.org');
-            $this->assertNotContains($file, '//');
+            $this->assertStringNotContainsString($file, 'http://example.org');
+            $this->assertStringNotContainsString($file, '//');
         }
 
         function testGetHost() {
@@ -171,6 +171,20 @@
         function testDoubleSlashesWithHTTPS() {
             $url = 'https://nytimes.com/news//world/thing.html';
             $expected_url = 'https://nytimes.com/news/world/thing.html';
+            $url = Timber\URLHelper::remove_double_slashes($url);
+            $this->assertEquals($expected_url, $url);
+        }
+
+        function testDoubleSlashesWithS3() {
+            $url = 's3://bucket/folder//thing.html';
+            $expected_url = 's3://bucket/folder/thing.html';
+            $url = Timber\URLHelper::remove_double_slashes($url);
+            $this->assertEquals($expected_url, $url);
+        }
+
+	function testDoubleSlashesWithGS() {
+            $url = 'gs://bucket/folder//thing.html';
+            $expected_url = 'gs://bucket/folder/thing.html';
             $url = Timber\URLHelper::remove_double_slashes($url);
             $this->assertEquals($expected_url, $url);
         }
@@ -265,10 +279,12 @@
         function testIsExternal(){
             $local = 'http://example.org';
             $subdomain = 'http://cdn.example.org';
-            $external = 'http://upstatement.com';
+			$external = 'http://upstatement.com';
+			$protocol_relative = '//upstatement.com';
             $this->assertFalse(TimberURLHelper::is_external($local));
             $this->assertFalse(TimberURLHelper::is_external($subdomain));
-            $this->assertTrue(TimberURLHelper::is_external($external));
+			$this->assertTrue(TimberURLHelper::is_external($external));
+			$this->assertTrue(TimberURLHelper::is_external($protocol_relative));
         }
 
 		function testIsExternalContent() {

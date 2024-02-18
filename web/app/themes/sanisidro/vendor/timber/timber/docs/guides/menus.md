@@ -76,16 +76,29 @@ function add_to_context( $context ) {
 }
 ```
 
-Now, when you call `Timber::get_context()`, your menu will already be set in the context. You don’t need to initialize the menu in all your template files.
+Now, when you call `Timber::context()`, your menu will already be set in the context. You don’t need to initialize the menu in all your template files.
 
 **index.php**
 
 ```php
 <?php
 
-$context = Timber::get_context();
+$context = Timber::context();
 
 Timber::render( 'index.twig', $context );
+```
+
+When adding multiple menus to the global `$context`, declare unique names for each menu in the `add_to_context` function.
+
+**functions.php**
+
+```php
+public function add_to_context( $context ) {
+    $context['primary_menu']  = new Timber\Menu('Primary Navigation');
+    $context['footer_menu'] = new Timber\Menu('Footer Navigation');
+    // ...
+    return $context;
+}
 ```
 
 ## Displaying the menu items
@@ -112,6 +125,23 @@ In your Twig file, you can loop over the menu items like normal arrays. You’re
             </li>
         {% endfor %}
     </ul>
+</nav>
+```
+
+When using multiple menus, use the unique name in your Twig markup. Notice `primary_menu.items` instead of `menu.items`.
+
+**index.twig**
+
+```twig
+<nav>
+  <ul class="nav-main">
+      {% for item in primary_menu.items %}
+          <li class="nav-main-item {{ item.classes|join(' ') }}">
+              <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+              <!-- ... -->
+          </li>
+      {% endfor %}
+  </ul>
 </nav>
 ```
 

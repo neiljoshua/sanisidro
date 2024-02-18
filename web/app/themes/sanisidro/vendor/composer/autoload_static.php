@@ -9,6 +9,7 @@ class ComposerStaticInite9963d97394508e115c9304f0b398741
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -19,6 +20,7 @@ class ComposerStaticInite9963d97394508e115c9304f0b398741
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
@@ -37,6 +39,10 @@ class ComposerStaticInite9963d97394508e115c9304f0b398741
         array (
             0 => __DIR__ . '/..' . '/timber/timber/lib',
         ),
+        'Symfony\\Polyfill\\Php72\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -52,7 +58,7 @@ class ComposerStaticInite9963d97394508e115c9304f0b398741
     );
 
     public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/asm89/twig-cache-extension/lib',
+        0 => __DIR__ . '/..' . '/twig/cache-extension/lib',
     );
 
     public static $prefixesPsr0 = array (

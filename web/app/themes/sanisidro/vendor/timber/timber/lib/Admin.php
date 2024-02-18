@@ -6,11 +6,23 @@ class Admin {
 
 	public static function init() {
 		$filter = add_filter('plugin_row_meta', array(__CLASS__, 'meta_links'), 10, 2);
+		$action = add_action('after_plugin_row_timber-library/timber.php', array(__CLASS__, 'show_deprecation_warning'), 10, 3);
 		$action = add_action('in_plugin_update_message-timber-library/timber.php', array(__CLASS__, 'in_plugin_update_message'), 10, 2);
 		$action = add_action('in_plugin_update_message-timber/timber.php', array(__CLASS__, 'in_plugin_update_message'), 10, 2);
 		if ( $filter && $action ) {
 			return true;
 		}
+	}
+
+	/**
+	 * show additional information about the plugin deprecation.
+	 *
+	 * @param string  $file
+	 * @param array   $plugin
+	 */
+	public static function show_deprecation_warning($file, $plugin, $status)
+	{
+		echo '<td colspan="3" class="plugin-update colspanchange"><div class="update-message notice-error notice inline notice-warning notice-alt"><p>We recommend <a target="_blank" href="https://timber.github.io/docs/getting-started/switch-to-composer/">switching to the Composer based version</a> of Timber. <a href="https://github.com/timber/timber/discussions/2804" target="_blank">Why you need to switch.</a></p></div></td>';
 	}
 
 	/**
@@ -21,7 +33,7 @@ class Admin {
 	public static function meta_links( $links, $file ) {
 		if ( strstr($file, '/timber.php') ) {
 			unset($links[2]);
-			$links[] = '<a href="/wp-admin/plugin-install.php?tab=plugin-information&amp;plugin=timber-library&amp;TB_iframe=true&amp;width=600&amp;height=550" class="thickbox" aria-label="More information about Timber" data-title="Timber">View details</a>';
+			$links[] = '<a href="' . admin_url( '/wp-admin/plugin-install.php?tab=plugin-information&amp;plugin=timber-library&amp;TB_iframe=true&amp;width=600&amp;height=550' ) . '" class="thickbox" aria-label="More information about Timber" data-title="Timber">View details</a>';
 			$links[] = '<a href="http://upstatement.com/timber" target="_blank">Homepage</a>';
 			$links[] = '<a href="https://timber.github.io/docs/" target="_blank">Documentation</a>';
 			$links[] = '<a href="https://timber.github.io/docs/getting-started/setup/" target="_blank">Starter Guide</a>';

@@ -30,7 +30,7 @@
   "dependencies": {
     "jquery": "^3.5.0",
     "lodash": "^4.17.20",
-    "swiper": "^5.3.7"
+    "swiper": "^6.5.1"
   },
   "keywords": []
 }

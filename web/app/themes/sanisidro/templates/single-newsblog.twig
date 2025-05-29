@@ -4,7 +4,7 @@
   {% if post %}
     <section >
       <div class="hero">
-        {% set hero_image = post.get_field('image_news_blog') %}
+        {% set hero_image = post.meta('image_news_blog') %}
         <img class="lazy hero__image" src="{{ hero_image.sizes.medium }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ post.title }}" />
       </div>
       <div class="pagination">

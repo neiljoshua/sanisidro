@@ -3,8 +3,8 @@
 * Template Name: Home Page
 */
 
-$post = new TimberPost();
-$data = Timber::get_context();
+$post = Timber::get_post();
+$data = Timber::context();
 $data['post'] = $post;
 $args = array(
           'post_type' => 'project',

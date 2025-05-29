@@ -1,13 +1,15 @@
-<div class="gallery">
-  {% for post in projects %}
-    {# {{ dump(post)}} #}
-    {% set featured_image = post.get_field('project_image') %}
-    <div class="gallery__image" data-state="{{ post.state|lower }}" data-city="{{ post.city|lower }}" >
-      <a href="{{ post.link }}{{ post.slug }}">
-        <img class="lazy" src="{{ featured_image.sizes.thumbnail }}" data-src="{{ featured_image.sizes.medium }}" data-srcset="{{ featured_image.sizes.medium }}"  alt="{{ post.project_description }}" />
-      </a>
-      <p> {{ post.title }} </p>
-    </div>
-  {% endfor %}
-</div>
+
+  <div class="gallery">
+    {{ dump() }}
+    {% for post in projects %}
+      {#{ dump(post)}#}
+      {% set featured_image = post.meta('project_image') %}
+      <div class="gallery__image" data-state="{{ attribute(post, 'state')|lower }}" data-city="{{ attribute(post, 'city')|lower }}" >
+        <a href="{{ post.link }}{{ post.slug }}">
+          <img class="lazy" src="{{ featured_image.sizes.thumbnail }}" data-src="{{ featured_image.sizes.medium }}" data-srcset="{{ featured_image.sizes.medium }}"  alt="{{ post.project_description }}" />
+        </a>
+        <p> {{ post.title }} </p>
+      </div>
+    {% endfor %}
+  </div>
 

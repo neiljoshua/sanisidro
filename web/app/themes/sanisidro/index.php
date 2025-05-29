@@ -1,5 +1,5 @@
 <?php
-  $post = new TimberPost();
-  $data = Timber::get_context();
-  $data['post'] = $post;
-  Timber::render('index.twig', $data);
+  $post= Timber::context();
+  $post['post'] = new Timber\Post();
+  Timber::render('index.twig', $post);
+  {{ dump() }}

@@ -1,10 +1,12 @@
 <?php
 
+use Timber\Timber;
+
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$timber = new \Timber\Timber();
+Timber::init();
 
-if ( ! class_exists( 'Timber' ) ) {
+if (!class_exists('Timber') || version_compare(Timber::$version, '2.0.0', '<')) {
   add_action( 'admin_notices', function() {
     echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
   });
@@ -25,11 +27,11 @@ function add_to_context( $data ) {
     $data['foo'] = 'bar';
     $data['stuff'] = 'I am a value set in your functions.php file';
     $data['notes'] = 'These values are available everytime you call Timber::get_context();';
-    $data['menu'] = new TimberMenu('primary');
-    $data['menu-footer'] = new TimberMenu('footer');
+    $data['menu'] = Timber::get_menu('primary');
+    $data['menu-footer'] = Timber::get_menu('footer');
     return $data;
 }
-add_filter( 'timber_context', 'add_to_context' );
+add_filter( 'timber/context', 'add_to_context' );
 
 
 // Load stylesheet for San Isidro Theme.

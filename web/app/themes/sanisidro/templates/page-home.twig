@@ -2,8 +2,9 @@
 
 {% block content %}
   {% if post %}
+    {#{ dump(post)}#} 
     <section class="home__hero">
-      {% set hero_image = post.get_field('hero_image') %}
+      {% set hero_image = post.meta('hero_image') %}
       <img class="lazy hero__image" src="{{ hero_image.sizes.medium }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ post.title }}" />
       <div class="home__logo">
         <img src="{{ post.meta('hero_logo')}}" alt="{{ post.title }}"/>
@@ -15,7 +16,7 @@
       <p class="copy">"{{ post.meta('hero_content')}}"</p>
     </section>
 
-    {% set slider = post.get_field('slider_home_page') %}
+    {% set slider = post.meta('slider_home_page') %}
     {# {{ dump(slider)}} #}
     {% if post.meta('slider_home_page')%}
       <section>
@@ -42,9 +43,9 @@
         <a> View Projects</a>
       </div>
       {% if projects %}
-        {% include 'partial/featured-projects.twig'%}
+        {% include 'partial/featured-projects.twig' %}
       {% else %}
-        {% include 'partial/not-projects-found.twig'%}
+        {% include 'partial/not-projects-found.twig' %}
       {% endif %}
     </section>
 

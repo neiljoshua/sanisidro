@@ -15,3 +15,7 @@ gitflow/
 
 *-old.php
 
+#Timber
+composer.lock
+/vendor/
+

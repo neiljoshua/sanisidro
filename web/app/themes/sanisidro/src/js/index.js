@@ -56,15 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function menuToggle() {
-    e.preventDefault();
-    var burger = document.querySelector('.site-header__hamburger--rot'),
-        body = document.body,
-        siteMenu = document.querySelector('.site-header__menu');
+    const burger = document.querySelector('a.site-header__hamburger--rot');
+    const body = document.body;
+    const siteMenu = document.querySelector('.site-header__menu');
 
-    burger.toggle('is-active');
-    body.toggle('fixed');
-    siteMenu.toggle('active');
-
+    siteMenu.classList.toggle('active');
+    burger.classList.toggle('is-active');
+    body.classList.toggle('fixed');
   }
 
   function homeMenuScrolling() {
@@ -97,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function checkWidth() {
+    var body = document.querySelector('body');
 
     if ( window.outerWidth < 1024 ) {
       if( body.classList.contains('fixed') ) {
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.site-header__hamburger--rot').addEventListener('click', menuToggle);
   checkWidth();
 
-  if( bodySite.classList.contains('projects') ) { // Projects page functions
+  if( bodySite.classList.contains('page-template-page-projects') ) { // Projects page functions
 
     var stateSelect = new Dropkick("#state-select"),
         citySelect = new Dropkick("#city-select"),

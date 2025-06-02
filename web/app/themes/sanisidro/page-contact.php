@@ -64,8 +64,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   else if ($_POST['submitted']) generate_response("error", $missing_content);
 }
 
-$post = new TimberPost();
-$data = Timber::get_context();
+$post = Timber::get_post();
+$data = Timber::context();
 $data['post'] = $post;
 $data['response'] = $response;
 Timber::render('page-contact.twig', $data);

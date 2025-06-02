@@ -15,3 +15,11 @@ gitflow/
 
 *-old.php
 
+#Timber
+composer.lock
+/vendor/
+
+#Webpack
+package-lock.json
+package-lock.json.bk
+

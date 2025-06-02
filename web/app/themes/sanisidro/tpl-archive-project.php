@@ -6,8 +6,8 @@
 
 include('src/inc/constants.php');
 
-$post = new TimberPost();
-$data = Timber::get_context();
+$post = Timber::get_post();
+$data = Timber::context();
 $data['post'] = $post;
 
 $args = array(

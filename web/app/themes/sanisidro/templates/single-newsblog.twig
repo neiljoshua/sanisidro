@@ -4,13 +4,13 @@
   {% if post %}
     <section >
       <div class="hero">
-        {% set hero_image = post.get_field('image_news_blog') %}
+        {% set hero_image = post.meta('image_news_blog') %}
         <img class="lazy hero__image" src="{{ hero_image.sizes.medium }}" data-src="{{ hero_image.sizes.large }}" data-srcset="{{ hero_image.sizes.large }}"  alt="{{ post.title }}" />
       </div>
       <div class="pagination">
           <a class="pagination__links" href="/news">View all </a>
-          <a class="pagination__links" href="{{ post._next.link }}">Previous </a>
-          <a class="pagination__links" href="{{ post._prev.link }}" >Next </a>
+          <a class="pagination__links" href="{{ post.next.link }}">Previous </a>
+          <a class="pagination__links" href="{{ post.prev.link }}" >Next </a>
       </div>
     </section>
     <section>

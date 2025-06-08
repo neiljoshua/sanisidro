@@ -17,7 +17,7 @@ gitflow/
 
 #Timber
 composer.lock
-/vendor/
+/vendor
 
 #Webpack
 package-lock.json
